@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>{% block title %}Poetic Goblin{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="/static/icons/goblin-mascot-sm.svg">
+    <script>if(localStorage.getItem('pg-theme')==='dark')document.documentElement.classList.add('dark-mode-pending');</script>
+</head>
+<body>
+    <script>if(localStorage.getItem('pg-theme')==='dark')document.body.classList.add('dark-mode');</script>
+    {% if current_user and current_user.char_name %}
+    <nav class="navbar">
+        <a href="{{ url_for('feed') }}" class="nav-brand">
+            <img class="nav-brand-icon" src="/static/icons/goblin-mascot-sm.svg" alt="">
+            <span class="nav-brand-text">Poetic <span class="brand-blue">Goblin</span></span>
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open');document.querySelector('.nav-user').classList.toggle('open');"><img class="px-icon" src="/static/icons/icon-menu.svg" alt=""></button>
+        <div class="nav-links">
+            <a href="{{ url_for('feed') }}" class="nav-link {% if request.endpoint == 'feed' %}active{% endif %}">
+                <img class="px-icon" src="/static/icons/icon-feed.svg" alt=""><span>Feed</span>
+            </a>
+            <a href="{{ url_for('annals_home') }}" class="nav-link {% if request.endpoint and request.endpoint.startswith('annals') %}active{% endif %}">
+                <img class="px-icon" src="/static/icons/icon-book.svg" alt=""><span>The Annals</span>
+            </a>
+            <a href="{{ url_for('explore') }}" class="nav-link {% if request.endpoint == 'explore' %}active{% endif %}">
+                <img class="px-icon" src="/static/icons/icon-compass.svg" alt=""><span>Explore</span>
+            </a>
+            <a href="{{ url_for('character_pool') }}" class="nav-link {% if request.endpoint == 'character_pool' %}active{% endif %}">
+                <img class="px-icon" src="/static/icons/icon-mask.svg" alt=""><span>Characters</span>
+            </a>
+            <a href="{{ url_for('about') }}" class="nav-link {% if request.endpoint == 'about' %}active{% endif %}">
+                <img class="px-icon" src="/static/icons/icon-book.svg" alt=""><span>About</span>
+            </a>
+        </div>
+        <div class="nav-user">
+            <a href="{{ url_for('messages_inbox') }}" class="nav-link {% if request.endpoint and request.endpoint.startswith('messages') %}active{% endif %}" title="Messages" style="position:relative;">
+                <img class="px-icon" src="/static/icons/icon-mail.svg" alt="">
+                {% if unread_message_count > 0 %}<span class="msg-badge">{{ unread_message_count }}</span>{% endif %}
+            </a>
+            <a href="{{ url_for('account_settings') }}" class="nav-link {% if request.endpoint == 'account_settings' %}active{% endif %}" title="Settings">
+                <img class="px-icon" src="/static/icons/icon-gear.svg" alt="">
+            </a>
+            <a href="{{ url_for('profile', username=current_user.username) }}" class="nav-link nav-identity">
+                {% if current_user.char_avatar %}
+                <img src="{{ current_user.char_avatar }}" class="nav-avatar" alt="">
+                {% else %}
+                <div class="nav-avatar avatar-placeholder" style="width:34px;height:34px;font-size:0.8rem;">{{ current_user.char_name[0]|upper }}</div>
+                {% endif %}
+                <span class="nav-char-info">
+                    <span class="nav-char-name">{{ current_user.char_name }}</span>
+                    <span class="nav-username">@{{ current_user.username }}</span>
+                </span>
+            </a>
+            <a href="{{ url_for('logout') }}" class="nav-link" title="Log out" onclick="return confirm('Log out of Poetic Goblin?');"><img class="px-icon" src="/static/icons/icon-door.svg" alt=""></a>
+        </div>
+    </nav>
+    {% endif %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-messages">
+        {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

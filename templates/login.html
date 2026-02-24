@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Poetic Goblin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <script>if(localStorage.getItem("pg-theme")==="dark")document.body.classList.add("dark-mode");</script>
+    {% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}<div class="flash-messages">{% for cat, msg in messages %}<div class="flash flash-{{ cat }}">{{ msg }}</div>{% endfor %}</div>{% endif %}{% endwith %}
+    <div class="auth-page">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div style="margin-bottom:0.5rem;"><img src="/static/icons/goblin-mascot.svg" alt="Poetic Goblin" style="width:80px;height:80px;image-rendering:pixelated;"></div>
+                <h1>Return to the Tavern</h1>
+                <p>Welcome back, adventurer</p>
+            </div>
+            <form method="POST">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                <div class="form-group">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" id="username" name="username" class="form-input" placeholder="Your username" value="{{ username|default('') }}" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="Your secret passphrase" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Enter the Realm</button>
+            </form>
+            <div class="auth-footer">New here? <a href="{{ url_for('register') }}">Create an account</a> · <a href="{{ url_for('forgot_password') }}">Forgot password?</a></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

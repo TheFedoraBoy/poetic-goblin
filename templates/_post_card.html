@@ -1,0 +1,96 @@
+{# Reusable post card — handles campaign, story, and art post types #}
+{% macro render_post(post, sessions=None, show_delete=False, show_edit=False, permalink=False) %}
+<article class="post-card">
+    <div class="post-header">
+        {% if post.char_avatar %}
+            <img src="{{ post.char_avatar }}" class="post-avatar" alt="">
+        {% else %}
+            <div class="post-avatar avatar-placeholder" style="width:42px;height:42px;font-size:1rem;">{{ (post.char_name or post.username)[0]|upper }}</div>
+        {% endif %}
+        <div class="post-meta">
+            <a href="{{ url_for('profile', username=post.username) }}" class="post-author">
+                {{ post.char_name or post.username }}
+            </a>
+            <div class="post-info">
+                <span class="post-username-badge">@{{ post.username }}</span>
+                <span>·</span>
+                <span>{{ post.created_at|timeago }}</span>
+                <span class="post-type-badge {{ post.post_type }}">
+                    {% if post.post_type == 'campaign' %}<img class="px-icon" src="/static/icons/icon-sword.svg" alt=""> Campaign
+                    {% elif post.post_type == 'story' %}<img class="px-icon" src="/static/icons/icon-story.svg" alt=""> Story
+                    {% elif post.post_type == 'art' %}<img class="px-icon" src="/static/icons/icon-art.svg" alt=""> Art/Map
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    {% if post.title %}
+    <div class="post-title-bar">
+        {% if not permalink %}<a href="{{ url_for('post_detail', post_id=post.id) }}" style="color:inherit;text-decoration:none;">{{ post.title|e }}</a>
+        {% else %}{{ post.title|e }}{% endif %}
+    </div>
+    {% endif %}
+
+    {% if post.tag_location or post.tag_age or post.tag_characters or post.tagged_users %}
+    <div class="post-tags">
+        {% if post.tag_location %}<span class="post-tag location"><img class="px-icon" src="/static/icons/icon-pin.svg" alt=""> {{ post.tag_location|e }}</span>{% endif %}
+        {% if post.tag_age %}<span class="post-tag age"><img class="px-icon" src="/static/icons/icon-clock.svg" alt=""> {{ post.tag_age|e }}</span>{% endif %}
+        {% if post.tag_characters %}{% for char in post.tag_characters.split(',') %}{% if char.strip() %}<span class="post-tag character">🧝 {{ char.strip()|e }}</span>{% endif %}{% endfor %}{% endif %}
+        {% if post.tagged_users %}{% for u in post.tagged_users.split(',') %}{% if u.strip() %}<a href="{{ url_for('profile', username=u.strip()) }}" class="post-tag user-tag" style="text-decoration:none;"><img class="px-icon" src="/static/icons/icon-user.svg" alt=""> @{{ u.strip()|e }}</a>{% endif %}{% endfor %}{% endif %}
+    </div>
+    {% endif %}
+
+    {% if post.post_type == 'story' %}
+        <div class="post-content">{{ post.content|e }}</div>
+    {% endif %}
+
+    {% if post.post_type == 'art' %}
+        {% if post.image_url %}<img src="{{ post.image_url }}" class="post-image" alt="{{ post.title|e }}" loading="lazy">{% endif %}
+        {% if post.description %}<div class="post-description">{{ post.description|e }}</div>{% endif %}
+    {% endif %}
+
+    {% if post.post_type == 'campaign' and sessions %}
+        <div class="session-list">
+            {% for s in sessions %}
+            <div class="session-item {% if loop.index > 1 %}hidden-session{% endif %}" data-post-id="{{ post.id }}" {% if loop.index > 1 %}style="display:none"{% endif %}>
+                <div class="session-title">Session {{ s.session_number }}: {{ s.title|e }}</div>
+                <div class="session-content">{{ s.content|e }}</div>
+            </div>
+            {% endfor %}
+            {% if sessions|length > 1 %}
+            <button class="session-expand-btn" data-post-id="{{ post.id }}">▼ Show {{ sessions|length - 1 }} more session{{ 's' if sessions|length > 2 }}</button>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="post-actions">
+        <button class="post-action-btn like-btn {% if post.user_liked %}liked{% endif %}" data-post-id="{{ post.id }}">
+            <span class="icon">{% if post.user_liked %}<img class="px-icon" src="/static/icons/icon-fire.svg" alt="">{% else %}<img class="px-icon" src="/static/icons/icon-heart.svg" alt="">{% endif %}</span>
+            <span class="count">{{ post.like_count if post.like_count else '' }}</span>
+        </button>
+        <button class="post-action-btn comment-toggle-btn" data-post-id="{{ post.id }}">
+            <span class="icon"><img class="px-icon" src="/static/icons/icon-chat.svg" alt=""></span>
+            <span class="count">{{ post.comment_count if post.comment_count else '' }}</span>
+        </button>
+        {% if not permalink %}<a href="{{ url_for('post_detail', post_id=post.id) }}" class="post-action-btn" title="Permalink" style="text-decoration:none;"><span class="icon"><img class="px-icon" src="/static/icons/icon-link.svg" alt=""></span></a>{% endif %}
+        {% if show_edit %}<a href="{{ url_for('edit_post', post_id=post.id) }}" class="post-action-btn" title="Edit" style="text-decoration:none;"><span class="icon"><img class="px-icon" src="/static/icons/icon-edit.svg" alt=""></span></a>{% endif %}
+        {% if show_delete %}
+        <form method="POST" action="{{ url_for('delete_post', post_id=post.id) }}" style="margin-left:auto;" onsubmit="return confirm('Delete this post? This cannot be undone.');">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+            <button type="submit" class="post-action-btn delete-btn" title="Delete post"><span class="icon"><img class="px-icon" src="/static/icons/icon-trash.svg" alt=""></span></button>
+        </form>
+        {% endif %}
+    </div>
+
+    {% if not permalink %}
+    <div class="comments-section" id="comments-{{ post.id }}">
+        <div class="comments-list"></div>
+        <div class="comment-input-row">
+            <input type="text" class="comment-input" id="comment-input-{{ post.id }}" data-post-id="{{ post.id }}" placeholder="Write a response...">
+            <button class="btn btn-sm btn-primary comment-submit-btn" data-post-id="{{ post.id }}">Reply</button>
+        </div>
+    </div>
+    {% endif %}
+</article>
+{% endmacro %}

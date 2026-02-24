@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "_annals_sidebar.html" import annals_sidebar %}
+{% block title %}Edit Story — The Annals{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="annals-layout">
+        <div class="annals-content">
+            <div class="annals-breadcrumb">
+                <a href="{{ url_for('annals_home') }}">The Annals</a>
+                <span class="sep">›</span>
+                <a href="{{ url_for('annals_user_story', story_id=story.id) }}">{{ story.title }}</a>
+                <span class="sep">›</span>
+                <span>Edit</span>
+            </div>
+
+            <div class="annals-article">
+                <div class="annals-article-title"><img class="px-icon" src="/static/icons/icon-edit.svg" alt=""> Edit Your Story</div>
+                <div class="annals-article-subtitle">{{ age.name }} · {{ century.name }}</div>
+                <hr class="annals-divider">
+
+                <form method="POST" class="form-stack">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                    <div class="form-group">
+                        <label class="form-label">Story Title</label>
+                        <input type="text" name="title" class="form-input" value="{{ story.title }}" minlength="3" maxlength="200" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Your Story</label>
+                        <textarea name="content" class="form-input" rows="12" minlength="50" maxlength="20000" required style="min-height:250px;line-height:1.7;resize:vertical;">{{ story.content }}</textarea>
+                    </div>
+                    <div style="display:flex;gap:0.75rem;">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <a href="{{ url_for('annals_user_story', story_id=story.id) }}" class="btn btn-ghost">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{ annals_sidebar(ages) }}
+    </div>
+</div>
+{% endblock %}

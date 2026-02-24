@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% from "_annals_sidebar.html" import annals_sidebar %}
+{% block title %}Contribute to the Annals — Poetic Goblin{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="annals-layout">
+        <div class="annals-content">
+            <div class="annals-breadcrumb">
+                <a href="{{ url_for('annals_home') }}">The Annals</a>
+                <span class="sep">›</span>
+                <span>Contribute a Story</span>
+            </div>
+
+            <div class="annals-article">
+                <div class="annals-article-title">🖊️ Contribute to the Annals</div>
+                <div class="annals-article-subtitle">Add your account to the living history of Elysal</div>
+                <hr class="annals-divider">
+
+                <div style="padding:0.75rem 1rem;background:var(--bg-light);border-radius:8px;border-left:3px solid var(--orange);margin-bottom:1.5rem;font-size:0.88rem;color:var(--text-muted);line-height:1.6;">
+                    <img class="px-icon" src="/static/icons/icon-quill.svg" alt=""> The Annals welcome all voices. Choose the age and century your story belongs to, give it a title, and write your account. Remember — Thandrik records all accounts without judgment.
+                </div>
+
+                <form method="POST" class="form-stack">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                    <div class="form-group">
+                        <label class="form-label">Which Age?</label>
+                        <select name="age_number" id="age-select" class="form-input" required>
+                            <option value="">— Select an Age —</option>
+                            {% for age in ages %}
+                            <option value="{{ age.number }}" {% if sel_age == age.number %}selected{% endif %}>
+                                {{ age.number }}. {{ age.name }} (Years {{ age.year_start }}–{{ age.year_end }})
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Which Century?</label>
+                        <select name="century_number" id="century-select" class="form-input" required>
+                            <option value="">— Select an Age first —</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Story Title</label>
+                        <input type="text" name="title" class="form-input" placeholder="e.g. The Fall of Blackthorn Keep" value="{{ title }}" minlength="3" maxlength="200" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Your Story</label>
+                        <textarea name="content" class="form-input" rows="12" placeholder="Write your account of what happened..." minlength="50" maxlength="20000" required style="min-height:250px;line-height:1.7;resize:vertical;">{{ content }}</textarea>
+                        <div style="display:flex;justify-content:space-between;margin-top:0.3rem;">
+                            <div class="form-hint">Minimum 50 characters. Write as much as you like.</div>
+                            <div style="font-size:0.78rem;color:var(--text-dim);"><span id="char-count">0</span> / 20,000</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:0.75rem;">
+                        <button type="submit" class="btn btn-orange"><img class="px-icon" src="/static/icons/icon-story.svg" alt=""> Add to the Annals</button>
+                        <a href="{{ url_for('annals_home') }}" class="btn btn-ghost">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {{ annals_sidebar(ages) }}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Century data keyed by age number
+    const centuryData = {
+        {% for age in ages %}
+        {{ age.number }}: [
+            {% for c in age.centuries %}
+            { num: {{ c.number }}, name: "{{ c.name }}" },
+            {% endfor %}
+        ],
+        {% endfor %}
+    };
+
+    const ageSelect = document.getElementById('age-select');
+    const centurySelect = document.getElementById('century-select');
+    const preselectedCentury = {{ sel_century or 0 }};
+
+    function updateCenturies() {
+        const ageNum = parseInt(ageSelect.value);
+        centurySelect.innerHTML = '<option value="">— Select a Century —</option>';
+        if (centuryData[ageNum]) {
+            centuryData[ageNum].forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c.num;
+                opt.textContent = `${c.name}`;
+                if (c.num === preselectedCentury) opt.selected = true;
+                centurySelect.appendChild(opt);
+            });
+        }
+    }
+
+    ageSelect.addEventListener('change', updateCenturies);
+    if (ageSelect.value) updateCenturies();
+
+    // Character count
+    const textarea = document.querySelector('textarea[name="content"]');
+    const counter = document.getElementById('char-count');
+    textarea.addEventListener('input', () => counter.textContent = textarea.value.length);
+    counter.textContent = textarea.value.length;
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+__pycache__
+*.pyc
+*.pyo
+.env
+.env.local
+*.db
+*.sqlite3
+.git
+.gitignore
+.DS_Store
+__MACOSX
+node_modules
+*.md
+.vscode
+.idea
+static/uploads/*
+!static/uploads/.gitkeep

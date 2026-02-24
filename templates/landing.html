@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poetic Goblin — Where Fantasy Lives</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="/static/icons/goblin-mascot-sm.svg">
+</head>
+<body>
+    <div class="landing">
+        <div class="landing-content">
+            <img class="landing-icon" src="/static/icons/goblin-mascot.svg" alt="Poetic Goblin">
+            <h1 class="landing-title">Poetic <span class="brand-blue">Goblin</span></h1>
+            <p class="landing-subtitle">Where Fantasy Lives</p>
+            <p class="landing-desc">
+                A realm for adventurers, storytellers, and dungeon delvers.
+                Forge characters, share campaigns, write stories, and explore
+                the world of <strong style="color: var(--orange);">Elysal</strong>.
+            </p>
+            <div class="landing-buttons">
+                <a href="{{ url_for('register') }}" class="btn btn-orange">Begin Your Adventure</a>
+                <a href="{{ url_for('login') }}" class="btn btn-ghost" style="color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.2);">Return to the Tavern</a>
+            </div>
+            <div style="margin-top:1.5rem;">
+                <a href="{{ url_for('about') }}" style="color:rgba(255,255,255,0.4);font-family:var(--font-pixel);font-size:0.5rem;letter-spacing:0.1em;text-transform:uppercase;">Learn more about Poetic Goblin</a>
+            </div>
+            <div class="landing-features">
+                <div class="landing-feature">
+                    <span class="landing-feature-icon"><img class="px-icon px-icon-lg" src="/static/icons/icon-mask.svg" alt=""></span>
+                    <h3>Forge Characters</h3>
+                    <p>Create characters with traits and backstories. Switch between them anytime.</p>
+                </div>
+                <div class="landing-feature">
+                    <span class="landing-feature-icon"><img class="px-icon px-icon-lg" src="/static/icons/icon-sword.svg" alt=""></span>
+                    <h3>Share Adventures</h3>
+                    <p>Post campaigns, stories, and art. Tag locations and characters from Elysal.</p>
+                </div>
+                <div class="landing-feature">
+                    <span class="landing-feature-icon"><img class="px-icon px-icon-lg" src="/static/icons/icon-compass.svg" alt=""></span>
+                    <h3>Explore Elysal</h3>
+                    <p>Discover a living world with unique locations, ages, and legendary characters.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

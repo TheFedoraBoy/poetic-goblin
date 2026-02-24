@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %}About — Poetic Goblin{% endblock %}
+{% block content %}
+<div class="about-page">
+    <div class="about-hero">
+        <img class="about-mascot" src="/static/icons/goblin-mascot.svg" alt="The Poetic Goblin">
+        <div class="about-title">Poetic <span class="brand-blue">Goblin</span></div>
+        <div class="about-tagline">Where Fantasy Lives</div>
+    </div>
+
+    <div class="about-content">
+        <h2><img class="px-icon" src="/static/icons/icon-book.svg" alt=""> Our Mission</h2>
+        <p>
+            <strong>Poetic Goblin</strong> is a social platform built for fantasy fans, tabletop roleplayers, and
+            Dungeons & Dragons enthusiasts. We believe the best stories aren't written alone — they're forged
+            at the table, between friends, one dice roll at a time.
+        </p>
+        <p>
+            Our mission is to connect players, storytellers, and worldbuilders into a living community where
+            campaigns are shared, characters come alive, and an entire world grows through play.
+        </p>
+
+        <h2><img class="px-icon" src="/static/icons/icon-compass.svg" alt=""> The World of Elysal</h2>
+        <p>
+            At the heart of Poetic Goblin is <strong style="color:var(--orange);">Elysal</strong> — an open-source
+            fantasy world spanning eight ages and thousands of years of history. Elysal isn't a static setting;
+            it's a living tapestry woven by its community.
+        </p>
+        <p>
+            When you play a campaign and share it here, your stories become part of the Annals — a
+            growing chronicle of Elysal's history. Every adventure adds a thread. Every character leaves
+            a mark. The world is built by the players who inhabit it.
+        </p>
+
+        <h2><img class="px-icon" src="/static/icons/icon-sword.svg" alt=""> What You Can Do</h2>
+        <div class="about-features">
+            <div class="about-feature-item">
+                <img class="px-icon" src="/static/icons/icon-mask.svg" alt="">
+                <div>
+                    <h3>Forge Characters</h3>
+                    <p>Create characters with unique traits, backstories, and pixel avatars. Switch between them at will.</p>
+                </div>
+            </div>
+            <div class="about-feature-item">
+                <img class="px-icon" src="/static/icons/icon-sword.svg" alt="">
+                <div>
+                    <h3>Share Campaigns</h3>
+                    <p>Document your tabletop sessions with multi-part campaign logs. Tag locations and players from Elysal.</p>
+                </div>
+            </div>
+            <div class="about-feature-item">
+                <img class="px-icon" src="/static/icons/icon-story.svg" alt="">
+                <div>
+                    <h3>Write Stories</h3>
+                    <p>Craft tales set in Elysal or your own worlds. Share fiction, lore entries, and character journals.</p>
+                </div>
+            </div>
+            <div class="about-feature-item">
+                <img class="px-icon" src="/static/icons/icon-art.svg" alt="">
+                <div>
+                    <h3>Post Art & Maps</h3>
+                    <p>Share illustrations, maps, tokens, and visual creations with the community.</p>
+                </div>
+            </div>
+            <div class="about-feature-item">
+                <img class="px-icon" src="/static/icons/icon-book.svg" alt="">
+                <div>
+                    <h3>Explore the Annals</h3>
+                    <p>Browse 8,000 years of lore across eight ages. Contribute your own stories to the chronicle.</p>
+                </div>
+            </div>
+            <div class="about-feature-item">
+                <img class="px-icon" src="/static/icons/icon-mail.svg" alt="">
+                <div>
+                    <h3>Connect & Collaborate</h3>
+                    <p>Follow other adventurers, exchange messages, and find your next party.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2><img class="px-icon" src="/static/icons/icon-quill.svg" alt=""> Open Source World</h2>
+        <p>
+            Elysal is designed to be <strong>open and community-driven</strong>. The lore, locations, and timeline
+            serve as a shared foundation that any group can build upon. Run a campaign in the Verdant Reaches?
+            Share it. Invent a new faction in the Iron Wastes? Write it into the Annals. Your table's stories
+            become part of something bigger.
+        </p>
+        <p>
+            We believe fantasy worlds shouldn't be locked behind a single author's vision. The best settings are
+            the ones that grow with their communities — messy, surprising, and alive.
+        </p>
+
+        <div class="about-cta">
+            <p>Ready to begin your adventure?</p>
+            {% if current_user and current_user.char_name %}
+                <a href="{{ url_for('feed') }}" class="btn btn-orange"><img class="px-icon" src="/static/icons/icon-feed.svg" alt=""> Return to Feed</a>
+            {% else %}
+                <a href="{{ url_for('register') }}" class="btn btn-orange">Begin Your Adventure</a>
+                <a href="{{ url_for('login') }}" class="btn btn-ghost" style="margin-left:0.5rem;">Return to the Tavern</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
