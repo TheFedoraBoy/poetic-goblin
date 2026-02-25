@@ -66,6 +66,7 @@ def _send_resend(to_email, subject, html_body, text_body=None):
             headers={
                 'Authorization': f'Bearer {api_key}',
                 'Content-Type': 'application/json',
+                'User-Agent': 'PoeticGoblin/1.0',
             },
             method='POST',
         )
