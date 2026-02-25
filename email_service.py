@@ -40,12 +40,15 @@ def _send_resend(to_email, subject, html_body, text_body=None):
     """Send via Resend HTTP API. Requires RESEND_API_KEY env var."""
     try:
         import urllib.request
+        import urllib.error
         import json
 
         api_key = Config.RESEND_API_KEY
         if not api_key:
             print("[Poetic Goblin] RESEND_API_KEY not set. Falling back to console.")
             return _send_console(to_email, subject, html_body, text_body)
+
+        print(f"[Poetic Goblin] Sending via Resend to {to_email} (key: {api_key[:6]}...{api_key[-4:]})")
 
         payload = {
             "from": f"{Config.SMTP_FROM_NAME} <{Config.SMTP_FROM_EMAIL}>",
@@ -73,6 +76,10 @@ def _send_resend(to_email, subject, html_body, text_body=None):
             print(f"[Poetic Goblin] Resend API returned {resp.status}")
             return False
 
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode('utf-8', errors='replace')
+        print(f"[Poetic Goblin] Resend email failed: HTTP {e.code} — {error_body}")
+        return False
     except Exception as e:
         print(f"[Poetic Goblin] Resend email failed: {e}")
         return False
