@@ -1,6 +1,11 @@
 """
 Poetic Goblin — Email Service
-Supports console output (dev) and SMTP (prod).
+Supports: console (dev), SMTP (prod), Resend API (prod - recommended).
+
+Set EMAIL_TYPE env var:
+  - 'console' — prints to terminal (default, for dev)
+  - 'smtp'    — sends via SMTP (Gmail, Postmark, Mailgun, etc.)
+  - 'resend'  — sends via Resend HTTP API (recommended, simplest setup)
 """
 import smtplib
 from email.mime.text import MIMEText
@@ -9,12 +14,11 @@ from config import Config
 
 
 def send_email(to_email, subject, html_body, text_body=None):
-    """
-    Send an email.
-    - Dev: prints to console
-    - Prod: sends via SMTP
-    """
-    if Config.EMAIL_TYPE == 'smtp':
+    """Send an email via the configured provider."""
+    email_type = Config.EMAIL_TYPE
+    if email_type == 'resend':
+        return _send_resend(to_email, subject, html_body, text_body)
+    elif email_type == 'smtp':
         return _send_smtp(to_email, subject, html_body, text_body)
     else:
         return _send_console(to_email, subject, html_body, text_body)
@@ -30,6 +34,48 @@ def _send_console(to_email, subject, html_body, text_body=None):
     print(f"   {text_body or html_body}")
     print("=" * 60 + "\n")
     return True
+
+
+def _send_resend(to_email, subject, html_body, text_body=None):
+    """Send via Resend HTTP API. Requires RESEND_API_KEY env var."""
+    try:
+        import urllib.request
+        import json
+
+        api_key = Config.RESEND_API_KEY
+        if not api_key:
+            print("[Poetic Goblin] RESEND_API_KEY not set. Falling back to console.")
+            return _send_console(to_email, subject, html_body, text_body)
+
+        payload = {
+            "from": f"{Config.SMTP_FROM_NAME} <{Config.SMTP_FROM_EMAIL}>",
+            "to": [to_email],
+            "subject": subject,
+            "html": html_body,
+        }
+        if text_body:
+            payload["text"] = text_body
+
+        data = json.dumps(payload).encode('utf-8')
+        req = urllib.request.Request(
+            'https://api.resend.com/emails',
+            data=data,
+            headers={
+                'Authorization': f'Bearer {api_key}',
+                'Content-Type': 'application/json',
+            },
+            method='POST',
+        )
+
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            if resp.status in (200, 201):
+                return True
+            print(f"[Poetic Goblin] Resend API returned {resp.status}")
+            return False
+
+    except Exception as e:
+        print(f"[Poetic Goblin] Resend email failed: {e}")
+        return False
 
 
 def _send_smtp(to_email, subject, html_body, text_body=None):
@@ -57,7 +103,7 @@ def _send_smtp(to_email, subject, html_body, text_body=None):
         return True
 
     except Exception as e:
-        print(f"[Poetic Goblin] Email send failed: {e}")
+        print(f"[Poetic Goblin] SMTP email failed: {e}")
         return False
 
 
@@ -66,19 +112,21 @@ def _send_smtp(to_email, subject, html_body, text_body=None):
 def send_verification_email(to_email, username, token):
     """Send email verification link."""
     verify_url = f"{Config.BASE_URL}/verify/{token}"
-    subject = "🧌 Verify your Poetic Goblin account"
+    subject = "Verify your Poetic Goblin account"
     html = f"""
-    <div style="font-family:sans-serif;max-width:500px;margin:0 auto;padding:2rem;">
-        <h1 style="color:#1a73e8;">🧌 Welcome to Poetic Goblin!</h1>
-        <p>Hey <strong>{username}</strong>,</p>
-        <p>Click the button below to verify your email and enter the realm:</p>
+    <div style="font-family:sans-serif;max-width:500px;margin:0 auto;padding:2rem;background:#fafaf7;border-radius:12px;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-size:2.5rem;">🧌</span>
+        </div>
+        <h1 style="color:#1a3a5c;text-align:center;margin-bottom:0.5rem;">Welcome to Poetic Goblin!</h1>
+        <p style="text-align:center;color:#666;">Hey <strong>{username}</strong>, verify your email to enter the realm.</p>
         <div style="text-align:center;margin:2rem 0;">
             <a href="{verify_url}" style="display:inline-block;padding:0.75rem 2rem;background:#ff6b2b;color:white;text-decoration:none;border-radius:8px;font-weight:bold;font-size:1.1rem;">Verify My Email</a>
         </div>
-        <p style="color:#666;font-size:0.85rem;">Or copy this link: {verify_url}</p>
-        <p style="color:#666;font-size:0.85rem;">This link expires in {Config.VERIFICATION_TOKEN_HOURS} hours.</p>
-        <hr style="border:none;border-top:1px solid #eee;margin:1.5rem 0;">
-        <p style="color:#999;font-size:0.8rem;">If you didn't create this account, you can safely ignore this email.</p>
+        <p style="color:#999;font-size:0.82rem;text-align:center;">Or copy: {verify_url}</p>
+        <p style="color:#999;font-size:0.82rem;text-align:center;">Expires in {Config.VERIFICATION_TOKEN_HOURS} hours.</p>
+        <hr style="border:none;border-top:1px solid #e0e0e0;margin:1.5rem 0;">
+        <p style="color:#bbb;font-size:0.78rem;text-align:center;">If you didn't create this account, ignore this email.</p>
     </div>
     """
     text = f"Welcome to Poetic Goblin, {username}! Verify your email: {verify_url}"
@@ -88,19 +136,21 @@ def send_verification_email(to_email, username, token):
 def send_password_reset_email(to_email, username, token):
     """Send password reset link."""
     reset_url = f"{Config.BASE_URL}/reset-password/{token}"
-    subject = "🧌 Reset your Poetic Goblin password"
+    subject = "Reset your Poetic Goblin password"
     html = f"""
-    <div style="font-family:sans-serif;max-width:500px;margin:0 auto;padding:2rem;">
-        <h1 style="color:#1a73e8;">🧌 Password Reset</h1>
-        <p>Hey <strong>{username}</strong>,</p>
-        <p>Someone requested a password reset for your account. Click below to set a new password:</p>
+    <div style="font-family:sans-serif;max-width:500px;margin:0 auto;padding:2rem;background:#fafaf7;border-radius:12px;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-size:2.5rem;">🧌</span>
+        </div>
+        <h1 style="color:#1a3a5c;text-align:center;margin-bottom:0.5rem;">Password Reset</h1>
+        <p style="text-align:center;color:#666;">Hey <strong>{username}</strong>, click below to set a new password.</p>
         <div style="text-align:center;margin:2rem 0;">
             <a href="{reset_url}" style="display:inline-block;padding:0.75rem 2rem;background:#1a73e8;color:white;text-decoration:none;border-radius:8px;font-weight:bold;font-size:1.1rem;">Reset My Password</a>
         </div>
-        <p style="color:#666;font-size:0.85rem;">Or copy this link: {reset_url}</p>
-        <p style="color:#666;font-size:0.85rem;">This link expires in {Config.RESET_TOKEN_HOURS} hours.</p>
-        <hr style="border:none;border-top:1px solid #eee;margin:1.5rem 0;">
-        <p style="color:#999;font-size:0.8rem;">If you didn't request this, your account is safe — just ignore this email.</p>
+        <p style="color:#999;font-size:0.82rem;text-align:center;">Or copy: {reset_url}</p>
+        <p style="color:#999;font-size:0.82rem;text-align:center;">Expires in {Config.RESET_TOKEN_HOURS} hours.</p>
+        <hr style="border:none;border-top:1px solid #e0e0e0;margin:1.5rem 0;">
+        <p style="color:#bbb;font-size:0.78rem;text-align:center;">If you didn't request this, your account is safe — ignore this email.</p>
     </div>
     """
     text = f"Reset your Poetic Goblin password: {reset_url} (expires in {Config.RESET_TOKEN_HOURS} hours)"

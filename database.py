@@ -177,7 +177,7 @@ def close_db(exception=None):
 
 # ─── Schema ──────────────────────────────────────────────────────────────────
 
-SCHEMA_VERSION = 7
+SCHEMA_VERSION = 8
 
 SQLITE_SCHEMA = f"""
 CREATE TABLE IF NOT EXISTS schema_version (version INTEGER);
@@ -297,6 +297,26 @@ CREATE INDEX IF NOT EXISTS idx_messages_unread ON messages(sender_id, is_read);
 CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id);
 CREATE INDEX IF NOT EXISTS idx_characters_user ON characters(user_id, is_main);
 CREATE INDEX IF NOT EXISTS idx_annals_stories_loc ON annals_stories(age_number, century_number);
+CREATE TABLE IF NOT EXISTS reports (
+    id TEXT PRIMARY KEY,
+    reporter_id TEXT NOT NULL,
+    reported_type TEXT NOT NULL DEFAULT 'post',
+    reported_id TEXT NOT NULL,
+    reason TEXT NOT NULL DEFAULT '',
+    status TEXT NOT NULL DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS blocks (
+    blocker_id TEXT NOT NULL,
+    blocked_id TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (blocker_id, blocked_id),
+    FOREIGN KEY (blocker_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (blocked_id) REFERENCES users(id) ON DELETE CASCADE
+);
+CREATE INDEX IF NOT EXISTS idx_reports_status ON reports(status);
+CREATE INDEX IF NOT EXISTS idx_blocks_blocker ON blocks(blocker_id);
 """
 
 MYSQL_SCHEMA = [
@@ -416,6 +436,26 @@ MYSQL_SCHEMA = [
     "CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id)",
     "CREATE INDEX IF NOT EXISTS idx_characters_user ON characters(user_id, is_main)",
     "CREATE INDEX IF NOT EXISTS idx_annals_stories_loc ON annals_stories(age_number, century_number)",
+    """CREATE TABLE IF NOT EXISTS reports (
+        id VARCHAR(36) PRIMARY KEY,
+        reporter_id VARCHAR(36) NOT NULL,
+        reported_type VARCHAR(20) NOT NULL DEFAULT 'post',
+        reported_id VARCHAR(36) NOT NULL,
+        reason TEXT NOT NULL,
+        status VARCHAR(20) NOT NULL DEFAULT 'pending',
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4""",
+    """CREATE TABLE IF NOT EXISTS blocks (
+        blocker_id VARCHAR(36) NOT NULL,
+        blocked_id VARCHAR(36) NOT NULL,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (blocker_id, blocked_id),
+        FOREIGN KEY (blocker_id) REFERENCES users(id) ON DELETE CASCADE,
+        FOREIGN KEY (blocked_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB""",
+    "CREATE INDEX IF NOT EXISTS idx_reports_status ON reports(status)",
+    "CREATE INDEX IF NOT EXISTS idx_blocks_blocker ON blocks(blocker_id)",
 ]
 
 POSTGRES_SCHEMA = [
@@ -521,6 +561,23 @@ POSTGRES_SCHEMA = [
     "CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id)",
     "CREATE INDEX IF NOT EXISTS idx_characters_user ON characters(user_id, is_main)",
     "CREATE INDEX IF NOT EXISTS idx_annals_stories_loc ON annals_stories(age_number, century_number)",
+    """CREATE TABLE IF NOT EXISTS reports (
+        id VARCHAR(36) PRIMARY KEY,
+        reporter_id VARCHAR(36) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        reported_type VARCHAR(20) NOT NULL DEFAULT 'post',
+        reported_id VARCHAR(36) NOT NULL,
+        reason TEXT NOT NULL DEFAULT '',
+        status VARCHAR(20) NOT NULL DEFAULT 'pending',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )""",
+    """CREATE TABLE IF NOT EXISTS blocks (
+        blocker_id VARCHAR(36) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        blocked_id VARCHAR(36) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (blocker_id, blocked_id)
+    )""",
+    "CREATE INDEX IF NOT EXISTS idx_reports_status ON reports(status)",
+    "CREATE INDEX IF NOT EXISTS idx_blocks_blocker ON blocks(blocker_id)",
 ]
 
 
@@ -555,6 +612,49 @@ def _migrate(db, db_type, from_version):
             print("[Poetic Goblin] Migration v7: Added 'class' column to characters.")
         except Exception:
             pass  # Column may already exist
+    if from_version < 8:
+        # v8: Add reports and blocks tables
+        try:
+            if db_type == 'mysql':
+                db.execute("""CREATE TABLE IF NOT EXISTS reports (
+                    id VARCHAR(36) PRIMARY KEY, reporter_id VARCHAR(36) NOT NULL,
+                    reported_type VARCHAR(20) NOT NULL DEFAULT 'post', reported_id VARCHAR(36) NOT NULL,
+                    reason TEXT NOT NULL, status VARCHAR(20) NOT NULL DEFAULT 'pending',
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4""")
+                db.execute("""CREATE TABLE IF NOT EXISTS blocks (
+                    blocker_id VARCHAR(36) NOT NULL, blocked_id VARCHAR(36) NOT NULL,
+                    created_at DATETIME DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (blocker_id, blocked_id),
+                    FOREIGN KEY (blocker_id) REFERENCES users(id) ON DELETE CASCADE,
+                    FOREIGN KEY (blocked_id) REFERENCES users(id) ON DELETE CASCADE
+                ) ENGINE=InnoDB""")
+            elif db_type == 'postgres':
+                db.execute("""CREATE TABLE IF NOT EXISTS reports (
+                    id VARCHAR(36) PRIMARY KEY, reporter_id VARCHAR(36) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                    reported_type VARCHAR(20) NOT NULL DEFAULT 'post', reported_id VARCHAR(36) NOT NULL,
+                    reason TEXT NOT NULL DEFAULT '', status VARCHAR(20) NOT NULL DEFAULT 'pending',
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)""")
+                db.execute("""CREATE TABLE IF NOT EXISTS blocks (
+                    blocker_id VARCHAR(36) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                    blocked_id VARCHAR(36) NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (blocker_id, blocked_id))""")
+            else:
+                db.execute("""CREATE TABLE IF NOT EXISTS reports (
+                    id TEXT PRIMARY KEY, reporter_id TEXT NOT NULL, reported_type TEXT NOT NULL DEFAULT 'post',
+                    reported_id TEXT NOT NULL, reason TEXT NOT NULL DEFAULT '', status TEXT NOT NULL DEFAULT 'pending',
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE)""")
+                db.execute("""CREATE TABLE IF NOT EXISTS blocks (
+                    blocker_id TEXT NOT NULL, blocked_id TEXT NOT NULL,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY (blocker_id, blocked_id),
+                    FOREIGN KEY (blocker_id) REFERENCES users(id) ON DELETE CASCADE,
+                    FOREIGN KEY (blocked_id) REFERENCES users(id) ON DELETE CASCADE)""")
+            db.execute("CREATE INDEX IF NOT EXISTS idx_reports_status ON reports(status)")
+            db.execute("CREATE INDEX IF NOT EXISTS idx_blocks_blocker ON blocks(blocker_id)")
+            print("[Poetic Goblin] Migration v8: Added reports and blocks tables.")
+        except Exception as e:
+            print(f"[Poetic Goblin] Migration v8 note: {e}")
     # Update schema version
     try:
         db.execute('UPDATE schema_version SET version = %s', (SCHEMA_VERSION,))

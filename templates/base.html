@@ -74,6 +74,51 @@
 
     {% block content %}{% endblock %}
 
+    <!-- Report Modal -->
+    <div id="report-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;align-items:center;justify-content:center;">
+        <div style="background:var(--bg-card);border-radius:12px;padding:1.5rem;max-width:400px;width:90%;box-shadow:var(--shadow-lg);">
+            <h3 style="margin-bottom:1rem;">⚑ Report Content</h3>
+            <form method="POST" action="{{ url_for('submit_report') if current_user else '#' }}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="type" id="report-type" value="">
+                <input type="hidden" name="id" id="report-id" value="">
+                <label style="display:block;margin-bottom:0.5rem;font-size:0.9rem;color:var(--text-muted);">What's the issue?</label>
+                <select name="reason" required style="width:100%;padding:0.5rem;border:1px solid var(--border-light);border-radius:8px;margin-bottom:1rem;font-size:0.9rem;background:var(--bg-light);">
+                    <option value="">Select a reason...</option>
+                    <option value="Spam or misleading">Spam or misleading</option>
+                    <option value="Harassment or bullying">Harassment or bullying</option>
+                    <option value="Hate speech">Hate speech</option>
+                    <option value="Inappropriate content">Inappropriate content</option>
+                    <option value="Impersonation">Impersonation</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div style="display:flex;gap:0.5rem;justify-content:flex-end;">
+                    <button type="button" onclick="document.getElementById('report-modal').style.display='none'" style="padding:0.5rem 1rem;border:1px solid var(--border-light);border-radius:8px;background:var(--bg-light);cursor:pointer;">Cancel</button>
+                    <button type="submit" style="padding:0.5rem 1rem;border:none;border-radius:8px;background:#c62828;color:white;cursor:pointer;font-weight:600;">Submit Report</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+    function showReportModal(type, id) {
+        document.getElementById('report-type').value = type;
+        document.getElementById('report-id').value = id;
+        document.getElementById('report-modal').style.display = 'flex';
+        // Close any open kebab menus
+        document.querySelectorAll('.kebab-menu').forEach(m => m.style.display = 'none');
+    }
+    // Close kebab menus when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.post-kebab')) {
+            document.querySelectorAll('.kebab-menu').forEach(m => m.style.display = 'none');
+        }
+    });
+    // Close report modal on backdrop click
+    document.getElementById('report-modal').addEventListener('click', function(e) {
+        if (e.target === this) this.style.display = 'none';
+    });
+    </script>
+
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     {% block scripts %}{% endblock %}
 </body>

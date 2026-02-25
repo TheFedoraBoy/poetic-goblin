@@ -48,8 +48,12 @@ class Config:
     AWS_S3_ENDPOINT_URL = os.environ.get('AWS_S3_ENDPOINT_URL', '')  # For R2/MinIO
 
     # ─── Email ────────────────────────────────────────────────────────
-    # Set EMAIL_TYPE=smtp for production. Default: console (prints to terminal)
-    EMAIL_TYPE = os.environ.get('EMAIL_TYPE', 'console')  # 'console' or 'smtp'
+    # Set EMAIL_TYPE=resend (recommended) or EMAIL_TYPE=smtp for production.
+    # Default: console (prints to terminal)
+    EMAIL_TYPE = os.environ.get('EMAIL_TYPE', 'console')  # 'console', 'smtp', or 'resend'
+
+    # Resend API (recommended — simplest setup)
+    RESEND_API_KEY = os.environ.get('RESEND_API_KEY', '')
 
     SMTP_HOST = os.environ.get('SMTP_HOST', 'smtp.gmail.com')
     SMTP_PORT = int(os.environ.get('SMTP_PORT', 587))
@@ -115,7 +119,7 @@ class Config:
             f'  Mode:      {mode}',
             f'  Database:  {db_info}',
             f'  Storage:   {cls.STORAGE_TYPE}' + (f' → s3://{cls.AWS_S3_BUCKET}' if cls.STORAGE_TYPE == 's3' else ' → local'),
-            f'  Email:     {cls.EMAIL_TYPE}' + (f' → {cls.SMTP_HOST}' if cls.EMAIL_TYPE == 'smtp' else ' → console'),
+            f'  Email:     {cls.EMAIL_TYPE}' + (f' → Resend API' if cls.EMAIL_TYPE == 'resend' else f' → {cls.SMTP_HOST}' if cls.EMAIL_TYPE == 'smtp' else ' → console'),
             f'  Verify:    {"required" if cls.REQUIRE_EMAIL_VERIFICATION else "disabled"}',
             f'  Rate Limit: {"enabled" if cls.RATELIMIT_ENABLED else "disabled"}',
             f'  Sentry:    {"enabled" if cls.SENTRY_DSN else "disabled"}',

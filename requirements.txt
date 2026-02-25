@@ -21,6 +21,9 @@ Flask-Limiter>=3.0
 # S3 file storage (also works with Cloudflare R2)
 boto3>=1.34
 
+# Image processing (resize, strip EXIF metadata)
+Pillow>=10.0
+
 # Error monitoring
 sentry-sdk[flask]>=2.0
 

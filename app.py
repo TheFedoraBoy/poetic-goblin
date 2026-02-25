@@ -95,11 +95,24 @@ def set_security_headers(response):
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['X-Frame-Options'] = 'SAMEORIGIN'
     response.headers['X-XSS-Protection'] = '1; mode=block'
+
+    # Build dynamic img-src based on storage config
+    img_sources = "'self' data:"
+    if Config.AWS_S3_CUSTOM_DOMAIN:
+        img_sources += f" https://{Config.AWS_S3_CUSTOM_DOMAIN}"
+    elif Config.AWS_S3_BUCKET:
+        img_sources += f" https://{Config.AWS_S3_BUCKET}.s3.{Config.AWS_S3_REGION}.amazonaws.com"
+    if Config.AWS_S3_ENDPOINT_URL:
+        img_sources += f" {Config.AWS_S3_ENDPOINT_URL}"
+    # Always allow amazonaws.com as fallback
+    img_sources += " https://*.amazonaws.com"
+
     response.headers['Content-Security-Policy'] = (
         "default-src 'self'; "
         "script-src 'self'; "
         "style-src 'self' 'unsafe-inline'; "
-        "img-src 'self' https://*.amazonaws.com data:; "
+        f"img-src {img_sources}; "
+        "font-src 'self'; "
         "frame-ancestors 'none'"
     )
     if Config.SESSION_COOKIE_SECURE:
@@ -397,6 +410,14 @@ def index():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/privacy')
+def privacy_policy():
+    return render_template('privacy.html', last_updated='February 2026')
+
+@app.route('/terms')
+def terms_of_service():
+    return render_template('terms.html', last_updated='February 2026')
 
 @app.route('/register', methods=['GET', 'POST'])
 @limiter.limit("10 per hour")
@@ -775,7 +796,9 @@ def feed():
         total = len(posts)
     else:
         users_found = []
-        total_row = db.fetchone('SELECT COUNT(*) as c FROM posts')
+        total_row = db.fetchone(
+            'SELECT COUNT(*) as c FROM posts WHERE author_id NOT IN (SELECT blocked_id FROM blocks WHERE blocker_id = %s)',
+            (uid,))
         total = total_row['c'] if total_row else 0
         posts = db.fetchall('''
             SELECT p.*, u.username, c.name as char_name, c.avatar_url as char_avatar,
@@ -784,8 +807,9 @@ def feed():
                    (SELECT COUNT(*) FROM likes WHERE post_id = p.id AND user_id = %s) as user_liked
             FROM posts p JOIN users u ON p.author_id = u.id
             LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
+            WHERE p.author_id NOT IN (SELECT blocked_id FROM blocks WHERE blocker_id = %s)
             ORDER BY p.created_at DESC LIMIT %s OFFSET %s
-        ''', (uid, per_page, offset))
+        ''', (uid, uid, per_page, offset))
     post_sessions = _batch_fetch_sessions(db, posts)
     return render_template('feed.html', posts=posts, post_sessions=post_sessions,
                            search_query=q, users_found=users_found,
@@ -1098,6 +1122,71 @@ def toggle_follow(username):
     cnt = db.fetchone('SELECT COUNT(*) as c FROM follows WHERE followed_id=%s', (target['id'],))
     return jsonify({'following': not existing, 'follower_count': cnt['c'] if cnt else 0})
 
+# ─── Report & Block System ──────────────────────────────────────────────────
+
+@app.route('/report', methods=['POST'])
+@login_required
+@limiter.limit("10 per hour")
+def submit_report():
+    """Submit a report for a post, comment, or user."""
+    reported_type = request.form.get('type', '').strip()  # 'post', 'comment', 'user', 'message'
+    reported_id = request.form.get('id', '').strip()
+    reason = request.form.get('reason', '').strip()
+    if reported_type not in ('post', 'comment', 'user', 'message'):
+        flash('Invalid report type.', 'error')
+        return redirect(request.referrer or url_for('feed'))
+    if not reported_id or not reason:
+        flash('Please provide a reason for your report.', 'error')
+        return redirect(request.referrer or url_for('feed'))
+    if len(reason) > 1000:
+        reason = reason[:1000]
+    db = get_db()
+    # Prevent duplicate reports
+    existing = db.fetchone(
+        'SELECT id FROM reports WHERE reporter_id = %s AND reported_type = %s AND reported_id = %s',
+        (session['user_id'], reported_type, reported_id))
+    if existing:
+        flash('You have already reported this content.', 'info')
+        return redirect(request.referrer or url_for('feed'))
+    report_id = str(uuid.uuid4())
+    db.execute(
+        'INSERT INTO reports (id, reporter_id, reported_type, reported_id, reason) VALUES (%s,%s,%s,%s,%s)',
+        (report_id, session['user_id'], reported_type, reported_id, reason))
+    flash('Thank you — your report has been submitted and will be reviewed.', 'success')
+    return redirect(request.referrer or url_for('feed'))
+
+@app.route('/block/<username>', methods=['POST'])
+@login_required
+def toggle_block(username):
+    """Block or unblock a user."""
+    db = get_db()
+    target = db.fetchone('SELECT id FROM users WHERE username = %s', (username,))
+    if not target or target['id'] == session['user_id']:
+        flash('Invalid action.', 'error')
+        return redirect(request.referrer or url_for('feed'))
+    existing = db.fetchone(
+        'SELECT blocker_id FROM blocks WHERE blocker_id = %s AND blocked_id = %s',
+        (session['user_id'], target['id']))
+    if existing:
+        db.execute('DELETE FROM blocks WHERE blocker_id = %s AND blocked_id = %s',
+                   (session['user_id'], target['id']))
+        # Also unfollow in both directions
+        db.execute('DELETE FROM follows WHERE follower_id = %s AND followed_id = %s',
+                   (session['user_id'], target['id']))
+        db.execute('DELETE FROM follows WHERE follower_id = %s AND followed_id = %s',
+                   (target['id'], session['user_id']))
+        flash(f'@{username} has been unblocked.', 'success')
+    else:
+        db.execute('INSERT INTO blocks (blocker_id, blocked_id) VALUES (%s, %s)',
+                   (session['user_id'], target['id']))
+        # Unfollow in both directions
+        db.execute('DELETE FROM follows WHERE follower_id = %s AND followed_id = %s',
+                   (session['user_id'], target['id']))
+        db.execute('DELETE FROM follows WHERE follower_id = %s AND followed_id = %s',
+                   (target['id'], session['user_id']))
+        flash(f'@{username} has been blocked. You won\'t see their content.', 'success')
+    return redirect(request.referrer or url_for('feed'))
+
 @app.route('/profile/<username>/followers')
 @character_required
 def followers_list(username):
@@ -1245,6 +1334,11 @@ def send_message_api(username):
     uid = session['user_id']
     other = db.fetchone('SELECT id FROM users WHERE username = %s', (username,))
     if not other or other['id'] == uid: return jsonify({'error': 'Invalid'}), 400
+    # Check for blocks in either direction
+    blocked = db.fetchone(
+        'SELECT blocker_id FROM blocks WHERE (blocker_id=%s AND blocked_id=%s) OR (blocker_id=%s AND blocked_id=%s)',
+        (uid, other['id'], other['id'], uid))
+    if blocked: return jsonify({'error': 'Cannot send message to this user.'}), 403
     content = request.form.get('content', '').strip()
     if not content: return jsonify({'error': 'Empty'}), 400
     if len(content) > 5000: return jsonify({'error': 'Message too long (max 5000 characters)'}), 400

@@ -23,6 +23,18 @@
                 </span>
             </div>
         </div>
+        {% if current_user and post.username != current_user.username %}
+        <div class="post-kebab" style="margin-left:auto;position:relative;">
+            <button type="button" class="post-action-btn kebab-btn" onclick="var m=this.parentElement.querySelector('.kebab-menu');m.style.display=m.style.display==='block'?'none':'block'" style="font-size:1.2rem;padding:0.2rem 0.5rem;" title="More options">⋯</button>
+            <div class="kebab-menu" style="display:none;position:absolute;right:0;top:100%;background:var(--bg-card);border:1px solid var(--border-light);border-radius:8px;box-shadow:var(--shadow-lg);z-index:50;min-width:180px;padding:0.3rem 0;">
+                <button type="button" class="kebab-item" onclick="showReportModal('post','{{ post.id }}')" style="display:block;width:100%;text-align:left;padding:0.5rem 1rem;border:none;background:none;cursor:pointer;font-size:0.88rem;color:var(--text-primary);">⚑ Report post</button>
+                <form method="POST" action="{{ url_for('toggle_block', username=post.username) }}" style="margin:0;">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit" class="kebab-item" style="display:block;width:100%;text-align:left;padding:0.5rem 1rem;border:none;background:none;cursor:pointer;font-size:0.88rem;color:#c62828;" onclick="return confirm('Block @{{ post.username }}? You won\'t see their content.')">🚫 Block @{{ post.username }}</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
     </div>
 
     {% if post.title %}
