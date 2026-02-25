@@ -266,7 +266,18 @@ CHARACTER_RACE_LABELS = {
 }
 CHARACTER_CLASSES = ['Warrior', 'Rogue', 'Ranger', 'Paladin', 'Cleric', 'Wizard', 'Warlock', 'Sorcerer', 'Monk', 'Druid', 'Bard']
 
-# ─── Auth Helpers ─────────────────────────────────────────────────────────────
+# ─── Auth Helpers ─────────────────────────────────────────────────────
+
+def validate_password(password):
+    """Validate password strength. Returns list of error messages (empty = valid)."""
+    errors = []
+    if len(password) < 8:
+        errors.append('Password must be at least 8 characters.')
+    if not any(c.isdigit() for c in password):
+        errors.append('Password must contain at least one number.')
+    if not any(c.isalpha() for c in password):
+        errors.append('Password must contain at least one letter.')
+    return errors
 
 def login_required(f):
     @wraps(f)
@@ -399,7 +410,8 @@ def register():
         if len(username) < 3 or len(username) > 30: errors.append('Username must be 3-30 characters.')
         if not re.match(r'^[a-zA-Z0-9_-]+$', username): errors.append('Username can only contain letters, numbers, hyphens, and underscores.')
         if not email or '@' not in email: errors.append('Valid email required.')
-        if len(password) < 6: errors.append('Password must be 6+ characters.')
+        pw_errors = validate_password(password)
+        if pw_errors: errors.extend(pw_errors)
         if password != confirm: errors.append('Passwords do not match.')
         db = get_db()
         if db.fetchone('SELECT id FROM users WHERE username = %s', (username,)):
@@ -507,8 +519,9 @@ def reset_password(token):
     if request.method == 'POST':
         password = request.form.get('password', '')
         confirm = request.form.get('confirm_password', '')
-        if len(password) < 6:
-            flash('Password must be 6+ characters.', 'error')
+        pw_errors = validate_password(password)
+        if pw_errors:
+            for e in pw_errors: flash(e, 'error')
             return render_template('reset_password.html', token=token)
         if password != confirm:
             flash('Passwords do not match.', 'error')
@@ -538,22 +551,32 @@ def account_settings():
             elif db.fetchone('SELECT id FROM users WHERE email = %s AND id != %s', (new_email, user['id'])):
                 flash('Email already in use.', 'error')
             else:
-                db.execute('UPDATE users SET email = %s WHERE id = %s', (new_email, user['id']))
-                flash('Email updated!', 'success')
+                if Config.REQUIRE_EMAIL_VERIFICATION:
+                    # Set new email but mark as unverified, send verification
+                    token = secrets.token_urlsafe(32)
+                    db.execute('UPDATE users SET email = %s, email_verified = 0, verification_token = %s WHERE id = %s',
+                               (new_email, token, user['id']))
+                    send_verification_email(new_email, user['username'], token)
+                    flash('Email updated! Please check your new inbox to re-verify.', 'success')
+                else:
+                    db.execute('UPDATE users SET email = %s WHERE id = %s', (new_email, user['id']))
+                    flash('Email updated!', 'success')
         elif action == 'change_password':
             current = request.form.get('current_password', '')
             new_pw = request.form.get('new_password', '')
             confirm = request.form.get('confirm_password', '')
             if not check_password_hash(user['password_hash'], current):
                 flash('Current password is incorrect.', 'error')
-            elif len(new_pw) < 6:
-                flash('New password must be 6+ characters.', 'error')
-            elif new_pw != confirm:
-                flash('Passwords do not match.', 'error')
             else:
-                db.execute('UPDATE users SET password_hash = %s WHERE id = %s',
-                           (generate_password_hash(new_pw), user['id']))
-                flash('Password changed!', 'success')
+                pw_errors = validate_password(new_pw)
+                if pw_errors:
+                    for e in pw_errors: flash(e, 'error')
+                elif new_pw != confirm:
+                    flash('Passwords do not match.', 'error')
+                else:
+                    db.execute('UPDATE users SET password_hash = %s WHERE id = %s',
+                               (generate_password_hash(new_pw), user['id']))
+                    flash('Password changed!', 'success')
         return redirect(url_for('account_settings'))
     return render_template('settings.html', user=user)
 
@@ -705,6 +728,19 @@ def delete_character(char_id):
 
 # ─── Routes: Feed & Search ───────────────────────────────────────────────────
 
+def _batch_fetch_sessions(db, posts):
+    """Batch-fetch campaign sessions for a list of posts (fixes N+1 query)."""
+    post_sessions = {}
+    campaign_ids = [p['id'] for p in posts if p['post_type'] == 'campaign']
+    if campaign_ids:
+        placeholders = ','.join(['%s'] * len(campaign_ids))
+        all_sessions = db.fetchall(
+            'SELECT * FROM campaign_sessions WHERE post_id IN ({}) ORDER BY session_number ASC'.format(placeholders),
+            tuple(campaign_ids))
+        for s in all_sessions:
+            post_sessions.setdefault(s['post_id'], []).append(s)
+    return post_sessions
+
 @app.route('/feed')
 @character_required
 def feed():
@@ -750,11 +786,7 @@ def feed():
             LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
             ORDER BY p.created_at DESC LIMIT %s OFFSET %s
         ''', (uid, per_page, offset))
-    post_sessions = {}
-    for p in posts:
-        if p['post_type'] == 'campaign':
-            post_sessions[p['id']] = db.fetchall(
-                'SELECT * FROM campaign_sessions WHERE post_id = %s ORDER BY session_number ASC', (p['id'],))
+    post_sessions = _batch_fetch_sessions(db, posts)
     return render_template('feed.html', posts=posts, post_sessions=post_sessions,
                            search_query=q, users_found=users_found,
                            page=page, total_pages=(total + per_page - 1) // per_page)
@@ -1002,6 +1034,14 @@ def profile(username):
     if not user:
         flash('User not found!', 'error')
         return redirect(url_for('feed'))
+    try:
+        page = max(1, int(request.args.get('page', 1)))
+    except (ValueError, TypeError):
+        page = 1
+    per_page = 20
+    offset = (page - 1) * per_page
+    total_row = db.fetchone('SELECT COUNT(*) as c FROM posts WHERE author_id = %s', (user['id'],))
+    total = total_row['c'] if total_row else 0
     posts = db.fetchall('''
         SELECT p.*, u.username, c.name as char_name, c.avatar_url as char_avatar,
                (SELECT COUNT(*) FROM likes WHERE post_id = p.id) as like_count,
@@ -1009,13 +1049,9 @@ def profile(username):
                (SELECT COUNT(*) FROM likes WHERE post_id = p.id AND user_id = %s) as user_liked
         FROM posts p JOIN users u ON p.author_id = u.id
         LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
-        WHERE p.author_id = %s ORDER BY p.created_at DESC
-    ''', (session['user_id'], user['id']))
-    post_sessions = {}
-    for p in posts:
-        if p['post_type'] == 'campaign':
-            post_sessions[p['id']] = db.fetchall(
-                'SELECT * FROM campaign_sessions WHERE post_id=%s ORDER BY session_number', (p['id'],))
+        WHERE p.author_id = %s ORDER BY p.created_at DESC LIMIT %s OFFSET %s
+    ''', (session['user_id'], user['id'], per_page, offset))
+    post_sessions = _batch_fetch_sessions(db, posts)
     all_characters = db.fetchall('SELECT * FROM characters WHERE user_id = %s ORDER BY is_main DESC, created_at', (user['id'],))
     fc = db.fetchone('SELECT COUNT(*) as c FROM follows WHERE followed_id=%s', (user['id'],))
     fing = db.fetchone('SELECT COUNT(*) as c FROM follows WHERE follower_id=%s', (user['id'],))
@@ -1024,7 +1060,9 @@ def profile(username):
         is_following = db.fetchone('SELECT follower_id FROM follows WHERE follower_id=%s AND followed_id=%s',
                                    (session['user_id'], user['id'])) is not None
     return render_template('profile.html', profile_user=user, posts=posts, post_sessions=post_sessions,
-                           all_characters=all_characters, follower_count=fc['c'], following_count=fing['c'], is_following=is_following)
+                           all_characters=all_characters, follower_count=fc['c'], following_count=fing['c'],
+                           is_following=is_following, page=page,
+                           total_pages=(total + per_page - 1) // per_page, total_posts=total)
 
 @app.route('/follow/<username>', methods=['POST'])
 @login_required
@@ -1098,11 +1136,7 @@ def explore():
         LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
         ORDER BY like_count DESC, p.created_at DESC LIMIT %s OFFSET %s
     ''', (uid, per_page, offset))
-    post_sessions = {}
-    for p in posts:
-        if p['post_type'] == 'campaign':
-            post_sessions[p['id']] = db.fetchall(
-                'SELECT * FROM campaign_sessions WHERE post_id=%s ORDER BY session_number', (p['id'],))
+    post_sessions = _batch_fetch_sessions(db, posts)
     suggested = db.fetchall('''
         SELECT u.*, c.name as char_name, c.avatar_url as char_avatar, c.trait1,
                (SELECT COUNT(*) FROM follows WHERE followed_id = u.id) as follower_count

@@ -43,7 +43,7 @@
                 {% for post in posts %}
                     {{ render_post(post, sessions=post_sessions.get(post.id), show_delete=(post.author_id == session.get('user_id', '')), show_edit=(post.author_id == session.get('user_id', ''))) }}
                 {% endfor %}
-                {{ render_pagination(page, total_pages, 'feed') }}
+                {{ render_pagination(page, total_pages, 'feed', q=search_query) }}
             {% else %}
                 <div class="empty-state">
                     <img class="px-icon" src="/static/icons/icon-feed.svg" alt="">

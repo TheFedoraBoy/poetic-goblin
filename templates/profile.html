@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "_post_card.html" import render_post with context %}
+{% from "_pagination.html" import render_pagination with context %}
 {% block title %}{{ profile_user.char_name or profile_user.username }} — Poetic Goblin{% endblock %}
 {% block content %}
 <style>
@@ -65,7 +66,7 @@
 
                 <!-- Stats -->
                 <div class="profile-stats">
-                    <div class="profile-stat"><div class="profile-stat-value">{{ posts|length }}</div><div class="profile-stat-label">Posts</div></div>
+                    <div class="profile-stat"><div class="profile-stat-value">{{ total_posts }}</div><div class="profile-stat-label">Posts</div></div>
                     <a href="{{ url_for('followers_list', username=profile_user.username) }}" class="profile-stat" style="text-decoration:none;color:inherit;"><div class="profile-stat-value" id="follower-count">{{ follower_count }}</div><div class="profile-stat-label">Followers</div></a>
                     <a href="{{ url_for('following_list', username=profile_user.username) }}" class="profile-stat" style="text-decoration:none;color:inherit;"><div class="profile-stat-value">{{ following_count }}</div><div class="profile-stat-label">Following</div></a>
                 </div>
@@ -91,6 +92,7 @@
                 {% for post in posts %}
                     {{ render_post(post, sessions=post_sessions.get(post.id), show_delete=(current_user and current_user.username == profile_user.username), show_edit=(current_user and current_user.username == profile_user.username)) }}
                 {% endfor %}
+                {{ render_pagination(page, total_pages, 'profile', username=profile_user.username) }}
             {% else %}
                 <div class="empty-state">
                     <img class="px-icon" src="/static/icons/icon-feed.svg" alt="">
