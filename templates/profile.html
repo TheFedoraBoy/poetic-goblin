@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_post_card.html" import render_post %}
+{% from "_post_card.html" import render_post with context %}
 {% block title %}{{ profile_user.char_name or profile_user.username }} — Poetic Goblin{% endblock %}
 {% block content %}
 <style>
