@@ -490,8 +490,8 @@ def login():
         user = db.fetchone('SELECT * FROM users WHERE username = %s', (username,))
         if user and check_password_hash(user['password_hash'], password):
             if Config.REQUIRE_EMAIL_VERIFICATION and not user['email_verified']:
-                flash('Please verify your email first. Check your inbox.', 'warning')
-                return render_template('login.html')
+                flash('Please verify your email first. Check your inbox, or click below to resend.', 'warning')
+                return render_template('login.html', show_resend=True, resend_username=username)
             session.clear()
             session['user_id'] = user['id']
             if not db.fetchone('SELECT id FROM characters WHERE user_id = %s', (user['id'],)):
@@ -500,6 +500,22 @@ def login():
             return redirect(url_for('feed'))
         flash('Invalid credentials.', 'error')
     return render_template('login.html')
+
+@app.route('/resend-verification', methods=['POST'])
+@limiter.limit("5 per hour")
+def resend_verification():
+    username = request.form.get('username', '').strip()
+    db = get_db()
+    user = db.fetchone('SELECT id, username, email, email_verified, verification_token FROM users WHERE username = %s', (username,))
+    if user and not user['email_verified']:
+        token = user['verification_token']
+        if not token:
+            token = secrets.token_urlsafe(32)
+            db.execute('UPDATE users SET verification_token = %s WHERE id = %s', (token, user['id']))
+        send_verification_email(user['email'], user['username'], token)
+    # Always show success to prevent enumeration
+    flash('If that account exists, a verification email has been sent.', 'success')
+    return redirect(url_for('login'))
 
 @app.route('/logout', methods=['POST'])
 @login_required

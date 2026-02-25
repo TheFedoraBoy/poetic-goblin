@@ -177,7 +177,7 @@ def close_db(exception=None):
 
 # ─── Schema ──────────────────────────────────────────────────────────────────
 
-SCHEMA_VERSION = 8
+SCHEMA_VERSION = 9
 
 SQLITE_SCHEMA = f"""
 CREATE TABLE IF NOT EXISTS schema_version (version INTEGER);
@@ -655,6 +655,13 @@ def _migrate(db, db_type, from_version):
             print("[Poetic Goblin] Migration v8: Added reports and blocks tables.")
         except Exception as e:
             print(f"[Poetic Goblin] Migration v8 note: {e}")
+    if from_version < 9:
+        # v9: Mark all existing accounts as email_verified (they were created before verification was required)
+        try:
+            result = db.execute('UPDATE users SET email_verified = 1 WHERE email_verified = 0')
+            print("[Poetic Goblin] Migration v9: Verified all existing user accounts.")
+        except Exception as e:
+            print(f"[Poetic Goblin] Migration v9 note: {e}")
     # Update schema version
     try:
         db.execute('UPDATE schema_version SET version = %s', (SCHEMA_VERSION,))
