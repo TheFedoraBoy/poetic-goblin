@@ -35,7 +35,7 @@
                 {% endif %}
                 {% endif %}
                 <div>
-                    <div class="msg-body">{{ msg.content }}</div>
+                    <div class="msg-body">{{ msg.content|e }}</div>
                     <div class="msg-time">{{ msg.created_at|timeago }}</div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
     const msgArea = document.getElementById('messages-area');
     const msgInput = document.getElementById('msg-input');
     const sendBtn = document.getElementById('send-btn');
-    const otherUsername = '{{ other.username }}';
+    const otherUsername = {{ other.username|tojson }};
     let lastTime = '';
 
     // Scroll to bottom
@@ -88,7 +88,7 @@
             const res = await fetch(`/messages/${otherUsername}/send`, {
                 method: 'POST',
                 body: form,
-                headers: { 'X-Requested-With': 'XMLHttpRequest' }
+                headers: { 'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content') }
             });
             const data = await res.json();
             if (data.created_at) lastTime = data.created_at;

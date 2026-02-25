@@ -4,6 +4,7 @@ Flask Application — Production-Ready with MySQL/PostgreSQL, S3, SMTP, Rate Lim
 """
 
 import os
+import re
 import uuid
 import json
 import secrets
@@ -73,10 +74,12 @@ def validate_csrf_token():
 def csrf_protect():
     """Check CSRF token on all POST/PUT/DELETE requests."""
     if request.method in ('POST', 'PUT', 'DELETE'):
-        # Exempt AJAX endpoints that use session auth (they check session cookie + SameSite)
-        # But still validate if a token was provided
+        # AJAX requests: validate via X-CSRF-Token header
         if request.is_json or request.headers.get('X-Requested-With') == 'XMLHttpRequest':
-            return  # AJAX requests protected by SameSite cookie
+            token = request.headers.get('X-CSRF-Token')
+            if not token or token != session.get('_csrf_token'):
+                abort(403)
+            return
         validate_csrf_token()
 
 @app.context_processor
@@ -92,6 +95,13 @@ def set_security_headers(response):
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['X-Frame-Options'] = 'SAMEORIGIN'
     response.headers['X-XSS-Protection'] = '1; mode=block'
+    response.headers['Content-Security-Policy'] = (
+        "default-src 'self'; "
+        "script-src 'self'; "
+        "style-src 'self' 'unsafe-inline'; "
+        "img-src 'self' https://*.amazonaws.com data:; "
+        "frame-ancestors 'none'"
+    )
     if Config.SESSION_COOKIE_SECURE:
         response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
     return response
@@ -319,19 +329,22 @@ def get_current_user():
 @app.context_processor
 def inject_globals():
     unread_count = 0
+    user = None
     if 'user_id' in session:
-        try:
-            db = get_db()
-            row = db.fetchone('''
-                SELECT COUNT(*) as c FROM messages m
-                JOIN conversations cv ON m.conversation_id = cv.id
-                WHERE (cv.user1_id = %s OR cv.user2_id = %s) AND m.sender_id != %s AND m.is_read = 0
-            ''', (session['user_id'], session['user_id'], session['user_id']))
-            unread_count = row['c'] if row else 0
-        except Exception:
-            pass
+        user = get_current_user()
+        if user:
+            try:
+                db = get_db()
+                row = db.fetchone('''
+                    SELECT COUNT(*) as c FROM messages m
+                    JOIN conversations cv ON m.conversation_id = cv.id
+                    WHERE (cv.user1_id = %s OR cv.user2_id = %s) AND m.sender_id != %s AND m.is_read = 0
+                ''', (session['user_id'], session['user_id'], session['user_id']))
+                unread_count = row['c'] if row else 0
+            except Exception:
+                pass
     return dict(
-        current_user=get_current_user(),
+        current_user=user,
         elysal_locations=ELYSAL_LOCATIONS,
         elysal_ages=ELYSAL_AGES,
         elysal_characters=ELYSAL_CHARACTERS,
@@ -384,14 +397,15 @@ def register():
         confirm = request.form.get('confirm_password', '')
         errors = []
         if len(username) < 3 or len(username) > 30: errors.append('Username must be 3-30 characters.')
+        if not re.match(r'^[a-zA-Z0-9_-]+$', username): errors.append('Username can only contain letters, numbers, hyphens, and underscores.')
         if not email or '@' not in email: errors.append('Valid email required.')
         if len(password) < 6: errors.append('Password must be 6+ characters.')
         if password != confirm: errors.append('Passwords do not match.')
         db = get_db()
         if db.fetchone('SELECT id FROM users WHERE username = %s', (username,)):
-            errors.append('Username taken.')
-        if db.fetchone('SELECT id FROM users WHERE email = %s', (email,)):
-            errors.append('Email already registered.')
+            errors.append('Registration failed — username or email may already be in use.')
+        elif db.fetchone('SELECT id FROM users WHERE email = %s', (email,)):
+            errors.append('Registration failed — username or email may already be in use.')
         if errors:
             for e in errors: flash(e, 'error')
             return render_template('register.html', username=username, email=email)
@@ -415,10 +429,20 @@ def register():
 @app.route('/verify/<token>')
 def verify_email(token):
     db = get_db()
-    user = db.fetchone('SELECT id, username FROM users WHERE verification_token = %s AND email_verified = 0', (token,))
+    user = db.fetchone('SELECT id, username, joined_at FROM users WHERE verification_token = %s AND email_verified = 0', (token,))
     if not user:
         flash('Invalid or expired verification link.', 'error')
         return redirect(url_for('login'))
+    # Check token hasn't expired (based on join time + configured hours)
+    try:
+        joined = user['joined_at']
+        if isinstance(joined, str):
+            joined = datetime.strptime(joined, '%Y-%m-%d %H:%M:%S')
+        if datetime.now() - joined > timedelta(hours=Config.VERIFICATION_TOKEN_HOURS):
+            flash('Verification link has expired. Please register again.', 'error')
+            return redirect(url_for('register'))
+    except (ValueError, TypeError):
+        pass
     db.execute("UPDATE users SET email_verified = 1, verification_token = '' WHERE id = %s", (user['id'],))
     flash('Email verified! Welcome, {}. You may now log in.'.format(user['username']), 'success')
     return redirect(url_for('login'))
@@ -435,6 +459,7 @@ def login():
             if Config.REQUIRE_EMAIL_VERIFICATION and not user['email_verified']:
                 flash('Please verify your email first. Check your inbox.', 'warning')
                 return render_template('login.html')
+            session.clear()
             session['user_id'] = user['id']
             if not db.fetchone('SELECT id FROM characters WHERE user_id = %s', (user['id'],)):
                 return redirect(url_for('create_character'))
@@ -443,7 +468,8 @@ def login():
         flash('Invalid credentials.', 'error')
     return render_template('login.html')
 
-@app.route('/logout')
+@app.route('/logout', methods=['POST'])
+@login_required
 def logout():
     session.clear()
     flash('Logged out. Safe travels!', 'info')
@@ -585,7 +611,8 @@ def create_character():
         db = get_db()
         avatar_url = ''
         preset = request.form.get('preset_avatar', '')
-        if preset and preset.startswith('/static/avatars/'):
+        valid_presets = [a['file'] for a in PRESET_AVATARS]
+        if preset and preset in valid_presets:
             avatar_url = preset
         elif 'avatar' in request.files and request.files['avatar'].filename:
             avatar_url = save_upload(request.files['avatar'], 'avatars')
@@ -642,7 +669,8 @@ def edit_character(char_id):
         bs = request.form.get('backstory','').strip()
         av = char['avatar_url']
         preset = request.form.get('preset_avatar', '')
-        if preset and preset.startswith('/static/avatars/'):
+        valid_presets = [a['file'] for a in PRESET_AVATARS]
+        if preset and preset in valid_presets:
             av = preset
         elif 'avatar' in request.files and request.files['avatar'].filename:
             new_av = save_upload(request.files['avatar'], 'avatars')
@@ -683,7 +711,10 @@ def feed():
     db = get_db()
     uid = session['user_id']
     q = request.args.get('q', '').strip()
-    page = max(1, int(request.args.get('page', 1)))
+    try:
+        page = max(1, int(request.args.get('page', 1)))
+    except (ValueError, TypeError):
+        page = 1
     per_page = 20
     offset = (page - 1) * per_page
     if q:
@@ -831,6 +862,7 @@ def like_post(post_id):
 def add_comment(post_id):
     content = request.form.get('content', '').strip()
     if not content: return jsonify({'error': 'Empty'}), 400
+    if len(content) > 5000: return jsonify({'error': 'Comment too long (max 5000 characters)'}), 400
     db = get_db()
     cid = str(uuid.uuid4())
     db.execute('INSERT INTO comments (id, post_id, author_id, content) VALUES (%s,%s,%s,%s)',
@@ -1049,7 +1081,10 @@ def following_list(username):
 def explore():
     db = get_db()
     uid = session['user_id']
-    page = max(1, int(request.args.get('page', 1)))
+    try:
+        page = max(1, int(request.args.get('page', 1)))
+    except (ValueError, TypeError):
+        page = 1
     per_page = 20
     offset = (page - 1) * per_page
     total_row = db.fetchone('SELECT COUNT(*) as c FROM posts')
@@ -1134,7 +1169,7 @@ def messages_conversation(username):
     conv_id = get_or_create_conversation(uid, other['id'])
     if request.method == 'POST':
         content = request.form.get('content', '').strip()
-        if content:
+        if content and len(content) <= 5000:
             msg_id = str(uuid.uuid4())
             db.execute('INSERT INTO messages (id, conversation_id, sender_id, content) VALUES (%s,%s,%s,%s)',
                        (msg_id, conv_id, uid, content))
@@ -1160,6 +1195,7 @@ def send_message_api(username):
     if not other or other['id'] == uid: return jsonify({'error': 'Invalid'}), 400
     content = request.form.get('content', '').strip()
     if not content: return jsonify({'error': 'Empty'}), 400
+    if len(content) > 5000: return jsonify({'error': 'Message too long (max 5000 characters)'}), 400
     conv_id = get_or_create_conversation(uid, other['id'])
     msg_id = str(uuid.uuid4())
     db.execute('INSERT INTO messages (id, conversation_id, sender_id, content) VALUES (%s,%s,%s,%s)',
@@ -1304,8 +1340,14 @@ def annals_search():
 @character_required
 def annals_contribute():
     if request.method == 'POST':
-        age_num = int(request.form.get('age_number', 0))
-        century_num = int(request.form.get('century_number', 0))
+        try:
+            age_num = int(request.form.get('age_number', 0))
+        except (ValueError, TypeError):
+            age_num = 0
+        try:
+            century_num = int(request.form.get('century_number', 0))
+        except (ValueError, TypeError):
+            century_num = 0
         title = request.form.get('title', '').strip()
         content = request.form.get('content', '').strip()
         errors = []

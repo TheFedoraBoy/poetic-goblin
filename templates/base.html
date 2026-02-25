@@ -54,7 +54,10 @@
                     <span class="nav-username">@{{ current_user.username }}</span>
                 </span>
             </a>
-            <a href="{{ url_for('logout') }}" class="nav-link" title="Log out" onclick="return confirm('Log out of Poetic Goblin?');"><img class="px-icon" src="/static/icons/icon-door.svg" alt=""></a>
+            <form method="POST" action="{{ url_for('logout') }}" style="display:inline;margin:0;padding:0;" onsubmit="return confirm('Log out of Poetic Goblin?');">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" class="nav-link" title="Log out" style="background:none;border:none;cursor:pointer;padding:0;font:inherit;color:inherit;"><img class="px-icon" src="/static/icons/icon-door.svg" alt=""></button>
+            </form>
         </div>
     </nav>
     {% endif %}

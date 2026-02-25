@@ -40,17 +40,17 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const res = await fetch(`/post/${postId}/like`, {
                     method: 'POST',
-                    headers: { 'X-Requested-With': 'XMLHttpRequest' }
+                    headers: { 'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': getCsrfToken() }
                 });
                 const data = await res.json();
                 const icon = btn.querySelector('.icon');
                 const count = btn.querySelector('.count');
                 if (data.liked) {
                     btn.classList.add('liked');
-                    icon.textContent = '🔥';
+                    icon.innerHTML = '<img class="px-icon" src="/static/icons/icon-fire.svg" alt="">';
                 } else {
                     btn.classList.remove('liked');
-                    icon.textContent = '🤍';
+                    icon.innerHTML = '<img class="px-icon" src="/static/icons/icon-heart.svg" alt="">';
                 }
                 count.textContent = data.count || '';
             } catch (e) { console.error(e); }
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const res = await fetch(`/post/${postId}/comment`, {
                 method: 'POST',
                 body: formData,
-                headers: { 'X-Requested-With': 'XMLHttpRequest' }
+                headers: { 'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': getCsrfToken() }
             });
             const data = await res.json();
             if (data.error) return;
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const res = await fetch(`/comment/${commentId}/delete`, {
                 method: 'POST',
-                headers: { 'X-Requested-With': 'XMLHttpRequest' }
+                headers: { 'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': getCsrfToken() }
             });
             const data = await res.json();
             if (data.deleted) {
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 const res = await fetch(`/follow/${username}`, {
                     method: 'POST',
-                    headers: { 'X-Requested-With': 'XMLHttpRequest' }
+                    headers: { 'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': getCsrfToken() }
                 });
                 const data = await res.json();
                 if (data.following) {

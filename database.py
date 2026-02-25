@@ -286,6 +286,17 @@ CREATE TABLE IF NOT EXISTS annals_stories (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE
 );
+CREATE INDEX IF NOT EXISTS idx_posts_author ON posts(author_id);
+CREATE INDEX IF NOT EXISTS idx_posts_created ON posts(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_likes_post ON likes(post_id);
+CREATE INDEX IF NOT EXISTS idx_comments_post ON comments(post_id);
+CREATE INDEX IF NOT EXISTS idx_follows_follower ON follows(follower_id);
+CREATE INDEX IF NOT EXISTS idx_follows_followed ON follows(followed_id);
+CREATE INDEX IF NOT EXISTS idx_messages_conv ON messages(conversation_id, created_at);
+CREATE INDEX IF NOT EXISTS idx_messages_unread ON messages(sender_id, is_read);
+CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id);
+CREATE INDEX IF NOT EXISTS idx_characters_user ON characters(user_id, is_main);
+CREATE INDEX IF NOT EXISTS idx_annals_stories_loc ON annals_stories(age_number, century_number);
 """
 
 MYSQL_SCHEMA = [
@@ -394,6 +405,17 @@ MYSQL_SCHEMA = [
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4""",
+    "CREATE INDEX IF NOT EXISTS idx_posts_author ON posts(author_id)",
+    "CREATE INDEX IF NOT EXISTS idx_posts_created ON posts(created_at DESC)",
+    "CREATE INDEX IF NOT EXISTS idx_likes_post ON likes(post_id)",
+    "CREATE INDEX IF NOT EXISTS idx_comments_post ON comments(post_id)",
+    "CREATE INDEX IF NOT EXISTS idx_follows_follower ON follows(follower_id)",
+    "CREATE INDEX IF NOT EXISTS idx_follows_followed ON follows(followed_id)",
+    "CREATE INDEX IF NOT EXISTS idx_messages_conv ON messages(conversation_id, created_at)",
+    "CREATE INDEX IF NOT EXISTS idx_messages_unread ON messages(sender_id, is_read)",
+    "CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id)",
+    "CREATE INDEX IF NOT EXISTS idx_characters_user ON characters(user_id, is_main)",
+    "CREATE INDEX IF NOT EXISTS idx_annals_stories_loc ON annals_stories(age_number, century_number)",
 ]
 
 POSTGRES_SCHEMA = [
@@ -488,6 +510,17 @@ POSTGRES_SCHEMA = [
         content TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )""",
+    "CREATE INDEX IF NOT EXISTS idx_posts_author ON posts(author_id)",
+    "CREATE INDEX IF NOT EXISTS idx_posts_created ON posts(created_at DESC)",
+    "CREATE INDEX IF NOT EXISTS idx_likes_post ON likes(post_id)",
+    "CREATE INDEX IF NOT EXISTS idx_comments_post ON comments(post_id)",
+    "CREATE INDEX IF NOT EXISTS idx_follows_follower ON follows(follower_id)",
+    "CREATE INDEX IF NOT EXISTS idx_follows_followed ON follows(followed_id)",
+    "CREATE INDEX IF NOT EXISTS idx_messages_conv ON messages(conversation_id, created_at)",
+    "CREATE INDEX IF NOT EXISTS idx_messages_unread ON messages(sender_id, is_read)",
+    "CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id)",
+    "CREATE INDEX IF NOT EXISTS idx_characters_user ON characters(user_id, is_main)",
+    "CREATE INDEX IF NOT EXISTS idx_annals_stories_loc ON annals_stories(age_number, century_number)",
 ]
 
 
