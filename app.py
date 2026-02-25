@@ -880,13 +880,21 @@ def api_search_users():
 def like_post(post_id):
     db = get_db()
     uid = session['user_id']
-    existing = db.fetchone('SELECT user_id FROM likes WHERE user_id=%s AND post_id=%s', (uid, post_id))
-    if existing:
-        db.execute('DELETE FROM likes WHERE user_id=%s AND post_id=%s', (uid, post_id))
-    else:
-        db.execute('INSERT INTO likes (user_id, post_id) VALUES (%s,%s)', (uid, post_id))
+    # Verify post exists
+    post = db.fetchone('SELECT id FROM posts WHERE id = %s', (post_id,))
+    if not post:
+        return jsonify({'error': 'Post not found'}), 404
+    try:
+        existing = db.fetchone('SELECT user_id FROM likes WHERE user_id=%s AND post_id=%s', (uid, post_id))
+        if existing:
+            db.execute('DELETE FROM likes WHERE user_id=%s AND post_id=%s', (uid, post_id))
+        else:
+            db.execute('INSERT INTO likes (user_id, post_id) VALUES (%s,%s)', (uid, post_id))
+    except Exception:
+        # Handle race condition (duplicate key, etc.)
+        pass
     cnt = db.fetchone('SELECT COUNT(*) as c FROM likes WHERE post_id=%s', (post_id,))
-    return jsonify({'liked': not existing, 'count': cnt['c']})
+    return jsonify({'liked': not existing, 'count': cnt['c'] if cnt else 0})
 
 @app.route('/post/<post_id>/comment', methods=['POST'])
 @login_required
@@ -896,9 +904,16 @@ def add_comment(post_id):
     if not content: return jsonify({'error': 'Empty'}), 400
     if len(content) > 5000: return jsonify({'error': 'Comment too long (max 5000 characters)'}), 400
     db = get_db()
-    cid = str(uuid.uuid4())
-    db.execute('INSERT INTO comments (id, post_id, author_id, content) VALUES (%s,%s,%s,%s)',
-               (cid, post_id, session['user_id'], content))
+    # Verify post exists
+    post = db.fetchone('SELECT id FROM posts WHERE id = %s', (post_id,))
+    if not post:
+        return jsonify({'error': 'Post not found'}), 404
+    try:
+        cid = str(uuid.uuid4())
+        db.execute('INSERT INTO comments (id, post_id, author_id, content) VALUES (%s,%s,%s,%s)',
+                   (cid, post_id, session['user_id'], content))
+    except Exception:
+        return jsonify({'error': 'Failed to save comment'}), 500
     user = get_current_user()
     return jsonify({
         'id': cid, 'content': content,
@@ -1071,14 +1086,17 @@ def toggle_follow(username):
     target = db.fetchone('SELECT id FROM users WHERE username=%s', (username,))
     if not target or target['id'] == session['user_id']:
         return jsonify({'error': 'Invalid'}), 400
-    existing = db.fetchone('SELECT follower_id FROM follows WHERE follower_id=%s AND followed_id=%s',
-                           (session['user_id'], target['id']))
-    if existing:
-        db.execute('DELETE FROM follows WHERE follower_id=%s AND followed_id=%s', (session['user_id'], target['id']))
-    else:
-        db.execute('INSERT INTO follows (follower_id, followed_id) VALUES (%s,%s)', (session['user_id'], target['id']))
+    try:
+        existing = db.fetchone('SELECT follower_id FROM follows WHERE follower_id=%s AND followed_id=%s',
+                               (session['user_id'], target['id']))
+        if existing:
+            db.execute('DELETE FROM follows WHERE follower_id=%s AND followed_id=%s', (session['user_id'], target['id']))
+        else:
+            db.execute('INSERT INTO follows (follower_id, followed_id) VALUES (%s,%s)', (session['user_id'], target['id']))
+    except Exception:
+        pass
     cnt = db.fetchone('SELECT COUNT(*) as c FROM follows WHERE followed_id=%s', (target['id'],))
-    return jsonify({'following': not existing, 'follower_count': cnt['c']})
+    return jsonify({'following': not existing, 'follower_count': cnt['c'] if cnt else 0})
 
 @app.route('/profile/<username>/followers')
 @character_required

@@ -138,6 +138,22 @@ class Bot:
     def url(self, path):
         return urljoin(self.base_url + '/', path.lstrip('/'))
 
+    def _safe_request(self, method, url, action, **kwargs):
+        """Make an HTTP request with retry and connection error handling."""
+        for attempt in range(3):
+            try:
+                if method == 'GET':
+                    return self.session.get(url, timeout=30, **kwargs)
+                else:
+                    return self.session.post(url, timeout=30, **kwargs)
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+                if attempt < 2:
+                    time.sleep(1 * (attempt + 1))  # Back off: 1s, 2s
+                    continue
+                self.errors.append(f"[{self.username}] {action}: Connection failed after 3 attempts")
+                return None
+        return None
+
     def _get_csrf(self, html):
         """Extract CSRF token from page HTML."""
         match = re.search(r'name="_csrf_token"\s+value="([^"]+)"', html)
@@ -150,6 +166,8 @@ class Bot:
 
     def _check(self, resp, action, expect_codes=(200, 302)):
         """Check response and log errors."""
+        if resp is None:
+            return False
         if resp.status_code not in expect_codes:
             self.errors.append(f"[{self.username}] {action}: HTTP {resp.status_code}")
             return False
@@ -166,7 +184,8 @@ class Bot:
 
     def register(self):
         """Create an account."""
-        resp = self.session.get(self.url('/register'))
+        resp = self._safe_request('GET', self.url('/register'), 'register')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
         data = {
             '_csrf_token': csrf,
@@ -175,12 +194,13 @@ class Bot:
             'password': self.password,
             'confirm_password': self.password,
         }
-        resp = self.session.post(self.url('/register'), data=data, allow_redirects=True)
+        resp = self._safe_request('POST', self.url('/register'), 'register', data=data, allow_redirects=True)
         return self._check(resp, 'register')
 
     def create_character(self):
         """Create a character."""
-        resp = self.session.get(self.url('/character/create'))
+        resp = self._safe_request('GET', self.url('/character/create'), 'create_character')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
         traits = random.sample(TRAITS, 3)
         data = {
@@ -194,12 +214,13 @@ class Bot:
             'backstory': f"Born in the shadows of {random.choice(LOCATIONS)}, {self.char_name} has walked a path few dare to tread. Their journey began when fate intervened...",
             'preset_avatar': random.choice(PRESET_AVATARS),
         }
-        resp = self.session.post(self.url('/character/create'), data=data, allow_redirects=True)
+        resp = self._safe_request('POST', self.url('/character/create'), 'create_character', data=data, allow_redirects=True)
         return self._check(resp, 'create_character')
 
     def create_story_post(self):
         """Create a story post."""
-        resp = self.session.get(self.url('/post/create'))
+        resp = self._safe_request('GET', self.url('/post/create'), 'create_story_post')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
         data = {
             '_csrf_token': csrf,
@@ -219,7 +240,7 @@ class Bot:
             'tag_characters': '',
             'tagged_users': '',
         }
-        resp = self.session.post(self.url('/post/create'), data=data, allow_redirects=True)
+        resp = self._safe_request('POST', self.url('/post/create'), 'create_story_post', data=data, allow_redirects=True)
         ok = self._check(resp, 'create_story_post')
         if ok:
             # Extract post IDs from the feed page (UUIDs only, not /post/create)
@@ -230,7 +251,8 @@ class Bot:
 
     def create_campaign_post(self):
         """Create a campaign post with sessions."""
-        resp = self.session.get(self.url('/post/create'))
+        resp = self._safe_request('GET', self.url('/post/create'), 'create_campaign_post')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
         import json
         num_sessions = random.randint(1, 4)
@@ -245,7 +267,7 @@ class Bot:
             'tag_characters': '',
             'tagged_users': '',
         }
-        resp = self.session.post(self.url('/post/create'), data=data, allow_redirects=True)
+        resp = self._safe_request('POST', self.url('/post/create'), 'create_campaign_post', data=data, allow_redirects=True)
         ok = self._check(resp, 'create_campaign_post')
         if ok:
             matches = re.findall(r'/post/([a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})', resp.text)
@@ -255,21 +277,24 @@ class Bot:
 
     def like_post(self, post_id):
         """Like a post via AJAX."""
-        # Get CSRF token from a page first
-        resp = self.session.get(self.url('/feed'))
+        resp = self._safe_request('GET', self.url('/feed'), 'like_post')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
-        resp = self.session.post(
+        resp = self._safe_request('POST',
             self.url(f'/post/{post_id}/like'),
+            f'like_post({post_id[:8]}...)',
             headers={'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': csrf},
         )
         return self._check(resp, f'like_post({post_id[:8]}...)')
 
     def comment_on_post(self, post_id):
         """Comment on a post via AJAX."""
-        resp = self.session.get(self.url('/feed'))
+        resp = self._safe_request('GET', self.url('/feed'), 'comment')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
-        resp = self.session.post(
+        resp = self._safe_request('POST',
             self.url(f'/post/{post_id}/comment'),
+            f'comment({post_id[:8]}...)',
             data={'content': random.choice(COMMENTS)},
             headers={'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': csrf},
         )
@@ -277,21 +302,25 @@ class Bot:
 
     def follow_user(self, username):
         """Follow another user via AJAX."""
-        resp = self.session.get(self.url('/feed'))
+        resp = self._safe_request('GET', self.url('/feed'), 'follow')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
-        resp = self.session.post(
+        resp = self._safe_request('POST',
             self.url(f'/follow/{username}'),
+            f'follow({username})',
             headers={'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': csrf},
         )
         return self._check(resp, f'follow({username})')
 
     def send_dm(self, username):
         """Send a direct message via AJAX."""
-        resp = self.session.get(self.url(f'/messages/{username}'))
+        resp = self._safe_request('GET', self.url(f'/messages/{username}'), f'send_dm({username})')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
         msg = random.choice(DM_MESSAGES).format(random.choice(CLASSES))
-        resp = self.session.post(
+        resp = self._safe_request('POST',
             self.url(f'/messages/{username}/send'),
+            f'send_dm({username})',
             data={'content': msg},
             headers={'X-Requested-With': 'XMLHttpRequest', 'X-CSRF-Token': csrf},
         )
@@ -299,32 +328,33 @@ class Bot:
 
     def browse_feed(self):
         """Browse the feed."""
-        resp = self.session.get(self.url('/feed'))
+        resp = self._safe_request('GET', self.url('/feed'), 'browse_feed')
         return self._check(resp, 'browse_feed')
 
     def browse_explore(self):
         """Browse explore page."""
-        resp = self.session.get(self.url('/explore'))
+        resp = self._safe_request('GET', self.url('/explore'), 'browse_explore')
         return self._check(resp, 'browse_explore')
 
     def browse_annals(self):
         """Browse the Annals."""
-        resp = self.session.get(self.url('/annals'))
+        resp = self._safe_request('GET', self.url('/annals'), 'browse_annals')
         return self._check(resp, 'browse_annals')
 
     def search(self, query):
         """Search the feed."""
-        resp = self.session.get(self.url('/feed'), params={'q': query})
+        resp = self._safe_request('GET', self.url('/feed'), f'search("{query}")', params={'q': query})
         return self._check(resp, f'search("{query}")')
 
     def view_profile(self, username):
         """View a user profile."""
-        resp = self.session.get(self.url(f'/profile/{username}'))
+        resp = self._safe_request('GET', self.url(f'/profile/{username}'), f'view_profile({username})')
         return self._check(resp, f'view_profile({username})')
 
     def contribute_annals(self):
         """Submit a story to the Annals."""
-        resp = self.session.get(self.url('/annals/contribute'))
+        resp = self._safe_request('GET', self.url('/annals/contribute'), 'contribute_annals')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
         data = {
             '_csrf_token': csrf,
@@ -333,14 +363,15 @@ class Bot:
             'title': random.choice(ANNALS_TITLES) + f" ({self.username})",
             'content': random.choice(ANNALS_CONTENT),
         }
-        resp = self.session.post(self.url('/annals/contribute'), data=data, allow_redirects=True)
+        resp = self._safe_request('POST', self.url('/annals/contribute'), 'contribute_annals', data=data, allow_redirects=True)
         return self._check(resp, 'contribute_annals')
 
     # ─── Chaos Mode Tests ─────────────────────────────────────────────
 
     def chaos_long_content(self):
         """Try submitting extremely long content."""
-        resp = self.session.get(self.url('/post/create'))
+        resp = self._safe_request('GET', self.url('/post/create'), 'chaos_long_content')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
         data = {
             '_csrf_token': csrf,
@@ -352,7 +383,9 @@ class Bot:
             'tag_characters': '',
             'tagged_users': '',
         }
-        resp = self.session.post(self.url('/post/create'), data=data, allow_redirects=True)
+        resp = self._safe_request('POST', self.url('/post/create'), 'chaos_long_content', data=data, allow_redirects=True)
+        if not resp:
+            return False
         # We expect this to either work or fail gracefully (not 500)
         if resp.status_code == 500:
             self.errors.append(f"[{self.username}] chaos_long_content: SERVER ERROR 500")
@@ -373,7 +406,8 @@ class Bot:
             "🧌" * 100,  # Lots of emoji
             "A" + "\u0300" * 50,  # Unicode combining characters
         ]
-        resp = self.session.get(self.url('/post/create'))
+        resp = self._safe_request('GET', self.url('/post/create'), 'chaos_special_chars')
+        if not resp: return False
         csrf = self._get_csrf(resp.text)
         evil = random.choice(evil_strings)
         data = {
@@ -386,7 +420,9 @@ class Bot:
             'tag_characters': evil[:100],
             'tagged_users': '',
         }
-        resp = self.session.post(self.url('/post/create'), data=data, allow_redirects=True)
+        resp = self._safe_request('POST', self.url('/post/create'), 'chaos_special_chars', data=data, allow_redirects=True)
+        if not resp:
+            return False
         if resp.status_code == 500:
             self.errors.append(f"[{self.username}] chaos_special_chars: SERVER ERROR 500 with input: {evil[:50]}")
             return False
@@ -410,7 +446,10 @@ class Bot:
         ]
         ok = True
         for path, label in tests:
-            resp = self.session.get(self.url(path))
+            resp = self._safe_request('GET', self.url(path), f'chaos_invalid_ids({label})')
+            if not resp:
+                ok = False
+                continue
             if resp.status_code == 500:
                 self.errors.append(f"[{self.username}] chaos_invalid_ids({label}): SERVER ERROR 500")
                 ok = False
@@ -530,10 +569,13 @@ def run_fleet(base_url, num_bots=10, posts_per_bot=5, chaos=False):
         print("\n🔥 Phase 6: Chaos Mode")
         for bot in active_bots:
             bot.chaos_long_content()
+            time.sleep(0.5)
             bot.chaos_special_chars()
+            time.sleep(0.5)
             bot.chaos_special_chars()
+            time.sleep(0.5)
             bot.chaos_invalid_ids()
-            time.sleep(0.2)
+            time.sleep(0.5)
             print(f"   🔥 {bot.username} ran chaos tests")
 
     # ─── Report ──────────────────────────────────────────────────────
