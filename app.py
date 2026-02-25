@@ -109,7 +109,7 @@ def set_security_headers(response):
 
     response.headers['Content-Security-Policy'] = (
         "default-src 'self'; "
-        "script-src 'self'; "
+        "script-src 'self' 'unsafe-inline'; "
         "style-src 'self' 'unsafe-inline'; "
         f"img-src {img_sources}; "
         "font-src 'self'; "
