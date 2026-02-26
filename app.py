@@ -112,9 +112,9 @@ def set_security_headers(response):
     response.headers['Content-Security-Policy'] = (
         "default-src 'self'; "
         "script-src 'self' 'unsafe-inline'; "
-        "style-src 'self' 'unsafe-inline'; "
+        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
         f"img-src {img_sources}; "
-        "font-src 'self'; "
+        "font-src 'self' https://fonts.gstatic.com; "
         "frame-ancestors 'none'"
     )
     if Config.SESSION_COOKIE_SECURE:

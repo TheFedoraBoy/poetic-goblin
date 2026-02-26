@@ -3,7 +3,7 @@
    Colors: White, Blue, Black, Orange / Comic-book aesthetic
    ═══════════════════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Nunito:wght@400;600;700;800;900&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Nunito:wght@400;600;700;800;900&family=Press+Start+2P&display=swap');
 
 :root {
     --bg-white: #ffffff;
@@ -39,8 +39,8 @@
     --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
     --shadow-pop: 0 6px 20px rgba(255, 107, 43, 0.25);
 
-    --font-display: 'Bangers', cursive;
-    --font-title: 'Luckiest Guy', cursive;
+    --font-display: 'Cinzel', serif;
+    --font-title: 'Cinzel', serif;
     --font-body: 'Nunito', sans-serif;
     --font-pixel: 'Press Start 2P', monospace;
 
