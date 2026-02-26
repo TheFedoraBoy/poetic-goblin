@@ -48,8 +48,6 @@ def _send_resend(to_email, subject, html_body, text_body=None):
             print("[Poetic Goblin] RESEND_API_KEY not set. Falling back to console.")
             return _send_console(to_email, subject, html_body, text_body)
 
-        print(f"[Poetic Goblin] Sending via Resend to {to_email} (key: {api_key[:6]}...{api_key[-4:]})")
-
         payload = {
             "from": f"{Config.SMTP_FROM_NAME} <{Config.SMTP_FROM_EMAIL}>",
             "to": [to_email],

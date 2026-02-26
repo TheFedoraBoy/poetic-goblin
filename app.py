@@ -41,6 +41,8 @@ if Config.SENTRY_DSN:
     except ImportError:
         print("[Poetic Goblin] sentry-sdk not installed. Error monitoring disabled.")
 
+SENTRY_TEST_ENABLED = False  # Set to True temporarily to test Sentry
+
 # ─── App Configuration ────────────────────────────────────────────────────────
 
 app = Flask(__name__)
@@ -140,6 +142,12 @@ def internal_error(e):
 def too_large_error(e):
     return render_template('error.html', code=413, title='File Too Large',
         message='Your upload exceeds the maximum size allowed. Try a smaller file.'), 413
+
+# Temporary test route — remove after confirming Sentry works
+if SENTRY_TEST_ENABLED:
+    @app.route('/sentry-test')
+    def sentry_test():
+        raise Exception("Sentry test — this error is intentional! Delete the /sentry-test route from app.py.")
 
 # ─── Rate Limiting ────────────────────────────────────────────────────────────
 
@@ -338,7 +346,8 @@ def get_current_user():
         db = get_db()
         try:
             user = db.fetchone('''
-                SELECT u.*, c.id as char_id, c.name as char_name, c.trait1, c.trait2, c.trait3,
+                SELECT u.id, u.username, u.email, u.joined_at,
+                       c.id as char_id, c.name as char_name, c.trait1, c.trait2, c.trait3,
                        c.backstory, c.avatar_url as char_avatar
                 FROM users u LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
                 WHERE u.id = %s
@@ -487,7 +496,7 @@ def login():
         username = request.form.get('username', '').strip()
         password = request.form.get('password', '')
         db = get_db()
-        user = db.fetchone('SELECT * FROM users WHERE username = %s', (username,))
+        user = db.fetchone('SELECT id, username, password_hash, email_verified FROM users WHERE username = %s', (username,))
         if user and check_password_hash(user['password_hash'], password):
             if Config.REQUIRE_EMAIL_VERIFICATION and not user['email_verified']:
                 flash('Please verify your email first. Check your inbox, or click below to resend.', 'warning')
@@ -575,7 +584,7 @@ def reset_password(token):
 @login_required
 def account_settings():
     db = get_db()
-    user = db.fetchone('SELECT * FROM users WHERE id = %s', (session['user_id'],))
+    user = db.fetchone('SELECT id, username, email, email_verified, joined_at FROM users WHERE id = %s', (session['user_id'],))
     if not user:
         session.clear()
         return redirect(url_for('login'))
@@ -622,7 +631,7 @@ def account_settings():
 def delete_account():
     db = get_db()
     password = request.form.get('password', '')
-    user = db.fetchone('SELECT * FROM users WHERE id = %s', (session['user_id'],))
+    user = db.fetchone('SELECT id, password_hash FROM users WHERE id = %s', (session['user_id'],))
     if not user or not check_password_hash(user['password_hash'], password):
         flash('Incorrect password. Account not deleted.', 'error')
         return redirect(url_for('account_settings'))
@@ -1080,7 +1089,8 @@ def delete_comment(comment_id):
 def profile(username):
     db = get_db()
     user = db.fetchone('''
-        SELECT u.*, c.id as char_id, c.name as char_name, c.race as char_race, c.class as char_class,
+        SELECT u.id, u.username, u.joined_at,
+               c.id as char_id, c.name as char_name, c.race as char_race, c.class as char_class,
                c.trait1, c.trait2, c.trait3,
                c.backstory, c.avatar_url as char_avatar
         FROM users u LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
