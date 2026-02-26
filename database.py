@@ -177,7 +177,7 @@ def close_db(exception=None):
 
 # ─── Schema ──────────────────────────────────────────────────────────────────
 
-SCHEMA_VERSION = 9
+SCHEMA_VERSION = 10
 
 SQLITE_SCHEMA = f"""
 CREATE TABLE IF NOT EXISTS schema_version (version INTEGER);
@@ -193,6 +193,7 @@ CREATE TABLE IF NOT EXISTS users (
     verification_token TEXT DEFAULT '',
     reset_token TEXT DEFAULT '',
     reset_token_expires TIMESTAMP DEFAULT NULL,
+    show_explicit INTEGER DEFAULT 0,
     joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE IF NOT EXISTS characters (
@@ -332,6 +333,7 @@ MYSQL_SCHEMA = [
         verification_token VARCHAR(64) DEFAULT '',
         reset_token VARCHAR(64) DEFAULT '',
         reset_token_expires DATETIME DEFAULT NULL,
+        show_explicit TINYINT DEFAULT 0,
         joined_at DATETIME DEFAULT CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4""",
     """CREATE TABLE IF NOT EXISTS characters (
@@ -471,6 +473,7 @@ POSTGRES_SCHEMA = [
         verification_token VARCHAR(64) DEFAULT '',
         reset_token VARCHAR(64) DEFAULT '',
         reset_token_expires TIMESTAMP DEFAULT NULL,
+        show_explicit SMALLINT DEFAULT 0,
         joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )""",
     """CREATE TABLE IF NOT EXISTS characters (
@@ -662,6 +665,18 @@ def _migrate(db, db_type, from_version):
             print("[Poetic Goblin] Migration v9: Verified all existing user accounts.")
         except Exception as e:
             print(f"[Poetic Goblin] Migration v9 note: {e}")
+    if from_version < 10:
+        # v10: Add show_explicit column to users (content preferences)
+        try:
+            if db_type == 'mysql':
+                db.execute("ALTER TABLE users ADD COLUMN show_explicit TINYINT DEFAULT 0")
+            elif db_type == 'postgres':
+                db.execute("ALTER TABLE users ADD COLUMN show_explicit SMALLINT DEFAULT 0")
+            else:
+                db.execute("ALTER TABLE users ADD COLUMN show_explicit INTEGER DEFAULT 0")
+            print("[Poetic Goblin] Migration v10: Added 'show_explicit' column to users.")
+        except Exception as e:
+            print(f"[Poetic Goblin] Migration v10 note: {e}")
     # Update schema version
     try:
         db.execute('UPDATE schema_version SET version = %s', (SCHEMA_VERSION,))

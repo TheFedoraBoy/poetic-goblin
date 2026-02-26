@@ -39,8 +39,8 @@
 
     {% if post.title %}
     <div class="post-title-bar">
-        {% if not permalink %}<a href="{{ url_for('post_detail', post_id=post.id) }}" style="color:inherit;text-decoration:none;">{{ post.title|e }}</a>
-        {% else %}{{ post.title|e }}{% endif %}
+        {% if not permalink %}<a href="{{ url_for('post_detail', post_id=post.id) }}" style="color:inherit;text-decoration:none;">{{ post.title|censor|e }}</a>
+        {% else %}{{ post.title|censor|e }}{% endif %}
     </div>
     {% endif %}
 
@@ -54,20 +54,20 @@
     {% endif %}
 
     {% if post.post_type == 'story' %}
-        <div class="post-content">{{ post.content|e }}</div>
+        <div class="post-content">{{ post.content|censor|e }}</div>
     {% endif %}
 
     {% if post.post_type == 'art' %}
-        {% if post.image_url %}<img src="{{ post.image_url }}" class="post-image" alt="{{ post.title|e }}" loading="lazy">{% endif %}
-        {% if post.description %}<div class="post-description">{{ post.description|e }}</div>{% endif %}
+        {% if post.image_url %}<img src="{{ post.image_url }}" class="post-image" alt="{{ post.title|censor|e }}" loading="lazy">{% endif %}
+        {% if post.description %}<div class="post-description">{{ post.description|censor|e }}</div>{% endif %}
     {% endif %}
 
     {% if post.post_type == 'campaign' and sessions %}
         <div class="session-list">
             {% for s in sessions %}
             <div class="session-item {% if loop.index > 1 %}hidden-session{% endif %}" data-post-id="{{ post.id }}" {% if loop.index > 1 %}style="display:none"{% endif %}>
-                <div class="session-title">Session {{ s.session_number }}: {{ s.title|e }}</div>
-                <div class="session-content">{{ s.content|e }}</div>
+                <div class="session-title">Session {{ s.session_number }}: {{ s.title|censor|e }}</div>
+                <div class="session-content">{{ s.content|censor|e }}</div>
             </div>
             {% endfor %}
             {% if sessions|length > 1 %}

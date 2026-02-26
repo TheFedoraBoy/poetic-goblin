@@ -21,7 +21,7 @@
                         {% endif %}
                         <div class="inbox-info">
                             <div class="inbox-name">{{ item.other.char_name or item.other.username }}</div>
-                            <div class="inbox-preview">{{ item.conv.last_message or 'No messages yet' }}</div>
+                            <div class="inbox-preview">{{ (item.conv.last_message or 'No messages yet')|censor }}</div>
                         </div>
                         <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.3rem;">
                             {% if item.conv.last_msg_time %}

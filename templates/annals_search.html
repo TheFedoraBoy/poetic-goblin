@@ -33,7 +33,7 @@
                     {% elif r.type == 'century' %}
                     <a href="{{ url_for('annals_century', age_num=r.age.number, century_num=r.century.number) }}" class="search-result-title">{{ r.title }}</a>
                     {% elif r.type == 'user_story' %}
-                    <a href="{{ url_for('annals_user_story', story_id=r.story_id) }}" class="search-result-title">{{ r.title }}</a>
+                    <a href="{{ url_for('annals_user_story', story_id=r.story_id) }}" class="search-result-title">{{ r.title|censor }}</a>
                     <span style="font-size:0.75rem;color:var(--text-dim);margin-left:0.5rem;">by @{{ r.username }}</span>
                     {% else %}
                     <a href="{{ url_for('annals_story', age_num=r.age.number, century_num=r.century.number, story_idx=r.story_idx) }}" class="search-result-title">{{ r.title }}</a>

@@ -35,7 +35,7 @@
                 {% endif %}
                 {% endif %}
                 <div>
-                    <div class="msg-body">{{ msg.content|e }}</div>
+                    <div class="msg-body">{{ msg.content|censor|e }}</div>
                     <div class="msg-time">{{ msg.created_at|timeago }}</div>
                 </div>
             </div>

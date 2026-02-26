@@ -72,6 +72,30 @@
                 </div>
             </div>
 
+            <!-- Content Preferences -->
+            <div class="card">
+                <h3 style="font-size:1rem;margin-bottom:0.75rem;"><img class="px-icon" src="/static/icons/icon-mask.svg" alt=""> Content Preferences</h3>
+                <form method="POST">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="action" value="toggle_explicit">
+                    <div class="theme-toggle">
+                        <div>
+                            <div class="theme-toggle-label">Show Explicit Language</div>
+                            <div class="theme-toggle-sub">When off, profanity in posts, comments, and messages will be replaced with asterisks (e.g. f**k). Hate speech is always blocked regardless of this setting.</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <label class="toggle-label" style="cursor:pointer;">
+                                <input type="hidden" name="show_explicit" value="0">
+                                <input type="checkbox" name="show_explicit" value="1"
+                                       {% if user.show_explicit %}checked{% endif %}
+                                       onchange="this.form.submit()"
+                                       style="width:18px;height:18px;cursor:pointer;">
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
             <!-- Danger Zone -->
             <div class="card" style="border-color:#ffcdd2;">
                 <h3 style="font-size:1rem;margin-bottom:0.5rem;color:#c62828;">⚠️ Danger Zone</h3>

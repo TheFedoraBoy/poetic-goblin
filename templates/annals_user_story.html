@@ -21,10 +21,10 @@
                     <span class="post-type-badge story">{{ century.name }}</span>
                     <span class="post-type-badge art" style="background:#e8f5e9;color:#2e7d32;">🖊️ Community</span>
                 </div>
-                <div class="annals-article-title">{{ story.title }}</div>
+                <div class="annals-article-title">{{ story.title|censor }}</div>
                 <div class="annals-article-subtitle">From the {{ century.name }} of {{ age.name }}</div>
                 <hr class="annals-divider">
-                <div class="annals-article-body">{{ story.content }}</div>
+                <div class="annals-article-body">{{ story.content|censor }}</div>
 
                 <hr class="annals-divider">
                 <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;background:var(--bg-light);border-radius:8px;border-left:3px solid var(--blue);">

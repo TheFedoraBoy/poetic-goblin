@@ -24,6 +24,7 @@ from database import get_db, close_db, init_db
 from storage import save_upload, allowed_file
 from email_service import send_verification_email, send_password_reset_email
 from annals_data import AGES as ANNALS_AGES, ANNALS_INTRO
+from moderation import censor_text, is_text_allowed, check_image_safety
 
 # ─── Sentry Error Monitoring ─────────────────────────────────────────────────
 
@@ -346,7 +347,7 @@ def get_current_user():
         db = get_db()
         try:
             user = db.fetchone('''
-                SELECT u.id, u.username, u.email, u.joined_at,
+                SELECT u.id, u.username, u.email, u.joined_at, u.show_explicit,
                        c.id as char_id, c.name as char_name, c.trait1, c.trait2, c.trait3,
                        c.backstory, c.avatar_url as char_avatar
                 FROM users u LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
@@ -400,6 +401,16 @@ def timeago_filter(dt_string):
     if diff < 86400: return f'{int(diff/3600)}h ago'
     if diff < 604800: return f'{int(diff/86400)}d ago'
     return dt.strftime('%b %d, %Y')
+
+@app.template_filter('censor')
+def censor_filter(text):
+    """Censor profanity unless the current user has enabled show_explicit."""
+    if not text:
+        return text
+    user = get_current_user()
+    if user and user.get('show_explicit'):
+        return text
+    return censor_text(text)
 
 # ─── Routes: Auth ─────────────────────────────────────────────────────────────
 
@@ -584,7 +595,7 @@ def reset_password(token):
 @login_required
 def account_settings():
     db = get_db()
-    user = db.fetchone('SELECT id, username, email, email_verified, joined_at FROM users WHERE id = %s', (session['user_id'],))
+    user = db.fetchone('SELECT id, username, email, password_hash, email_verified, show_explicit, joined_at FROM users WHERE id = %s', (session['user_id'],))
     if not user:
         session.clear()
         return redirect(url_for('login'))
@@ -623,6 +634,10 @@ def account_settings():
                     db.execute('UPDATE users SET password_hash = %s WHERE id = %s',
                                (generate_password_hash(new_pw), user['id']))
                     flash('Password changed!', 'success')
+        elif action == 'toggle_explicit':
+            new_val = 1 if request.form.get('show_explicit') == '1' else 0
+            db.execute('UPDATE users SET show_explicit = %s WHERE id = %s', (new_val, user['id']))
+            flash('Content preferences updated!', 'success')
         return redirect(url_for('account_settings'))
     return render_template('settings.html', user=user)
 
@@ -684,7 +699,12 @@ def create_character():
         if preset and preset in valid_presets:
             avatar_url = preset
         elif 'avatar' in request.files and request.files['avatar'].filename:
-            avatar_url = save_upload(request.files['avatar'], 'avatars')
+            img_file = request.files['avatar']
+            safe, img_reason = check_image_safety(img_file)
+            if not safe:
+                flash(img_reason, 'error')
+                return redirect(url_for('create_character'))
+            avatar_url = save_upload(img_file, 'avatars')
         existing = db.fetchone('SELECT COUNT(*) as c FROM characters WHERE user_id = %s', (session['user_id'],))
         is_main = 1 if (not existing or existing['c'] == 0) else 0
         char_id = str(uuid.uuid4())
@@ -742,7 +762,12 @@ def edit_character(char_id):
         if preset and preset in valid_presets:
             av = preset
         elif 'avatar' in request.files and request.files['avatar'].filename:
-            new_av = save_upload(request.files['avatar'], 'avatars')
+            img_file = request.files['avatar']
+            safe, img_reason = check_image_safety(img_file)
+            if not safe:
+                flash(img_reason, 'error')
+                return redirect(url_for('edit_character', char_id=char_id))
+            new_av = save_upload(img_file, 'avatars')
             if new_av: av = new_av
         db.execute('UPDATE characters SET name=%s,race=%s,class=%s,trait1=%s,trait2=%s,trait3=%s,backstory=%s,avatar_url=%s WHERE id=%s',
                    (n, race, cls, t1, t2, t3, bs, av, char_id))
@@ -859,6 +884,11 @@ def create_post():
         if not title:
             flash('A title is required!', 'error')
             return redirect(url_for('create_post'))
+        # ── Hate speech check on title ──
+        allowed, reason = is_text_allowed(title)
+        if not allowed:
+            flash(reason, 'error')
+            return redirect(url_for('create_post'))
         post_id = str(uuid.uuid4())
         content = ''
         description = ''
@@ -867,6 +897,11 @@ def create_post():
             content = request.form.get('content', '').strip()
             if not content:
                 flash('Story content is required!', 'error')
+                return redirect(url_for('create_post'))
+            # ── Hate speech check on story content ──
+            allowed, reason = is_text_allowed(content)
+            if not allowed:
+                flash(reason, 'error')
                 return redirect(url_for('create_post'))
         elif post_type == 'campaign':
             sessions_json = request.form.get('sessions_data', '[]')
@@ -877,10 +912,30 @@ def create_post():
             if not sessions:
                 flash('Add at least one session!', 'error')
                 return redirect(url_for('create_post'))
+            # ── Hate speech check on campaign session content ──
+            for s in sessions:
+                session_text = '{} {}'.format(s.get('title', ''), s.get('content', ''))
+                allowed, reason = is_text_allowed(session_text)
+                if not allowed:
+                    flash(reason, 'error')
+                    return redirect(url_for('create_post'))
         elif post_type == 'art':
             description = request.form.get('description', '').strip()
+            if description:
+                # ── Hate speech check on art description ──
+                allowed, reason = is_text_allowed(description)
+                if not allowed:
+                    flash(reason, 'error')
+                    return redirect(url_for('create_post'))
             if 'image' in request.files:
-                image_url = save_upload(request.files['image'], 'posts')
+                img_file = request.files['image']
+                # ── Image moderation check ──
+                if img_file and img_file.filename:
+                    safe, img_reason = check_image_safety(img_file)
+                    if not safe:
+                        flash(img_reason, 'error')
+                        return redirect(url_for('create_post'))
+                image_url = save_upload(img_file, 'posts')
             if not image_url:
                 flash('An image is required for art/map posts!', 'error')
                 return redirect(url_for('create_post'))
@@ -952,6 +1007,10 @@ def add_comment(post_id):
     content = request.form.get('content', '').strip()
     if not content: return jsonify({'error': 'Empty'}), 400
     if len(content) > 5000: return jsonify({'error': 'Comment too long (max 5000 characters)'}), 400
+    # ── Hate speech check ──
+    allowed, reason = is_text_allowed(content)
+    if not allowed:
+        return jsonify({'error': reason}), 400
     db = get_db()
     # Verify post exists
     post = db.fetchone('SELECT id FROM posts WHERE id = %s', (post_id,))
@@ -965,7 +1024,7 @@ def add_comment(post_id):
         return jsonify({'error': 'Failed to save comment'}), 500
     user = get_current_user()
     return jsonify({
-        'id': cid, 'content': content,
+        'id': cid, 'content': censor_filter(content),
         'author': user['char_name'] or user['username'],
         'username': user['username'],
         'avatar_url': user['char_avatar'] or '',
@@ -983,7 +1042,7 @@ def get_comments(post_id):
         WHERE cm.post_id = %s ORDER BY cm.created_at ASC
     ''', (post_id,))
     return jsonify([{
-        'id': cm['id'], 'content': cm['content'],
+        'id': cm['id'], 'content': censor_filter(cm['content']),
         'author': cm['char_name'] or cm['username'],
         'username': cm['username'],
         'avatar_url': cm['char_avatar'] or '',
@@ -1049,14 +1108,35 @@ def edit_post(post_id):
         if not title:
             flash('Title is required.', 'error')
             return redirect(url_for('edit_post', post_id=post_id))
+        # ── Hate speech check on title ──
+        allowed, reason = is_text_allowed(title)
+        if not allowed:
+            flash(reason, 'error')
+            return redirect(url_for('edit_post', post_id=post_id))
         if post['post_type'] == 'story':
             content = request.form.get('content', '').strip()
+            # ── Hate speech check on story content ──
+            allowed, reason = is_text_allowed(content)
+            if not allowed:
+                flash(reason, 'error')
+                return redirect(url_for('edit_post', post_id=post_id))
             db.execute('UPDATE posts SET title = %s, content = %s WHERE id = %s', (title, content, post_id))
         elif post['post_type'] == 'art':
             description = request.form.get('description', '').strip()
+            if description:
+                allowed, reason = is_text_allowed(description)
+                if not allowed:
+                    flash(reason, 'error')
+                    return redirect(url_for('edit_post', post_id=post_id))
             image_url = post['image_url']
             if 'image' in request.files and request.files['image'].filename:
-                new_url = save_upload(request.files['image'], 'posts')
+                # ── Image moderation check ──
+                img_file = request.files['image']
+                safe, img_reason = check_image_safety(img_file)
+                if not safe:
+                    flash(img_reason, 'error')
+                    return redirect(url_for('edit_post', post_id=post_id))
+                new_url = save_upload(img_file, 'posts')
                 if new_url:
                     image_url = new_url
             db.execute('UPDATE posts SET title = %s, description = %s, image_url = %s WHERE id = %s',
@@ -1337,6 +1417,11 @@ def messages_conversation(username):
     if request.method == 'POST':
         content = request.form.get('content', '').strip()
         if content and len(content) <= 5000:
+            # ── Hate speech check ──
+            allowed, reason = is_text_allowed(content)
+            if not allowed:
+                flash(reason, 'error')
+                return redirect(url_for('messages_conversation', username=username))
             msg_id = str(uuid.uuid4())
             db.execute('INSERT INTO messages (id, conversation_id, sender_id, content) VALUES (%s,%s,%s,%s)',
                        (msg_id, conv_id, uid, content))
@@ -1368,6 +1453,10 @@ def send_message_api(username):
     content = request.form.get('content', '').strip()
     if not content: return jsonify({'error': 'Empty'}), 400
     if len(content) > 5000: return jsonify({'error': 'Message too long (max 5000 characters)'}), 400
+    # ── Hate speech check ──
+    allowed, reason = is_text_allowed(content)
+    if not allowed:
+        return jsonify({'error': reason}), 400
     conv_id = get_or_create_conversation(uid, other['id'])
     msg_id = str(uuid.uuid4())
     db.execute('INSERT INTO messages (id, conversation_id, sender_id, content) VALUES (%s,%s,%s,%s)',
@@ -1375,7 +1464,7 @@ def send_message_api(username):
     db.execute('UPDATE conversations SET last_message_at = CURRENT_TIMESTAMP WHERE id = %s', (conv_id,))
     user = get_current_user()
     return jsonify({
-        'id': msg_id, 'content': content,
+        'id': msg_id, 'content': censor_filter(content),
         'sender_char_name': user['char_name'] or user['username'],
         'sender_avatar': user['char_avatar'] or '',
         'sender_username': user['username'],
@@ -1409,7 +1498,7 @@ def poll_messages(username):
     db.execute('UPDATE messages SET is_read = 1 WHERE conversation_id = %s AND sender_id != %s AND is_read = 0',
                (conv['id'], uid))
     return jsonify([{
-        'id': m['id'], 'content': m['content'],
+        'id': m['id'], 'content': censor_filter(m['content']),
         'sender_char_name': m['sender_char_name'] or m['sender_username'],
         'sender_avatar': m['sender_avatar'] or '',
         'sender_username': m['sender_username'],
@@ -1541,6 +1630,12 @@ def annals_contribute():
                 flash(e, 'error')
             return render_template('annals_contribute.html', ages=ANNALS_AGES,
                                    sel_age=age_num, sel_century=century_num, title=title, content=content)
+        # ── Hate speech check ──
+        allowed, reason = is_text_allowed('{} {}'.format(title, content))
+        if not allowed:
+            flash(reason, 'error')
+            return render_template('annals_contribute.html', ages=ANNALS_AGES,
+                                   sel_age=age_num, sel_century=century_num, title=title, content=content)
         db = get_db()
         story_id = str(uuid.uuid4())
         db.execute('INSERT INTO annals_stories (id, author_id, age_number, century_number, title, content) VALUES (%s,%s,%s,%s,%s,%s)',
@@ -1586,6 +1681,13 @@ def annals_edit_story(story_id):
         elif len(content) < 50:
             flash('Story must be 50+ characters.', 'error')
         else:
+            # ── Hate speech check ──
+            allowed, reason = is_text_allowed('{} {}'.format(title, content))
+            if not allowed:
+                flash(reason, 'error')
+                age = next((a for a in ANNALS_AGES if a['number'] == story['age_number']), None)
+                century = next((c for c in age['centuries'] if c['number'] == story['century_number']), None) if age else None
+                return render_template('annals_edit_story.html', story=story, age=age, century=century, ages=ANNALS_AGES)
             db.execute('UPDATE annals_stories SET title = %s, content = %s WHERE id = %s',
                        (title, content, story_id))
             flash('Story updated!', 'success')
