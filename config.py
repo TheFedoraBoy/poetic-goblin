@@ -89,14 +89,10 @@ class Config:
     SENTRY_DSN = os.environ.get('SENTRY_DSN', '')
 
     # ─── Content Moderation ────────────────────────────────────────────
-    # Hate speech detection via Google Perspective API (free)
-    # Get a key at: https://perspectiveapi.com/
+    # Text moderation via OpenAI Moderation API (free)
+    # Uses your OpenAI API key: https://platform.openai.com/api-keys
     MODERATION_ENABLED = os.environ.get('MODERATION_ENABLED', 'false').lower() == 'true'
-    PERSPECTIVE_API_KEY = os.environ.get('PERSPECTIVE_API_KEY', '')
-
-    # Threshold for blocking content (0.0 - 1.0). Lower = stricter.
-    # 0.8 is a good starting point; 0.7 is stricter.
-    HATE_SPEECH_THRESHOLD = float(os.environ.get('HATE_SPEECH_THRESHOLD', '0.8'))
+    OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY', '')
 
     # Image moderation via AWS Rekognition (uses existing AWS creds)
     IMAGE_MODERATION_ENABLED = os.environ.get('IMAGE_MODERATION_ENABLED', 'false').lower() == 'true'
@@ -136,7 +132,7 @@ class Config:
             f'  Verify:    {"required" if cls.REQUIRE_EMAIL_VERIFICATION else "disabled"}',
             f'  Rate Limit: {"enabled" if cls.RATELIMIT_ENABLED else "disabled"}',
             f'  Sentry:    {"enabled" if cls.SENTRY_DSN else "disabled"}',
-            f'  Moderation: {"enabled" if cls.MODERATION_ENABLED else "disabled"}' + (f' (threshold: {cls.HATE_SPEECH_THRESHOLD})' if cls.MODERATION_ENABLED else ''),
+            f'  Moderation: {"enabled" if cls.MODERATION_ENABLED else "disabled"}',
             f'  Image Mod: {"enabled" if cls.IMAGE_MODERATION_ENABLED else "disabled"}',
         ]
         return '\n'.join(lines)
