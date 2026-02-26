@@ -854,6 +854,14 @@ select.form-input { cursor: pointer; }
     color: var(--text-dim); text-transform: uppercase;
     letter-spacing: 0.08em; margin-bottom: 1rem;
 }
+.about-donate-links {
+    display: flex; gap: 1rem; justify-content: center;
+    margin-top: 1.25rem; flex-wrap: wrap;
+}
+.donate-btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.85rem; padding: 0.55rem 1.25rem;
+}
 @media (max-width: 600px) {
     .about-features { grid-template-columns: 1fr; }
     .about-title { font-size: 2rem; }

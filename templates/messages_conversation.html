@@ -57,7 +57,7 @@
     const msgInput = document.getElementById('msg-input');
     const sendBtn = document.getElementById('send-btn');
     const otherUsername = {{ other.username|tojson }};
-    let lastTime = '';
+    let lastTime = '1970-01-01 00:00:00';
 
     // Scroll to bottom
     function scrollBottom() { msgArea.scrollTop = msgArea.scrollHeight; }
@@ -66,7 +66,7 @@
     // Get last message time
     const allBubbles = document.querySelectorAll('.msg-bubble');
     if (allBubbles.length > 0) {
-        lastTime = allBubbles[allBubbles.length - 1].dataset.time || '';
+        lastTime = allBubbles[allBubbles.length - 1].dataset.time || '1970-01-01 00:00:00';
     }
 
     // Send message

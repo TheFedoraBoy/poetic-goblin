@@ -1390,7 +1390,9 @@ def poll_messages(username):
     uid = session['user_id']
     other = db.fetchone('SELECT id FROM users WHERE username = %s', (username,))
     if not other: return jsonify([])
-    after = request.args.get('after', '')
+    after = request.args.get('after', '').strip()
+    if not after:
+        after = '1970-01-01 00:00:00'
     conv = db.fetchone('''
         SELECT id FROM conversations
         WHERE (user1_id = %s AND user2_id = %s) OR (user1_id = %s AND user2_id = %s)
