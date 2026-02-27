@@ -1072,13 +1072,374 @@ Klae published this prayer as the final entry for the Third Age. He believed, co
             ]}
         ]
     },
+    {
+        "number": 4,
+        "name": "An Empire of Men",
+        "year_start": 1501,
+        "year_end": 2000,
+        "description": """The story belongs not to the man who died, but to the man who wrote about it. This ancient Cynthian proverb originated in the Fourth Age during the Pervin Wars, and it captures the essence of the age better than any historical analysis could. The Fourth Age was the age of the Gechann Empire, the first continental superpower, built through constant warmongering, advances in military tactics and logistics, and the creation of the first truly professional army. Geckish domination throughout the realm of men was, for a time, unstoppable.
+
+But empires, as Klae observed, carry the seeds of their own destruction, and the Gechann sowed more seeds than most. The same military machine that conquered half of Fondore required constant feeding — in gold, in grain, in young men who marched south or west or east and did not come back. The conquered peoples who labored under Geckish governors did not forget who they were. The Pervins remembered. The Leimish remembered. The Verans, in what remained of their crumbling island kingdom, remembered most of all.
+
+And beyond Fondore, in the jungles of Metzerul and the savannahs of Tzun, civilizations that the Gechann had dismissed as primitive were watching the empire's expansion with the particular attention of a prey animal observing a predator's habits. They were learning. They were adapting. And when the empire finally stumbled, they would be ready.
+
+The Fourth Age is the age of empire. It is also, inevitably, the age of resistance. The two are inseparable, because every act of conquest produces an equal and opposite act of defiance, and the defiance, being cheaper and more sustainable, tends to win in the end.""",
+        "centuries": [
+            {"number": 1, "name": "First Century",
+             "description": "The Rise of Imperial Gecha. The Geckish city-states, enriched by centuries of trade and emboldened by the Novus Gecharium, transform from a commercial federation into a military empire. The Supremus Leader takes the title of Imperator, and the Gechann begin the systematic conquest of their neighbors.",
+             "stories": [
+                {"title": "The Imperator's Speech",
+                 "content": """The transformation of the Geckish city-states from a commercial federation into a military empire did not happen overnight. It happened over decades, in increments so gradual that most people did not notice until the process was complete, which is how the most dangerous transformations always work.
+
+The Supremus Leader system established after the Punitive Wars had served Gecha well for centuries. It was flexible, competitive, and produced leaders who were, on average, competent, because incompetent leaders tended to be replaced at the next election by someone who was better at making money. But the system had a flaw: it was designed for a federation of city-states, not for an empire, and by the early Fourth Age, the Gechann had outgrown their institutions.
+
+The catalyst was a man named Vorrikus Aelum Boulvaranus, the Supremus Leader from Boulavar who looked at the Novus Gecharium — the network of colonies, trade outposts, and military bases that the Gechann had built during the Third Age — and saw not a commercial enterprise but the skeleton of an empire. The flesh, he decided, would be military.
+
+Vorrikus addressed the assembled representatives of the Thirteen Families in the grand senate hall at Boulavar and delivered a speech that Klae reconstructed from three separate sources, none of which agreed on the exact wording. The substance, however, was consistent: the Geckish city-states could no longer afford to be a federation of merchants. The world was too dangerous, the competition too fierce, the opportunities too vast. They needed a single voice, a single army, a single will. They needed an Imperator.
+
+The vote was not unanimous. Jayvlun, the most democratic of the city-states, objected strenuously. Gisup Geronus abstained. But the majority — persuaded by Vorrikus's rhetoric, his military record, and the considerable economic pressure that Boulavar could bring to bear — voted yes. Vorrikus became the first Gechann Imperator, and the city-states became provinces of an empire.
+
+The transition was, on paper, smooth. In practice, it was the beginning of the end of Geckish liberty. The elected Supremus became an appointed position. The Thirteen Families retained their wealth but lost their independence. The professional army that Vorrikus built was loyal not to the city-states but to the Imperator, and that distinction would matter enormously in the centuries that followed.
+
+Klae wrote: 'The Gecks traded their freedom for power, which is the oldest bargain in civilization and the one that is always regretted first.'"""},
+
+                {"title": "The Professional Army",
+                 "content": """The Gechann had always been good at war. They had produced famous commanders, innovative tacticians, and soldiers whose discipline was the envy of Fondore. But they had never had a professional army in the modern sense: a standing military force that trained year-round, fought as a career, and owed its loyalty to the state rather than to a city-state, a prince, or a mercenary captain with a fat purse.
+
+Vorrikus changed this. Drawing on lessons from the Punitive Wars, the Second Age War, the Barren Wars, and every conflict the Gechann had fought or observed, he created the Imperial Gechann Army: a force of thirty thousand professional soldiers organized into legions, equipped with standardized weapons and armor, trained to fight in coordinated formations, and paid a regular salary that made them dependent on the empire for their livelihood.
+
+The legions were the backbone. Each consisted of five thousand infantry, organized into centuries of one hundred men under a centurion, with attached cavalry, engineers, and supply units. The infantry fought with the pilum — a heavy throwing javelin designed to bend on impact so it couldn't be thrown back — and the gladius, a short stabbing sword optimized for close-quarters combat in tight formations. The shield wall, refined over centuries of Geckish warfare, became the legion's signature tactic: an interlocking barrier of heavy wooden shields behind which the infantry advanced like a single armored organism.
+
+The legions could march thirty miles in a day carrying their own supplies. They could build a fortified camp every evening and strike it every morning. They could construct bridges, siege works, and roads as part of their normal operations. They were, in Klae's words, 'an army that carried its civilization with it, and planted it wherever it stopped.'
+
+The effect on Fondore was immediate. The kingdoms that had fought the Gechann to a standstill during the Barren Wars found themselves facing an enemy that was qualitatively different from anything they had encountered. The old tactics — guerrilla warfare, defensive fortifications, mercenary armies assembled for a season and disbanded afterward — did not work against an opponent that was always ready, always organized, and always advancing.
+
+Within a generation, the Gechann had conquered Waydren formally, absorbed the border territories that had been contested during the Barren Wars, and established a military presence in northern Mural Cere that the desert monks could not dislodge. The empire was expanding, and it was expanding with a professional efficiency that made resistance feel not just futile but obsolete.
+
+Klae noted, with his characteristic precision, that the Gechann army's greatest weapon was not the pilum or the gladius or the shield wall. It was the road. Every territory the legions conquered was connected to the empire by a paved road, and every road led back to Boulavar. The empire did not just conquer land. It connected it."""}
+            ]},
+
+            {"number": 2, "name": "Second Century",
+             "description": "The Pervin Wars. The Gechann Empire turns its attention to Epervinay, the small but fierce nation that had won its independence in the Second Age War. The resulting conflict produces some of the most celebrated resistance fighters in Fondorian history, and demonstrates that professional armies can be beaten by people with nothing left to lose.",
+             "stories": [
+                {"title": "The Iron Fist in Epervinay",
+                 "content": """Epervinay should not have mattered. It was a small nation of farmers and horse breeders wedged between Gecha, Hyacinth, and Lambridge, with a population that could barely field an army of ten thousand and an economy based primarily on wheat, goats, and the stubborn refusal to accept the obvious. By every rational calculation, the Gechann should have been able to absorb it as easily as they had absorbed Waydren.
+
+The Gechann did not account for the Pervins.
+
+The Pervin Wars began in the second century of the Fourth Age when the current Imperator — a hard, efficient man from Aemore whose name the Pervins refused to record in their histories, calling him only The Grey Fist — demanded that Epervinay accept a Geckish military garrison on its territory. The demand was phrased as a request for mutual security. Everyone knew what it actually was.
+
+The Pervin minister, a woman named Rell Havenaugh, refused. The Grey Fist sent two legions. Rell Havenaugh mobilized the Pervin militia and called on the alliance treaties with Lambridge and Hyacinth. Lambridge sent three hundred knights. Hyacinth sent a strongly worded letter.
+
+The first Geckish advance was a disaster for Epervinay. The legions crossed the border, defeated the Pervin militia in open battle — because militia cannot beat professional soldiers in open battle, which the Pervins should have known — and occupied the capital within a season. Rell Havenaugh fled to the hills. The Grey Fist declared Epervinay a Geckish protectorate and appointed a governor.
+
+What followed was twenty years of the ugliest, most grinding, most exhausting guerrilla warfare that Fondore had ever seen. The Pervins refused to accept occupation. They had tried freedom, briefly, during the Second Age, and the taste of it had permanently ruined them for subjugation. Pervin farmers who had never held a sword picked up whatever was available — axes, pitchforks, sharpened stakes — and fought. They fought from the hills, from the forests, from the cellars of their own homes. They assassinated Geckish officers. They poisoned wells. They burned their own granaries rather than let the occupiers eat from them.
+
+The Gechann responded with escalating brutality. Villages suspected of harboring resistance fighters were razed. Public executions became weekly events. The occupation army swelled from two legions to five, then to eight, tying down forty thousand professional soldiers in a territory that the empire had expected to pacify in a season.
+
+Klae recorded a Geckish officer's letter home: 'We have conquered the land. We have not conquered the people. I am beginning to wonder if these are different things.'"""},
+
+                {"title": "Rell of the Hills",
+                 "content": """Rell Havenaugh became a legend despite her best efforts to the contrary. She was not a warrior. She was a politician — a minister's daughter from the provincial town of Havenaugh who had entered government because someone needed to do it and she was tired of waiting for a man to volunteer. She had never held a weapon. She had never commanded soldiers. She had never, in her own words, done anything more violent than argue with a tax collector.
+
+The Geckish invasion changed this, as invasions tend to change everything. Rell fled the occupied capital with a handful of loyalists and established a resistance government in the hill country south of the Paronis. From there, she coordinated the guerrilla campaign that would torment the Gechann for two decades. She did not fight. She organized. She sent messages, gathered intelligence, arranged supply lines, and made the thousands of small, grinding decisions that keep a resistance alive when every rational calculation says it should surrender.
+
+The Geckish called her the Hill Witch, a name she found amusing. The Pervins called her Rell of the Hills, which she found acceptable. She called herself 'the minister of a government that doesn't have a building,' which was accurate.
+
+Her greatest contribution was not military but diplomatic. Rell understood that Epervinay could not defeat the Gechann alone. She needed allies, and allies required persuasion. She sent envoys to every kingdom in Fondore, not asking for armies — she knew better — but asking for economic pressure. Embargo Gecha. Refuse their trade. Make the occupation of Epervinay more expensive than it was worth.
+
+The strategy worked, slowly. The Raxonians, who had been selling mercenaries to both sides, quietly raised their prices for Geckish contracts. The Ardenese, whose ships carried Geckish goods, began imposing surcharges. Even the Leimish, who generally avoided confrontation, restricted the sale of Ardent-built warships to the empire.
+
+The Geckish treasury, which had expected a short campaign and was now funding a permanent occupation, began to strain. The Grey Fist's successor — the Imperator was elected every decade, though the elections were increasingly performative — made the calculation that every occupier eventually makes: this is costing more than it is worth.
+
+The Gechann withdrew. Not completely — they maintained a military presence on the border that would endure for centuries — but they recognized Epervinay's sovereignty and removed their governor. Rell Havenaugh returned to the capital and governed for another decade.
+
+She never wrote a memoir. She never commissioned a statue. When she died, she was buried in the family plot in Havenaugh, and the inscription on her stone was the same as every other Havenaugh buried there: name, dates, and the Pervin word for home.
+
+Klae wrote: 'She saved her country by being too stubborn to admit it was lost. This is not a military strategy. It is a Pervin one.'"""}
+            ]},
+
+            {"number": 3, "name": "Third Century",
+             "description": "The Fall of Vera. The ancient Kingdom of Vera, once the mightiest naval power in the world, collapses under the weight of its own slave economy and Geckish military pressure. The island kingdom that built the first transoceanic empire becomes a Geckish dependency, and the Karaf slaves who built Vera's wealth are freed — not by Veran conscience but by Geckish pragmatism.",
+             "stories": [
+                {"title": "The Last King of Vera",
+                 "content": """The Kingdom of Vera had been dying for centuries. The diagnosis was simple: an economy built entirely on slave labor cannot adapt, because adaptation requires the kind of creative problem-solving that slave economies systematically destroy. The Verans had Karaf slaves for manual labor, Rusiki slaves for household work, and an aristocracy so accustomed to being served that many of its members could not dress themselves without assistance. This is not a recipe for national resilience.
+
+The Gechann, who had been expanding their naval power throughout the Third Age, looked at Vera the way a doctor looks at a terminal patient: with clinical interest and a clear sense of inevitability. The island kingdom still had a fleet, but it was crewed increasingly by slaves who had no particular reason to fight for their masters. The army was small and poorly trained, because the aristocracy considered military service beneath them and the slaves were not trusted with weapons.
+
+The last King of Vera — Sokotros XXIII, a number that tells you something about the dynasty's longevity and nothing about its quality — was a young man who had inherited a kingdom that was, by every measurable standard, bankrupt. The treasury was empty. The slave population, which outnumbered the free population three to one, was restive. The Geckish fleet was visible on the horizon on clear days.
+
+Sokotros XXIII tried diplomacy. He offered trade concessions, military access, and a formal alliance. The Gechann accepted the concessions, noted the military access, and invaded anyway, because the Gechann had learned that the cheapest way to acquire something was to take it from someone who had already offered to give it away.
+
+The invasion lasted three weeks. The Veran fleet, crewed by slaves who dropped their oars the moment the Geckish ships appeared, was captured without a significant engagement. The Veran army, such as it was, surrendered after a single battle outside the capital. Sokotros XXIII was deposed, exiled to a small estate on the Rokori peninsula, and spent the rest of his life writing poetry that nobody read.
+
+The Gechann freed the Karaf slaves. This was not an act of moral conviction. It was an act of economic calculation. Free workers are more productive than slaves, require less policing, and do not periodically attempt to murder their employers. The Karaf, who had been in chains for millennia, were handed their freedom by the same empire that had just conquered their masters, which created a complicated emotional landscape that Klae found fascinating and the Karaf found exhausting.
+
+Vera, the kingdom that had built the first transoceanic empire, ceased to exist. Its territory became a Geckish province. Its name survived only in geography and in the bitter memories of an aristocracy that had lost everything except its sense of entitlement."""},
+
+                {"title": "Karaf Unchained",
+                 "content": """The day the chains came off was not a celebration. It was a confusion.
+
+The Karaf had been slaves for so long that freedom was not a concept most of them had personal experience with. Their great-grandparents had been slaves. Their great-great-grandparents had been slaves. The stories of the Kola Tai — the great escape during the First Age, when Karaf slaves had stolen a ship and founded a free colony on Karagon — were legends, not lived memory. For the Karaf on Vera, slavery was not an injustice. It was weather. It was the sky. It was the fundamental condition of existence.
+
+The Geckish governor who announced the emancipation did so in a public square in the Veran capital, reading from a prepared text that had been drafted by bureaucrats in Boulavar. The language was dry, legalistic, and entirely inadequate to the moment. 'All persons held in bondage within the territories of the former Kingdom of Vera are hereby declared free citizens of the Gechann Empire, with all rights and responsibilities pertaining thereto.'
+
+Rights and responsibilities. The Karaf standing in the square — grey-skinned, sharp-featured, bearing the physical marks of generations of forced labor — heard the words and did not know what to do with them. Some wept. Some stood in silence. Some walked away, because they had work to do and emancipation did not change the fact that the crops needed harvesting and the fishing boats needed mending.
+
+The practical reality of emancipation was brutal. The Karaf were free, but they owned nothing. The land they had worked belonged to Veran aristocrats or, now, to the Geckish state. The skills they possessed were the skills of slaves: farming, fishing, construction, domestic service. The education system that might have prepared them for free citizenship had never existed, because educated slaves are dangerous slaves.
+
+The Gechann provided, to their credit, a rudimentary transition program. Land grants were distributed — small parcels, mostly the worst land on the island, the rocky hillsides and marshy lowlands that nobody else wanted. Tools were provided. Cereyst missionaries established schools. It was not enough. It was never going to be enough. Centuries of bondage cannot be remedied by a decade of half-measures.
+
+Some Karaf left Vera entirely. They sailed to Karagon, where the free Karaf nation had been building a civilization for millennia. The reunion was complicated: the Karagonese Karaf had developed a culture so different from the Veran Karaf that they were, in many ways, different peoples who happened to share a skin color and a history of suffering.
+
+Klae spent months interviewing Karaf communities on both Vera and Karagon. He concluded: 'Freedom given is not the same as freedom taken. The Karaf of Karagon earned theirs with blood. The Karaf of Vera received theirs from the same kind of power that had stolen it in the first place. Both are free. Neither has forgotten.'"""}
+            ]},
+
+            {"number": 4, "name": "Fourth Century",
+             "description": "The Rise of the Karagon. While the Gechann Empire expands across Fondore, the Karaf nation on Karagon emerges as an unlikely power. Built on the ruins of Veran colonialism and sustained by a fierce egalitarian culture, Karagon develops its own navy, its own trade routes, and its own ideas about how a nation should be governed.",
+             "stories": [
+                {"title": "The Republic of Karagon",
+                 "content": """The Karaf had tried kings. It hadn't worked.
+
+The early centuries of Karagonese independence had been governed by a rotating series of strongmen, warlords, and self-appointed monarchs who rose on the strength of their personality and fell when someone stronger came along. The cycle was predictable and exhausting, and by the middle centuries of the Third Age, the Karagonese had developed a cultural allergy to concentrated power that bordered on the pathological.
+
+The solution they devised was radical: a republic. Not the elective monarchy of the Gechann, which produced dictators who called themselves elected officials. Not the constitutional monarchy of Lambridge, which produced kings who called themselves servants of the people. A genuine republic, where representatives were chosen by popular vote, served fixed terms, and could be removed by the same vote that installed them.
+
+The system was messy. Elections were chaotic. Representatives spent as much time arguing with each other as governing, which the Karagonese considered a feature rather than a bug. The bureaucracy was slow, the military was underfunded, and foreign diplomats who were accustomed to dealing with a single authority figure found the Karagonese system baffling.
+
+But it worked. Not perfectly, not elegantly, but it worked in the sense that power transferred peacefully, unpopular leaders were removed without bloodshed, and the government, despite its many inefficiencies, reflected the will of the people it governed more accurately than any other system in Elysal.
+
+The Karagonese were particularly proud of one institution: the People's Court, where any citizen could bring a grievance against any official, up to and including the head of state. The court was staffed by randomly selected citizens who served for one year, ensuring that no judicial class could form. It was chaotic, unpredictable, and occasionally absurd — a fisherman once brought a complaint against the trade minister for the price of bait — but it kept the powerful honest, or at least nervous, which the Karagonese considered approximately the same thing.
+
+Klae visited Karagon during his research and was deeply impressed. He wrote: 'The Karagonese have built the only government in Elysal that is designed to distrust itself. Every institution contains the mechanism for its own correction. Every leader serves knowing that the people who elevated them can bring them down. It is not efficient. It is not elegant. It may be the closest thing to justice that politics can produce.'"""},
+
+                {"title": "The Karagonese Navy",
+                 "content": """The Karagonese had a saying: the ocean freed us, and the ocean will keep us free. It was not a metaphor.
+
+Karagon was an island. Its freedom depended entirely on the ability to prevent hostile fleets from reaching its shores, which meant that the Karagonese invested in their navy with the single-minded intensity of a people who understood that the alternative was extinction. Every child on Karagon learned to sail. Every coastal village maintained a fleet of fishing boats that could be converted to warships in an emergency. The shipyards at Kapolei, the capital, produced vessels that were fast, maneuverable, and designed for one purpose: making other people's ships sink.
+
+The Karagonese ship design was distinctive. Where Fondorian vessels were built for cargo capacity and ocean endurance, Karagonese ships were built for speed and combat. They were lower, narrower, with hulls shaped to cut through waves rather than ride over them. Their signature weapon was the fire pot — a ceramic container filled with a mixture of pitch, sulfur, and other combustibles that could be catapulted onto an enemy deck, where it would shatter and ignite. The mixture was a closely guarded state secret, and Karagonese sailors were trained to destroy their own ships rather than allow the formula to be captured.
+
+The navy's first major test came when a Geckish trading fleet, emboldened by the empire's conquest of Vera, attempted to establish a commercial outpost on Karagon's northern coast without permission. The Karagonese response was swift and unambiguous: the fleet was intercepted, the merchant ships were burned, and the Geckish captain was sent back to Boulavar on a raft with a message that Klae found in the Gechann imperial archives: 'Karagon is not Vera. We freed ourselves. Try us.'
+
+The Gechann, who were stretched thin by their continental empire, decided that Karagon was not worth the effort. The island republic was left alone, which was all the Karagonese had ever wanted. They continued to trade with Fondore — Karaf merchants were welcome in every port — but they traded on their own terms, and any nation that attempted to impose terms on them discovered what the fire pots were for.
+
+Klae noted that Karagon's independence was maintained not by diplomacy or alliances but by the simple, brutal logic of naval superiority. The Karagonese could not defeat the Gechann Empire in a war. But they could make any invasion so expensive that no Imperator would consider it worthwhile. This is the strategy of the small and the determined, and it has a perfect record against the large and the distracted."""}
+            ]},
+
+            {"number": 5, "name": "Fifth Century",
+             "description": "The Icrazan Genocide. The Gechann Empire, seeking to secure its holdings in Metzerul, launches a campaign against the Lirzan Kingdom that escalates into one of the worst atrocities in Elysali history. The dragonborn ruling class is specifically targeted, and the events of this century leave scars that will never fully heal.",
+             "stories": [
+                {"title": "The Lirzan Question",
+                 "content": """The Gechann called it the Lirzan Question, as if the existence of an entire civilization were a problem to be solved.
+
+The Lirzan Kingdom in Metzerul had been a trading partner of Fondore since the Era of Sail. Lirzan goods — exotic metals, alchemical compounds, jungle hardwoods, and the distinctive fire-glazed ceramics that were fashionable in every Fondorian court — flowed through Capera Cuza and across the Erezetta. The Lirzans, for their part, imported Fondorian textiles, agricultural technology, and Kript, which they found revolting but which the Wintermen in their territories demanded.
+
+The relationship worked because it was mutually profitable. It stopped working when the Gechann decided that mutual profit was insufficient and that total control was preferable.
+
+The Fourth Age Imperator — a man named Gaius Thryvyc Saul, who had risen through the military ranks and viewed every problem as a logistics exercise — determined that the Gechann needed exclusive access to Lirzan resources. The Wintermen of Perut, the Raxonian merchants in Capera Cuza, the Ardenese trading companies — all of these competitors needed to be eliminated. And the Lirzans themselves, who had the inconvenient habit of setting their own prices and choosing their own partners, needed to be brought under control.
+
+The initial approach was economic. Geckish trade representatives offered the Lirzan king exclusive contracts at favorable rates. The Lirzans declined, preferring to maintain their diverse trading relationships. The Gechann offered again, less favorably. The Lirzans declined again. The Gechann offered a third time, with an implied threat. The Lirzan king, a dragonborn named Zumarax III, reportedly breathed a small jet of fire in the direction of the Geckish ambassador and suggested he leave.
+
+What followed was not a negotiation. It was a campaign of subjugation that began with trade blockades, escalated to naval engagements, and culminated in a full military invasion of coastal Metzerul. The Geckish legions, adapted for jungle warfare with lighter equipment and native guides, pushed into Lirzan territory with the methodical efficiency that defined every imperial campaign.
+
+But the Lirzan campaign was different from Epervinay or Vera. The Lirzans were not humans. They were lizardfolk, with dragonborn at the apex of their society, and the Gechann treated them accordingly — not as a people to be conquered but as a species to be subdued.
+
+Klae wrote: 'The Lirzan Question was never a question. It was an answer looking for a justification.'"""},
+
+                {"title": "Fire and Scale",
+                 "content": """The word genocide was not used in the Fourth Age. The concept did not yet have a name, because naming a thing requires acknowledging that it exists, and the Gechann were not in the business of acknowledging what they were doing.
+
+The campaign against the Lirzans began as a conventional military operation and became something else. The Geckish legions conquered the coastal cities without great difficulty — the Lirzan military, organized for jungle warfare, was poorly suited to defending fixed positions. But the interior, where the great jungle cities like Imbraxione lay hidden beneath the canopy, proved unconquerable by conventional means. The legions could not march through terrain where every tree might contain an ambush, where the rivers were full of predators, and where the defenders could literally see in the dark.
+
+The Imperator's solution was extermination. If the Lirzans could not be conquered, they would be destroyed — not all of them, because even Gaius Thryvyc recognized that someone needed to work the mines and farms, but enough of them to break any capacity for organized resistance. Specifically, the dragonborn.
+
+The dragonborn were the ruling class of Lirzan society. They were the generals, the priests, the administrators. They were also, due to their dragon ancestry, the most dangerous combatants on the battlefield — capable of breathing fire, resistant to extreme temperatures, and possessed of a physical toughness that made them difficult to kill even when you caught them. The Gechann concluded, with the cold logic of empire, that removing the dragonborn would decapitate Lirzan society and render the remaining lizardfolk population docile and exploitable.
+
+The campaign that followed targeted dragonborn specifically. Villages were raided and dragonborn identified by their distinctive features — the vestigial wing-bones, the darker scales, the smoke that curled from their nostrils. They were separated from the general population and killed. Not in battle, not in the chaos of combat, but systematically, in organized operations that had the bureaucratic efficiency of a tax collection.
+
+The Lirzans resisted with everything they had. Dragonborn warriors fought to the last, and the legends of the Lirzan resistance are among the most harrowing in the Annals. But organization, numbers, and the industrial capacity of the Gechann Empire prevailed over individual heroism.
+
+Klae recorded the Icrazan Genocide in the flattest, most clinical language he could manage. He did not editorialize. He did not moralize. He simply listed the numbers, the dates, the names of the dead where they could be recovered, and the names of the commanders who gave the orders. He believed that the facts, presented without adornment, were condemnation enough.
+
+He was right."""}
+            ]},
+
+            {"number": 6, "name": "Sixth Century",
+             "description": "Palasor City. At the height of its power, the Gechann Empire builds Palasor, a new capital designed to project imperial grandeur across the world. The city becomes a monument to Geckish ambition — and, eventually, a monument to the hubris that accompanies it.",
+             "stories": [
+                {"title": "The City That Swallowed the World",
+                 "content": """Boulavar had been the capital of Gecha since the early days of the Novus Gecharium. It was a fine city — wealthy, well-defended, strategically located — but it was also a city that had grown organically, without plan, its streets a tangle of old neighborhoods and market districts that had been built by merchants, not architects. The Imperators who ruled from Boulavar's senate hall found it an unsatisfactory seat of power. It looked like what it was: a trading city that had stumbled into empire. They wanted something that looked like it was meant to rule.
+
+Palasor was designed from the ground up as an imperial capital. The location was chosen for symbolism rather than strategy: a flat plain in central Gecha, equidistant from the major city-states, at the intersection of the empire's great military roads. The architect — a Waydrani genius named Thessik Moran, who had been recruited, or possibly coerced, from the university at Hypolta — was given unlimited resources and a simple brief: build a city that makes visitors feel small.
+
+Thessik delivered. Palasor's central avenue was wide enough for three legions to march abreast. The Imperial Palace, called the Aurumthen, was a complex of marble and granite that covered more ground than some towns. The senate hall could seat a thousand. The public baths could accommodate ten thousand. The arena, where gladiatorial games and military demonstrations were held, was visible from five miles away.
+
+The city was a statement, and the statement was: we are the most powerful civilization in the world, and we have built a city to prove it. Foreign ambassadors who visited Palasor returned home with descriptions that read like hallucinations. A Leimish diplomat's letter, recovered by Klae from the Clarity archives, reads: 'It is not a city. It is an argument made of stone.'
+
+But Palasor had a problem that stone arguments always have: it was expensive. The construction alone consumed a significant portion of the imperial treasury. Maintaining it — the aqueducts, the roads, the public works, the garrison — required a constant flow of tax revenue from the provinces. And the provinces, several of which were occupied territories whose populations resented funding the construction of a monument to their own subjugation, were increasingly reluctant to pay.
+
+Klae visited the ruins of Palasor during his research. By his time, the city had been abandoned for centuries, its marble cracked, its avenues overgrown, its arena home to nothing more threatening than nesting birds. He wrote: 'Palasor was built to last forever. It lasted as long as the money did, which is another way of saying it lasted as long as the empire did, which is another way of saying nothing lasts forever.'"""},
+
+                {"title": "The Games at Palasor",
+                 "content": """The arena at Palasor was the largest enclosed structure in Fondore, an oval of tiered stone seating that could hold forty thousand spectators and was rarely less than full. The games held there were the empire's most popular entertainment, and they were, depending on your perspective, either a celebration of martial culture or a systematic desensitization to violence dressed up as sport.
+
+The games featured gladiatorial combat, military re-enactments, animal hunts, and public executions — the last of which were presented as entertainment rather than justice, which tells you something about how the empire viewed both. Gladiators were drawn from the prisoner population, from slaves, from condemned criminals, and from a surprising number of volunteers who chose the arena over poverty, which tells you something about the poverty.
+
+The most popular events were the re-enactments: staged recreations of famous imperial victories, complete with thousands of combatants, elaborate scenery, and a script that ensured the Gechann always won. The Battle of the Thaugren, where the Gechann had crushed a Debrear border incursion, was a perennial favorite. So was the Fall of Vera, re-enacted with Veran prisoners playing themselves. The taste involved in making conquered peoples re-enact their own defeat for the entertainment of their conquerors was not questioned, because the Gechann did not consider it a question.
+
+But the games served a political purpose that went beyond entertainment. They kept the population of Palasor — a city of bureaucrats, soldiers, merchants, and the various hangers-on that accumulate around power — occupied and distracted. A population watching gladiators is a population not questioning policy. The bread-and-games strategy is as old as civilization, and the Gechann executed it with their characteristic efficiency.
+
+The games also served as a pressure valve for the empire's military culture. The Gechann glorified martial prowess, but the legions were fighting on distant frontiers, and the average citizen of Palasor would never see a real battle. The arena provided a substitute: controlled violence, presented as spectacle, allowing the population to participate vicariously in the martial virtues that the empire claimed as its identity.
+
+Klae attended a re-enactment during his visit to the ruins, staged by a local historical society with considerably fewer resources than the original. He found it disturbing, not because of the violence — which was simulated — but because of the enthusiasm. 'The audience cheered,' he wrote, 'at the moment the Verans died. They have been cheering at this moment for centuries. I do not think they know what they are cheering for.'"""}
+            ]},
+
+            {"number": 7, "name": "Seventh Century",
+             "description": "The Second Holy War. Emboldened by Geckish overextension, the High Cere calls a second crusade to retake the holy lands of Mural Cere. The war is larger, bloodier, and more cynical than the first, and it produces a generation of disillusioned soldiers who return home questioning everything they were told to believe.",
+             "stories": [
+                {"title": "The Call That Should Not Have Been Answered",
+                 "content": """The Second Holy War was, in every measurable way, a mistake. The High Cere who called it — a man named Gloron Pav VII, deliberately named after his crusading predecessor to invoke the spirit of the First Holy War — was not a spiritual leader. He was a politician in robes who understood that Mural Cere's influence had been declining for centuries and that a war was the fastest way to reverse the trend.
+
+The pretext was the same as the first time: Geckish occupation of historically Cereyst territory. The Gechann, stretched across half the world, had garrisoned northern Mural Cere with a single legion and a governor whose primary qualification was that nobody else wanted the job. The desert was hot, the population was hostile, and the posting was considered a punishment for officers who had disappointed their superiors.
+
+Gloron Pav VII saw an opportunity. The empire was overextended. Its legions were committed in Metzerul, in Epervinay, in the border territories, in every corner of a domain that had grown faster than its ability to defend it. A well-timed crusade could recapture the holy lands while the Gechann were looking the other way.
+
+The kingdoms of Fondore answered the call, again. Lambridge sent knights, again. Raxone sent mercenaries, again. Epervinay sent soldiers who were happy to fight anyone who wasn't fighting them for a change. And the crusading army marched south into the Pasav, again, through the same killing heat, toward the same fortified cities, against the same kind of enemy.
+
+But the soldiers of the Second Holy War were different from their predecessors. They had read the histories of the first crusade. They knew about the sack of Ramal Cere. They knew that the crusader state had lasted barely a century before the Gechann retook it. And they marched anyway, because their kings told them to and their priests told them God wanted them to, and when kings and priests agree, the ordinary soldier's opinion is not consulted.
+
+The war lasted years. It produced several significant battles, a handful of legendary commanders, and an enormous quantity of dead young men who had traveled hundreds of miles to die in a desert for a cause that their grandchildren would struggle to explain. The crusaders took territory, lost it, took it again, lost it again, in a cycle that achieved nothing except the enrichment of the weapons merchants and the impoverishment of everyone else.
+
+Klae wrote: 'The Second Holy War was the First Holy War with the illusions removed. The first time, men marched for God. The second time, they marched because they had been told to march, and the difference between faith and obedience is the difference between a fire and its ashes.'"""},
+
+                {"title": "The Veterans of Sand",
+                 "content": """They came home changed. The soldiers who returned from the Second Holy War — those who returned at all — carried something with them that was more durable than their scars and more dangerous than their weapons. They carried doubt.
+
+The crusaders had been told they were fighting for Illiman, for the holy lands, for the eternal salvation of their souls. What they had found in the Pasav was sand, heat, disease, and an enemy that fought with the same conviction and the same prayers to the same god. A Raxonian mercenary named Helter Jorunson, whose testimony Klae recorded in full, described the moment that broke him: hand-to-hand combat with a Mural Cereyn defender who was reciting Illiman's Prayer of Mercy while trying to kill him. 'He was praying the same prayer I was praying,' Jorunson said. 'And one of us was supposed to be wrong. I couldn't figure out which.'
+
+The veterans returned to kingdoms that did not know what to do with them. They were too experienced to be farmers and too disillusioned to be soldiers. Many drank. Some turned to crime. A significant number joined the growing Rundelian movement, which rejected institutional Ceresy entirely and practiced a personal, unmediated relationship with the divine that did not require priests, temples, or wars fought in God's name.
+
+The Rundelian movement had been growing since the Second Age, but the veterans of the Second Holy War gave it a critical mass of credibility. These were not philosophers or monks arguing about doctrine. They were men who had killed and nearly died in the name of a religion that they now believed had betrayed them. When they said the Church was corrupt, people listened, because the men saying it had the authority of experience.
+
+The Gechann Empire, which had weathered the crusade with minimal territorial loss, observed the religious upheaval in its rivals with amusement. A Fondore divided by religious controversy was a Fondore too distracted to challenge Geckish hegemony. The Imperator reportedly said, upon hearing of the Rundelian schism: 'Let them argue about God. We will argue about borders. Our argument is more productive.'
+
+He was wrong about that, as Imperators often are about things that do not involve legions. The religious transformation that the veterans brought home would reshape Fondorian society more profoundly than any military campaign, because it changed what people believed, and what people believe determines what they are willing to fight for and what they are willing to accept.
+
+Klae, who was himself not religious, understood this. He wrote: 'The veterans came home and said: I have seen what is done in God's name, and I do not believe God wants it. This is a small sentence. It brought down cathedrals.'"""}
+            ]},
+
+            {"number": 8, "name": "Eighth Century",
+             "description": "The Kingdom of the North Divided. The Raxonian monarchy, weakened by the princely feuds and the costs of the crusade, fractures into warring factions. The War of Snow — a civil war fought across the frozen North — produces one of the most devastating conflicts in Raxonian history and permanently alters the balance of power in northern Fondore.",
+             "stories": [
+                {"title": "The War of Snow",
+                 "content": """The War of Snow did not begin with a declaration. It began with a door.
+
+In the eighth century of the Fourth Age, King Brostav IV of Raxone was found dead in his bedchamber, the door locked from the inside, with no visible wounds and no explanation. The royal physician declared natural causes. The king's brother, Prince Varek, declared murder. The king's son, Prince Aldren, declared his father's brother a liar. And within a week, the kingdom was at war with itself.
+
+The details of the succession crisis are tangled beyond recovery. Klae spent years trying to untangle them and eventually admitted defeat, writing: 'I have interviewed forty-seven Raxonians about the War of Snow and received fifty-three different explanations, because six of them changed their story between our first and second meetings.'
+
+What is clear is this: the kingdom split roughly in half. The western provinces, controlled by the older princely families, backed Varek. The eastern provinces, controlled by newer families who had risen through the military, backed Aldren. The central territories, caught between the two, tried to stay neutral and were invaded by both sides for their trouble.
+
+The War of Snow earned its name from the terrain and the season. The fighting began in winter, because Raxonians do not wait for favorable weather, and it was fought across hundreds of miles of frozen taiga, snowbound passes, and river crossings that were either frozen solid or frozen enough to look solid until a column of soldiers tried to cross and discovered otherwise.
+
+The war lasted seven years. It produced no legendary battles, because battles in the Raxonian North tended to be confused, bloody affairs fought in poor visibility between men who could not feel their extremities. It produced, instead, a grinding attrition that consumed the kingdom's manpower, its treasury, and its capacity for self-governance. Towns changed hands repeatedly. Families were divided. Men who had drunk together at the Tavern at Esterhai found themselves on opposite sides of a shield wall.
+
+The war ended when both sides ran out of men. Prince Varek was killed in a skirmish so minor that it does not appear in most histories. Prince Aldren took the throne and immediately faced a kingdom that was exhausted, depopulated, and broke. The Princes of Rax, who had fueled the war by backing different sides, emerged from the conflict with their power enhanced and the monarchy's power diminished. The king ruled in name. The princes ruled in fact.
+
+Raxone would not recover for generations. And the Gechann, watching from the south, noted the North's weakness with the professional interest of an empire that had not yet run out of things to conquer."""},
+
+                {"title": "The Frozen Truce",
+                 "content": """After seven years of killing each other, the Raxonians needed to remember how to stop. This proved more difficult than the fighting.
+
+The Frozen Truce — named for the river crossing where it was negotiated, and for the temperature, which was several degrees below what any Fondorian would consider habitable — was brokered not by diplomats but by tavern-keepers. This is not a metaphor. The tavern-keepers of Raxone, who occupied a social position somewhere between priest and magistrate, had watched their communities tear themselves apart and decided, collectively, that someone needed to intervene before there was nobody left to serve drinks to.
+
+A woman named Inge Torvaldssen, who ran the largest inn in the border town of Voskraad, organized a meeting between representatives of both factions. She did this by the simple expedient of inviting both sides to her inn for a funeral — the funeral of a local farmer who had been killed by neither side but whose death she attributed to both, loudly, publicly, and with the kind of moral authority that only a woman who has been feeding your soldiers for seven years can claim.
+
+The representatives came. They drank. They argued. They drank more. Inge Torvaldssen, who had been serving Kript to angry men for thirty years and was not impressed by either princes or generals, kept them in the same room until they reached an agreement. The agreement was simple: stop fighting. Divide the territory along the current battle lines. Let Aldren have the crown, because Varek was dead and crowns need heads. And for the love of everything sacred, rebuild the roads, because the trade routes were destroyed and nobody could get a shipment of anything anywhere.
+
+The truce held, not because of its legal framework — which was minimal — but because of its practical foundation. The Raxonians were exhausted. The economy was shattered. The army, what was left of it, wanted to go home. And the tavern-keepers, who understood their countrymen better than any politician, had given both sides an exit that allowed them to stop fighting without admitting they had been wrong to start.
+
+Klae found the Frozen Truce deeply characteristic of Raxone. He wrote: 'Other nations end their wars with treaties signed in palaces. The Raxonians ended theirs in a tavern, brokered by a woman who was tired of cleaning blood off her floorboards. I am not sure which approach is more civilized, but I know which one I prefer.'"""}
+            ]},
+
+            {"number": 9, "name": "Ninth Century",
+             "description": "The Schvainese Rebellion. The Isles of Schvaine, long a Leimish territory and the birthplace of the Knights of Lambridge, erupt in revolt against the Clairdwell dynasty. The rebellion forces Lambridge to confront the contradiction at the heart of its national identity: a kingdom founded on liberation that has become, in its own small way, an oppressor.",
+             "stories": [
+                {"title": "The Sons of Schvaine",
+                 "content": """The irony was exquisite, and the Schvainese were not shy about pointing it out.
+
+The Isles of Schvaine had been the birthplace of the Knights of Lambridge — the rocky, wet islands where Emantine Asaundier had trained his exiled warriors before crossing back to the mainland to liberate the Leimlands from Debrear occupation. The Schvainese had sheltered the knights, fed them, given them boats and supplies and the quiet, steady support that makes exile survivable. They had done this freely, out of solidarity and shared Leimish identity.
+
+In return, when the Clairdwell dynasty was established on the mainland, the Schvainese were made subjects. Not partners, not allies, not the honored founders of the liberation movement. Subjects. The islands were incorporated into Lambridge as a territory — technically equal under the law, practically subordinate in every way that mattered. Schvainese governors were appointed by the Clairdwell court. Schvainese taxes flowed to Clarity. Schvainese fishermen were conscripted into the Leimish navy.
+
+For centuries, the Schvainese accepted this arrangement with the quiet resentment that characterizes people who know they are being taken for granted but cannot identify the precise moment when the taking began. The resentment accumulated like snow on a roof: imperceptibly, persistently, until the weight became unsupportable.
+
+The rebellion began with a fishing tax. The Clairdwell court, straining under the costs of maintaining the Leimbordur garrisons and the Knights of Lambridge, imposed a new levy on Schvainese fishing catches. The tax was not large, but it was the final indignity for a population that had been providing fish, sailors, and soldiers to the kingdom for centuries without receiving proportional representation in return.
+
+A fisherman named Colm Devane stood up in the Schvaine town assembly and said, in a speech that Klae reconstructed from six different oral accounts: 'We gave them an island to fight from, and they gave us a tax to pay. We sheltered their knights, and they sent us their governors. We are the cradle of Lambridge, and Lambridge has forgotten who rocked it.'
+
+The assembly voted to withhold the tax. The Clairdwell court sent soldiers. The Schvainese met them on the docks, and the soldiers, who were Leimish and had Schvainese grandmothers, refused to fire.
+
+The rebellion had begun, and it was the most dangerous kind: a rebellion that the oppressor's own people agreed with."""},
+
+                {"title": "The Compromise of Tides",
+                 "content": """The Schvainese Rebellion lasted two years and was resolved without a major battle, which is the most Leimish outcome imaginable.
+
+The Clairdwell court was paralyzed. They could not crush the rebellion without crushing their own founding mythology, because every Leimish child grew up on stories of the Knights of Lambridge being sheltered on Schvaine, and sending an army to subjugate the islands would have been, symbolically, an act of national self-destruction. The knights themselves were divided: their code of honor demanded loyalty to the crown, but their origin story demanded gratitude to the Schvainese.
+
+The Schvainese, for their part, did not want independence. They wanted recognition. They wanted representation in the Clairdwell court proportional to their contribution to the kingdom. They wanted their governors to be elected, not appointed. They wanted the fishing tax repealed, obviously. And they wanted an apology, which in Leimish culture carries more weight than a treaty, because a treaty can be broken but an apology, once given, becomes part of the historical record.
+
+The resolution was called the Compromise of Tides, negotiated on a beach at low tide — literally between the worlds of land and sea, which the Schvainese insisted upon because they had a gift for symbolism that the mainland Leimish found simultaneously irritating and impressive.
+
+The terms gave the Schvainese most of what they wanted. Elected governors. Proportional representation. The fishing tax was repealed and replaced with a voluntary contribution to the Leimish navy, which amounted to the same thing but was phrased differently, and phrasing matters to the Leimish. The Clairdwell king issued a formal statement acknowledging the debt that Lambridge owed to the Isles of Schvaine, which was not quite an apology but was close enough for the Schvainese to accept.
+
+The Compromise of Tides was not a revolution. It was a correction — a small adjustment to a relationship that had been out of balance for centuries. Klae found it significant precisely because it was small. He wrote: 'The great revolutions get the histories. The small corrections get the results. The Schvainese did not overthrow their kingdom. They reminded it of its own principles, which is harder and more important.'"""}
+            ]},
+
+            {"number": 10, "name": "Tenth Century",
+             "description": "The Long Shadow. The Gechann Empire reaches its maximum extent and begins to show the first signs of the decline that will define the next age. The conquered peoples are restless, the treasury is strained, the legions are spread thin across half the world. The Fourth Age ends not with a collapse but with a tremor — the first warning that the ground beneath the empire is not as solid as the marble of Palasor suggests.",
+             "stories": [
+                {"title": "The Cracks in the Marble",
+                 "content": """At its height, the Gechann Empire controlled the entirety of the Geckish heartland, the Waydrani peninsula, northern Mural Cere, significant portions of coastal Metzerul, the former Kingdom of Vera, and a network of trade outposts, military bases, and colonial settlements that stretched from the frozen approaches of Raxone to the jungles of the Rim. On paper, it was the largest political entity in the history of Elysal.
+
+Paper, as the empire was beginning to discover, is not the same as reality.
+
+The cracks appeared first in the finances. The empire's economy was built on trade, tribute, and taxation, and all three were declining. Trade was disrupted by Karagonese competition and Raxonian piracy. Tribute from conquered territories was increasingly difficult to collect, because the populations of those territories had discovered that withholding payment was a form of resistance that did not require weapons. And taxation of the Geckish heartland itself was approaching the limit of what the population would tolerate, because even Gecks — who were culturally disposed to accept high taxes as the price of civilization — had a breaking point.
+
+The legions were stretched thin. The professional army that had conquered half of Fondore now had to garrison it, and garrisoning is more expensive than conquering because it never ends. Every province required soldiers. Every border required patrols. Every colonial outpost required a detachment. The total military commitment had grown to over a hundred thousand men, and the empire's population, while large, was not inexhaustible.
+
+The most dangerous crack was in the provinces themselves. The Waydrani, who had endured Geckish rule with characteristic quiet resistance, were producing a generation of intellectuals who wrote treatises on sovereignty and self-determination that circulated through the empire's own postal system. The Lirzan survivors in Metzerul had regrouped in the deep jungle and were launching raids against Geckish settlements. The Pervins of Epervinay, technically independent but hemmed in by Geckish military power, were building an army that would, in the next age, become the instrument of the empire's humiliation.
+
+Klae, who had the advantage of writing from the far side of the empire's collapse, saw the pattern clearly. He wrote: 'The empire did not fall because it was attacked. It fell because it grew until it could no longer sustain its own weight, and the weight was not stone or marble but the accumulated resentment of every person who had been told that their subjugation was a form of civilization.'"""},
+
+                {"title": "A Letter from the Frontier",
+                 "content": """Klae found this letter in a Geckish military archive, filed under 'Miscellaneous Correspondence, Lirzan Frontier.' It was written by a Geckish centurion stationed in the jungle outpost of Vexillum, on the edge of Lirzan territory, sometime in the final decades of the Fourth Age. The intended recipient was the centurion's wife in Palasor.
+
+'Talia,
+
+I write this by lamplight because the jungle does not permit the luxury of daylight. The canopy above us is so thick that noon looks like dusk, and dusk looks like the inside of a tomb. I have been here for three years. My century is down to sixty-two men from the original hundred. The rest are dead, deserted, or invalided home with fevers that the physicians cannot name.
+
+We are not fighting a war. A war has objectives, and we have none. We hold this outpost because we were ordered to hold it, and we were ordered to hold it because it appears on a map in Palasor, and the men who look at maps in Palasor have never been to a jungle and do not understand that a dot on parchment is not the same as a defensible position in a forest that is trying to eat you.
+
+The Lirzans raid us every few weeks. They come at night, because they can see in the dark and we cannot. They kill one or two of our men, take what supplies they can carry, and vanish back into the trees. We cannot pursue them. We have tried. The jungle closes behind them like water behind a stone.
+
+I do not hate the Lirzans. I understand this is an unusual statement for a man in my position. But I have been here long enough to understand what we did to them, and I have concluded that if someone had done to Gecha what we did to Lirza, I would be raiding their outposts too. This is not a popular opinion. I do not share it with my men.
+
+I am told the empire is strong. I am told the Imperator has plans. I am told that our sacrifice serves a greater purpose. I believe the first two. I doubt the third. But I will hold this post because I was ordered to, and I am a Geck, and Gecks do what they are told until they are told something different.
+
+Tell the children I am well. I am not, but tell them anyway.
+
+Your husband, from the edge of everything.'
+
+Klae published this letter as the final entry for the Fourth Age. He believed, and was probably correct, that the centurion on the frontier understood the empire's condition better than the Imperator in Palasor."""}
+            ]}
+        ]
+    },
 ]
 
-# Ages 4-8: structure in place, stories to be written
+# Ages 5-8: structure in place, stories to be written
 for age_data in [
-    (4, "An Empire of Men", 1501, 2000,
-     "The story belongs not to the man who died, but to the man who wrote about it. This ancient Cynthian proverb originated in the Fourth Age during the Pervin Wars. The fourth age saw the rise of the first continental empire: the Gechann. Through constant warmongering, advances in military tactics and logistics, and the creation of the first professional army, Geckish domination throughout the realm of men was unstoppable. But empires, as Klae observed, carry the seeds of their own destruction, and the Gechann sowed more seeds than most.",
-     ["Rise of Imperial Gecha", "The Pervin Wars", "Fall of Vera", "Rise of the Karagon", "The Icrazan Genocide", "Palasor City", "The Second Holy War", "Kingdom of the North Divided", "The Schvainese Rebellion", "The Long Shadow"]),
     (5, "The Rise of the North", 2001, 2500,
      "The Fifth Age belongs to Raxone. After centuries of playing second fiddle to Gechann ambition and Cynthian diplomacy, the Kingdom of the North rose to become the dominant military power on Fondore. Raxonian mercenaries had always been present in foreign wars, but now Raxone fought its own, and won. The balance of power shifted northward, and the nations of Fondore scrambled to adjust to a world where the men who drank too much and laughed too loud were suddenly the ones making the rules.",
      ["The Raxonian Ascendancy", "War of Snow", "Lipse Founded", "The Border Tensions", "Concert of Nations", "The Great Plague", "Pervin Awakening", "The Merchant Princes", "Northern Reforms", "A Fragile Peace"]),
