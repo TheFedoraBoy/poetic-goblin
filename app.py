@@ -23,6 +23,7 @@ from database import get_db, close_db, init_db
 from storage import save_upload, allowed_file
 from email_service import send_verification_email, send_password_reset_email, send_welcome_email
 from annals_data import AGES as ANNALS_AGES, ANNALS_INTRO
+from world_data import CONTINENTS
 from helpers import SCRIBE_TIERS, get_scribe_tier, get_next_tier
 from moderation import censor_text, is_text_allowed, check_image_safety
 
@@ -1616,7 +1617,7 @@ def poll_messages(username):
 @app.route('/annals')
 @character_required
 def annals_home():
-    return render_template('annals_home.html', intro=ANNALS_INTRO, ages=ANNALS_AGES)
+    return render_template('annals_home.html', intro=ANNALS_INTRO, ages=ANNALS_AGES, continents=CONTINENTS)
 
 @app.route('/annals/age/<int:age_num>')
 @character_required
@@ -1703,6 +1704,25 @@ def annals_search():
                                     'story_id': us['id'], 'title': us['title'],
                                     'snippet': snippet, 'username': us['username']})
     return render_template('annals_search.html', q=request.args.get('q', ''), results=results, ages=ANNALS_AGES)
+
+@app.route('/annals/world/<slug>')
+@character_required
+def annals_continent(slug):
+    continent = next((c for c in CONTINENTS if c['slug'] == slug), None)
+    if not continent:
+        return redirect(url_for('annals_home'))
+    return render_template('annals_continent.html', continent=continent, continents=CONTINENTS, ages=ANNALS_AGES)
+
+@app.route('/annals/world/<continent_slug>/<country_slug>')
+@character_required
+def annals_country(continent_slug, country_slug):
+    continent = next((c for c in CONTINENTS if c['slug'] == continent_slug), None)
+    if not continent:
+        return redirect(url_for('annals_home'))
+    country = next((c for c in continent['countries'] if c['slug'] == country_slug), None)
+    if not country:
+        return redirect(url_for('annals_continent', slug=continent_slug))
+    return render_template('annals_country.html', continent=continent, country=country, continents=CONTINENTS, ages=ANNALS_AGES)
 
 @app.route('/annals/contribute', methods=['GET', 'POST'])
 @character_required

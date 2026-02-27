@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% from "_annals_sidebar.html" import annals_sidebar %}
+{% block title %}{{ country.name }} — The Annals{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="annals-layout">
+        <div class="annals-content">
+            <div class="annals-breadcrumb">
+                <a href="{{ url_for('annals_home') }}">The Annals</a>
+                <span class="sep">›</span>
+                <a href="{{ url_for('annals_continent', slug=continent.slug) }}">{{ continent.name }}</a>
+                <span class="sep">›</span>
+                <span>{{ country.name }}</span>
+            </div>
+
+            <div class="annals-article">
+                <div style="display:flex;gap:0.4rem;margin-bottom:0.75rem;">
+                    <span class="post-type-badge campaign">{{ continent.name }}</span>
+                    <span class="post-type-badge story">Nation</span>
+                </div>
+                <div class="annals-article-title">{{ country.name }}</div>
+                <div class="annals-article-subtitle">{{ country.aliases }}</div>
+                <hr class="annals-divider">
+
+                {# Quick reference card #}
+                <div style="background:var(--bg-light);border:1px solid var(--border-light);border-radius:8px;padding:1rem 1.2rem;margin-bottom:1.5rem;font-size:0.88rem;line-height:1.8;">
+                    <div style="font-family:var(--font-display);font-size:0.95rem;color:var(--blue-dark);margin-bottom:0.5rem;"><img class="px-icon" src="/static/icons/icon-compass.svg" alt=""> Quick Reference</div>
+                    <div><strong style="color:var(--text-secondary);">Capital:</strong> <span style="color:var(--text-muted);">{{ country.capital }}</span></div>
+                    <div><strong style="color:var(--text-secondary);">Peoples:</strong> <span style="color:var(--text-muted);">{{ country.peoples }}</span></div>
+                    <div><strong style="color:var(--text-secondary);">Languages:</strong> <span style="color:var(--text-muted);">{{ country.languages }}</span></div>
+                    <div><strong style="color:var(--text-secondary);">Religion:</strong> <span style="color:var(--text-muted);">{{ country.religion }}</span></div>
+                    <div><strong style="color:var(--text-secondary);">Government:</strong> <span style="color:var(--text-muted);">{{ country.government }}</span></div>
+                </div>
+
+                <div class="annals-article-body">{{ country.description }}</div>
+
+                {# Notable heroes #}
+                {% if country.heroes %}
+                <hr class="annals-divider">
+                <h2 style="font-size:1.1rem;color:var(--blue-dark);margin-bottom:0.75rem;"><img class="px-icon" src="/static/icons/icon-sword.svg" alt=""> Notable Figures</h2>
+                <div style="background:var(--bg-light);border:1px solid var(--border-light);border-radius:8px;padding:1rem 1.2rem;font-size:0.88rem;line-height:1.8;color:var(--text-muted);">
+                    {{ country.heroes }}
+                </div>
+                {% endif %}
+
+                {# Related annals stories #}
+                {% if country.related_stories %}
+                <hr class="annals-divider">
+                <h2 style="font-size:1.1rem;color:var(--blue-dark);margin-bottom:0.75rem;"><img class="px-icon" src="/static/icons/icon-book.svg" alt=""> Stories in the Annals</h2>
+                <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.75rem;">Read more about {{ country.name }} in these entries from the Annals.</p>
+                {% for ref in country.related_stories %}
+                <a href="{{ url_for('annals_story', age_num=ref.age, century_num=ref.century, story_idx=ref.story_idx) }}" style="text-decoration:none;color:inherit;display:block;">
+                    <div style="display:flex;gap:0.75rem;align-items:center;padding:0.7rem 1rem;margin:0.4rem 0;background:var(--bg-light);border:1px solid var(--border-light);border-radius:8px;transition:all 0.2s;" onmouseover="this.style.background='var(--blue-pale)';this.style.borderColor='var(--blue)'" onmouseout="this.style.background='var(--bg-light)';this.style.borderColor='var(--border-light)'">
+                        <div style="flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:0.75rem;">{{ ref.age }}</div>
+                        <div>
+                            <div style="font-family:var(--font-display);font-size:0.92rem;color:var(--text-primary);">{{ ref.title }}</div>
+                            <div style="font-size:0.75rem;color:var(--text-dim);">Age {{ ref.age }}, Century {{ ref.century }}</div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+                {% endif %}
+
+                <hr class="annals-divider">
+                <div style="font-size:0.82rem;color:var(--text-dim);font-style:italic;padding:0.75rem;background:var(--bg-light);border-radius:8px;border-left:3px solid var(--orange);">
+                    <img class="px-icon" src="/static/icons/icon-quill.svg" alt=""> Excerpted from the geographic appendices of the Annals of Elysal. All accounts are preserved as received — the Keeper makes no judgments on their veracity.
+                </div>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;margin-top:1rem;">
+                <a href="{{ url_for('annals_continent', slug=continent.slug) }}" class="btn btn-ghost">← Back to {{ continent.name }}</a>
+                <a href="{{ url_for('annals_home') }}" class="btn btn-primary">The Annals →</a>
+            </div>
+        </div>
+        {{ annals_sidebar(ages) }}
+    </div>
+</div>
+{% endblock %}
