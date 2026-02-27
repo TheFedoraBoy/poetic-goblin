@@ -448,6 +448,7 @@ def inject_globals():
         elysal_ages=ELYSAL_AGES,
         elysal_characters=ELYSAL_CHARACTERS,
         annals_ages=ANNALS_AGES,
+        continents=CONTINENTS,
         unread_message_count=unread_count,
         get_scribe_tier=get_scribe_tier,
         get_next_tier=get_next_tier,
@@ -1617,7 +1618,7 @@ def poll_messages(username):
 @app.route('/annals')
 @character_required
 def annals_home():
-    return render_template('annals_home.html', intro=ANNALS_INTRO, ages=ANNALS_AGES, continents=CONTINENTS)
+    return render_template('annals_home.html', intro=ANNALS_INTRO, ages=ANNALS_AGES)
 
 @app.route('/annals/age/<int:age_num>')
 @character_required

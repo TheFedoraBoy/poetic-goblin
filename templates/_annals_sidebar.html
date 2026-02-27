@@ -1,5 +1,5 @@
-{# Reusable Annals sidebar — directory of 8 ages #}
-{% macro annals_sidebar(ages, active_age=None) %}
+{# Reusable Annals sidebar — directory of 8 ages + world continents #}
+{% macro annals_sidebar(ages, active_age=None, active_continent=None) %}
 <aside class="annals-sidebar">
     <div class="annals-sidebar-card">
         <div class="annals-sidebar-title"><img class="px-icon" src="/static/icons/icon-book.svg" alt=""> The Eight Ages</div>
@@ -12,11 +12,14 @@
         {% endfor %}
     </div>
     <div class="annals-sidebar-card">
-        <div class="annals-sidebar-title"><img class="px-icon" src="/static/icons/icon-search.svg" alt=""> Search the Annals</div>
-        <form action="{{ url_for('annals_search') }}" method="GET" style="display:flex;gap:0.4rem;">
-            <input type="text" name="q" class="form-input" style="padding:0.4rem 0.7rem;font-size:0.85rem;" placeholder="Keywords...">
-            <button type="submit" class="btn btn-primary btn-sm">Go</button>
-        </form>
+        <div class="annals-sidebar-title"><img class="px-icon" src="/static/icons/icon-compass.svg" alt=""> The World of Elysal</div>
+        {% for continent in continents %}
+        <a href="{{ url_for('annals_continent', slug=continent.slug) }}"
+           class="annals-nav-item {% if active_continent and active_continent.slug == continent.slug %}active{% endif %}">
+            <span class="age-num" style="background:var(--orange);font-size:0.7rem;">{{ continent.name[0] }}</span>
+            {{ continent.name }}
+        </a>
+        {% endfor %}
     </div>
 </aside>
 {% endmacro %}

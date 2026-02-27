@@ -13,6 +13,7 @@ By the modern era, Fondore's old monarchies have given way to republics, constit
         "countries": [
             {
                 "slug": "gechann",
+                "color": "#c0392b",
                 "name": "Gechann",
                 "aliases": "The Geckish Empire, The Republic of Gecha",
                 "capital": "Boulavar (formerly Suntrae, Palasor)",
@@ -44,6 +45,7 @@ Klae wrote: 'The Gecks are not a lovable people. They are an impressive one, whi
             },
             {
                 "slug": "lambridge",
+                "color": "#2c5aa0",
                 "name": "Lambridge",
                 "aliases": "The Leimlands, Kingdom of Lambridge",
                 "capital": "Clarity",
@@ -75,6 +77,7 @@ Klae wrote: 'The Leimish are the most civilized people in Fondore. They are also
             },
             {
                 "slug": "epervinay",
+                "color": "#1e8449",
                 "name": "Epervinay",
                 "aliases": "The Pervin Republic, The Hill Country",
                 "capital": "Havenaugh",
@@ -104,6 +107,7 @@ Klae wrote: 'The Pervins saved their country by being too stubborn to admit it w
             },
             {
                 "slug": "hyacinth",
+                "color": "#27ae60",
                 "name": "Hyacinth",
                 "aliases": "The Cynthian Kingdom, The Western Peninsula",
                 "capital": "Oradova",
@@ -135,11 +139,12 @@ Klae wrote: 'Oradova is a monument to what the Cynthians could create. It is als
             },
             {
                 "slug": "raxone",
+                "color": "#e0e0e0",
                 "name": "Raxone",
                 "aliases": "The Kingdom of the North, The Frozen Throne",
                 "capital": "Raxona",
                 "peoples": "Raxonians — large, hardy Northerners with a cultural fondness for drinking, fighting, and directness",
-                "languages": "Raxonian, Common Speak",
+                "languages": "Snow Tongue, Common Speak",
                 "religion": "Rundelian Ceresy (the personal, anti-institutional variety)",
                 "government": "Military monarchy, tempered by the power of the Princes of Rax",
                 "description": """Raxone is the largest kingdom in Fondore and the most difficult to govern, which are related facts.
@@ -162,6 +167,7 @@ Klae wrote: 'The Raxonians are the only people in Fondore who consider drinking 
             },
             {
                 "slug": "deberania",
+                "color": "#7f8c8d",
                 "name": "Deberania",
                 "aliases": "The Thaumatarchy, The Forest Kingdom",
                 "capital": "Foebrier (the Great Walled City)",
@@ -189,6 +195,7 @@ Klae wrote: 'The Debrears built a civilization to survive. Having survived, they
             },
             {
                 "slug": "waydren",
+                "color": "#5dade2",
                 "name": "Waydren",
                 "aliases": "The Ghenyarian Homeland, The Ancient Coast",
                 "capital": "Hypolta (formerly Hipola, the oldest city in existence)",
@@ -206,6 +213,8 @@ The story of Otoshi Zapora — taken from his family at six, risen to the innerm
 
 Waydren is tiny, ancient, and has endured more than any nation in Fondore. Its people produced the first written language, the first courts of law, and the first armies, which tells you something about priorities. They also produced Pellae Aymundra, who fled to Lipse and built the Library of Spires, and countless unnamed scholars who preserved their culture in homes and temples while their conquerors took credit for it.
 
+Waydren is the only nation on Fondore that has never been a kingdom. It is not counted among the 'seven kingdoms of men' that Fondorian historians are fond of enumerating, because Waydren never had a king, never wanted a king, and never produced the kind of centralized authority that other nations considered necessary for legitimacy. The Waydrani governed themselves through councils, through consensus, and through the shared understanding that a people who had been conquered by everyone could not afford to be governed by anyone. This absence from the official count has never bothered the Waydrani, who regard the 'seven kingdoms' formulation as a Fondorian vanity and their exclusion from it as a point of quiet pride.
+
 Klae, who understood small peoples and quiet resistance, wrote: 'They survived not by fighting but by being needed. It is a quieter form of resistance, and no less courageous, and it has the considerable advantage of leaving you alive at the end.'""",
                 "heroes": "Hipolyptica (founder of civilization), Hicobare (first hero, took a blade for his king), Otoshi Zapora (the Ward of Waydren), Pellae Aymundra (founder of the Library of Spires)",
                 "related_stories": [
@@ -216,6 +225,7 @@ Klae, who understood small peoples and quiet resistance, wrote: 'They survived n
             },
             {
                 "slug": "mural-cere",
+                "color": "#d4a574",
                 "name": "Mural Cere",
                 "aliases": "The Holy Lands, The Pasav",
                 "capital": "Ramal Cere",
@@ -242,8 +252,147 @@ Klae wrote: 'The Cereyian Wars proved that humanity is capable of missing the po
                     {"age": 4, "century": 4, "story_idx": 0, "title": "The Second Holy War"},
                 ]
             },
+        ]
+    },
+    {
+        "slug": "metzerul",
+        "name": "Metzerul",
+        "subtitle": "The Dark Continent",
+        "description": """Metzerul is larger than Fondore, older than most Fondorian civilizations, and less understood than any landmass in Elysal. It is a continent of volcanic jungles, ancient kingdoms, frozen northern reaches, and peoples who watched Fondorian explorers wash up on their beaches and regarded them with the clinical curiosity of a naturalist examining a new species of beetle.
+
+The first Fondorian contact was a shipwreck — Pervin sailors blown onto black volcanic sand, finding tracks left by something that walked on two legs but was clearly not human. What they discovered was a continent inhabited by lizardfolk, dragonborn, dwarves, giants, and creatures that breathed fire. The stories were met with skepticism in the courts of Fondore and with enthusiasm in the taverns, which tells you everything about where truth goes to be believed.
+
+The Gechann attempted to colonize Metzerul during the height of their empire. The jungle ate them. Outposts rotted in the humidity, supply lines were cut, and the Lirzan resistance made every garrison untenable. The withdrawal of the Fourteenth Legion — the last Geckish unit to leave, marching six hundred miles through hostile jungle while the Lirzans watched from the treeline without attacking — became one of the most famous retreats in military history.
+
+Metzerul's civilizations predate Fondore's. The Lirzans had kingdoms, science, and a written language while the Ghenyarians were still arguing about shell currency. The Dwarves of Shoale were carving cities into the mountains while Fondorian cultures were building huts. And in the frozen north, behind the Styrmwall, the Wintermen of Perut have been holding back horrors that the rest of Elysal prefers not to think about for four thousand years without being thanked for it.
+
+Klae visited Metzerul during his research and found it humbling. He wrote: 'The discovery of Metzerul was not really a discovery at all. The Lirzans had known about Fondore. The only people who thought the world was unknown were the people who had never bothered to ask anyone else.'""",
+        "countries": [
+            {
+                "slug": "lirzan-kingdom",
+                "color": "#556b2f",
+                "name": "The Lirzan Kingdom",
+                "aliases": "Metzerul (used interchangeably by Fondorians, to Lirzan irritation)",
+                "capital": "Imbraxione (largest city in the world during the early ages)",
+                "peoples": "Lirzans — lizardfolk, dragonborn, dwarves, giants; a multi-species civilization",
+                "languages": "Sizzeracisenn (hissing consonants and glottal clicks, nearly impossible for human vocal cords)",
+                "religion": "Ancestral traditions, nature-based spirituality, no Cereyst influence",
+                "government": "Monarchy led by dragonborn royalty",
+                "description": """The Lirzan Kingdom is the oldest continuous civilization in Elysal, which is a fact that the Lirzans are aware of and that the Fondorians prefer to ignore.
+
+While the Ghenyarians were learning to stack stones, the Lirzans had cities. While the Gecks were arguing about olive oil prices, the Lirzans had a written language, a legal system, and scientific knowledge that Fondorian scholars would not achieve for millennia. The dragonborn — the ruling and scholarly class — could breathe fire by the time they were three hours old, which their nurses found alarming and their mothers found hilarious.
+
+Imbraxione, the Lirzan capital, was the largest city in the world during the early ages. Its architecture incorporated volcanic stone, jungle timber, and engineering principles that visiting Fondorian merchants could not replicate. The city's great library held more scrolls than any institution in Fondore, written in a language that human tongues could barely pronounce.
+
+The Lirzans' relationship with Fondore was defined by the simple fact that Fondorians kept showing up uninvited. The shipwrecked Pervins were treated with curiosity. The Geckish colonizers were treated with resistance. The Lirzan military — lizardfolk infantry, dragonborn commanders, and creatures that the Geckish soldiers described in their journals with the controlled panic of men who had been trained for human warfare and were now facing something else entirely — made colonial occupation untenable.
+
+The withdrawal of the Gechann garrisons was observed by the Lirzans without comment. They simply watched the legions march out, the way a landowner watches a trespasser finally leave. When a Lirzan scout appeared on the road in front of the retreating Fourteenth Legion and stood there, looking at the soldiers for a long time before stepping aside, he said nothing. The silence said everything.
+
+In the modern era, the Lirzan Kingdom has undergone a scientific renaissance led by the dragonborn, producing advances that benefit the entire world. They remain patient, ancient, and largely uninterested in Fondorian opinion.
+
+Klae wrote: 'The Lirzans watched us arrive, watched us fail, and watched us leave. They said very little throughout. I suspect they were being polite.'""",
+                "heroes": "Zugaraz (dragonborn prince, First Age), unnamed Lirzan scout (who watched the Fourteenth Legion leave)",
+                "related_stories": [
+                    {"age": 3, "century": 4, "story_idx": 1, "title": "Dark Beaches"},
+                    {"age": 5, "century": 2, "story_idx": 1, "title": "The Last Legion of Metzerul"},
+                ]
+            },
+            {
+                "slug": "perut",
+                "color": "#708090",
+                "name": "Perut",
+                "aliases": "The Winterlands, The Ice Wall",
+                "capital": "No centralized capital (confederation of holds)",
+                "peoples": "Wintermen — hardy, insular, builders of the Styrmwall",
+                "languages": "Winterman dialects, minimal Common Speak",
+                "religion": "Pre-Cereyst traditions focused on survival, endurance, and the defense against what lies beyond the ice",
+                "government": "Confederation of holds, recently recognized as a nation",
+                "description": """The Wintermen have been defending the world for four thousand years, and the world has spent most of that time not noticing.
+
+On the frozen northern reaches of Metzerul, behind a wall of ice and stone called the Styrmwall, the Wintermen have held back horrors that the rest of Elysal prefers not to think about. What exactly lies beyond the Styrmwall is a matter of considerable debate and minimal firsthand testimony, because the people who cross the wall to investigate tend not to come back, and the people who defend it tend not to talk about what they've seen.
+
+The Wintermen are small, stubborn, and organized around holds — fortified communities built into the ice and rock of Metzerul's frozen interior. Their entire culture is oriented around defense: defense of the wall, defense of each other, defense against a cold that kills the unprepared and merely punishes everyone else. They are not a people who waste words, and their reputation for insularity is earned, because when your primary interaction with the outside world consists of foreign hunters wandering into your territory and telling stories about ice goblins, a certain wariness is justified.
+
+Fondorian contact with the Wintermen was minimal for most of history. Raxonian hunters encountered their settlements and returned with stories that their countrymen believed about as much as they believed anything they hadn't seen with their own eyes. The Wintermen, for their part, regarded Fondorian interest in their territory with the flat skepticism of people who have been guarding a wall for millennia without being thanked for it.
+
+In the modern era, the Perut Confederation has been recognized as a nation — a formality that the Wintermen accepted with characteristic understatement, since they had been functioning as a nation for longer than most of the countries doing the recognizing had existed.
+
+Klae wrote: 'The Wintermen asked for nothing. They received nothing. They defended the world anyway. I am not sure what this says about them. I am fairly sure what it says about the rest of us.'""",
+                "heroes": "Unnamed — the Wintermen honor the wall, not the individuals who defend it",
+                "related_stories": []
+            },
+            {
+                "slug": "shoale",
+                "color": "#b87333",
+                "name": "Shoale",
+                "aliases": "The Dwarven Kingdom, The Deep Holds",
+                "capital": "Shoale (the name refers to both kingdom and its primary mountain stronghold)",
+                "peoples": "Dwarves — subterranean miners, smiths, and engineers of legendary skill and legendary stubbornness",
+                "languages": "Dwarven (related distantly to Sizzeracisenn through millennia of coexistence), Common Speak",
+                "religion": "Stone-faith traditions tied to the deep earth and the forge",
+                "government": "Dwarven monarchy, with guild councils holding significant power",
+                "description": """The Dwarves of Shoale have been digging into the mountains of Metzerul since before the Lirzans built their first city, which the Dwarves will tell you if you ask them and also if you don't.
+
+Shoale is a kingdom built downward rather than outward. Its cities are carved into the roots of Metzerul's volcanic mountains — vast underground complexes of tunnels, forges, mining shafts, and chambers of such architectural precision that visiting scholars have described them as cathedrals turned inside out. The Dwarves do not build on the land. They build in it, and they have been building for so long that the distinction between natural cavern and Dwarven construction has, in many places, ceased to exist.
+
+Their engineering is the finest in Elysal. Dwarven metalwork is unmatched. Dwarven stonework is unrivaled. Dwarven mining techniques have been borrowed — and poorly imitated — by every civilization that has encountered them. The Geckish legions used Dwarven-forged weapons when they could get them, which was rarely, because the Dwarves sell to whoever pays and charge prices that make Geckish merchants weep.
+
+Shoale is also, less proudly, the birthplace of the Luschnypp Syndicate — the criminal organization that operates across Elysal with the kind of efficiency that legitimate governments envy. The Syndicate emerged from the Dwarven mining guilds, where the skills required for underground excavation turned out to be remarkably transferable to smuggling, theft, and the discreet movement of goods that their owners would prefer not to have moved. The Dwarven crown has spent centuries denying any connection to the Syndicate, which is the kind of denial that becomes less convincing each time it is repeated.
+
+The Dwarves maintain a complicated relationship with the Lirzans — trading partners, occasional rivals, and the only other civilization on Metzerul old enough to treat as equals. The lizardfolk and the Dwarves do not love each other. They respect each other, which in Metzerul is worth more.
+
+Klae visited Shoale and found the Dwarves hospitable, opinionated, and impossible to hurry. He wrote: 'The Dwarves measure time in stone. They have been building their kingdom for four thousand years and consider themselves approximately halfway finished. When I asked halfway to what, they looked at me as though I had asked a mountain why it was tall.'""",
+                "heroes": "Unnamed guild-masters, Luschnypp Syndicate founders (whose names are known to the Syndicate and to nobody else)",
+                "related_stories": []
+            },
+        ]
+    },
+    {
+        "slug": "karagon",
+        "name": "The Karagon",
+        "subtitle": "The Free Republic",
+        "description": """Karagon is an island continent in the Erezetta Ocean, and it was built on bones.
+
+The Karaf — grey-skinned, sharp-featured, tiefling-descended people — were slaves on Vera. They escaped on a ship called the Kola Tai during the First Age, carrying nothing but their children and the determination to never be owned again. They were deposited on the island of Karto with instructions to survive. They did more than survive. They multiplied, they built, and when the Verans eventually found them and tried to re-enslave them, the Karaf destroyed the Veran civilization on Karagon entirely. Every Veran on the island was killed.
+
+This fact defines everything about Karagon. The Karaf built a functioning republic on the ruins of their former masters — with laws, trade, democratic governance, and every institution designed, consciously or unconsciously, to ensure that nobody would ever be enslaved again. They were free. They were also haunted by what freedom had cost them.
+
+When the Geckish merchant captain Lyco the Lucky stumbled upon Karagon, he found a people who were unsurprised by foreign visitors, wary but not hostile, and willing to trade. What he did not learn until much later was the history behind the civilization he had found. The matter-of-factness with which the Karaf discussed the annihilation of their former masters chilled the Geckish sailors to their bones.
+
+The Karagonese Republic has endured, projecting democratic values across the Erezetta in the modern era. It is a nation that proves something important and uncomfortable: that freedom, once tasted, cannot be taken back without consequences that the takers cannot imagine.
+
+Klae wrote: 'A people who had looked into the darkest part of the human soul and decided to build a country anyway.'""",
+        "countries": [
+            {
+                "slug": "karaf-republic",
+                "color": "#8e44ad",
+                "name": "The Karaf Republic",
+                "aliases": "Karagon, The Free State",
+                "capital": "Karto",
+                "peoples": "Karaf — grey-skinned, sharp-featured, tiefling-descended; descendants of Veran slaves",
+                "languages": "Karaf, Common Speak (learned through Geckish trade contact)",
+                "religion": "Secular, with ancestral traditions commemorating the Kola Tai",
+                "government": "Democratic republic (one of the oldest functioning democracies in Elysal)",
+                "description": """The Karaf Republic is the answer to a question that most civilizations prefer not to ask: what do the enslaved do when they finally hold the sword?
+
+The Karaf answer was total annihilation of their Veran masters, followed by the construction of a democratic society designed to ensure that no one — not the Karaf, not anyone — would ever be enslaved again. Every institution, every law, every political tradition carries the weight of that origin. The Karaf do not forget what they were. They have built their entire civilization around the promise that they will never be that again.
+
+The republic functions. It has functioned for millennia, which is remarkable for a democracy and which the Karaf attribute not to the genius of their system but to the clarity of their motivation. When your national founding story involves the complete destruction of the people who owned you, the commitment to self-governance acquires a visceral urgency that more comfortable democracies cannot replicate.
+
+The reunion with the Veran Karaf — freed by the Gechann centuries later — was complicated. The Karagonese Karaf had built a culture so different from the Veran Karaf that they were, in many ways, different peoples who happened to share a skin color and a history of suffering. The meeting of the two populations was less a homecoming than an introduction, and the discovery that shared trauma does not automatically produce shared identity was painful for everyone involved.
+
+In the modern era, the Karaf Republic projects democratic values across the Erezetta with the quiet confidence of a people who know what the alternative looks like. They are watched, respected, and occasionally feared by nations that have not yet resolved their own questions about freedom and who governs whom.
+
+Klae wrote: 'The Karaf built a republic on the bones of their masters. It was not a gentle founding. It was an honest one, and honesty, in the history of nations, is rarer than gentleness.'""",
+                "heroes": "The Kola Tai survivors (unnamed, foundational), Lyco the Lucky (first Fondorian contact)",
+                "related_stories": [
+                    {"age": 3, "century": 4, "story_idx": 0, "title": "The Discovery of Karagon"},
+                    {"age": 4, "century": 3, "story_idx": 1, "title": "Karaf Unchained"},
+                ]
+            },
             {
                 "slug": "vera",
+                "color": "#922b21",
                 "name": "Vera",
                 "aliases": "The Veran Kingdom, The Slave Isle",
                 "capital": "Vera (city and island share the name)",
@@ -273,94 +422,6 @@ Klae wrote: 'Vera proved that a civilization built on slavery will produce exact
         ]
     },
     {
-        "slug": "metzerul",
-        "name": "Metzerul",
-        "subtitle": "The Dark Continent",
-        "description": """Metzerul is larger than Fondore, older than most Fondorian civilizations, and less understood than any landmass in Elysal. It is a continent of volcanic jungles, ancient kingdoms, and peoples who watched Fondorian explorers wash up on their beaches and regarded them with the clinical curiosity of a naturalist examining a new species of beetle.
-
-The first Fondorian contact was a shipwreck — Pervin sailors blown onto black volcanic sand, finding tracks left by something that walked on two legs but was clearly not human. What they discovered was a continent inhabited by lizardfolk, dragonborn, dwarves, giants, and creatures that breathed fire. The stories were met with skepticism in the courts of Fondore and with enthusiasm in the taverns, which tells you everything about where truth goes to be believed.
-
-The Gechann attempted to colonize Metzerul during the height of their empire. The jungle ate them. Outposts rotted in the humidity, supply lines were cut, and the Lirzan resistance made every garrison untenable. The withdrawal of the Fourteenth Legion — the last Geckish unit to leave, marching six hundred miles through hostile jungle while the Lirzans watched from the treeline without attacking — became one of the most famous retreats in military history.
-
-Metzerul's civilizations predate Fondore's. The Lirzans had kingdoms, science, and a written language while the Ghenyarians were still arguing about shell currency. The dragonborn, who lead the Lirzan military and scholarly classes, achieved scientific advances that Fondore would not match for centuries. The continent's knowledge was vast, its peoples were ancient, and its attitude toward Fondorian visitors was, on the whole, one of patient tolerance for children who thought they had discovered something that had been there all along.
-
-Klae visited Metzerul during his research and found it humbling. He wrote: 'The discovery of Metzerul was not really a discovery at all. The Lirzans had known about Fondore. The only people who thought the world was unknown were the people who had never bothered to ask anyone else.'""",
-        "countries": [
-            {
-                "slug": "lirzan-kingdom",
-                "name": "The Lirzan Kingdom",
-                "aliases": "Metzerul (used interchangeably by Fondorians, to Lirzan irritation)",
-                "capital": "Imbraxione (largest city in the world during the early ages)",
-                "peoples": "Lirzans — lizardfolk, dragonborn, dwarves, giants; a multi-species civilization",
-                "languages": "Sizzeracisenn (hissing consonants and glottal clicks, nearly impossible for human vocal cords)",
-                "religion": "Ancestral traditions, nature-based spirituality, no Cereyst influence",
-                "government": "Monarchy led by dragonborn royalty",
-                "description": """The Lirzan Kingdom is the oldest continuous civilization in Elysal, which is a fact that the Lirzans are aware of and that the Fondorians prefer to ignore.
-
-While the Ghenyarians were learning to stack stones, the Lirzans had cities. While the Gecks were arguing about olive oil prices, the Lirzans had a written language, a legal system, and scientific knowledge that Fondorian scholars would not achieve for millennia. The dragonborn — the ruling and scholarly class — could breathe fire by the time they were three hours old, which their nurses found alarming and their mothers found hilarious.
-
-Imbraxione, the Lirzan capital, was the largest city in the world during the early ages. Its architecture incorporated volcanic stone, jungle timber, and engineering principles that visiting Fondorian merchants could not replicate. The city's great library held more scrolls than any institution in Fondore, written in a language that human tongues could barely pronounce.
-
-The Lirzans' relationship with Fondore was defined by the simple fact that Fondorians kept showing up uninvited. The shipwrecked Pervins were treated with curiosity. The Geckish colonizers were treated with resistance. The Lirzan military — lizardfolk infantry, dragonborn commanders, and creatures that the Geckish soldiers described in their journals with the controlled panic of men who had been trained for human warfare and were now facing something else entirely — made colonial occupation untenable.
-
-The withdrawal of the Gechann garrisons was observed by the Lirzans without comment. They simply watched the legions march out, the way a landowner watches a trespasser finally leave. When a Lirzan scout appeared on the road in front of the retreating Fourteenth Legion and stood there, looking at the soldiers for a long time before stepping aside, he said nothing. The silence said everything.
-
-In the modern era, the Lirzan Kingdom has undergone a scientific renaissance led by the dragonborn, producing advances that benefit the entire world. They remain patient, ancient, and largely uninterested in Fondorian opinion.
-
-Klae wrote: 'The Lirzans watched us arrive, watched us fail, and watched us leave. They said very little throughout. I suspect they were being polite.'""",
-                "heroes": "Zugaraz (dragonborn prince, First Age), unnamed Lirzan scout (who watched the Fourteenth Legion leave)",
-                "related_stories": [
-                    {"age": 3, "century": 4, "story_idx": 1, "title": "Dark Beaches"},
-                    {"age": 5, "century": 2, "story_idx": 1, "title": "The Last Legion of Metzerul"},
-                ]
-            },
-        ]
-    },
-    {
-        "slug": "karagon",
-        "name": "The Karagon",
-        "subtitle": "The Free Republic",
-        "description": """Karagon is an island continent in the Erezetta Ocean, and it was built on bones.
-
-The Karaf — grey-skinned, sharp-featured, tiefling-descended people — were slaves on Vera. They escaped on a ship called the Kola Tai during the First Age, carrying nothing but their children and the determination to never be owned again. They were deposited on the island of Karto with instructions to survive. They did more than survive. They multiplied, they built, and when the Verans eventually found them and tried to re-enslave them, the Karaf destroyed the Veran civilization on Karagon entirely. Every Veran on the island was killed.
-
-This fact defines everything about Karagon. The Karaf built a functioning republic on the ruins of their former masters — with laws, trade, democratic governance, and every institution designed, consciously or unconsciously, to ensure that nobody would ever be enslaved again. They were free. They were also haunted by what freedom had cost them.
-
-When the Geckish merchant captain Lyco the Lucky stumbled upon Karagon, he found a people who were unsurprised by foreign visitors, wary but not hostile, and willing to trade. What he did not learn until much later was the history behind the civilization he had found. The matter-of-factness with which the Karaf discussed the annihilation of their former masters chilled the Geckish sailors to their bones.
-
-The Karagonese Republic has endured, projecting democratic values across the Erezetta in the modern era. It is a nation that proves something important and uncomfortable: that freedom, once tasted, cannot be taken back without consequences that the takers cannot imagine.
-
-Klae wrote: 'A people who had looked into the darkest part of the human soul and decided to build a country anyway.'""",
-        "countries": [
-            {
-                "slug": "karaf-republic",
-                "name": "The Karaf Republic",
-                "aliases": "Karagon, The Free State",
-                "capital": "Karto",
-                "peoples": "Karaf — grey-skinned, sharp-featured, tiefling-descended; descendants of Veran slaves",
-                "languages": "Karaf, Common Speak (learned through Geckish trade contact)",
-                "religion": "Secular, with ancestral traditions commemorating the Kola Tai",
-                "government": "Democratic republic (one of the oldest functioning democracies in Elysal)",
-                "description": """The Karaf Republic is the answer to a question that most civilizations prefer not to ask: what do the enslaved do when they finally hold the sword?
-
-The Karaf answer was total annihilation of their Veran masters, followed by the construction of a democratic society designed to ensure that no one — not the Karaf, not anyone — would ever be enslaved again. Every institution, every law, every political tradition carries the weight of that origin. The Karaf do not forget what they were. They have built their entire civilization around the promise that they will never be that again.
-
-The republic functions. It has functioned for millennia, which is remarkable for a democracy and which the Karaf attribute not to the genius of their system but to the clarity of their motivation. When your national founding story involves the complete destruction of the people who owned you, the commitment to self-governance acquires a visceral urgency that more comfortable democracies cannot replicate.
-
-The reunion with the Veran Karaf — freed by the Gechann centuries later — was complicated. The Karagonese Karaf had built a culture so different from the Veran Karaf that they were, in many ways, different peoples who happened to share a skin color and a history of suffering. The meeting of the two populations was less a homecoming than an introduction, and the discovery that shared trauma does not automatically produce shared identity was painful for everyone involved.
-
-In the modern era, the Karaf Republic projects democratic values across the Erezetta with the quiet confidence of a people who know what the alternative looks like. They are watched, respected, and occasionally feared by nations that have not yet resolved their own questions about freedom and who governs whom.
-
-Klae wrote: 'The Karaf built a republic on the bones of their masters. It was not a gentle founding. It was an honest one, and honesty, in the history of nations, is rarer than gentleness.'""",
-                "heroes": "The Kola Tai survivors (unnamed, foundational), Lyco the Lucky (first Fondorian contact)",
-                "related_stories": [
-                    {"age": 3, "century": 4, "story_idx": 0, "title": "The Discovery of Karagon"},
-                    {"age": 4, "century": 3, "story_idx": 1, "title": "Karaf Unchained"},
-                ]
-            },
-        ]
-    },
-    {
         "slug": "womparti",
         "name": "Womparti",
         "subtitle": "The Pirate Isles",
@@ -374,6 +435,7 @@ Klae visited the Rim Work during his research and found it fascinating. He wrote
         "countries": [
             {
                 "slug": "rim-work",
+                "color": "#d4a017",
                 "name": "The Rim Work",
                 "aliases": "The Pirate Federation, Skellet's Domain",
                 "capital": "None (Womparti serves as the informal center)",
@@ -404,21 +466,44 @@ Klae wrote: 'The treasure is probably still there. So, possibly, is Windel. The 
         "subtitle": "The Sunlit Savannah",
         "description": """Tzun is the great southern continent — a vast expanse of savannah, grassland, and golden plains stretching beneath a sky that seems larger here than anywhere else in Elysal. It is a land that operates on a different timescale than Fondore's, where civilizations measured their history not in centuries but in generations, and where the relationship between people and land was not one of ownership but of tenancy.
 
-The Pridekin — lion-folk whose evolution from the great cats of the savannah is one of the most remarkable biological developments in Elysal's history — built civilizations here that Fondorian scholars barely understood and frequently underestimated. Their societies were organized around prides, their governance was based on consensus, and their relationship with the land was one of stewardship rather than exploitation.
+Tzun is home to three distinct civilizations. The Tzunadaine — human descendants of seafaring Ghenyarians who crossed the ocean in the early ages — settled the coastal regions and built trading kingdoms that connected the continent to the wider world. The Pridekin — lion-folk whose evolution from the great cats of the savannah is one of the most remarkable biological developments in Elysal's history — built civilizations in the interior that Fondorian scholars barely understood and frequently underestimated. And the Gesdeans carved out a nation in the continent's eastern reaches.
 
-Fondorian contact with Tzun was limited for most of history — the continent was far enough away that only the most ambitious sailors reached it, and the Pridekin were not particularly interested in being reached. Colonial contact in the later ages introduced the complications that colonialism always introduces: extraction, disruption, and the particular arrogance of people who assume that a civilization organized differently from their own is a civilization organized poorly.
-
-In the modern era, the Tzunadaine — as the Pridekin nations are collectively known — struggle with the legacy of colonialism and the demands of a world that has been shaped by Fondorian assumptions about how civilization should work.
+Fondorian contact with Tzun was limited for most of history — the continent was far enough away that only the most ambitious sailors reached it. Colonial contact in the later ages introduced the complications that colonialism always introduces: extraction, disruption, and the particular arrogance of people who assume that a civilization organized differently from their own is a civilization organized poorly.
 
 Klae wrote: 'Tzun reminded me that Fondore is not the world. It is a part of the world that has spent four thousand years insisting otherwise.'""",
         "countries": [
             {
                 "slug": "tzunadaine",
+                "color": "#c19a6b",
                 "name": "The Tzunadaine",
-                "aliases": "The Pridekin Nations, The Golden Lands",
+                "aliases": "The Ghenyarian Diaspora, The Coastal Kingdoms",
+                "capital": "Various (organized by coastal trading settlements)",
+                "peoples": "Tzunadaine — human, descendants of seafaring Ghenyarians who crossed the ocean in the early ages",
+                "languages": "Tzunadaine dialects (distantly related to ancient Ghenyarian), Common Speak (through trade)",
+                "religion": "Syncretic traditions blending Ghenyarian ancestor worship with local practices",
+                "government": "Coastal trading kingdoms with hereditary and elected elements",
+                "description": """The Tzunadaine are proof that the Ghenyarians — the first civilization, the builders of Hipola — did not merely spread across Fondore. They crossed oceans.
+
+Sometime in the early ages, Ghenyarian seafarers — driven by the same restless curiosity that had built the first cities on the Waydrani coast — sailed south across waters that no Fondorian chart would map for millennia. They found Tzun. They stayed. And they built something new, borrowing from the culture they had left behind and the land they had found, until the connection to Ghenyar became a memory preserved in language and tradition rather than lived experience.
+
+The Tzunadaine settled the coasts, as seafaring peoples do. Their kingdoms were built around harbors, trade routes, and the particular combination of mercantile ambition and maritime skill that characterized their Ghenyarian ancestors. They traded with the Pridekin of the interior, with passing Fondorian ships when they eventually arrived, and with anyone else whose goods were worth the voyage.
+
+Their relationship with the Pridekin is the defining dynamic of Tzun — two civilizations sharing a continent, one human and one decidedly not, navigating the tensions that arise when peoples with fundamentally different relationships to the land must coexist. The Tzunadaine built cities. The Pridekin governed territories. The border between building and governing has been the subject of negotiation, conflict, and occasional cooperation for as long as both peoples have been on the continent.
+
+Fondorian colonizers found the Tzunadaine easier to understand than the Pridekin, because the Tzunadaine were human and organized their societies in ways that Fondorian scholars could categorize. This was a mistake. Understanding the form of a civilization is not the same as understanding its substance, and the Fondorians who assumed that the Tzunadaine were simply Ghenyarians who had wandered off discovered that three thousand years of independent development produces a people who share an ancestor but not much else.
+
+Klae wrote: 'The Tzunadaine left Ghenyar and built a world. The Waydrani stayed in Ghenyar and endured one. Both are valid responses to the human condition. Neither is complete without the other.'""",
+                "heroes": "Unnamed seafaring founders, Tzunadaine trading kings",
+                "related_stories": []
+            },
+            {
+                "slug": "pridekin",
+                "color": "#cc8400",
+                "name": "The Pridekin",
+                "aliases": "The Lion-Folk, The Interior Nations",
                 "capital": "Various (organized by pride territories rather than centralized states)",
                 "peoples": "Pridekin — lion-folk, evolved from the great cats of the savannah over millennia",
-                "languages": "Pridekin languages (multiple, organized by pride), Common Speak (learned through trade contact)",
+                "languages": "Pridekin languages (multiple, organized by pride), limited Common Speak",
                 "religion": "Ancestral traditions tied to the land and the pride",
                 "government": "Consensus-based governance organized around prides",
                 "description": """The Pridekin are not human. This obvious fact has been the source of more misunderstanding, more condescension, and more colonial violence than any other single detail in the history of inter-species contact.
@@ -427,10 +512,30 @@ They evolved from the great cats of the Tzun savannah — a biological developme
 
 The pride system was not primitive. It was different, which Fondorians consistently failed to distinguish from the same thing. Each pride governed its territory through collective decision-making, with leadership determined by competence rather than birth. Disputes were settled through deliberation rather than violence, though the Pridekin were entirely capable of violence when the situation demanded it, and a pride defending its territory was a military force that colonial armies learned to respect the hard way.
 
-Fondorian colonialism in Tzun followed the depressingly predictable pattern: arrival, trade, exploitation, resistance, extraction, and the slow dismantling of social structures that had functioned for longer than most Fondorian kingdoms had existed. The Pridekin endured. Their cultures survived, diminished but unbroken, and the modern Tzunadaine nations carry both the weight of colonial disruption and the resilience of peoples who have been living on their land since before Fondore learned to build houses.
+Fondorian colonialism in Tzun fell heaviest on the Pridekin, whose interior territories contained the resources that the colonizers wanted and whose social structures were the easiest to dismiss as 'uncivilized.' The Pridekin endured. Their cultures survived, diminished but unbroken, carrying both the weight of colonial disruption and the resilience of peoples who have been living on their land since before Fondore learned to build houses.
 
-Klae spent time in Tzun and found the experience transformative. He wrote: 'The Pridekin taught me that civilization is not a single thing with a single definition. It is a thousand answers to the same question: how do we live together? The Fondorian answer is not the only one. It is not even the best one. It is simply the loudest.'""",
+Klae spent time among the Pridekin and found the experience transformative. He wrote: 'The Pridekin taught me that civilization is not a single thing with a single definition. It is a thousand answers to the same question: how do we live together? The Fondorian answer is not the only one. It is not even the best one. It is simply the loudest.'""",
                 "heroes": "Unnamed — the Pridekin oral tradition honors prides rather than individuals, a distinction that Fondorian historians find inconvenient and that the Pridekin find entirely natural",
+                "related_stories": []
+            },
+            {
+                "slug": "gesdea",
+                "color": "#2e8b8b",
+                "name": "Gesdea",
+                "aliases": "The Eastern Reach",
+                "capital": "Unknown",
+                "peoples": "Gesdeans",
+                "languages": "Gesdean, limited Common Speak",
+                "religion": "Local traditions",
+                "government": "Unknown in detail to Fondorian scholars",
+                "description": """Gesdea occupies the eastern reaches of Tzun, and what is known about it could fill a pamphlet. What is not known could fill the Library of Spires.
+
+Klae included Gesdea in the Annals with the characteristic honesty of a historian who would rather admit ignorance than invent knowledge. Fondorian contact with Gesdea was limited, the Gesdeans were not inclined to explain themselves to foreign visitors, and the accounts that do exist are filtered through the biases of traders and explorers who spent more time observing than understanding.
+
+What is clear is that Gesdea is a nation of sufficient size and organization to maintain its independence on a continent shared with the Tzunadaine trading kingdoms and the Pridekin pride territories. The Gesdeans have persisted, which in Tzun — a continent where colonial pressures and inter-civilizational competition have dismantled lesser polities — is an achievement that deserves more scholarly attention than it has received.
+
+Klae wrote: 'I did not reach Gesdea. I regret this. The stories I missed outnumber the stories I found, and Gesdea is among the largest of my omissions. If these pages move you, go find the stories I could not.'""",
+                "heroes": "Unknown to Fondorian scholars",
                 "related_stories": []
             },
         ]
@@ -441,14 +546,43 @@ Klae spent time in Tzun and found the experience transformative. He wrote: 'The 
         "subtitle": "The Frozen Edge",
         "description": """Acumfrial is the frozen continent at the edge of the known world — a land of ice, rock, and the kind of weather that exists primarily to remind human beings of their insignificance. It is the smallest continent, the coldest, and the most frequently overlooked, which is precisely why the most important things in Elysal happened here.
 
-The Wintermen of Perut built a civilization behind a wall of ice and stone, holding back horrors that defied description while the rest of the world argued about trade routes and theology. The Hiyalmites of Lipse — the island off Acumfrial's coast — built the only successful multicultural democracy in Elysal and the library that holds its memory. And Kratikar Klae, the man who wrote the book you are reading, was born here, on a windswept rock that nobody wanted, in a town named for the shape of a reef.
+The Hiyalmites built a civilization on these frozen shores — fishing communities, trading posts, and eventually a culture distinct enough to produce the nation of Hiyalm. The island of Lipse, off Acumfrial's coast, became the only successful multicultural democracy in Elysal and the home of the Library of Spires, where the memory of the world is kept. And Kratikar Klae, the man who wrote the book you are reading, was born here, on a windswept rock that nobody wanted, in a town named for the shape of a reef.
+
+In the deep waters off Acumfrial's coast lies Ulceron, the domain of the Mermassa — the underwater civilization that most surface dwellers regard as legend and that the Hiyalmite fishermen of Lipse regard as neighbors, which is closer to the truth.
 
 Acumfrial is proof that geography is not destiny. The smallest, coldest, most remote corner of Elysal produced the freest society and the most ambitious work of history ever attempted. The continent's motto, if it had one, would be the Hiyalmite proverb that Klae quoted in his introduction: the world is full of stories. They are waiting. They have always been waiting.
 
 Klae wrote of his home: 'Acumfrial is not much to look at. It is cold, it is small, and the wind never stops. But I have never found a place where more was possible.'""",
         "countries": [
             {
+                "slug": "hiyalm",
+                "color": "#34495e",
+                "name": "Hiyalm",
+                "aliases": "The Frozen Shore, The Hiyalmite Nation",
+                "capital": "Various coastal settlements",
+                "peoples": "Hiyalmites — hardy coastal people, fishermen, traders, and scholars",
+                "languages": "Hiyalmite, Common Speak",
+                "religion": "Mixed traditions; Ceresy present but adapted to local customs",
+                "government": "Loose confederation of coastal communities with democratic traditions",
+                "description": """Hiyalm is the nation that nobody remembers founding, which is appropriate for a people who have always been more interested in surviving than in declaring themselves.
+
+The Hiyalmites occupy the frozen coastline of Acumfrial — fishing communities and trading settlements scattered along shores that are ice-locked for much of the year and merely hostile the rest of it. They are not a large people, not a powerful people, and not a people who appear in the military histories that Fondorian scholars consider important. They fish. They trade. They endure. And they have been doing all three for long enough that endurance has become their defining characteristic.
+
+What the Hiyalmites produced, quietly and without fanfare, was a culture of openness that the larger, louder civilizations of Fondore never managed. Hiyalmite communities accepted refugees, exiles, and wanderers from every nation in Elysal. They did not ask where you came from. They asked whether you could help with the nets. This radical indifference to origin — born from the practical reality that anyone willing to live on a frozen coast was welcome to share the work — became the foundation of the democratic traditions that would flourish on Lipse.
+
+Hiyalm is where Klae was from. Not Lipse specifically — Lipse was its own entity — but the culture that produced a man who believed that every person's story mattered was a Hiyalmite culture: practical, unpretentious, and convinced that listening was more valuable than speaking.
+
+In Hiyalm, asking too many questions is considered a character flaw. In the rest of the world, it is considered a profession. Klae was guilty of both.
+
+Klae wrote: 'I am Hiyalmite. We are a small people from a cold place. We have contributed nothing to the world except a library, a historian, and the radical idea that everyone deserves to be heard. I am told this is not enough. I am not convinced.'""",
+                "heroes": "Kratikar Klae (in the broadest sense — a product of Hiyalmite culture), unnamed fishermen and traders who built the coastal communities",
+                "related_stories": [
+                    {"age": 8, "century": 5, "story_idx": 2, "title": "The Hero of the Century: Kratikar Klae"},
+                ]
+            },
+            {
                 "slug": "lipse",
+                "color": "#16a085",
                 "name": "Lipse",
                 "aliases": "The Island Nobody Wanted, The Hiyalmite Democracy",
                 "capital": "Catcher's Rim",
@@ -477,27 +611,30 @@ Klae wrote: 'It is not much to look at. The buildings are plain, the streets are
                 ]
             },
             {
-                "slug": "perut",
-                "name": "Perut",
-                "aliases": "The Winterlands, The Ice Wall",
-                "capital": "No centralized capital (confederation of holds)",
-                "peoples": "Wintermen — hardy, insular, builders of the Styrmwall",
-                "languages": "Winterman dialects, minimal Common Speak",
-                "religion": "Pre-Cereyst traditions focused on survival, endurance, and the defense against what lies beyond the ice",
-                "government": "Confederation of holds, recently recognized as a nation",
-                "description": """The Wintermen have been defending the world for four thousand years, and the world has spent most of that time not noticing.
+                "slug": "ulceron",
+                "color": "#1a5276",
+                "name": "Ulceron",
+                "aliases": "The Deep Kingdom, The Domain Beneath",
+                "capital": "Unknown to surface dwellers",
+                "peoples": "Mermassa — an underwater civilization of mermaid-like people, operating on geological timescales",
+                "languages": "Mermassa (untranslatable by surface scholars; communicated through water-carried vibrations)",
+                "religion": "Unknown; the Mermassa do not discuss their spiritual practices with surface dwellers",
+                "government": "Unknown in detail; the Mermassa govern themselves by systems that surface scholars have never been permitted to observe",
+                "description": """Ulceron is the kingdom beneath the waves, and everything the surface world knows about it is probably wrong.
 
-On the frozen continent of Acumfrial, behind a wall of ice and stone called the Styrmwall, the Wintermen have held back horrors that the rest of Elysal prefers not to think about. What exactly lies beyond the Styrmwall is a matter of considerable debate and minimal firsthand testimony, because the people who cross the wall to investigate tend not to come back, and the people who defend it tend not to talk about what they've seen.
+The Mermassa inhabit the deep oceans off Acumfrial's coast — though 'inhabit' may be too small a word for a civilization that spans the ocean floor and operates on timescales that make surface history look like a footnote. They are not mermaids in the fairy-tale sense. They are an intelligent aquatic species whose civilization predates every surface nation in Elysal, and whose patience — the patience of a people who measure time by currents rather than calendars — has been their defining characteristic for longer than the surface world has existed.
 
-The Wintermen are small, stubborn, and organized around holds — fortified communities built into the ice and rock of Acumfrial's interior. Their entire culture is oriented around defense: defense of the wall, defense of each other, defense against a cold that kills the unprepared and merely punishes everyone else. They are not a people who waste words, and their reputation for insularity is earned, because when your primary interaction with the outside world consists of Raxonian hunters wandering into your territory and telling stories about ice goblins, a certain wariness is justified.
+They watch. This is what the Mermassa do. They have been watching the surface world since before the Ghenyarians built their first city, observing with an analytical patience that surface scholars find unnerving when they think about it, which is rarely, because most surface dwellers prefer to think of the Mermassa as legend rather than as neighbors who have been taking notes.
 
-Fondorian contact with the Wintermen was minimal for most of history. Raxonian hunters encountered their settlements and returned with stories that their countrymen believed about as much as they believed anything they hadn't seen with their own eyes. The Wintermen, for their part, regarded Fondorian interest in their territory with the flat skepticism of people who have been guarding a wall for millennia without being thanked for it.
+The Submassa — a sub-race adapted for shallow coastal waters — have occasionally been seen in surface communities, particularly the port cities of Fondore. Zif, the Submassa dockworker of Suntrae who gave his life to save a governor's daughter from a shark, is the most famous example. But the deep Mermassa remain unknown, their cities unseen, their intentions a matter of speculation.
 
-In the modern era, the Perut Confederation has been recognized as a nation — a formality that the Wintermen accepted with characteristic understatement, since they had been functioning as a nation for longer than most of the countries doing the recognizing had existed.
+Hiyalmite fishermen on Lipse have maintained a longer relationship with the Mermassa than any other surface people — not a diplomatic relationship, exactly, but the kind of mutual acknowledgment that develops between neighbors who have been sharing the same ocean for millennia. The fishermen leave offerings. The Mermassa leave the fishing boats alone. It is not a treaty. It is an understanding, and it has lasted longer than most treaties.
 
-Klae wrote: 'The Wintermen asked for nothing. They received nothing. They defended the world anyway. I am not sure what this says about them. I am fairly sure what it says about the rest of us.'""",
-                "heroes": "Unnamed — the Wintermen honor the wall, not the individuals who defend it",
-                "related_stories": []
+Klae tried to include the Mermassa in the Annals and found the task nearly impossible. He wrote: 'The Mermassa are watching. They have always been watching. What they think of us, I cannot say. I suspect they are patient enough to wait until we are worth talking to.'""",
+                "heroes": "Zif (Submassa dockworker of Suntrae, hero of the Third Age)",
+                "related_stories": [
+                    {"age": 3, "century": 1, "story_idx": 2, "title": "The Hero of the Century: Zif"},
+                ]
             },
         ]
     },
