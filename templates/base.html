@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/svg+xml" href="/static/icons/goblin-mascot-sm.svg">
     <script>if(localStorage.getItem('pg-theme')==='dark')document.documentElement.classList.add('dark-mode-pending');</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DS4QNGH190"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-DS4QNGH190');
+    </script>
 </head>
 <body>
     <script>if(localStorage.getItem('pg-theme')==='dark')document.body.classList.add('dark-mode');</script>
