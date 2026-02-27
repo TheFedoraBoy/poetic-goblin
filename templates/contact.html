@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Contact Us — Poetic Goblin{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="content-narrow" style="max-width:700px;margin:0 auto;padding:2rem 1rem;">
+        <h1 style="color:var(--blue-dark);margin-bottom:0.5rem;">✉️ Contact Us</h1>
+        <p style="color:var(--text-muted);margin-bottom:1.5rem;">Have a question, bug report, feature request, or just want to say hello? Send us a message and we'll get back to you.</p>
+
+        <iframe height="700" title="Contact Poetic Goblin" allowtransparency="true" frameborder="0" scrolling="yes" style="width:100%;border:none;display:block;" sandbox="allow-popups-to-escape-sandbox allow-top-navigation allow-scripts allow-popups allow-forms allow-same-origin" src="https://advanceprep.wufoo.com/embed/zcwmy2q16kxm51/">
+            <a href="https://advanceprep.wufoo.com/forms/zcwmy2q16kxm51/">Fill out my Wufoo form!</a>
+        </iframe>
+
+        <div style="margin-top:2rem;text-align:center;">
+            <a href="{{ url_for('feed') if current_user else url_for('index') }}" style="color:var(--blue);text-decoration:none;">← Back to Poetic Goblin</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

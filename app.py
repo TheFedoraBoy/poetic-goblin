@@ -498,6 +498,10 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @app.route('/privacy')
 def privacy_policy():
     return render_template('privacy.html', last_updated='February 2026')
