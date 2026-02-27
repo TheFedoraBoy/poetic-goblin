@@ -1436,13 +1436,358 @@ Klae published this letter as the final entry for the Fourth Age. He believed, a
             ]}
         ]
     },
+    {
+        "number": 5,
+        "name": "The Rise of the North",
+        "year_start": 2001,
+        "year_end": 2500,
+        "description": """The Fifth Age belongs to Raxone. After centuries of playing second fiddle to Gechann ambition and Cynthian diplomacy, the Kingdom of the North rose to become the dominant military power on Fondore. Raxonian mercenaries had always been present in foreign wars, but now Raxone fought its own, and won. The balance of power shifted northward, and the nations of Fondore scrambled to adjust to a world where the men who drank too much and laughed too loud were suddenly the ones making the rules.
+
+The Gechann Empire, which had defined the Fourth Age, did not collapse overnight. Empires rarely do. They erode, the way a coastline erodes — slowly at first, then suddenly, then in ways that make everyone wonder why they didn't see it coming. The legions that had conquered half of Fondore were still there, still professional, still dangerous. But the treasury that paid them was shrinking, the territories that fed them were rebellious, and the political will that had built the empire was giving way to the political exhaustion that follows every great exertion.
+
+Into this vacuum stepped Raxone: rebuilt after the War of Snow, reformed by kings who had learned from their predecessors' mistakes, and armed with an army that had been trained not by imperial doctrine but by centuries of princely feuds, border wars, and the practical education of fighting in conditions that would kill a man before the enemy got the chance. The Raxonians were not elegant. They were effective. And in the Fifth Age, effective was enough.""",
+        "centuries": [
+            {"number": 1, "name": "First Century",
+             "description": "The Raxonian Ascendancy. King Aldren's successors rebuild the kingdom after the War of Snow, reforming the military, taming the Princes of Rax, and transforming Raxone from a feudal backwater into the most formidable military power in northern Fondore. The process is neither gentle nor democratic.",
+             "stories": [
+                {"title": "The Reforms of Sigrid",
+                 "content": """Queen Sigrid of Raxone was not supposed to be queen. She was the third daughter of a minor prince from the eastern territories, and her ascension to the throne was the result of a succession crisis so convoluted that Klae devoted four pages to explaining it and then apologized for the confusion. The short version: every male heir with a stronger claim was either dead, disgraced, or had fled the kingdom after the War of Snow, and Sigrid was the last person standing who had both royal blood and a functioning spine.
+
+She proved to be the best thing that had happened to Raxone in centuries.
+
+Sigrid looked at the kingdom she had inherited — broke, depopulated, its infrastructure destroyed by civil war, its princes scheming in their territories like wolves circling a wounded elk — and made a series of decisions that were so sensible they bordered on revolutionary. She reformed the tax system, replacing the patchwork of princely levies with a standardized royal tax collected by crown officials. She rebuilt the roads, because an army that cannot move is not an army. She established the first Raxonian schools, staffed by Waydrani scholars she recruited with a combination of generous salaries and the implied suggestion that declining her invitation would be unwise.
+
+Most importantly, she broke the princes. Not all of them, and not all at once. She was too smart for that. But over the course of her reign, she systematically stripped the Princes of Rax of their military autonomy. Private armies were limited. Princely militias were folded into the Royal Raxonian Army. The princes retained their titles, their estates, and their right to drink themselves into oblivion at state functions, but the days of raising armies and waging private wars were over.
+
+The princes objected, naturally. Three of them raised a rebellion. Sigrid crushed it with the efficiency of a woman who had anticipated the rebellion before the rebels had and had positioned her forces accordingly. The rebel princes were stripped of their titles and their lands were redistributed to loyal supporters, a move that simultaneously punished the disloyal and rewarded the obedient. It was, in Klae's assessment, 'the most elegantly brutal act of domestic politics in Raxonian history, which is saying something for a kingdom whose politics regularly involved axes.'
+
+Sigrid ruled for thirty-one years. When she died, Raxone had a professional army, a functional treasury, a road network, and an educated administrative class. She was buried in the royal crypt at Raxona with the epitaph she had chosen herself: 'She found a ruin and left a kingdom.'"""},
+
+                {"title": "The Royal Raxonian Army",
+                 "content": """The army that Sigrid built was not modeled on the Gechann legions. This was deliberate. The Raxonians had fought against the legions enough times to understand their strengths, and they had no intention of copying them. Instead, they built something that reflected their own culture: an army that was flexible, aggressive, and comfortable operating in conditions that would have paralyzed a Geckish commander.
+
+The core of the Raxonian army was the hird: a company-sized unit of two hundred professional soldiers who trained together, fought together, and were bound by oaths of mutual loyalty that made them, in practice, an extended family with weapons. Each hird had its own banner, its own traditions, and its own reputation, and the competition between hirds for glory and recognition was the engine that drove Raxonian military performance.
+
+Where the Geckish legions favored heavy infantry in tight formations, the Raxonians favored versatility. A hird could fight in formation when the terrain demanded it, but its soldiers were equally comfortable operating in small groups, conducting raids, fighting in forests or mountains or snow. Every Raxonian soldier was trained to march, fight, forage, build, and survive independently for extended periods. The Gechann produced soldiers. The Raxonians produced warriors who could also be soldiers when the situation required it.
+
+The cavalry was the army's striking arm. Raxonian horses were smaller than the Geckish breeds but tougher, bred for endurance in cold weather rather than speed on flat ground. The cavalry tactics emphasized the hit-and-withdraw: a mounted force would strike the enemy's flank, disengage before a counter-attack could develop, circle, and strike again. It was exhausting to face, because the defender could never predict where the next blow would come from.
+
+The army's most distinctive feature was the Oburpittenn corps — the war beast riders who had first appeared during the Winter Wars of the First Age. The Pittenn, large armored goat-like creatures, had been bred for war over millennia, and the beasts that the Fifth Age army fielded were larger, meaner, and better armored than their ancestors. An Oburpittenn charge was a terrifying experience. The beasts were nearly impossible to stop, their riders were protected by the animals' bulk, and the psychological impact of several hundred armored goat-monsters bearing down on a formation was enough to break most armies before contact.
+
+Klae, who observed a military parade in Raxona during his research, described the Oburpittenn as 'the most unsettling military asset I have ever seen, and I have seen a Lirzan dragonborn in full war paint.' He added, with characteristic understatement: 'I would not want to be standing in front of one.'"""}
+            ]},
+
+            {"number": 2, "name": "Second Century",
+             "description": "The Gechann Retreat. As Raxone ascends, the Gechann Empire contracts. Provincial rebellions, financial strain, and the sheer impossibility of governing a territory that spans half the world force the Imperators into a series of strategic withdrawals that their propaganda departments insist on calling 'consolidations.'",
+             "stories": [
+                {"title": "The Unraveling",
+                 "content": """The Gechann Empire did not fall. It shrank, which was worse, because falling is dramatic and shrinking is humiliating.
+
+The withdrawals began in the distant provinces. Coastal Metzerul was abandoned first — the jungle outposts that had cost so much blood to establish were simply too expensive to maintain, and the Lirzan resistance had made them untenable. The garrisons were recalled, the settlers evacuated, and the Lirzans reclaimed their territory with a quiet efficiency that suggested they had been waiting for exactly this moment.
+
+Northern Mural Cere was next. The crusader legacy had left behind a population that despised Geckish occupation with religious fervor, and the garrison there had been fighting a low-intensity insurgency for decades. The current Imperator — a pragmatist from Suntrae who understood balance sheets better than ideology — calculated the cost of maintaining the garrison against the revenue it generated and arrived at a number that was deeply unflattering to imperial ambition. The legions withdrew.
+
+Each withdrawal emboldened the next rebellion. The Waydrani, who had endured Geckish rule with their characteristic patience, began demanding autonomy. The Veran aristocracy, stripped of their slaves but not their sense of entitlement, agitated for independence. Even the Geckish city-states themselves, the original members of the federation, began questioning why their taxes were funding an empire that was getting smaller by the decade.
+
+The Imperator's response was to consolidate — a word that the imperial propaganda office used so frequently that it became a joke in the taverns of Boulavar. 'We're not retreating,' went the saying. 'We're consolidating. We've been consolidating for twenty years. Soon we'll have consolidated all the way back to Boulavar.'
+
+The joke was not far from the truth. By the end of the century, the Gechann Empire had retreated to its core territory: the Geckish heartland, Waydren, and Vera. Everything else — the colonies, the outposts, the conquered provinces — was gone. The legions were still professional, still dangerous, still the best-trained soldiers in Fondore. But there were fewer of them, and the empire they served was a shadow of what it had been.
+
+Klae wrote: 'The Gechann did not lose their empire to a conqueror. They lost it to arithmetic. The numbers stopped adding up, and no amount of martial glory can overcome a deficit.'"""},
+
+                {"title": "The Last Legion of Metzerul",
+                 "content": """The Fourteenth Legion was the last Geckish military unit to leave Metzerul, and their withdrawal became one of the most famous marches in imperial history — not because it was glorious, but because it was the opposite.
+
+The Fourteenth had been stationed in the jungle for over a decade, manning a chain of outposts along the Lirzan border that served no strategic purpose except to demonstrate that the empire was still there. The soldiers were sick, undermanned, and demoralized. Their equipment was rotting in the humidity. Their supply lines had been cut so many times that they had stopped expecting supplies and started growing their own food, which is the point at which an army stops being an army and starts being a farming commune with weapons.
+
+When the order to withdraw finally came, the Fourteenth's commander — a centurion named Marcus Belvyc Aemorius, the senior officer left alive — assembled his remaining men and began the march to the coast. The march should have taken two weeks. It took six.
+
+The Lirzans did not attack. This was the most unnerving part. The jungle was full of Lirzan scouts — the soldiers could hear them moving through the canopy, could see the occasional flash of scales in the undergrowth — but no attack came. The Lirzans simply watched the Fourteenth march out, the way a landowner watches a trespasser finally leave.
+
+Marcus recorded the march in his personal journal, which Klae obtained from a descendant in Aemore. The entries are spare and matter-of-fact, which makes them devastating. Day three: 'Lost two men to fever. Buried them by the river. No markers — nothing to mark them with.' Day nine: 'Crossed the Boudazi plain. The volcano is smoking. The men think this is an omen. I think it is a volcano.' Day fourteen: 'A Lirzan appeared on the road ahead. Just stood there. We stopped. He looked at us for a long time, then stepped aside. We marched past him. Nobody spoke.'
+
+The Fourteenth reached the coast and boarded transport ships bound for Vera. Marcus Belvyc Aemorius retired to his family's farm outside Aemore and never spoke publicly about Metzerul again. When a Geckish historian asked him, years later, to contribute to a military history of the empire's colonial campaigns, he reportedly said: 'Write whatever you want. We were there. That was enough.'
+
+Klae used the Fourteenth's withdrawal as a metaphor for the empire itself. He wrote: 'They marched out in good order, as the Gechann always do. Their discipline was intact, their formation correct, their standards held high. They looked like an army. They were a funeral procession.'"""}
+            ]},
+
+            {"number": 3, "name": "Third Century",
+             "description": "Lipse Founded. On a small island off the coast of Acumfrial, an unlikely experiment begins. Refugees, exiles, and adventurers from every nation in Elysal converge on the island of Lipse and establish the only successful multicultural democracy in the world. It is here, centuries later, that Kratikar Klae will write the Annals.",
+             "stories": [
+                {"title": "The Island Nobody Wanted",
+                 "content": """Lipse was not an attractive island. It was small, rocky, windswept, and located off the coast of Acumfrial in waters that were cold ten months of the year and freezing the other two. It had no natural resources worth mentioning, no strategic value, and a climate that could charitably be described as character-building. Every major power had looked at Lipse at one point or another and decided it wasn't worth the trouble of claiming.
+
+This made it perfect.
+
+The first settlers arrived in the third century of the Fifth Age: a mixed group of Hiyalmite fishermen, Waydrani scholars fleeing Geckish cultural repression, Pervin refugees from the border wars, and a handful of Raxonian sailors who had deserted their ships for reasons they declined to specify. They had nothing in common except the desire to be left alone, which in Elysal is a stronger bond than shared language, religion, or ethnicity.
+
+The settlement had no government at first. It didn't need one. When you have forty people on a rock in the ocean, disputes are settled by conversation, and the consequences of antisocial behavior are limited by the fact that there's nowhere to go. But as the population grew — drawn by the island's reputation as a place where nobody cared who you were or where you came from — some form of organization became necessary.
+
+What emerged was a direct democracy. Every adult resident had a vote. Laws were proposed, debated, and decided in public assemblies held in the town square, which was really just a flat area near the docks where people could stand without being blown into the sea. There was no king, no governor, no elected leader. There were only citizens, and every citizen had the same voice.
+
+The system was chaotic, slow, and frequently absurd. Debates about fishing rights could last longer than the fishing season. A proposal to build a second dock was debated for three years before being approved, by which time the original dock had collapsed and needed rebuilding first. But decisions, once made, had the legitimacy that only genuine consensus can provide, and the population — which had come to Lipse specifically to escape the arbitrary authority of kings and emperors — tolerated the inefficiency as the price of freedom.
+
+Klae was born on Lipse. He grew up in this democracy, attended its assemblies, argued about dock construction with his neighbors, and absorbed the fundamental principle that would animate his life's work: every voice matters, and history belongs to everyone who lived it."""},
+
+                {"title": "Catcher's Rim",
+                 "content": """The town that grew up on Lipse's eastern shore was called Catcher's Rim, named for the curved reef that sheltered its natural harbor like a cupped hand catching rainwater. It was not a large town — at its peak, the population of the entire island never exceeded ten thousand — but it was, in its own small way, the most important place in Elysal.
+
+Catcher's Rim was where the library was.
+
+The library began as a single shelf in the home of a Waydrani scholar named Pellae Aymundra, who had brought a collection of scrolls and codices from Hypolta when she fled Geckish Waydren. She offered to lend her books to anyone who wanted to read them, which on Lipse was everyone, because people who voluntarily move to a windswept rock in the ocean tend to be the kind of people who read.
+
+The shelf became a room. The room became a building. The building became the Library of Spires — named for the four narrow towers that rose from its corners, which served the dual purpose of housing additional books and being visible from the harbor so that arriving ships knew they had found the right island. By the middle centuries of the Fifth Age, the Library of Spires was the largest repository of written knowledge in Elysal outside of the great institutional libraries of Oradova and Boulavar. And unlike those libraries, which were controlled by states and restricted to authorized scholars, the Library of Spires was open to anyone.
+
+The library's collection was eclectic. Waydrani philosophical texts sat next to Raxonian military histories. Lirzan scientific treatises shared shelves with Pridekin oral traditions that had been transcribed by visiting scholars. Cereyst religious texts were catalogued alongside Mural Cereyn poetry and Karagonese political theory. The organizational system was, by the standards of professional librarianship, a disaster. But the principle — that all knowledge belonged in the same place, available to anyone who sought it — was the library's true achievement.
+
+It was in this library that a young Hiyalmite student named Kratikar Klae would spend his formative years, reading everything he could reach and developing the ambition that would consume his life: to create a comprehensive history of the world he lived in. The Annals were born in the Library of Spires, conceived by a clerk's apprentice who read too much, on an island that nobody had wanted, in a town named for the shape of a reef.
+
+Klae wrote of Catcher's Rim: 'It is not much to look at. The buildings are plain, the streets are muddy, and the wind never stops. But I have never found a place where more was known, or more was shared, or more was possible. This island taught me that the world is a book, and we are all its authors.'"""}
+            ]},
+
+            {"number": 4, "name": "Fourth Century",
+             "description": "The Border Tensions. With the Gechann Empire in retreat and Raxone ascendant, the border regions of Fondore become flashpoints. The Leimbordur passes, which have separated the North from the South since the founding of Lambridge, become the most militarized border in the world.",
+             "stories": [
+                {"title": "The Line in the Mountains",
+                 "content": """The Leimbordur had always been more than a mountain range. It was a cultural boundary, a linguistic boundary, and — since the founding of Lambridge — a military boundary that separated the northern world from the southern. The Leimish had built their kingdom behind it. The Debrears had been stopped by it. The Gechann had respected it, because crossing mountains to fight people who live in mountains is a bad idea that the Gechann, unusually, were smart enough to avoid.
+
+But with Raxone expanding its influence southward and the Gechann contracting, the Leimbordur passes became the most strategically important terrain in Fondore. Whoever controlled the passes controlled the flow of armies, trade, and influence between North and South. The Leimish, who had controlled the passes since the founding of their kingdom, suddenly found themselves under pressure from both sides.
+
+Raxone wanted access. Not invasion — the Raxonians were not interested in conquering Lambridge, a nation of poets and musicians that would resist occupation and be impossible to govern. They wanted the right to move troops and trade goods through the passes, which the Leimish interpreted, correctly, as the first step toward a dependency that would end with Raxonian soldiers stationed in Clarity and Raxonian merchants dominating the Arden trade routes.
+
+The Gechann wanted the passes closed. A Raxone with free access to the southern plains was a Raxone that could threaten Geckish territory, and the empire, weakened as it was, had no intention of facing the Royal Raxonian Army on open ground.
+
+Lambridge was caught in the middle, which was its natural position and one it had centuries of experience navigating. The Clairdwell court deployed the tools it knew best: diplomacy, delay, and the strategic manipulation of everyone's expectations. They negotiated with Raxone and promised access. They negotiated with Gecha and promised closure. They fortified the passes, training the Knights of Lambridge to hold the defiles against any army that showed up without an invitation.
+
+The result was a militarized border that both sides respected, not out of goodwill but out of the practical recognition that fighting through the Leimbordur was more trouble than it was worth. The passes remained open to trade and closed to armies, a distinction maintained by the Leimish with the kind of polite, firm insistence that is their national specialty.
+
+Klae noted that the Leimbordur standoff was, in its own way, a model for Fondorian diplomacy. He wrote: 'The mountains did not keep the peace. The Leimish did, by convincing both sides that crossing the mountains was more expensive than not crossing them. This is not a noble principle. It is an effective one.'"""},
+
+                {"title": "The Debrear Question",
+                 "content": """While Raxone and Gecha jostled for influence over the Leimbordur, a third power was watching from the forests with the patience of a people who had been waiting for their moment since the Second Age.
+
+The Debrears of Deberania had never forgiven the loss of the Leimlands. Their kingdom, centered on Foebrier and the Thaugren heartland, had been a significant power in the early Second Age, and the Leimish liberation — the return of the Knights of Lambridge, the establishment of the Clairdwell dynasty — was remembered not as a national correction but as a national humiliation. The Debrears had conquered the Leimish, ruled them, and lost them, and they wanted them back.
+
+For centuries, this had been an impossible ambition. Lambridge was protected by the Leimbordur, by its alliance with Cynthia, and by the Knights, whose military reputation was sufficient to discourage casual aggression. But the Debrears were not casual people. They were planners. They had spent generations rebuilding their military, studying Leimish defenses, and waiting for the moment when Lambridge's allies were too distracted to help.
+
+That moment arrived in the Fifth Age. Cynthia — the old Cynthia — was declining, its power absorbed by the Hyacinth newcomers on the western peninsula. The Gechann were retreating. Raxone was focused on northern expansion. Lambridge, for the first time in centuries, was diplomatically isolated.
+
+The Thaumfuher of Deberania — a man named Igorion IV, named for the general who had conquered Clarity in the Second Age, which tells you everything about his intentions — began probing the Leimish border with increasing aggression. Raids across the southern frontier. Provocations designed to test response times. Diplomatic insults calibrated to anger without technically constituting acts of war.
+
+The Leimish responded with their characteristic mix of cultural superiority and military preparedness. They reinforced the southern border, deployed additional Knights to the frontier towns, and sent a diplomatic note to Foebrier that Klae recovered from the Debrear archives. It read, in its entirety: 'We notice your soldiers are very close to our border. We hope they are enjoying the scenery. The scenery is ours.'
+
+The border remained intact. The Debrears, who were aggressive but not stupid, recognized that they could not take the Leimlands without a full-scale war that would draw in other powers. They retreated to their heartland and continued waiting. The Debrear Question — what to do about a nation of forest warriors who refused to accept the loss of territory they had conquered and held for less than a century — would remain unanswered for ages to come."""}
+            ]},
+
+            {"number": 5, "name": "Fifth Century",
+             "description": "The Concert of Nations. Exhausted by centuries of constant warfare, the major powers of Fondore attempt something unprecedented: a diplomatic conference to establish rules of engagement, borders, and trade agreements that all parties will respect. The Concert of Nations is imperfect, fragile, and groundbreaking.",
+             "stories": [
+                {"title": "The Meeting at Oradova",
+                 "content": """The idea was Cynthian, which surprised no one. The Cynthians of Hyacinth — the sharp-eared newcomers who had transformed the western peninsula into the cultural capital of Fondore — had always believed that problems could be solved by putting intelligent people in a beautiful room and letting them talk. The fact that this approach had failed repeatedly throughout history did not diminish their enthusiasm for it.
+
+The Concert of Nations convened in Oradova, chosen because it was the most neutral city available: technically Cynthian, practically international, and beautiful enough to put everyone in a generous mood. Representatives arrived from every major power: Raxone, the Gechann Empire, Lambridge, Epervinay, Hyacinth, Deberania, and Mural Cere. Even Karagon sent an observer, though the Karaf representative made it clear that he was observing, not participating, because Karagon did not recognize the authority of any gathering it had not organized itself.
+
+The agenda was ambitious. Establish recognized borders. Agree on rules of warfare. Create a framework for trade that would prevent the economic conflicts that had fueled the Barren Wars. And, most radically, establish a principle of sovereignty: the idea that each nation had the right to govern itself without interference from its neighbors.
+
+The negotiations lasted months. They were conducted in High Cynthian, which was the diplomatic language of the age, and which most of the delegates spoke badly, creating misunderstandings that ranged from amusing to nearly catastrophic. The Raxonian delegate, a blunt military man named Helter Voskraad, reportedly told the Geckish ambassador that his proposal was 'the offspring of a goat,' when he had intended to say it was 'the product of careful thought.' The Cynthian word for goat and the Cynthian word for contemplation differ by a single vowel.
+
+Despite the linguistic disasters, the Concert produced a treaty. It was not comprehensive — the delegates could not agree on everything, and the sections they could not agree on were left deliberately vague, a diplomatic technique that the Cynthians had elevated to an art form. But it established principles that would guide Fondorian relations for centuries: recognized borders, freedom of trade, the prohibition of aggressive war, and the right of each nation to conduct its internal affairs without foreign intervention.
+
+Klae called the Concert of Nations 'the moment Fondore stopped being a collection of warring states and started being a civilization.' He acknowledged that this was an overstatement. The warring did not stop. But the rules changed, and changing the rules is, in its own quiet way, a revolution."""},
+
+                {"title": "The Treaty That Almost Worked",
+                 "content": """The Concert of Nations treaty was signed on a warm evening in Oradova, in a ceremony that the Cynthians had choreographed with their usual attention to aesthetics. Each delegate signed with a specially commissioned quill. Each signature was witnessed by a Cereyst priest and a secular official, satisfying both the religious and the pragmatic constituencies. Wine was served. Music was played. Everyone pretended to believe that the document they had just signed would prevent war, which is the fundamental pretense of all diplomacy.
+
+The treaty's strengths were considerable. It drew borders that, while imperfect, were at least agreed upon. It established trade routes that were protected by international consensus rather than military force. It created a mechanism for dispute resolution — a panel of arbitrators, drawn from neutral nations, who could adjudicate conflicts before they escalated to war. The panel was, in practice, toothless. But its existence meant that a nation contemplating aggression had to at least pretend to seek a peaceful resolution first, and the pretense, surprisingly often, became reality.
+
+The treaty's weaknesses were equally considerable. It had no enforcement mechanism. It applied only to the signatory nations, leaving the rest of Elysal — Tzun, Metzerul, the oceanic territories — outside its protection. And it was predicated on the assumption that all parties would act in good faith, which was an assumption that no one who had studied Fondorian history should have made.
+
+The first violation came within five years, when a Geckish merchant fleet seized a Karagonese trade vessel in the Erezetta, claiming it was carrying contraband. The Karagonese, who had not signed the treaty, were not bound by its dispute resolution mechanisms. The Gechann, who had signed it, were supposed to submit to arbitration. They did not. The incident was resolved through direct negotiation — which is to say, the Karagonese burned three Geckish ships in retaliation and the Gechann decided the trade vessel had not been worth the trouble.
+
+The treaty survived this and other violations, not because it was strong but because it was useful. Having agreed-upon rules, even rules that were regularly broken, was better than having no rules at all. The Concert of Nations did not prevent war. It made war slightly more expensive and slightly more embarrassing, which turns out to be more effective than idealists expect and less effective than they hope.
+
+Klae wrote: 'The treaty was a promise that everyone made and nobody fully kept. But the making of the promise was itself an achievement, because it meant that the nations of Fondore had agreed, for the first time in history, that peace was preferable to war. They did not always act on this agreement. But they could no longer pretend they had never made it.'"""}
+            ]},
+
+            {"number": 6, "name": "Sixth Century",
+             "description": "The Great Plague. A disease of unknown origin sweeps across Fondore, killing indiscriminately and reshaping the social order. The plague does not care about borders, treaties, or the Concert of Nations. It teaches Elysal a lesson that armies never could: that civilization is fragile, and nature does not negotiate.",
+             "stories": [
+                {"title": "The Dying Season",
+                 "content": """The plague arrived in Suntrae on a merchant ship from the Erezetta islands. The first recorded case was a dockworker who developed a fever, a rash, and a persistent cough that produced blood. He was dead within a week. His wife followed three days later. Their children lasted until the end of the month. By then, the disease had spread to the market district, the residential quarters, and the garrison.
+
+Nobody knew what it was. The physicians of the age understood disease in broad terms — they knew about contagion, about quarantine, about the importance of clean water — but they had never encountered anything like this. The plague killed with a speed and thoroughness that suggested malice, though malice requires intent and disease has none. It simply was: a fact of biology operating with the indifference that biology brings to all its work.
+
+Suntrae was the first city to fall. Within months, the disease had spread to every port city in Fondore, carried by the same trade networks that carried silk, grain, and Kript. Boulavar was devastated. Raxona lost a third of its population. Clarity, sealed behind the Leimbordur with desperate quarantine measures, delayed the plague's arrival but could not prevent it. Even Foebrier, deep in the Thaugren forest, was reached by traders who carried the disease without knowing it.
+
+The social consequences were immediate and profound. Labor shortages forced the dissolution of serfdom in territories where it still existed, because dead serfs cannot plow fields and the survivors could demand better terms. The Cereyst Church, which had promised its followers divine protection, lost credibility when priests died at the same rate as everyone else. The Gechann army, reduced by plague losses, contracted further, accelerating the empire's decline.
+
+The plague lasted, in its acute phase, approximately five years. It killed between fifteen and twenty percent of Fondore's population, though exact numbers are impossible to determine because the record-keeping systems collapsed along with everything else. Villages were abandoned. Cities were depopulated. Mass graves, excavated by Klae's contemporaries centuries later, revealed the scale of the catastrophe in a way that written records could not.
+
+Klae recorded the plague with clinical precision but allowed himself one observation: 'The plague did not discriminate. It killed Gecks and Raxonians, Pervins and Leimish, kings and farmers, priests and atheists. In this, it was the most egalitarian force in the history of Elysal, and the lesson it taught — that we are all equally fragile — was the one lesson that nobody wanted to learn.'"""},
+
+                {"title": "The Plague Doctor of Hypolta",
+                 "content": """Her name was Ayla Eregeshi Pellador, and she was a Waydrani physician practicing in the old city of Hypolta when the plague arrived. She was thirty-four years old, trained in the Geckish medical tradition at the university in Boulavar, and she had a habit of asking questions that her colleagues found annoying, such as: why does the disease spread faster in crowded neighborhoods than in the countryside? Why do some people survive and others don't? Why do the dockworkers die first?
+
+These questions, which seem obvious in retrospect, were radical at the time. The prevailing medical theory attributed disease to divine punishment, bad air, or an imbalance of bodily humors. Ayla looked at the pattern of deaths — concentrated in the ports, spreading along trade routes, hitting the poor and the crowded before the wealthy and the isolated — and concluded that the disease was carried by contact, probably through the breath or through contaminated surfaces.
+
+She proposed quarantine measures that were decades ahead of their time: isolation of the sick, burning of contaminated clothing and bedding, the use of cloth masks for anyone treating patients, and the closure of public gathering places. The city authorities of Hypolta ignored her, because she was a woman, she was Waydrani, and her proposals would have disrupted trade.
+
+Ayla implemented them anyway. She established an informal quarantine zone in the old Ghenyarian quarter, commandeering abandoned buildings as isolation wards and recruiting volunteers to staff them. She burned the belongings of the dead. She insisted that her volunteers wash their hands in vinegar before and after treating patients, a practice that her colleagues found bizarre and that reduced transmission rates dramatically.
+
+The mortality rate in Ayla's quarantine zone was roughly half that of the rest of Hypolta. This was not a perfect result — people still died, and Ayla watched each death with the particular anguish of a physician who knows what could have been prevented if anyone had listened sooner. But her methods worked, and the evidence was impossible to ignore.
+
+After the plague subsided, Ayla wrote a treatise on disease transmission that was the most important medical document of the Fifth Age. It was translated into every major language, taught in every medical school, and would form the foundation of public health practice for centuries. She did not live to see its full impact. She died at fifty-one of an unrelated illness, in the city she had saved, in a house that smelled of vinegar.
+
+Klae, who read her treatise at the Library of Spires, called it 'the most important book written by a person the world tried to ignore.' He added: 'She asked simple questions and gave simple answers, and the simplicity of both is what made them revolutionary.'"""}
+            ]},
+
+            {"number": 7, "name": "Seventh Century",
+             "description": "The Pervin Awakening. In the aftermath of the plague and the decline of the Gechann Empire, Epervinay experiences a cultural and military renaissance. The small nation that had always defined itself by survival begins, for the first time, to define itself by ambition.",
+             "stories": [
+                {"title": "The New Pervins",
+                 "content": """The plague had devastated Epervinay, but it had devastated Epervinay's neighbors more, and in the arithmetic of power, relative strength matters more than absolute strength. The Gechann, who had kept Epervinay hemmed in for centuries, were reeling from plague losses that had reduced their legions and emptied their treasury. The border garrisons that had contained Pervin ambition were undermanned. The military machine that had made the Gechann the dominant power in southern Fondore was, for the first time, vulnerable.
+
+The Pervins noticed.
+
+The Pervin Awakening was not a revolution or a war. It was a mood — a collective shift in national temperament from defensive survival to aggressive ambition that expressed itself in every aspect of Pervin life. Pervin farmers began producing surplus instead of subsistence. Pervin merchants, historically cautious, began competing with Geckish traders in markets that had been Geckish monopolies for centuries. Pervin soldiers, always tough but poorly equipped, were reorganized into a professional army modeled on — though they would never admit it — the Geckish legions.
+
+The military reforms were led by a general named Lans Ilonso, a horse breeder's son from the Paronis Hills who had served as a mercenary in Raxone and returned with ideas about cavalry tactics that would transform Pervin warfare. Ilonso's innovation was the mounted lance charge — a massed cavalry assault at full gallop, with riders carrying heavy lances couched under their arms, hitting the enemy line with the combined momentum of horse and rider and weapon. The technique required extensive training, specially bred warhorses, and the kind of reckless courage that Pervins had never lacked.
+
+The first test of the new Pervin cavalry came in a border skirmish with a Geckish patrol that had strayed into Pervin territory. The Geckish patrol, twenty men strong, was accustomed to Pervin farmers scattering at the approach of imperial soldiers. Instead, they were hit by sixty mounted lancers moving at full gallop. The engagement lasted approximately four minutes. No Gecks survived.
+
+This was not, in itself, a significant military event. Twenty men dying in a border clash barely registers in the annals of Fondorian warfare. But the message it sent was enormous: the Pervins were no longer defending. They were projecting. The small, stubborn nation that had spent centuries surviving between larger powers was, for the first time, making those larger powers nervous.
+
+Klae wrote: 'The Pervin Awakening was not the birth of a new nation. It was the moment an old nation decided it was tired of being small.'"""},
+
+                {"title": "The Mare of Havenaugh",
+                 "content": """Pervin horses were legendary, and the most legendary of them was a mare named Bellacor, bred in the stables of the Havenaugh estate and owned by a woman named Teya Havenaugh, who was either the greatest horse breeder in Pervin history or the luckiest, depending on whom you asked.
+
+Bellacor was not the largest horse. She was not the fastest over short distances. But she had two qualities that no other horse in Fondore could match: endurance and intelligence. She could run for hours without tiring. She responded to commands that her rider had not yet given, anticipating turns, stops, and accelerations with an awareness that horse trainers found uncanny and slightly unnerving. A Geckish cavalry officer who observed her during a demonstration described her as 'a horse that thinks, which is frankly more than I can say for most of my men.'
+
+Teya Havenaugh bred Bellacor's bloodline for three decades, producing a strain of warhorses that became the foundation of the Pervin cavalry. The Havenaugh horses — tall, lean, with a distinctive chestnut coloring and a temperament that combined aggression with obedience — were the most sought-after military animals in Fondore. Raxone tried to buy them. Gecha tried to steal them. Lambridge tried to breed their own version. None succeeded, because the Havenaughs guarded their breeding secrets with a possessiveness that bordered on the religious.
+
+The horses changed Pervin warfare. Before Bellacor, the Pervins fought as infantry — tough, disciplined, but limited by their small population to defensive operations. After Bellacor, the Pervins fought as cavalry — fast, aggressive, and capable of striking deep into enemy territory before the enemy knew they were there. A thousand Pervin lancers on Havenaugh horses could cover ground faster than any messenger, which meant they could attack before the enemy received warning.
+
+The strategic implications were profound. Epervinay, which had always been too small to fight a war of attrition against its larger neighbors, could now fight a war of speed. Hit the enemy before they deploy. Destroy their supplies before they arrive. Cut their communications. Withdraw before they can respond. It was the cavalry equivalent of the guerrilla tactics that had kept Epervinay alive during the Pervin Wars, but applied with a speed and striking power that guerrillas could never achieve.
+
+Klae visited the Havenaugh stables during his research and was shown Bellacor's grave, which was marked with a stone larger than most human graves in the district. He found this appropriate. He wrote: 'The Pervins owe their independence to many things: to Sans the Avenger, to Rell of the Hills, to the stubbornness that is their national character. But they also owe it to a horse, which is the kind of historical fact that heroes find embarrassing and horses find irrelevant.'"""}
+            ]},
+
+            {"number": 8, "name": "Eighth Century",
+             "description": "The Merchant Princes. As the old feudal order weakens across Fondore, a new class of power emerges: the merchant princes. Wealthy traders and banking families accumulate influence that rivals the nobility, buying and selling not just goods but governments. The Arden Trade Federations evolve from a shipping consortium into a financial empire.",
+             "stories": [
+                {"title": "The Bankers of Rin Nohara",
+                 "content": """Money had always been powerful. In the Eighth Century of the Fifth Age, it became sovereign.
+
+The merchant princes of the Arden Trade Federations had been accumulating wealth since the Era of Sail, and by the Fifth Age they had more of it than most kingdoms. The great banking houses of Rin Nohara — the Sforzan, the Medelune, the Braccavelle — controlled the financial infrastructure that made Fondorian commerce possible. They issued letters of credit that were accepted in every port. They financed trade expeditions, military campaigns, and the construction of cities. They lent money to kings, which gave them influence over kings, which gave them influence over everything.
+
+The Sforzan family was the most powerful. Headed by a patriarch named Janus Sforzan, the family controlled the Arden Exchange — the institution where trade contracts were negotiated, currencies converted, and the price of everything from grain to weapons was set. Controlling the Exchange meant controlling the information on which all commercial decisions were based, and information, as Janus understood, was more valuable than gold because gold could only buy things while information could create them.
+
+Janus Sforzan did not hold political office. He did not command soldiers. He did not give speeches or issue proclamations. He sat in a modest office above the Exchange floor and made decisions that moved markets, financed wars, and determined whether nations prospered or starved. When the Clairdwell king needed money to maintain the Leimbordur garrisons, he asked Janus. When the Pervin minister needed financing for the new cavalry, she asked Janus. When the Geckish Imperator needed a loan to pay his legions, he asked Janus, and Janus charged him interest that was, in the opinion of Geckish financial historians, criminal.
+
+The merchant princes did not see themselves as parasites. They saw themselves as the circulatory system of civilization, moving resources from where they were abundant to where they were needed. This was true, in the same way that it is true that a river carries water to the sea: the river also floods, erodes, and occasionally destroys everything in its path. The merchant princes enriched Fondore. They also impoverished it, by concentrating wealth in the hands of families who owed loyalty to no nation and felt responsibility to no population.
+
+Klae, who was not wealthy and found the concept of banking morally ambiguous, wrote: 'The merchant princes proved that money is the most democratic form of power: it does not care who holds it. They also proved that democratic power, unchecked, becomes tyranny, because money that answers to no one serves no one except itself.'"""},
+
+                {"title": "The Debt of Kings",
+                 "content": """The most dangerous thing a king could do in the Fifth Age was borrow money from the Ardenese bankers. The second most dangerous thing was not borrowing money from the Ardenese bankers, because a king without credit was a king without an army, and a king without an army was not a king for long.
+
+The debt trap was elegant in its simplicity. A kingdom needed money — for soldiers, for ships, for the construction of fortifications, for the maintenance of roads. The kingdom's tax revenue was insufficient, because tax revenue is always insufficient when ambitions exceed resources. The king borrowed from the Arden banks, at interest rates that seemed reasonable in the short term and became catastrophic in the long term. The interest accumulated. The debt grew. The king borrowed more to pay the interest on what he had already borrowed, which is the financial equivalent of trying to put out a fire with lamp oil.
+
+Eventually, the king could not pay. At this point, the banker did not send soldiers. He did not threaten invasion. He simply stopped lending, which was worse than any military threat because it meant the king could not pay his existing soldiers, who tended to become uncooperative when they stopped receiving wages.
+
+The banker would then offer a solution: debt restructuring, in exchange for concessions. Trade rights. Tax exemptions. Access to ports, markets, or resources. The concessions were never called tribute, because tribute implies subjugation and the bankers preferred the language of partnership. But the effect was the same: the kingdom's sovereignty was eroded, one concession at a time, until the king ruled at the pleasure of his creditors.
+
+The Gechann Empire fell into this trap deepest. The costs of maintaining the legions, the provincial garrisons, the infrastructure of empire, exceeded the revenue that a shrinking empire could generate. The Imperators borrowed. Then they borrowed more. By the late Fifth Age, the Gechann owed more money to the Arden banks than the empire's entire annual revenue, and the interest payments alone consumed a quarter of the imperial budget.
+
+The Ardenese did not conquer the Gechann Empire. They foreclosed on it. The distinction is subtle but important, because it reveals a truth about power that military historians tend to overlook: the strongest army in the world is useless against an enemy that fights with ledgers instead of swords.
+
+Klae wrote: 'The Arden bankers discovered that the pen is mightier than the sword, provided the pen is used to write loan agreements at compound interest.'"""}
+            ]},
+
+            {"number": 9, "name": "Ninth Century",
+             "description": "The Northern Reforms. Raxone, now the dominant military power in Fondore, faces an internal crisis: the kingdom that was built by warriors must learn to be governed by administrators. The resulting reforms are painful, incomplete, and absolutely necessary.",
+             "stories": [
+                {"title": "The King Who Read Books",
+                 "content": """King Alvar III of Raxone was, by Raxonian standards, deeply suspicious. He did not drink to excess. He did not hunt. He did not challenge visiting dignitaries to wrestling matches, which had been a Raxonian diplomatic tradition for centuries. Instead, he read books, which in Raxone was considered a sign of either great wisdom or deep moral failure, depending on whom you asked.
+
+Alvar had been educated by Waydrani tutors imported by his grandmother, Queen Sigrid's great-granddaughter, and he had developed the dangerous habit of thinking before acting. He looked at the kingdom — militarily dominant, economically stagnant, administratively chaotic — and concluded that Raxone's greatest enemy was not the Gechann or the Debrears but its own refusal to modernize.
+
+The reforms he proposed were, by Raxonian standards, revolutionary. A civil service, recruited by examination rather than birth, to administer the kingdom's provinces. A legal code, standardized across the realm, replacing the patchwork of princely laws and local customs that made justice a matter of geography. A tax system based on income rather than land, which shifted the burden from poor farmers to wealthy merchants and princes. And a system of public education, open to all citizens regardless of birth, modeled on the schools of Lipse and the universities of Hyacinth.
+
+The opposition was immediate and furious. The princes, whose authority the reforms would diminish, threatened rebellion. The military, which had always been the kingdom's dominant institution, resented the elevation of bureaucrats. The tavern-keepers, who served as the kingdom's informal political class, debated the reforms with the passion that Raxonians brought to everything: loudly, drunkenly, and with occasional violence.
+
+Alvar pushed the reforms through anyway, using a combination of political skill, strategic bribery, and the simple fact that he controlled the Royal Raxonian Army and the princes did not. The reforms were not fully implemented during his reign — administrative transformation takes decades, and Alvar ruled for only eighteen years before dying of pneumonia, which was both ordinary and anticlimactic for a king who had survived three assassination attempts.
+
+But the foundation was laid. Raxone began the slow, painful process of becoming a modern state: governed by law rather than custom, administered by professionals rather than aristocrats, and educated by teachers rather than tavern-keepers. The transformation would take generations. The resistance would never fully cease. But the kingdom that emerged was stronger, more stable, and better prepared for the challenges of the coming ages than the warrior-kingdom it replaced.
+
+Klae wrote of Alvar: 'He was the most important king Raxone ever had, and the least popular. He changed the kingdom by forcing it to grow up, which is the one thing that no kingdom does voluntarily.'"""},
+
+                {"title": "The Waydrani Administrators",
+                 "content": """The civil service that Alvar III created needed administrators, and the Raxonians did not have any. This was not a failure of education but of culture: Raxonians valued martial prowess, physical endurance, and the ability to drink without falling over. Administrative skill — the ability to organize records, manage budgets, and navigate bureaucratic procedures without threatening anyone with a weapon — was not a quality that Raxonian society cultivated.
+
+The Waydrani, on the other hand, had been cultivating it for millennia. The oldest people in Fondore, descended from the first Ghenyarian civilization, the Waydrani had survived conquest after conquest by making themselves indispensable. Under Geckish rule, they had become the empire's most trusted administrators, managing provincial governments, maintaining records, and running the institutions that kept the imperial machinery functioning. When the Gechann retreated, the Waydrani took their skills elsewhere.
+
+Alvar's invitation — or recruitment, or conscription, depending on the Waydrani's perspective — brought hundreds of Waydrani scholars and administrators to Raxone. They staffed the new civil service, organized the provincial governments, established the record-keeping systems that a modern state requires, and generally made themselves as indispensable to Raxone as they had been to Gecha.
+
+The cultural friction was considerable. Raxonians regarded the Waydrani as clever but physically contemptible — small, quiet, and incapable of holding their Kript. The Waydrani regarded the Raxonians as large, loud, and incapable of filing a document correctly. Both assessments contained enough truth to be offensive, and the early years of the Waydrani presence in Raxone were marked by misunderstandings that ranged from comedic to violent.
+
+But the partnership worked, because it had to. Raxone needed administrators and the Waydrani needed employment. Over time, the two cultures developed a working relationship that was, if not warm, at least functional. Waydrani families settled in Raxonian cities. Raxonian children attended Waydrani-run schools. Intermarriage, while rare, occurred. The kingdom that emerged was not purely Raxonian and not purely Waydrani but something new: a hybrid culture that combined Northern martial traditions with Waydrani administrative competence.
+
+Klae, who was Hiyalmite and thus an outsider to both cultures, found the Raxonian-Waydrani partnership deeply instructive. He wrote: 'Two peoples who had nothing in common except geography built a kingdom together by recognizing what they lacked. The Raxonians lacked patience. The Waydrani lacked swords. Together, they had both, and that was enough.'"""}
+            ]},
+
+            {"number": 10, "name": "Tenth Century",
+             "description": "A Fragile Peace. The Fifth Age ends in an uneasy equilibrium. Raxone dominates the North. The Gechann control a diminished but still formidable South. Lambridge holds the center. And across the Erezetta, civilizations that Fondore once dismissed as peripheral are building power that will reshape the world in the ages to come.",
+             "stories": [
+                {"title": "The Balance of Powers",
+                 "content": """At the close of the Fifth Age, the world was balanced on the edge of a knife, and everyone could see the knife but nobody could agree on which way it was going to fall.
+
+Raxone was the dominant military power in Fondore, but dominance is not the same as control. The Royal Raxonian Army could defeat any force on the continent in open battle, but it could not be everywhere at once, and the geography of Fondore — with its mountain ranges, dense forests, and the sheer distance between the northern frontier and the southern coast — made continental hegemony impractical. Raxone controlled the North. It influenced the Center. It watched the South.
+
+The Gechann Empire still existed, technically. The Imperator still ruled from Palasor, which was showing its age. The legions still marched, though they marched shorter distances and toward more modest objectives. The empire had consolidated — the word had lost its satirical edge and become simply accurate — to its core territories: the Geckish heartland, Waydren, and the diminished island of Vera. It was still wealthy, still civilized, still capable of projecting force. But it was no longer the continent-spanning power that had defined the Fourth Age.
+
+Lambridge held the Leimbordur and the moral high ground, which in Fondorian politics were equally valuable. The Clairdwell dynasty was stable, the Knights were sharp, and the Arden Trade Federations ensured that money flowed through Leimish territory regardless of who was fighting whom. The Leimish, as always, survived by being useful to everyone and threatening to no one.
+
+Epervinay was ascendant, its cavalry feared, its economy growing, its national confidence at an all-time high. Hyacinth was culturally dominant, its universities and concert halls the envy of the world. Deberania was quiet, which worried everyone who knew the Debrears. And Mural Cere, the holy desert state, maintained its spiritual authority while its political relevance declined.
+
+Beyond Fondore, the balance was shifting in ways that the continental powers had not yet registered. Karagon's republic was growing in wealth and influence. The Lirzan Kingdom, recovering from the Geckish genocide, was rebuilding its dragonborn aristocracy. The Pridekin of Tzun, who had been subjugated by the Mark of Tzun, were growing restless. And in the far north, the Wintermen — patient, relentless, long-memoried — were waiting for something that none of the civilized nations could predict.
+
+Klae described the end of the Fifth Age as 'a pause between heartbeats — the moment when the world holds its breath before the next thing happens.' The next thing, when it happened, would be the Sixth Age: an age of ideas, of revolution, and of the terrifying discovery that the old certainties were not as certain as everyone had assumed."""},
+
+                {"title": "A Conversation in Catcher's Rim",
+                 "content": """Klae recorded this conversation from his own memory. It took place on the docks of Catcher's Rim, on the island of Lipse, between himself and an old Raxonian sailor named Brath who had stopped on the island to repair his ship. Klae was nineteen years old, recently appointed as a letterboy at Hejem University, and had not yet begun his life's work. The conversation, he later wrote, was the moment he decided to write the Annals.
+
+Brath was sixty-three, barrel-chested, and missing two fingers on his left hand from a rope accident. He had sailed every ocean in Elysal and had opinions about all of them. He sat on a barrel on the dock, eating dried fish and watching Klae, who was reading a book.
+
+'What's that, then?' Brath asked.
+
+'A history of the Second Age War,' Klae said.
+
+'Any good?'
+
+'It's written by a Cynthian. He says the Pervins were bandits who got lucky.'
+
+'Ha. I knew an old Pervin in Erogan who said the Cynthians were cowards who ran. Both wrong, probably. That's what happens when one man writes it down. You get one man's story.'
+
+'What would you write?' Klae asked.
+
+Brath thought about this for a long time, chewing his fish. 'I wouldn't write one story,' he said finally. 'I'd write all of them. Every side. Every voice. The kings and the fishermen and the women who kept the world running while the men were off being idiots. All of it. Because that's what history is, isn't it? Not what happened. What everyone remembers happening, which is never the same thing.'
+
+'That would take a lifetime,' Klae said.
+
+'Aye,' Brath said. 'But what else are you going to do with one?'
+
+Klae left Lipse the following spring, carrying a journal and a knapsack and passage on a trade vessel bound for Fondore. He would not return for forty-three years. But the seed had been planted on a dock, by a sailor with missing fingers and a mouthful of fish, who had understood something about history that most historians never learn: that the truth is not a single story. It is all of them, told together, by everyone who was there.
+
+The Fifth Age was over. The Annals were about to begin."""}
+            ]}
+        ]
+    },
 ]
 
-# Ages 5-8: structure in place, stories to be written
+# Ages 6-8: structure in place, stories to be written
 for age_data in [
-    (5, "The Rise of the North", 2001, 2500,
-     "The Fifth Age belongs to Raxone. After centuries of playing second fiddle to Gechann ambition and Cynthian diplomacy, the Kingdom of the North rose to become the dominant military power on Fondore. Raxonian mercenaries had always been present in foreign wars, but now Raxone fought its own, and won. The balance of power shifted northward, and the nations of Fondore scrambled to adjust to a world where the men who drank too much and laughed too loud were suddenly the ones making the rules.",
-     ["The Raxonian Ascendancy", "War of Snow", "Lipse Founded", "The Border Tensions", "Concert of Nations", "The Great Plague", "Pervin Awakening", "The Merchant Princes", "Northern Reforms", "A Fragile Peace"]),
     (6, "A Leap of Faith", 2501, 3000,
      "The Sixth Age was an age of ideas. Philosophy, science, and political theory erupted across Fondore with an intensity that made the old institutions nervous and the young populations excited. The printing press equivalent arrived in Clarity and within a generation, pamphlets were more dangerous than swords. Ceresy faced its most serious internal crisis since the Cereyian Wars, and the nations of Fondore began to grapple with questions that had no easy answers: What is a citizen? What does a king owe his people? And what happens when the people decide the answer is: everything?",
      ["The Printing Revolution", "The Reformations", "The Terminal War", "The Philosophers of Oradova", "The Pervin Republic", "Fall of the Clairdwells", "The Geckish Civil War", "The Luschnypp Ascendant", "The Treaty of Clarity", "New Faiths"]),
