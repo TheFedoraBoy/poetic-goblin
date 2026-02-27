@@ -60,7 +60,7 @@ class Config:
     SMTP_USER = os.environ.get('SMTP_USER', '')
     SMTP_PASSWORD = os.environ.get('SMTP_PASSWORD', '')
     SMTP_FROM_NAME = os.environ.get('SMTP_FROM_NAME', 'Poetic Goblin')
-    SMTP_FROM_EMAIL = os.environ.get('SMTP_FROM_EMAIL', 'noreply@poeticgoblin.com')
+    SMTP_FROM_EMAIL = os.environ.get('SMTP_FROM_EMAIL', 'poeticgoblin@gmail.com')
     SMTP_USE_TLS = os.environ.get('SMTP_USE_TLS', 'true').lower() == 'true'
 
     # ─── App Settings ─────────────────────────────────────────────────
