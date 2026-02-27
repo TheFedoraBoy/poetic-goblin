@@ -10,6 +10,7 @@
             <a href="{{ url_for('admin_dashboard') }}" class="btn {% if tab == 'dashboard' %}btn-orange{% else %}btn-ghost{% endif %}" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Dashboard</a>
             <a href="{{ url_for('admin_users') }}" class="btn {% if tab == 'users' %}btn-orange{% else %}btn-ghost{% endif %}" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Users</a>
             <a href="{{ url_for('admin_reports') }}" class="btn {% if tab == 'reports' %}btn-orange{% else %}btn-ghost{% endif %}" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Reports{% if tab != 'reports' and report_count is defined and report_count > 0 %} <span style="background:#c62828;color:white;border-radius:10px;padding:0 6px;font-size:0.75rem;margin-left:4px;">{{ report_count }}</span>{% endif %}</a>
+            <a href="{{ url_for('admin_annals') }}" class="btn {% if tab == 'annals' %}btn-orange{% else %}btn-ghost{% endif %}" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Annals</a>
         </div>
 
         {% if tab == 'dashboard' %}
@@ -190,6 +191,45 @@
             {% else %}
                 No {{ status_filter }} reports found.
             {% endif %}
+        </div>
+        {% endif %}
+
+        {% elif tab == 'annals' %}
+        <!-- ═══════ ANNALS FEED ═══════ -->
+        <div style="font-size:0.8rem;color:var(--text-dim);margin-bottom:0.75rem;">{{ annals_stories|length }} recent Annals entries</div>
+
+        {% if annals_stories %}
+        {% for s in annals_stories %}
+        <div style="background:var(--bg-card);border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.75rem;border:1px solid var(--border-light);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;flex-wrap:wrap;">
+                <div style="flex:1;min-width:200px;">
+                    <div style="font-size:0.78rem;color:var(--text-dim);margin-bottom:0.3rem;">
+                        {{ s.age_name }} · {{ s.century_name }} · {{ s.created_at|timeago }}
+                    </div>
+                    <a href="{{ url_for('annals_user_story', story_id=s.id) }}" style="font-size:1rem;font-weight:600;color:var(--text-secondary);text-decoration:none;">
+                        {{ s.title|censor }}
+                    </a>
+                    <div style="font-size:0.82rem;color:var(--text-muted);margin-top:0.3rem;">
+                        by <a href="{{ url_for('profile', username=s.username) }}" style="color:var(--blue);">{{ s.char_name or s.username }}</a>
+                        <span style="color:var(--text-dim);">(@{{ s.username }})</span>
+                    </div>
+                    <div style="font-size:0.83rem;color:var(--text-muted);background:var(--bg-light);padding:0.5rem 0.75rem;border-radius:6px;margin-top:0.5rem;line-height:1.5;word-break:break-word;">
+                        {{ s.content[:300]|censor }}{% if s.content|length > 300 %}…{% endif %}
+                    </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:0.4rem;min-width:100px;">
+                    <a href="{{ url_for('annals_user_story', story_id=s.id) }}" class="btn btn-ghost" style="padding:4px 10px;font-size:0.78rem;text-align:center;">📖 View</a>
+                    <form method="POST" action="{{ url_for('admin_delete_annals_story', story_id=s.id) }}" style="margin:0;">
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                        <button type="submit" class="btn btn-ghost" style="width:100%;padding:4px 10px;font-size:0.78rem;color:#c62828;" onclick="return confirm('Delete &quot;{{ s.title }}&quot; by @{{ s.username }}?')">🗑️ Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div style="text-align:center;padding:3rem;color:var(--text-dim);">
+            📜 No Annals entries yet. The history of Elysal awaits its first scribe.
         </div>
         {% endif %}
 

@@ -2025,6 +2025,25 @@ def admin_delete_comment(comment_id):
     referrer = request.form.get('referrer', '')
     return redirect(referrer or url_for('admin_dashboard'))
 
+@app.route('/admin/annals')
+@admin_required
+def admin_annals():
+    db = get_db()
+    stories = db.fetchall('''
+        SELECT s.*, u.username,
+               c.name as char_name, c.avatar_url as char_avatar
+        FROM annals_stories s
+        JOIN users u ON s.author_id = u.id
+        LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
+        ORDER BY s.created_at DESC LIMIT 100
+    ''')
+    for s in stories:
+        age = next((a for a in ANNALS_AGES if a['number'] == s['age_number']), None)
+        s['age_name'] = age['name'] if age else f"Age {s['age_number']}"
+        century = next((c for c in age['centuries'] if c['number'] == s['century_number']), None) if age else None
+        s['century_name'] = century['name'] if century else f"Century {s['century_number']}"
+    return render_template('admin.html', tab='annals', annals_stories=stories)
+
 @app.route('/admin/annals/<story_id>/delete', methods=['POST'])
 @admin_required
 def admin_delete_annals_story(story_id):
