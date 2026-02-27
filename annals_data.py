@@ -2032,7 +2032,23 @@ The cavalry was the army's striking arm. Raxonian horses were smaller than the G
 
 The army's most distinctive feature was the Oburpittenn corps — the war beast riders who had first appeared during the Winter Wars of the First Age. The Pittenn, large armored goat-like creatures, had been bred for war over millennia, and the beasts that the Fifth Age army fielded were larger, meaner, and better armored than their ancestors. An Oburpittenn charge was a terrifying experience. The beasts were nearly impossible to stop, their riders were protected by the animals' bulk, and the psychological impact of several hundred armored goat-monsters bearing down on a formation was enough to break most armies before contact.
 
-Klae, who observed a military parade in Raxona during his research, described the Oburpittenn as 'the most unsettling military asset I have ever seen, and I have seen a Lirzan dragonborn in full war paint.' He added, with characteristic understatement: 'I would not want to be standing in front of one.'"""}
+Klae, who observed a military parade in Raxona during his research, described the Oburpittenn as 'the most unsettling military asset I have ever seen, and I have seen a Lirzan dragonborn in full war paint.' He added, with characteristic understatement: 'I would not want to be standing in front of one.'"""},
+                {"title": 'The Hero of the Century: Queen Sigrid of Raxone',
+                 "content": """Queen Sigrid was not supposed to rule. She was the third child of a dead king, born during a civil war, raised in a fortress that smelled of smoke and wet stone. The throne came to her because her brothers died — one in battle, one of fever — and because the Raxonian lords, desperate for stability after the War of Snow, were willing to accept a queen if the alternative was another war.
+
+They expected a figurehead. They received a force of nature.
+
+What the official accounts do not capture is the woman behind the reforms: a small, fierce, prematurely grey figure who governed from a study cluttered with maps and tax ledgers, who ate meals standing because sitting felt like wasting time, and who possessed a vocabulary of profanity in four languages that she deployed with surgical precision against anyone who told her that something could not be done.
+
+She broke the princes. This sounds dramatic. It was bureaucratic. The regional princes who had carved Raxone into private fiefdoms during the civil war found their tax revenues redirected, their private armies absorbed into the royal military, and their hereditary privileges replaced by administrative responsibilities that required actual competence. Those who adapted survived. Those who resisted discovered that Sigrid's negotiations had a time limit, after which the royal army arrived.
+
+She built schools. She standardized the currency. She commissioned roads that connected the frontier provinces to the capital. She established a civil service examination that was open to anyone — including Waydrani, including women, including the Wintermen auxiliaries who had never been offered a position more dignified than 'expendable infantry.'
+
+She ruled for thirty-seven years. She never married, because marriage would have required sharing power, and Sigrid did not share power. She shared responsibility, which is a different thing.
+
+She died in her study, at her desk, with a tax ledger open in front of her. The lords who had feared her wept at her funeral, because they understood — too late, as understanding always comes — that she had been the best thing that had ever happened to them.
+
+Klae wrote: 'She was given a broken kingdom and returned it whole. She was given power and used it for others. She was given a throne and treated it as a desk. The desk was more useful.'"""}
             ]},
             {"number": 2, "name": 'Second Century',
              "description": "The Gechann Retreat. As Raxone ascends, the Gechann Empire contracts. Provincial rebellions, financial strain, and the sheer impossibility of governing a territory that spans half the world force the Imperators into a series of strategic withdrawals that their propaganda departments insist on calling 'consolidations.'",
@@ -2064,7 +2080,25 @@ Marcus recorded the march in his personal journal, which Klae obtained from a de
 
 The Fourteenth reached the coast and boarded transport ships bound for Vera. Marcus Belvyc Aemorius retired to his family's farm outside Aemore and never spoke publicly about Metzerul again. When a Geckish historian asked him, years later, to contribute to a military history of the empire's colonial campaigns, he reportedly said: 'Write whatever you want. We were there. That was enough.'
 
-Klae used the Fourteenth's withdrawal as a metaphor for the empire itself. He wrote: 'They marched out in good order, as the Gechann always do. Their discipline was intact, their formation correct, their standards held high. They looked like an army. They were a funeral procession.'"""}
+Klae used the Fourteenth's withdrawal as a metaphor for the empire itself. He wrote: 'They marched out in good order, as the Gechann always do. Their discipline was intact, their formation correct, their standards held high. They looked like an army. They were a funeral procession.'"""},
+                {"title": 'The Hero of the Century: Marcus Belvyc Aemorius',
+                 "content": """Marcus Belvyc Aemorius was the last man out of Metzerul, and he walked the entire way.
+
+He was a centurion of the Fourteenth Legion — the unit assigned to the Gechann Empire's most remote colonial outpost, deep in the jungles of the Lirzan territories. The Fourteenth had been stationed in Metzerul for three generations, long enough that the soldiers spoke pidgin Sizzeracisenn, ate local food, and had quietly abandoned most of the military protocols that the empire considered essential. They were, by the standards of the Geckish military, barely a legion. They were also, by the standards of survival in hostile jungle, the most competent unit in the imperial army.
+
+When the withdrawal order came, Marcus read it twice and then sat quietly for a long time, which his subordinates recognized as the prelude to a decision.
+
+The withdrawal route was six hundred miles of jungle, mountain, and river. The legion had no supply train, no reinforcements, and no guarantee that the Lirzan populations along the route would allow them to pass. The empire that had sent them to Metzerul was abandoning them, and the abandonment was dressed in the language of strategic retreat, which was the empire's way of making cowardice sound like policy.
+
+Marcus organized the withdrawal with methodical care. He divided the legion into march companies. He negotiated passage with local Lirzan communities, offering weapons and equipment in exchange for food and safe conduct. He maintained discipline not through punishment but through the simple authority of a man who knew what he was doing and who would not leave anyone behind.
+
+The march took six weeks. The Lirzans watched from the treeline. They did not attack. Marcus never learned whether this was respect, contempt, or simply the recognition that a retreating army was a problem that solved itself.
+
+He reached the Geckish border with ninety-three percent of his command intact. He submitted his resignation the following day.
+
+A young officer asked him why he was leaving. Marcus said: 'I was ordered to abandon men who trusted me to a jungle that wanted to kill them. I brought them home. I will not give anyone the opportunity to order me to do it again.'
+
+Klae wrote: 'He was the last good soldier of a dying empire. He did his duty and then he stopped, because duty, like empire, has limits.'"""}
             ]},
             {"number": 3, "name": 'Third Century',
              "description": 'Lipse Founded. On a small island off the coast of Acumfrial, an unlikely experiment begins. Refugees, exiles, and adventurers from every nation in Elysal converge on the island of Lipse and establish the only successful multicultural democracy in the world. It is here, centuries later, that Kratikar Klae will write the Annals.',
@@ -2096,7 +2130,21 @@ The library's collection was eclectic. Waydrani philosophical texts sat next to 
 
 It was in this library that a young Hiyalmite student named Kratikar Klae would spend his formative years, reading everything he could reach and developing the ambition that would consume his life: to create a comprehensive history of the world he lived in. The Annals were born in the Library of Spires, conceived by a clerk's apprentice who read too much, on an island that nobody had wanted, in a town named for the shape of a reef.
 
-Klae wrote of Catcher's Rim: 'It is not much to look at. The buildings are plain, the streets are muddy, and the wind never stops. But I have never found a place where more was known, or more was shared, or more was possible. This island taught me that the world is a book, and we are all its authors.'"""}
+Klae wrote of Catcher's Rim: 'It is not much to look at. The buildings are plain, the streets are muddy, and the wind never stops. But I have never found a place where more was known, or more was shared, or more was possible. This island taught me that the world is a book, and we are all its authors.'"""},
+                {"title": 'The Hero of the Century: Pellae Aymundra',
+                 "content": """The Library of Spires was built by a woman who could not read.
+
+Pellae Aymundra was a Waydrani refugee — one of thousands displaced by the upheavals of the Fifth Age, blown across the Erezetta to the rocky island of Acumfrial, where the settlement of Catcher's Rim was accepting anyone desperate enough to live on a windswept rock in the middle of the ocean. Pellae was desperate enough. She arrived with nothing: no money, no family, no possessions beyond the clothes she wore and the conviction, common to refugees, that survival was a form of victory.
+
+She could not read because no one had taught her. Waydrani women in her province were educated in practical skills — weaving, agriculture, medicine — but literacy was reserved for men. Pellae had not married. She had fled, which required a different set of skills.
+
+On Lipse, she learned to read. She was thirty-four years old, which is considered late by the standards of people who have never had to choose between learning to read and learning to eat. She learned from the town's schoolteacher, a retired Geckish merchant who taught anyone who showed up. Pellae showed up every day for two years. She learned Common. She learned Geckish. She learned, eventually, four other languages, because once you learn to read, the appetite does not stop.
+
+She built the Library because she understood what its absence meant. A community without books was a community without memory, and a community without memory was a community that could not learn from its mistakes. She begged donations from every ship that docked at Catcher's Rim. She traded for books in the Arden ports. She copied manuscripts by hand when the originals could not be obtained. The collection grew from a shelf in her cottage to a room, to a building, to the four-spired structure that would become the most important library in Elysal.
+
+She died at seventy-one, surrounded by books she had spent a lifetime collecting and a granddaughter who could read before she could walk, because Pellae had ensured it.
+
+Klae, who grew up in Pellae's library, wrote: 'She could not read until she was thirty-four. She built a library that educated the world. I owe her everything, and everything I have written is a footnote to her achievement.'"""}
             ]},
             {"number": 4, "name": 'Fourth Century',
              "description": 'The Border Tensions. With the Gechann Empire in retreat and Raxone ascendant, the border regions of Fondore become flashpoints. The Leimbordur passes, which have separated the North from the South since the founding of Lambridge, become the most militarized border in the world.',
@@ -2128,7 +2176,21 @@ The Thaumfuher of Deberania — a man named Igorion IV, named for the general wh
 
 The Leimish responded with their characteristic mix of cultural superiority and military preparedness. They reinforced the southern border, deployed additional Knights to the frontier towns, and sent a diplomatic note to Foebrier that Klae recovered from the Debrear archives. It read, in its entirety: 'We notice your soldiers are very close to our border. We hope they are enjoying the scenery. The scenery is ours.'
 
-The border remained intact. The Debrears, who were aggressive but not stupid, recognized that they could not take the Leimlands without a full-scale war that would draw in other powers. They retreated to their heartland and continued waiting. The Debrear Question — what to do about a nation of forest warriors who refused to accept the loss of territory they had conquered and held for less than a century — would remain unanswered for ages to come."""}
+The border remained intact. The Debrears, who were aggressive but not stupid, recognized that they could not take the Leimlands without a full-scale war that would draw in other powers. They retreated to their heartland and continued waiting. The Debrear Question — what to do about a nation of forest warriors who refused to accept the loss of territory they had conquered and held for less than a century — would remain unanswered for ages to come."""},
+                {"title": 'The Hero of the Century: Gerrik Ashfall',
+                 "content": """Gerrik Ashfall was a Leimish border warden — one of the professional soldiers who patrolled the Leimbordur passes and whose primary job was to prevent the tensions between Raxone, Gecha, and Deberania from becoming wars.
+
+The incident that defined his career occurred on a winter night when a Raxonian patrol — lost, cold, and armed — crossed into Leimish territory and encountered a Debrear hunting party that was also lost, cold, and armed. The two groups confronted each other in a mountain pass with weapons drawn and tempers at the breaking point.
+
+Gerrik arrived with four men. He walked between the two groups. He did not draw his weapon. He did not shout. He spoke to the Raxonian commander in passable Raxonian. He spoke to the Debrear hunting-leader in passable Debrear. He explained to both that they were in Leimish territory, that neither of them was supposed to be here, and that if they wanted to fight, they would have to go home to do it, because fighting in Lambridge required a permit that neither of them had.
+
+The Raxonian commander, who had expected confrontation, was confused by paperwork. The Debrear hunting-leader, who had expected violence, was confused by politeness. Both groups lowered their weapons. Gerrik escorted the Raxonians to the northern border and the Debrears to the eastern border, wrote a three-page report that was excruciatingly detailed, and resumed his patrol.
+
+The incident never appeared in any diplomatic record. It never produced a crisis. It never became a story, because the whole point was that nothing happened, and nothing happening is the border warden's greatest achievement.
+
+Klae found Gerrik's report in the Clairdwell archives and published it because he believed it captured something essential about Lambridge: that the kingdom's survival depended not on grand gestures but on quiet competence, applied consistently, by people whose names nobody remembered.
+
+Klae wrote: 'Gerrik Ashfall prevented a war by being boring. This is the highest compliment I can pay anyone.'"""}
             ]},
             {"number": 5, "name": 'Fifth Century',
              "description": 'The Concert of Nations. Exhausted by centuries of constant warfare, the major powers of Fondore attempt something unprecedented: a diplomatic conference to establish rules of engagement, borders, and trade agreements that all parties will respect. The Concert of Nations is imperfect, fragile, and groundbreaking.',
@@ -2156,7 +2218,23 @@ The first violation came within five years, when a Geckish merchant fleet seized
 
 The treaty survived this and other violations, not because it was strong but because it was useful. Having agreed-upon rules, even rules that were regularly broken, was better than having no rules at all. The Concert of Nations did not prevent war. It made war slightly more expensive and slightly more embarrassing, which turns out to be more effective than idealists expect and less effective than they hope.
 
-Klae wrote: 'The treaty was a promise that everyone made and nobody fully kept. But the making of the promise was itself an achievement, because it meant that the nations of Fondore had agreed, for the first time in history, that peace was preferable to war. They did not always act on this agreement. But they could no longer pretend they had never made it.'"""}
+Klae wrote: 'The treaty was a promise that everyone made and nobody fully kept. But the making of the promise was itself an achievement, because it meant that the nations of Fondore had agreed, for the first time in history, that peace was preferable to war. They did not always act on this agreement. But they could no longer pretend they had never made it.'"""},
+                {"title": 'The Hero of the Century: Delara Rin Nohara',
+                 "content": """The Meeting at Oradova was organized by forty diplomats from twelve nations. It was saved by a translator.
+
+Delara Rin Nohara was Ardenese — born in the merchant city that had given the world banking, insurance, and the concept of interest. She was not a diplomat. She was a linguist, fluent in eleven languages, employed by the Arden Trade Federations as a commercial translator. She was assigned to the Oradova conference as support staff, the kind of person who sits at the back of the room and is not expected to speak.
+
+The conference nearly collapsed on the third day. The Raxonian delegation had used a phrase that, when translated into Geckish by the official interpreter, suggested that Raxone was claiming sovereignty over the Leimbordur passes. The Geckish delegation threatened to walk out. The Leimish demanded clarification. The Raxonians were confused.
+
+Delara stood up from the back of the room. She explained, in fluent Raxonian and flawless Geckish, that the phrase in question was an archaic northern idiom meaning 'shared interest' rather than 'sovereign claim,' and that the mistranslation was the result of the interpreter's unfamiliarity with northern dialects. The Raxonians confirmed this. The Geckish delegation sat down. The conference continued.
+
+This happened four more times during the negotiations. Each time, a mistranslation or cultural misunderstanding threatened to derail the talks, and each time Delara intervened to clarify what was actually being said versus what was being heard.
+
+She was not credited in the final treaty. Translators never are. But the diplomats who were present understood what she had done: prevented five separate crises using nothing but linguistic precision and the ability to hear what people meant rather than what they said.
+
+After Oradova, she was offered diplomatic positions by three nations. She declined all of them. She returned to Rin Nohara and established a school of languages that trained translators for international negotiations, because she understood that the next conference would need people like her, and that people like her did not occur naturally. They had to be taught.
+
+Klae wrote: 'Words are not swords, but they can start wars just as easily, and the person who prevents the wrong word from being spoken is as important as the general who prevents the wrong battle from being fought.'"""}
             ]},
             {"number": 6, "name": 'Sixth Century',
              "description": 'The Great Plague. A disease of unknown origin sweeps across Fondore, killing indiscriminately and reshaping the social order. The plague does not care about borders, treaties, or the Concert of Nations. It teaches Elysal a lesson that armies never could: that civilization is fragile, and nature does not negotiate.',
@@ -2186,7 +2264,23 @@ The mortality rate in Ayla's quarantine zone was roughly half that of the rest o
 
 After the plague subsided, Ayla wrote a treatise on disease transmission that was the most important medical document of the Fifth Age. It was translated into every major language, taught in every medical school, and would form the foundation of public health practice for centuries. She did not live to see its full impact. She died at fifty-one of an unrelated illness, in the city she had saved, in a house that smelled of vinegar.
 
-Klae, who read her treatise at the Library of Spires, called it 'the most important book written by a person the world tried to ignore.' He added: 'She asked simple questions and gave simple answers, and the simplicity of both is what made them revolutionary.'"""}
+Klae, who read her treatise at the Library of Spires, called it 'the most important book written by a person the world tried to ignore.' He added: 'She asked simple questions and gave simple answers, and the simplicity of both is what made them revolutionary.'"""},
+                {"title": 'The Hero of the Century: Ayla Eregeshi Pellador',
+                 "content": """The plague doctor of Hypolta saved more lives than any general in Fondorian history, and she did it with soap.
+
+Ayla Eregeshi Pellador was Waydrani — a physician trained at the university in Hypolta, the only medical school in Fondore that accepted women and the only one whose curriculum included the Lirzan tradition of empirical observation alongside the Cereyst tradition of humoral theory. Ayla studied both and believed only the former, because humoral theory predicted that bloodletting would cure plague and empirical observation predicted that it would kill the patient faster.
+
+When the Great Plague reached Hypolta, Ayla was thirty-two years old, recently widowed, and possessed of a clinical detachment that her colleagues found either admirable or inhuman depending on whether they were dying. She observed that the plague spread fastest in crowded quarters with poor sanitation. She observed that families who washed their hands and boiled their water had lower infection rates. She observed that quarantine — the physical isolation of the sick from the healthy — slowed transmission in every case where it was implemented.
+
+These observations were obvious, to anyone who looked at the data instead of the theology. Most physicians attributed the plague to divine punishment and prescribed prayer, fasting, and the avoidance of sin. Ayla prescribed soap, clean water, and the avoidance of sick people, which was less spiritually satisfying but considerably more effective.
+
+She established quarantine zones in Hypolta. She organized sanitation crews to clean the streets and remove the dead. She trained nurses — mostly women, because the male physicians were busy arguing about humors — in basic hygiene protocols that reduced infection rates. In the districts she managed, mortality fell by half.
+
+She wrote a treatise — the Pellador Treatise on Contagion — that became the foundational text of epidemiology. It was criticized by the medical establishment for decades. It saved millions of lives.
+
+Klae met Ayla's great-granddaughter during his research. She showed him Ayla's original notes, which included a margin comment next to a passage on humoral theory: 'This is wrong. People are dying. Stop arguing and wash your hands.'
+
+Klae published the comment as the epigraph to his chapter on the plague, because he had never read a better summary of the difference between theory and practice."""}
             ]},
             {"number": 7, "name": 'Seventh Century',
              "description": 'The Pervin Awakening. In the aftermath of the plague and the decline of the Gechann Empire, Epervinay experiences a cultural and military renaissance. The small nation that had always defined itself by survival begins, for the first time, to define itself by ambition.',
@@ -2216,7 +2310,21 @@ The horses changed Pervin warfare. Before Bellacor, the Pervins fought as infant
 
 The strategic implications were profound. Epervinay, which had always been too small to fight a war of attrition against its larger neighbors, could now fight a war of speed. Hit the enemy before they deploy. Destroy their supplies before they arrive. Cut their communications. Withdraw before they can respond. It was the cavalry equivalent of the guerrilla tactics that had kept Epervinay alive during the Pervin Wars, but applied with a speed and striking power that guerrillas could never achieve.
 
-Klae visited the Havenaugh stables during his research and was shown Bellacor's grave, which was marked with a stone larger than most human graves in the district. He found this appropriate. He wrote: 'The Pervins owe their independence to many things: to Sans the Avenger, to Rell of the Hills, to the stubbornness that is their national character. But they also owe it to a horse, which is the kind of historical fact that heroes find embarrassing and horses find irrelevant.'"""}
+Klae visited the Havenaugh stables during his research and was shown Bellacor's grave, which was marked with a stone larger than most human graves in the district. He found this appropriate. He wrote: 'The Pervins owe their independence to many things: to Sans the Avenger, to Rell of the Hills, to the stubbornness that is their national character. But they also owe it to a horse, which is the kind of historical fact that heroes find embarrassing and horses find irrelevant.'"""},
+                {"title": 'The Hero of the Century: Teya Havenaugh',
+                 "content": """Teya Havenaugh bred horses, and the horses she bred changed the balance of power in Fondore.
+
+She was a farmer's daughter from the Paronis Hills — the same stubborn country that had produced rebels, martyrs, and the most obstinate population in Fondore. The Havenaughs had been breeding horses since the Pervin Wars, when cavalry had been the difference between freedom and subjugation. But the horses of the Fifth Age were medium creatures — fast enough for scouting, strong enough for light cavalry, but too small to carry an armored rider and too fragile for sustained charges.
+
+Teya wanted a better horse. She obtained a Raxonian stallion through methods the family records describe as 'trade' and that Klae suspected involved theft, bribery, or both.
+
+The result, after fifteen years of careful breeding, was the Bellacor: a warhorse larger than any Pervin breed, faster than any Raxonian breed, and possessed of a temperament that combined Pervin alertness with Raxonian stubbornness, which made it the ideal cavalry mount and a terrible pet. The mounted lance charge that General Lans Ilonso developed using the new breed became the most feared tactical maneuver in Fondore. A line of Bellacor-mounted Pervin cavalry hitting an infantry formation at full gallop was not a military engagement. It was a natural disaster.
+
+Teya never rode in battle. She ran her farm, bred her horses, and maintained the bloodline records with the precision of a woman who understood that genetics was a science even if nobody had invented the word yet. She sold Bellacors to the Pervin military at cost, because she was a patriot, and she refused to sell them to anyone else, because she was a Havenaugh.
+
+She died at eighty-six, in the stable, which her family considered appropriate.
+
+Klae visited the Havenaugh farm during his research. He wrote: 'She bred a horse that changed the world. The horse did not know it was changing the world. Neither, I think, did Teya. She was simply doing what Havenaughs do: making something excellent and sharing it with the people who needed it.'"""}
             ]},
             {"number": 8, "name": 'Eighth Century',
              "description": 'The Merchant Princes. As the old feudal order weakens across Fondore, a new class of power emerges: the merchant princes. Wealthy traders and banking families accumulate influence that rivals the nobility, buying and selling not just goods but governments. The Arden Trade Federations evolve from a shipping consortium into a financial empire.',
@@ -2246,7 +2354,21 @@ The Gechann Empire fell into this trap deepest. The costs of maintaining the leg
 
 The Ardenese did not conquer the Gechann Empire. They foreclosed on it. The distinction is subtle but important, because it reveals a truth about power that military historians tend to overlook: the strongest army in the world is useless against an enemy that fights with ledgers instead of swords.
 
-Klae wrote: 'The Arden bankers discovered that the pen is mightier than the sword, provided the pen is used to write loan agreements at compound interest.'"""}
+Klae wrote: 'The Arden bankers discovered that the pen is mightier than the sword, provided the pen is used to write loan agreements at compound interest.'"""},
+                {"title": 'The Hero of the Century: Janus Sforzan',
+                 "content": """Janus Sforzan was the richest man in Fondore, and he used his wealth the way a general uses an army: strategically, ruthlessly, and with a clear understanding that the purpose of power is to acquire more power.
+
+He was Ardenese — the head of the Sforzan banking family, which had controlled the Arden Exchange for three generations. The Sforzans financed wars, underwriting campaigns of nations that could not afford to fight and collecting the interest those nations could not afford to pay. They financed trade, providing credit that allowed merchants to buy goods in one country and sell them in another. They financed governments, lending to kings who spent more than they taxed and who discovered, too late, that debt to a banker is a different kind of vassalage.
+
+Janus was the most capable of the Sforzans, which is to say he was the most dangerous. He understood that money was not wealth. Money was leverage — the ability to make other people do what you wanted by controlling the resource they needed most.
+
+His finest operation was the financial destruction of the Gechann Empire. The empire owed the Arden banks an enormous sum — accumulated debt from decades of overreach, funded by loans the Sforzans had extended with cheerful generosity. When the empire could not repay, Janus did not demand payment. He demanded concessions: trade rights, port access, regulatory control over the Geckish merchant marine. Each concession made the empire weaker and the Sforzans stronger, until the relationship between debtor and creditor became indistinguishable from the relationship between subject and sovereign.
+
+Klae found Janus fascinating and repellent in equal measure. He was not evil — he funded hospitals and schools in Rin Nohara. But his professional activities produced suffering on a continental scale, and the suffering was so abstracted by financial instruments that the man who caused it never had to see it.
+
+Janus died wealthy, comfortable, and entirely unaware that the financial system he had perfected would produce the workers' movements that would threaten to destroy everything he had built.
+
+Klae wrote: 'He bought and sold kingdoms with ledger entries. He was the most powerful man in Fondore, and he held no title, commanded no army, and never raised his voice. This is the future of power, and it is more frightening than any emperor.'"""}
             ]},
             {"number": 9, "name": 'Ninth Century',
              "description": 'The Northern Reforms. Raxone, now the dominant military power in Fondore, faces an internal crisis: the kingdom that was built by warriors must learn to be governed by administrators. The resulting reforms are painful, incomplete, and absolutely necessary.',
@@ -2276,7 +2398,25 @@ The cultural friction was considerable. Raxonians regarded the Waydrani as cleve
 
 But the partnership worked, because it had to. Raxone needed administrators and the Waydrani needed employment. Over time, the two cultures developed a working relationship that was, if not warm, at least functional. Waydrani families settled in Raxonian cities. Raxonian children attended Waydrani-run schools. Intermarriage, while rare, occurred. The kingdom that emerged was not purely Raxonian and not purely Waydrani but something new: a hybrid culture that combined Northern martial traditions with Waydrani administrative competence.
 
-Klae, who was Hiyalmite and thus an outsider to both cultures, found the Raxonian-Waydrani partnership deeply instructive. He wrote: 'Two peoples who had nothing in common except geography built a kingdom together by recognizing what they lacked. The Raxonians lacked patience. The Waydrani lacked swords. Together, they had both, and that was enough.'"""}
+Klae, who was Hiyalmite and thus an outsider to both cultures, found the Raxonian-Waydrani partnership deeply instructive. He wrote: 'Two peoples who had nothing in common except geography built a kingdom together by recognizing what they lacked. The Raxonians lacked patience. The Waydrani lacked swords. Together, they had both, and that was enough.'"""},
+                {"title": 'The Hero of the Century: Vaelys Moran',
+                 "content": """Vaelys Moran was a Waydrani scholar who taught a Raxonian king to think, which was an act of courage that both cultures found heroic for entirely different reasons.
+
+She was summoned to the Raxonian court by King Alvar III, who had decided that his kingdom needed a modern civil service and who had concluded, correctly, that the Waydrani were the only people in Fondore who knew how to build one. Vaelys was assigned to tutor the king himself — a position of extraordinary influence and extraordinary danger, because a tutor who makes the king feel stupid does not remain a tutor for long. Vaelys made the king feel curious, which is a different thing and considerably more useful.
+
+She taught him economics, law, and the Waydrani system of administrative classification that organized governmental functions into categories so logical that the Raxonian lords found them simultaneously obvious and infuriating. She also taught him history, which she believed was the most important subject because it was the only one that showed what happened when the other subjects were ignored.
+
+The friction came from the Raxonian aristocracy. The lords who had governed through hereditary privilege viewed the Waydrani administrators that Alvar was installing as a threat — which they were — and Vaelys as the architect of that threat — which she was. They called her a foreign manipulator. They questioned her loyalty. They suggested that a Waydrani woman had no business teaching a Raxonian king.
+
+Alvar ignored them. Vaelys ignored them louder, which is to say she continued teaching, continued advising, and continued being right, which was the most irritating thing a Waydrani could do to a Raxonian lord.
+
+She served at court for twenty-three years. She never married, never sought political office, and never accumulated personal wealth. She lived in a modest apartment near the palace and spent her evenings writing letters to her family in Waydren, which she had not visited since her appointment and would not visit again.
+
+When Alvar died, his son offered Vaelys the position of Chancellor — the first time a Waydrani had been offered a seat at the highest level of Raxonian government. She declined. She said: 'I came to teach, not to rule. The difference matters.'
+
+She returned to Waydren at the age of sixty-seven. She taught at the university in Hypolta until her death. Her students went on to staff the civil services of six nations.
+
+Klae wrote: 'She gave a kingdom its mind. The kingdom did not always use it wisely, but it had one, which is more than could be said before she arrived.'"""}
             ]},
             {"number": 10, "name": 'Tenth Century',
              "description": 'A Fragile Peace. The Fifth Age ends in an uneasy equilibrium. Raxone dominates the North. The Gechann control a diminished but still formidable South. Lambridge holds the center. And across the Erezetta, civilizations that Fondore once dismissed as peripheral are building power that will reshape the world in the ages to come.',
@@ -2320,7 +2460,21 @@ Brath thought about this for a long time, chewing his fish. 'I wouldn't write on
 
 Klae left Lipse the following spring, carrying a journal and a knapsack and passage on a trade vessel bound for Fondore. He would not return for forty-three years. But the seed had been planted on a dock, by a sailor with missing fingers and a mouthful of fish, who had understood something about history that most historians never learn: that the truth is not a single story. It is all of them, told together, by everyone who was there.
 
-The Fifth Age was over. The Annals were about to begin."""}
+The Fifth Age was over. The Annals were about to begin."""},
+                {"title": 'The Hero of the Century: Brath',
+                 "content": """The sailor on the dock at Catcher's Rim who changed Klae's life did not know he was changing it. His name was Brath, and he told Klae, on a summer evening when the wind was coming off the water and the ships in the harbor were rocking gently, that the world was larger than any one person could understand and that the only way to try was to listen to the people who had been there.
+
+Brath was a merchant sailor — Ardenese by birth, cosmopolitan by profession, weathered by decades of voyages that had taken him to every port in Fondore and several beyond. He was not educated in the formal sense. He could read a manifest but not a philosophy book. He could calculate a cargo's weight but not a theory's implications. What he had was experience: the accumulated knowledge of a man who had spent his life moving between cultures and who had learned to understand people whose languages, customs, and assumptions were different from his own.
+
+He had been everywhere. He had traded in Boulavar, where the Geckish argued about politics over dinner. He had sheltered from storms in the Schvainese islands, where the fishermen sang songs older than their language. He had bartered with Wintermen traders in Perut, where silence was a form of respect. He had even glimpsed a Mermassa vessel surfacing off the Karagonese coast, an experience he described as 'seeing something that shouldn't be there and understanding that it had always been there and you just hadn't noticed.'
+
+He told these stories to a nineteen-year-old Klae on the dock, and Klae listened, because listening was Klae's gift, and Brath's stories were the kind that demanded listening: not grand narratives but small observations about how people lived and what they cared about and how they treated strangers, which Brath considered the most reliable measure of a civilization.
+
+When Klae told Brath he was thinking about writing a history of the world, Brath laughed. Not unkindly. He said: 'Then you'd better leave this island, because the world doesn't come to you. You have to go to it.'
+
+Klae left the island. He went to the world. He spent forty-three years listening. And the Annals exist because a sailor on a dock told a young man that listening mattered.
+
+Klae did not record Brath's surname. He may not have known it. He wrote: 'He was the first person who told me that the world was worth understanding. I have spent my life testing his claim. He was right.'"""}
             ]}
         ]
     },
@@ -2365,7 +2519,21 @@ The Pamphlet War — as it came to be called — lasted for years, fought not wi
 
 The Pamphlet War did not overthrow the Imperator. It did something more lasting: it established the principle that political authority could be publicly questioned, that arguments could be mass-distributed, and that public opinion — the collective judgment of thousands of ordinary people reading the same text and reaching their own conclusions — was a force that no government could ignore.
 
-Klae wrote: 'The Pamphlet War proved that ideas, once printed, cannot be unprinted. The Imperator could burn every copy of Theocles's pamphlet in Gecha and the argument would survive, because it had entered the minds of the people who read it, and minds do not burn as easily as paper.'"""}
+Klae wrote: 'The Pamphlet War proved that ideas, once printed, cannot be unprinted. The Imperator could burn every copy of Theocles's pamphlet in Gecha and the argument would survive, because it had entered the minds of the people who read it, and minds do not burn as easily as paper.'"""},
+                {"title": 'The Hero of the Century: Odren Celle',
+                 "content": """Odren Celle was a clockmaker who got bored with clocks.
+
+He was Leimish — a craftsman from the town of Clarity, where the tradition of precision metalwork had been producing timepieces and navigational instruments since the Third Age. Odren had inherited his father's workshop and his father's talent for making small things work perfectly, a talent that was lucrative, respected, and, by his thirty-fifth year, suffocating.
+
+The printing press was not his invention. Movable type had been attempted before. What Odren invented was a press that worked — that produced legible, consistent, reproducible text at a speed that made hand-copying obsolete. The difference was precision, which was what Odren had been trained for.
+
+The first book he printed was Illiman's Teachings — commercially brilliant and politically explosive, because the Cereyst Church had maintained its authority partly through its monopoly on religious texts. A printed Teachings cost a fraction of a hand-copied one. Anyone could afford it. The Church's control over the word of God was broken by a clockmaker with ink-stained fingers and a better gear ratio.
+
+He spent the rest of his life printing philosophy, science, history, poetry, and political pamphlets that the authorities found seditious and the public found irresistible. He was arrested twice, fined three times, and threatened with excommunication once, which he treated as a marketing opportunity.
+
+He died at sixty-eight, in his workshop, with ink on his hands. The press was still running.
+
+Klae wrote: 'He made a machine that made books. The books made everything else. He is the most important person in the Sixth Age, and he would have been embarrassed to hear it, because he thought he was just solving an engineering problem.'"""}
             ]},
             {"number": 2, "name": 'Second Century',
              "description": 'The Reformations. The printing press unleashes a wave of religious reform that splits Ceresy along lines that have been forming since the Rundelian Heresy of the Second Age. The Cereyst Church, already weakened by the crusades and the rise of national churches, faces a challenge that no amount of institutional authority can suppress.',
@@ -2397,7 +2565,21 @@ The Burning Season lasted, by most historical reckonings, approximately two deca
 
 The aftermath was a Fondore permanently divided along religious lines. The Reformist North, the Orthodox South, and a contested middle ground where both denominations existed in uneasy proximity. This division would map onto political alliances for centuries, adding a religious dimension to conflicts that were already complicated by territorial, economic, and ethnic rivalries.
 
-Klae wrote of the Burning Season: 'Illiman walked the roads of Fondore teaching people to be kind. Two thousand years later, his followers were burning each other's houses over disagreements about how to be kind. There is a lesson in this, but I am not sure it is a lesson anyone wants to learn.'"""}
+Klae wrote of the Burning Season: 'Illiman walked the roads of Fondore teaching people to be kind. Two thousand years later, his followers were burning each other's houses over disagreements about how to be kind. There is a lesson in this, but I am not sure it is a lesson anyone wants to learn.'"""},
+                {"title": 'The Hero of the Century: Vorstag Helmunn',
+                 "content": """Vorstag Helmunn was a Raxonian monk who loved God so much that he broke God's church to fix it.
+
+He was born in a monastery in the northern provinces — a cold, austere place where the monks prayed six times daily. Vorstag excelled at contemplating the inadequacy of human virtue, a talent he eventually directed, with devastating precision, at the institution he had devoted his life to.
+
+The Ninety-Seven Failures were not theological arguments. They were an audit. Vorstag examined the Church's practices with the same methodical attention a Waydrani administrator would apply to a tax ledger, and he found ninety-seven specific instances where the Church's actions contradicted its own teachings. The sale of indulgences. The accumulation of wealth. The political manipulation. The list was comprehensive, documented, and printed — because this was the Sixth Age, and a monk's complaints could reach every literate person in Fondore within weeks.
+
+The Church excommunicated him. Vorstag received the news with equanimity. He continued writing. He continued preaching. He continued pointing out the gap between what the Church said and what the Church did, with a persistence the Church found maddening because it could not be refuted — only punished.
+
+The Reformation that followed was not what he wanted. He had wanted reform within the existing Church. What he got was schism — factions that would spend the next century killing each other. The violence grieved him. He had broken the Church to save it, and the pieces would not fit back together.
+
+He died in exile, in a farmhouse in the Raxonian countryside, surrounded by printed copies of his own works and the conviction that he had done the right thing in the wrong way.
+
+Klae wrote: 'He told the truth about the Church. The truth split the Church in half. Whether this makes him a hero or a catastrophe depends on which half you belong to.'"""}
             ]},
             {"number": 3, "name": 'Third Century',
              "description": 'The Terminal War. The religious divisions of the Reformation erupt into a continental conflict that engulfs every major power in Fondore. The Terminal War is fought for God, for territory, for revenge, and for reasons that nobody can articulate clearly. It is the longest and most destructive war in Fondorian history.',
@@ -2427,7 +2609,19 @@ Emelle's schools survived the war. They became the model for the public educatio
 
 The children of the war grew up and became the adults who ended it. They did not end it through military victory or diplomatic brilliance. They ended it through the simple, devastating refusal to continue. A generation that had grown up surrounded by death decided, collectively, that they had seen enough death. This is not the kind of decision that gets recorded in treaties. It is the kind of decision that makes treaties possible.
 
-Klae wrote: 'The Terminal War was ended by the people who had the least reason to believe in peace and the most reason to demand it. They had been children when the world caught fire. They put it out because no one else would.'"""}
+Klae wrote: 'The Terminal War was ended by the people who had the least reason to believe in peace and the most reason to demand it. They had been children when the world caught fire. They put it out because no one else would.'"""},
+                {"title": 'The Hero of the Century: Emelle Clairdwell',
+                 "content": """Emelle Clairdwell was a princess who built schools for orphans because she had seen what happened to children when no one built schools for them, and what she had seen was the Terminal War.
+
+She was the youngest daughter of the Clairdwell king — sheltered, educated, and entirely unprepared for a thirty-seven-year continental conflict that turned half of Fondore into a graveyard. The war reached Lambridge late but thoroughly, and Emelle, who had been seventeen when it started, was fifty-four when it ended.
+
+The children were the worst part. The orphans, the displaced, the children who had grown up in army camps and who had never known a world that was not at war. They spoke in military slang. They flinched at loud noises. They did not know how to play.
+
+Emelle established the first school in an abandoned monastery in the Leimbordur — neutral territory, because the children came from every nation. The curriculum was deliberately non-denominational: reading, mathematics, history, and what she called 'the art of disagreement' — the ability to hold a conviction without killing the person who held a different one.
+
+The schools multiplied. The children who graduated became the generation that refused to continue the war. They entered government, commerce, the military, carrying the conviction that people who disagreed did not have to destroy each other.
+
+Klae wrote: 'She did not end the war. She ended the next one, by educating a generation that knew better. This is the slower victory and the more lasting one.'"""}
             ]},
             {"number": 4, "name": 'Fourth Century',
              "description": 'The Philosophers of Oradova. In the aftermath of the Terminal War, a generation of thinkers emerges in the universities of Hyacinth, producing philosophical works that challenge every assumption about governance, religion, and the relationship between the individual and the state. The ideas they generate will fuel revolutions for centuries.',
@@ -2457,7 +2651,21 @@ The lectures were transcribed by students and printed — illegally — on press
 
 King Aelyr eventually lifted the ban, recognizing that it was doing more to promote Lyssandre's ideas than any amount of lecturing could have. Lyssandre returned to the university and continued teaching until her death, by which time her students occupied positions of influence in every government in Fondore.
 
-Klae met Lyssandre's granddaughter during his research in Oradova. She told him that her grandmother had always said that the most important thing about the Banned Lectures was not the ideas but the banning. 'The ban taught people that ideas are dangerous,' she said. 'And dangerous ideas are the only kind worth having.'"""}
+Klae met Lyssandre's granddaughter during his research in Oradova. She told him that her grandmother had always said that the most important thing about the Banned Lectures was not the ideas but the banning. 'The ban taught people that ideas are dangerous,' she said. 'And dangerous ideas are the only kind worth having.'"""},
+                {"title": 'The Hero of the Century: Lyssandre Elan',
+                 "content": """Lyssandre Elan was the most dangerous woman in Fondore, and her weapon was a lecture.
+
+She was Cynthian — educated at the University of Oradova, possessed of a mind so sharp her professors found her simultaneously brilliant and exhausting. She studied philosophy, history, and political theory, and concluded that every war, every famine, every injustice in Fondorian history had a common cause: the concentration of power in the hands of people who had not earned it and could not be removed from it.
+
+The solution, she argued, was democracy. Lyssandre gave the idea its philosophical foundation — the rigorous, irrefutable argument that government derived its authority from the consent of the governed and that any government without consent was illegitimate.
+
+King Aelyr Lomei banned her lectures. Lyssandre went underground. She taught in cellars, in private homes, in back rooms of taverns. Her students transcribed her words and printed them illegally. The pamphlets spread across Fondore with the speed of an idea whose time had arrived.
+
+She was arrested, released, arrested again, and finally forced into exile in Epervinay, where the republic her philosophy described already existed. She died in Ryad's Landing at seventy-one.
+
+Klae met people who had attended her underground lectures. They described it as transformative — not because the ideas were complex but because they were simple, and because simplicity, delivered with conviction in a cellar while the authorities searched overhead, has a power that no academic podium can match.
+
+Klae wrote: 'She said what everyone knew and no one dared say: that kings are not necessary. The kings disagreed. History sided with Lyssandre.'"""}
             ]},
             {"number": 5, "name": 'Fifth Century',
              "description": 'The Pervin Republic. Inspired by the philosophers of Oradova and the example of Karagon, Epervinay becomes the first nation in Fondore to abolish its monarchy and establish a republic. The transition is messy, violent, and ultimately transformative — not just for the Pervins but for every nation watching.',
@@ -2489,7 +2697,23 @@ Lans Paronis became the first First Citizen of the Pervin Republic. His inaugura
 
 The system was not yet boring. It would take generations to become boring, and the journey from chaos to routine would involve crises, scandals, constitutional amendments, and at least one attempted military coup that failed because the general who planned it forgot to secure the telegraph office. But the Pervin Republic survived its first election, which was the hardest test, and everything that followed was, in comparison, merely difficult.
 
-Klae wrote: 'The first election was imperfect. Every election since has been imperfect. The Pervins consider this a feature, not a flaw. A perfect election would mean that everyone agreed, and the Pervins have never agreed about anything, which is precisely why they need a republic.'"""}
+Klae wrote: 'The first election was imperfect. Every election since has been imperfect. The Pervins consider this a feature, not a flaw. A perfect election would mean that everyone agreed, and the Pervins have never agreed about anything, which is precisely why they need a republic.'"""},
+                {"title": 'The Hero of the Century: Garan Havenaugh',
+                 "content": """Garan Havenaugh was the last Minister of Epervinay, and his final act in office was to make the office unnecessary.
+
+He was the last in a long line of Havenaughs who had served the Pervin nation. Garan had served as Minister for twelve years, governing with competence and mild exasperation. He balanced budgets, maintained the army, and negotiated trade agreements with nations whose diplomats found his bluntness either refreshing or appalling.
+
+What he did not do was pretend that the system he led was democratic. The Pervin Minister was chosen by a council of landowners — wealthy families governing since the Cynthian withdrawal. The system had worked because the landowning class was broad and the Havenaughs governed in the national interest. But it was not a republic. It was an oligarchy with good manners.
+
+Garan changed this because he had read Lyssandre's philosophy and could not argue with it. The government derived its authority from the consent of the governed. The governed had not been asked. This was a problem.
+
+He drafted a constitution. He established universal suffrage. He created the framework for free elections. And then he resigned, because the first election could not be credible if the man who created it was also running in it.
+
+He went home to the Havenaugh estate and spent the rest of his life breeding horses, which he found more satisfying than politics because horses were honest about what they wanted.
+
+Klae visited Garan in retirement. He was seventy-one and surrounded by Bellacors. He told Klae: 'I gave them a republic. They can do what they like with it. My job is done.'
+
+Klae wrote: 'He held power and surrendered it. This is the rarest act in political history, and Garan performed it with the casual competence of a man returning a borrowed tool.'"""}
             ]},
             {"number": 6, "name": 'Sixth Century',
              "description": "The Fall of the Clairdwells. The Leimish dynasty that has ruled Lambridge since the Second Age faces its greatest crisis. The Terminal War has drained the treasury, the Schvainese Rebellion revealed cracks in the kingdom's unity, and the ideas of Oradova are spreading through a population that is beginning to question whether a knight's code written on a wet island centuries ago is still the best foundation for a modern government.",
@@ -2519,7 +2743,23 @@ But everyone disliked the alternative more. Civil war in Lambridge would destroy
 
 The Clairdwell Constitution was ratified in a ceremony that was considerably less dramatic than the crisis that had produced it. Emmet IV signed it with visible reluctance. The first parliamentary elections were held the following year. The Knights, to their astonishment, won several seats, because the population that had resented their privilege still respected their service.
 
-Klae wrote: 'The Clairdwell Constitution was not a revolution. It was a compromise, which is less exciting but more durable. Revolutions devour their children. Compromises merely disappoint them.'"""}
+Klae wrote: 'The Clairdwell Constitution was not a revolution. It was a compromise, which is less exciting but more durable. Revolutions devour their children. Compromises merely disappoint them.'"""},
+                {"title": 'The Hero of the Century: Sir Aldric Tor Clairdwell',
+                 "content": """Sir Aldric was the last Knight of Lambridge who believed in the old code, and his belief cost him everything except his honor.
+
+He was born into the order — the son of a knight, the grandson of a knight. He was trained in swordsmanship, horsemanship, chivalric courtesy, and the absolute conviction that a knight's duty was to protect the weak and serve the crown.
+
+The problem was that the moral order was changing. The Constitutional Crisis stripped the knights of their political privilege. Most accepted the change with resentment. Aldric accepted it with grace, because the chivalric code required him to serve the nation, and the nation had chosen a parliament.
+
+His colleagues did not share his view. A faction of senior knights plotted to overthrow the new constitution. They approached Aldric, assuming a man of his lineage would support them.
+
+He refused. He reported the plot to the parliament. He testified against his brothers-in-arms, men he had trained with and fought beside, because the code required him to serve the nation and the plotters were betraying it.
+
+He was expelled from the order. He was shunned by his family. He spent his remaining years in a cottage on the Schvainese coast, reading the chivalric romances he had loved as a boy.
+
+Klae visited him. Aldric was old, alone, and at peace. He said: 'The code says serve the people. I served the people. If the code meant something else, then the code was wrong and I was right.'
+
+Klae wrote: 'He was the last true knight. The irony is that being a true knight required him to betray the knights.'"""}
             ]},
             {"number": 7, "name": 'Seventh Century',
              "description": 'The Geckish Civil War. The Gechann Empire, weakened by debt, territorial loss, and the growing irrelevance of the Imperator, tears itself apart in a civil war between the reformist city-states and the conservative military establishment. The result reshapes the most powerful nation in southern Fondore.',
@@ -2551,7 +2791,21 @@ These limitations were significant, and the people excluded from the franchise n
 
 The Pervins, who had established their republic a century earlier, watched the Geckish transition with the smug satisfaction of pioneers. The Raxonians, still a monarchy, watched with the nervous interest of a kingdom that suspected its own population might be getting ideas. And the Leimish, who had already compromised their way to a constitutional monarchy, nodded approvingly and suggested that the Gecks might benefit from some Leimish-designed furniture for their new senate chamber, because the Leimish never missed an opportunity to sell something beautiful.
 
-Klae wrote: 'The Gechann went from an empire to a republic in the space of five years, which is either proof that political systems can change rapidly or proof that the Gechann had been a republic all along and had merely been pretending to be an empire.'"""}
+Klae wrote: 'The Gechann went from an empire to a republic in the space of five years, which is either proof that political systems can change rapidly or proof that the Gechann had been a republic all along and had merely been pretending to be an empire.'"""},
+                {"title": 'The Hero of the Century: Vittoria Medelune',
+                 "content": """The Geckish Civil War produced many victims and few heroes. Vittoria Medelune was both.
+
+She was Ardenese by marriage and Geckish by birth — the wife of a Medelune banking scion, the daughter of a Boulavar shipwright. When the mob burned the Senate and the civil war erupted, Vittoria was in Boulavar visiting her family. Her husband urged her to return to safe Rin Nohara. She refused, because the dockworkers and factory hands were her people, and her people were dying.
+
+The civil war turned Boulavar into a battlefield. Food supplies were cut. The dock district was shelled by both sides. Vittoria organized the evacuation. She commandeered merchant vessels from her husband's fleet without his permission, a detail she addressed later with the observation that asking forgiveness was more efficient than asking permission.
+
+She loaded the ships with refugees and made seven trips across the harbor, through waters being contested by opposing naval forces. She lost not a single passenger.
+
+She was shot during the seventh crossing — a musket ball that shattered her left arm. She continued directing the evacuation from the deck, one-armed and furious, until the last boat was loaded.
+
+She survived the war. Her arm did not. She spent the rest of her life rebuilding the dock district with Medelune money.
+
+Klae wrote: 'She crossed a harbor under fire seven times to save people she did not have to save. When asked why, she said: Because someone had to. This is not a philosophy. It is a character.'"""}
             ]},
             {"number": 8, "name": 'Eighth Century',
              "description": 'The Luschnypp Ascendant. While nations reformed and rebuilt, the Luschnypp Syndicate expanded from its base in Capera Cuza into an international organization with agents in every major city. The Syndicate thrived on the chaos of the age, offering services that governments could not provide and could not suppress.',
@@ -2579,7 +2833,23 @@ The most remarkable thing about the Shoalene Masters was their self-restraint. T
 
 The Syndicate wanted a world that was stable enough to generate wealth but unstable enough to generate demand for its services. It wanted, in other words, exactly the world that existed: imperfect, corrupt, and perpetually in need of the kind of help that no legitimate institution could provide.
 
-Klae concluded his investigation of the Syndicate with a sentence that captures both his admiration and his horror: 'The Luschnypp have mastered the art of making themselves necessary. This is the most dangerous skill an organization can possess, because necessity is the one argument that morality cannot overcome.'"""}
+Klae concluded his investigation of the Syndicate with a sentence that captures both his admiration and his horror: 'The Luschnypp have mastered the art of making themselves necessary. This is the most dangerous skill an organization can possess, because necessity is the one argument that morality cannot overcome.'"""},
+                {"title": 'The Hero of the Century: Grom Shoaleguard',
+                 "content": """The head of the Luschnypp Syndicate was, by the standards of criminal masterminds, remarkably boring. This was deliberate.
+
+Grom Shoaleguard was Pkoyte — a dwarf from the mining clans of Shoale, where the cultural values were patience, secrecy, and the conviction that the best way to accumulate power was to make sure nobody noticed you were accumulating it.
+
+He inherited the Syndicate and transformed it from a regional criminal enterprise into a global information network. The transformation was incremental — a new operation here, a new contact there — proceeding with the geological patience the Pkoyte brought to everything.
+
+His genius was restraint. The Syndicate under Grom did not murder indiscriminately. It gathered information. It brokered deals. It provided services — intelligence, logistics, communication — to anyone who could pay. The Syndicate was not a criminal organization. It was an infrastructure, and like all infrastructure, it was invisible until you needed it.
+
+Grom's personal life was nonexistent. He lived in Shoale in a modest dwelling. He ate simple food. He conducted the business of the most powerful criminal organization in the world through intermediaries and coded messages.
+
+He was never arrested. He was never identified. He died of natural causes at an age Klae could not determine because the Pkoyte did not share their calendar with outsiders.
+
+Klae obtained a single interview with a former operative who said: 'He was the quietest man I ever met. He was also the most frightening, because quiet men are listening, and men who are listening know everything.'
+
+Klae wrote: 'The Luschnypp under Grom was the most powerful organization in the world that nobody could see. Power that is visible is power that can be challenged. Grom was never challenged, because Grom was never visible.'"""}
             ]},
             {"number": 9, "name": 'Ninth Century',
              "description": 'The Treaty of Clarity. After decades of political transformation, the nations of Fondore convene to establish a new international order. The Treaty of Clarity — signed in the rebuilt capital of Lambridge — is the most comprehensive diplomatic agreement in Fondorian history, establishing principles of sovereignty, trade, and mutual defense that will govern the continent through the next age.',
@@ -2617,7 +2887,23 @@ The silence lasted long enough to be uncomfortable. The Geckish delegate shifted
 
 Talis sat down. The Congress resumed. The colonial provisions of the Treaty remained weak. The principles of sovereignty applied, in practice, primarily to the Fondorian nations that had the military power to enforce them.
 
-But Talis's question hung in the air, unanswered, and it would continue to hang there for centuries. Klae recorded the speech in full. He wrote: 'She asked the question that the Congress had been designed to avoid. She asked it anyway, because the Karaf have never had the luxury of politeness. They know what happens to people who do not ask difficult questions. They become the people that difficult questions are asked about.'"""}
+But Talis's question hung in the air, unanswered, and it would continue to hang there for centuries. Klae recorded the speech in full. He wrote: 'She asked the question that the Congress had been designed to avoid. She asked it anyway, because the Karaf have never had the luxury of politeness. They know what happens to people who do not ask difficult questions. They become the people that difficult questions are asked about.'"""},
+                {"title": 'The Hero of the Century: Talis Shura',
+                 "content": """Talis Shura asked a question, and the question outlasted the congress that could not answer it.
+
+She was Karagonese — a representative of the Karaf republic, sent to the Congress of Clarity as an observer because Karagon had not been invited as a full participant. This was typical: the Fondorian powers regarded the Karaf with condescension, because the Karaf were former slaves who had built a functioning democracy.
+
+Talis was small, dark-skinned, and possessed of a stillness that diplomats found unnerving. She sat. She listened. She took notes in handwriting so small the delegates next to her could not read it. And on the final day, when the treaty was being celebrated as a triumph, she stood and asked her question.
+
+The treaty established principles of sovereignty and self-determination. Did these principles apply to everyone? Or only to the nations in this room — the Fondorian powers with armies and treasuries?
+
+What about the Karaf, enslaved for millennia? The Pridekin, subjected to genocide? The Wintermen, ignored? The Waydrani, used? What about every people told that sovereignty was a right and then told the right did not apply to them?
+
+The congress did not answer. The chairman thanked the observer and moved to the next item. The question hung in the air.
+
+Talis returned to Karagon and served twenty more years, advocating for colonized peoples. She was never satisfied, because the question was never answered.
+
+Klae published it in full. He wrote: 'The Congress produced a treaty. Talis Shura produced a question. The treaty has been revised seventeen times. The question remains unchanged.'"""}
             ]},
             {"number": 10, "name": 'Tenth Century',
              "description": 'New Faiths. The Sixth Age closes with a Fondore that is intellectually transformed but spiritually exhausted. The Reformations have fractured Ceresy beyond repair. The philosophers of Oradova have challenged every assumption. And in the spaces left by the retreat of old certainties, new movements — spiritual, philosophical, and political — are taking root.',
@@ -2641,7 +2927,25 @@ This was liberating. It was also terrifying. If everything could change, then no
 
 The Seventh Age would be the age of consequences — the age when the ideas of the Sixth were tested against the realities of power, and the results were mixed, as results always are when theory meets practice.
 
-Klae closed his account of the Sixth Age with a passage that was, for him, unusually personal: 'I grew up on an island where every citizen had a voice. I traveled the world and found that most citizens had none. The Sixth Age was the age when the world began to wonder whether my island was the exception or the future. I believe it was the future. I acknowledge that I may be wrong. But the leap of faith that the age is named for is precisely this: believing that things can be better, in the full knowledge that the belief may be mistaken, and leaping anyway.'"""}
+Klae closed his account of the Sixth Age with a passage that was, for him, unusually personal: 'I grew up on an island where every citizen had a voice. I traveled the world and found that most citizens had none. The Sixth Age was the age when the world began to wonder whether my island was the exception or the future. I believe it was the future. I acknowledge that I may be wrong. But the leap of faith that the age is named for is precisely this: believing that things can be better, in the full knowledge that the belief may be mistaken, and leaping anyway.'"""},
+                {"title": 'The Hero of the Century: Father Declan Rin Nohara',
+                 "content": """Father Declan was a Cereyst priest who lost his faith and found something better.
+
+He was Ardenese — ordained at the Cathedral of Rin Nohara, assigned to a parish in the dock district where the congregation was poor, the building was crumbling, and the theological debates that consumed the Church seemed spectacularly irrelevant.
+
+He served the parish for thirty years. He baptized children, buried the dead, counseled the grieving. He fed the hungry from the parish kitchen. He sheltered the homeless in the parish hall. He did the work that Illiman had described and that the Church had forgotten.
+
+His crisis came not from doubt about God but from doubt about the Church. The Reformation had split Ceresy into factions that competed for political influence and devoted more energy to fighting each other than to serving the people God presumably cared about.
+
+Declan stopped attending Church councils. He stopped engaging in doctrinal debates. He stopped, in the formal sense, being a Cereyst priest, though he never announced his departure because announcements were a form of argument, and he was done arguing.
+
+He continued running his parish. He continued feeding the hungry and sheltering the homeless. He did everything a priest does, except believe the institution he served was doing what it was supposed to do.
+
+His parishioners did not notice the change. Declan had lost his faith in the Church and replaced it with faith in the work — the daily, unglamorous, essential work of caring for people who needed care. This was, he concluded, what Illiman had actually taught, stripped of the theology and the politics.
+
+He died in the parish kitchen, preparing soup for the evening meal. He was seventy-eight.
+
+Klae wrote: 'He served God by ignoring the Church. The Church would have found this heretical. Illiman would have found it familiar.'"""}
             ]}
         ]
     },
