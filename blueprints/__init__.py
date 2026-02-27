@@ -1,1 +1,0 @@
-# Poetic Goblin — Blueprint Registration
