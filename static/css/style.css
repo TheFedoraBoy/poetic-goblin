@@ -1211,3 +1211,6 @@ body.dark-mode .profile-header { border-color: var(--border-light); }
     height: 100%; border-radius: 4px; transition: width 0.5s ease;
 }
 
+/* Donation sidebar card */
+.sidebar-donate-card:hover { background: rgba(255,111,0,0.12) !important; }
+
