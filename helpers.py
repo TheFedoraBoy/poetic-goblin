@@ -11,6 +11,34 @@ from moderation import censor_text
 
 logger = logging.getLogger('poetic_goblin')
 
+# ─── Scribe Tier System ──────────────────────────────────────────────────────
+
+SCRIBE_TIERS = [
+    {'min': 50, 'title': 'Annalist',     'icon': '🏛️', 'color': '#ff6f00', 'border': 'legendary', 'desc': 'Living legend of Elysal\'s history'},
+    {'min': 20, 'title': 'Lorekeeper',   'icon': '📜', 'color': '#7b1fa2', 'border': 'purple',    'desc': 'Guardian of Elysal\'s deepest knowledge'},
+    {'min': 10, 'title': 'Chronicler',   'icon': '✨', 'color': '#f9a825', 'border': 'gold',      'desc': 'Trusted recorder of the ages'},
+    {'min': 5,  'title': 'Scribe',       'icon': '🪶', 'color': '#9e9e9e', 'border': 'silver',    'desc': 'Dedicated contributor to the Annals'},
+    {'min': 1,  'title': 'Inkblot',      'icon': '🖋️', 'color': '#8d6e63', 'border': 'bronze',    'desc': 'Took their first step into history'},
+    {'min': 0,  'title': None,           'icon': '',   'color': '',        'border': 'none',      'desc': ''},
+]
+
+def get_scribe_tier(story_count):
+    """Return the scribe tier dict for a given story count."""
+    for tier in SCRIBE_TIERS:
+        if story_count >= tier['min']:
+            return tier
+    return SCRIBE_TIERS[-1]
+
+def get_next_tier(story_count):
+    """Return the next tier to unlock and stories needed, or None if max."""
+    current = get_scribe_tier(story_count)
+    for i, tier in enumerate(SCRIBE_TIERS):
+        if tier == current and i > 0:
+            next_t = SCRIBE_TIERS[i - 1]
+            return {'tier': next_t, 'stories_needed': next_t['min'] - story_count}
+    return None
+
+
 # ─── 100 Character Traits ────────────────────────────────────────────────────
 
 CHARACTER_TRAITS = [
@@ -127,6 +155,35 @@ CHARACTER_RACE_LABELS = {
     'Pridekin': 'Pridekin',
 }
 CHARACTER_CLASSES = ['Warrior', 'Rogue', 'Ranger', 'Paladin', 'Cleric', 'Wizard', 'Warlock', 'Sorcerer', 'Monk', 'Druid', 'Bard']
+
+# ─── Scribe Tier System ──────────────────────────────────────────────────────
+
+SCRIBE_TIERS = [
+    {'min': 50, 'title': 'Annalist',     'icon': '🏛️', 'color': '#ff6f00',  'border': 'legendary',  'desc': 'Living legend of Elysal\'s history'},
+    {'min': 20, 'title': 'Lorekeeper',   'icon': '📜', 'color': '#7b1fa2',  'border': 'purple',     'desc': 'Guardian of ancient knowledge'},
+    {'min': 10, 'title': 'Chronicler',   'icon': '🪶', 'color': '#ffd700',  'border': 'gold',       'desc': 'Dedicated recorder of the ages'},
+    {'min': 5,  'title': 'Scribe',       'icon': '✒️', 'color': '#c0c0c0',  'border': 'silver',     'desc': 'Trusted contributor to the Annals'},
+    {'min': 1,  'title': 'Inkblot',      'icon': '🖋️', 'color': '#cd7f32',  'border': 'bronze',     'desc': 'First mark upon the page'},
+]
+
+def get_scribe_tier(story_count):
+    """Return the scribe tier dict for a given story count, or empty dict."""
+    if not story_count or story_count < 1:
+        return {}
+    for tier in SCRIBE_TIERS:
+        if story_count >= tier['min']:
+            return tier
+    return {}
+
+def get_next_tier(story_count):
+    """Return dict with 'tier' and 'stories_needed', or None if maxed."""
+    if not story_count:
+        story_count = 0
+    for tier in reversed(SCRIBE_TIERS):
+        if story_count < tier['min']:
+            return {'tier': tier, 'stories_needed': tier['min'] - story_count}
+    return None
+
 
 # ─── Auth Helpers ─────────────────────────────────────────────────────
 

@@ -15,11 +15,12 @@
                 <span>{{ story.title }}</span>
             </div>
 
-            <div class="annals-article">
-                <div style="display:flex;gap:0.4rem;margin-bottom:0.75rem;">
+            <div class="annals-article{% if story.is_canon %} annals-story-canon{% endif %}">
+                <div style="display:flex;gap:0.4rem;margin-bottom:0.75rem;flex-wrap:wrap;">
                     <span class="post-type-badge campaign">{{ age.name }}</span>
                     <span class="post-type-badge story">{{ century.name }}</span>
                     <span class="post-type-badge art" style="background:#e8f5e9;color:#2e7d32;">🖊️ Community</span>
+                    {% if story.is_canon %}<span class="annals-canon-badge">⭐ Canon</span>{% endif %}
                 </div>
                 <div class="annals-article-title">{{ story.title|censor }}</div>
                 <div class="annals-article-subtitle">From the {{ century.name }} of {{ age.name }}</div>
@@ -29,15 +30,20 @@
                 <hr class="annals-divider">
                 <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem 1rem;background:var(--bg-light);border-radius:8px;border-left:3px solid var(--blue);">
                     {% if story.char_avatar %}
-                    <img src="{{ story.char_avatar }}" style="width:36px;height:36px;border-radius:50%;border:2px solid var(--blue-light);object-fit:cover;image-rendering:pixelated;">
+                    {% if author_tier.title %}
+                    <div class="avatar-ring avatar-ring-{{ author_tier.border }}">
+                    {% endif %}
+                    <img src="{{ story.char_avatar }}" style="width:36px;height:36px;border-radius:50%;border:2px solid var(--blue-light);object-fit:cover;image-rendering:pixelated;position:relative;z-index:1;">
+                    {% if author_tier.title %}</div>{% endif %}
                     {% else %}
                     <div class="avatar-placeholder" style="width:36px;height:36px;font-size:0.85rem;">{{ (story.char_name or story.username)[0]|upper }}</div>
                     {% endif %}
                     <div>
                         <div style="font-family:var(--font-display);font-size:0.9rem;color:var(--text-primary);letter-spacing:0.03em;">
                             Contributed by <a href="{{ url_for('profile', username=story.username) }}">{{ story.char_name or story.username }}</a>
+                            {% if author_tier.title %}<span class="scribe-badge scribe-badge-{{ author_tier.border }}">{{ author_tier.icon }} {{ author_tier.title }}</span>{% endif %}
                         </div>
-                        <div style="font-size:0.75rem;color:var(--text-dim);">@{{ story.username }} · {{ story.created_at|timeago }}</div>
+                        <div style="font-size:0.75rem;color:var(--text-dim);">@{{ story.username }} · {{ story.created_at|timeago }} · 📜 {{ author_annals_count }} stor{{ 'y' if author_annals_count == 1 else 'ies' }}</div>
                     </div>
                     {% if current_user and current_user.id == story.author_id %}
                     <div style="margin-left:auto;display:flex;gap:0.4rem;">
@@ -49,7 +55,13 @@
                         </form>
                     </div>
                     {% elif current_user and current_user.is_admin %}
-                    <div style="margin-left:auto;">
+                    <div style="margin-left:auto;display:flex;gap:0.4rem;">
+                        <form method="POST" action="{{ url_for('admin_toggle_canon', story_id=story.id) }}" style="margin:0;">
+                            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn btn-ghost btn-sm" style="color:{% if story.is_canon %}#f9a825{% else %}var(--text-dim){% endif %};font-size:0.78rem;">
+                                ⭐ {% if story.is_canon %}Remove Canon{% else %}Mark Canon{% endif %}
+                            </button>
+                        </form>
                         <form method="POST" action="{{ url_for('admin_delete_annals_story', story_id=story.id) }}"
                               onsubmit="return confirm('⚠️ Admin: Delete this Annals entry by @{{ story.username }}?');">
                             <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">

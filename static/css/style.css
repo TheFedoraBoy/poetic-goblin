@@ -1096,3 +1096,118 @@ body.dark-mode .profile-header { border-color: var(--border-light); }
     display: flex; align-items: center; gap: 0.5rem;
 }
 .theme-toggle-icons .px-icon { width: 1.3em; height: 1.3em; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SCRIBE TIER SYSTEM — Avatar borders & badges
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Tier badge base */
+.scribe-badge {
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    padding: 0.15rem 0.5rem; border-radius: 12px;
+    font-family: var(--font-display); font-size: 0.72rem;
+    letter-spacing: 0.04em; font-weight: 600; white-space: nowrap;
+}
+.scribe-badge-bronze { background: #efebe9; color: #6d4c41; border: 1px solid #bcaaa4; }
+.scribe-badge-silver { background: #f5f5f5; color: #616161; border: 1px solid #bdbdbd; }
+.scribe-badge-gold   { background: #fff8e1; color: #f57f17; border: 1px solid #ffe082; }
+.scribe-badge-purple { background: #f3e5f5; color: #6a1b9a; border: 1px solid #ce93d8; }
+.scribe-badge-legendary { background: linear-gradient(135deg, #fff3e0, #ffe0b2); color: #e65100; border: 1px solid #ffb74d; }
+
+/* Avatar border rings */
+.avatar-ring { position: relative; display: inline-block; }
+.avatar-ring img, .avatar-ring .avatar-placeholder {
+    position: relative; z-index: 1;
+}
+.avatar-ring::before {
+    content: ''; position: absolute; inset: -4px;
+    border-radius: 50%; z-index: 0;
+}
+.avatar-ring-bronze::before  { background: linear-gradient(135deg, #8d6e63, #d7ccc8, #8d6e63); }
+.avatar-ring-silver::before  { background: linear-gradient(135deg, #9e9e9e, #e0e0e0, #9e9e9e); }
+.avatar-ring-gold::before    { background: linear-gradient(135deg, #f9a825, #fff176, #f9a825); }
+.avatar-ring-purple::before  { background: linear-gradient(135deg, #7b1fa2, #ce93d8, #7b1fa2); }
+.avatar-ring-legendary::before {
+    background: conic-gradient(#ff6f00, #f9a825, #ff6f00, #e65100, #ff6f00);
+    animation: legendaryRing 3s linear infinite;
+}
+@keyframes legendaryRing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/* Mask the spinning gradient to just a ring */
+.avatar-ring-legendary::after {
+    content: ''; position: absolute;
+    inset: 0; border-radius: 50%;
+    background: var(--bg-card); z-index: 0;
+}
+.avatar-ring-legendary img, .avatar-ring-legendary .avatar-placeholder {
+    z-index: 2;
+}
+
+/* Profile-specific large ring */
+.profile-avatar-ring { position: relative; display: inline-block; margin-bottom: 1rem; }
+.profile-avatar-ring::before {
+    content: ''; position: absolute; inset: -6px;
+    border-radius: 50%; z-index: 0;
+}
+.profile-avatar-ring-bronze::before  { background: linear-gradient(135deg, #8d6e63, #d7ccc8, #8d6e63); }
+.profile-avatar-ring-silver::before  { background: linear-gradient(135deg, #9e9e9e, #e0e0e0, #9e9e9e); }
+.profile-avatar-ring-gold::before    { background: linear-gradient(135deg, #f9a825, #fff176, #f9a825); }
+.profile-avatar-ring-purple::before  { background: linear-gradient(135deg, #7b1fa2, #ce93d8, #7b1fa2); }
+.profile-avatar-ring-legendary::before {
+    background: conic-gradient(#ff6f00, #f9a825, #ff6f00, #e65100, #ff6f00);
+    animation: legendaryRing 3s linear infinite;
+}
+.profile-avatar-ring-legendary::after {
+    content: ''; position: absolute;
+    inset: 0; border-radius: 50%;
+    background: var(--bg-card); z-index: 0;
+}
+.profile-avatar-ring img, .profile-avatar-ring .avatar-placeholder {
+    position: relative; z-index: 2;
+}
+
+/* Canon story glow */
+.annals-canon-badge {
+    display: inline-flex; align-items: center; gap: 0.25rem;
+    padding: 0.2rem 0.6rem; border-radius: 12px;
+    background: linear-gradient(135deg, #fff8e1, #ffe0b2);
+    color: #e65100; border: 1px solid #ffb74d;
+    font-family: var(--font-display); font-size: 0.72rem;
+    font-weight: 700; letter-spacing: 0.04em;
+}
+.annals-story-canon {
+    border-left: 3px solid #f9a825 !important;
+    background: linear-gradient(135deg, var(--bg-card), #fffde7) !important;
+}
+
+/* Hall of Scribes */
+.hall-card {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem 1.2rem; background: var(--bg-card);
+    border-radius: 12px; border: 1px solid var(--border-light);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.hall-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.hall-rank {
+    font-family: var(--font-display); font-size: 1.4rem;
+    font-weight: 800; color: var(--text-dim); min-width: 2.5rem; text-align: center;
+}
+.hall-rank-1 { color: #f9a825; font-size: 1.8rem; }
+.hall-rank-2 { color: #9e9e9e; font-size: 1.6rem; }
+.hall-rank-3 { color: #8d6e63; font-size: 1.5rem; }
+.hall-info { flex: 1; min-width: 0; }
+.hall-name { font-family: var(--font-display); font-size: 1rem; color: var(--text-primary); font-weight: 600; }
+.hall-username { font-size: 0.8rem; color: var(--text-dim); }
+.hall-count { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--blue); text-align: right; }
+
+/* Tier progress bar */
+.tier-progress-bar {
+    width: 100%; height: 8px; background: var(--bg-light);
+    border-radius: 4px; overflow: hidden; margin-top: 0.3rem;
+}
+.tier-progress-fill {
+    height: 100%; border-radius: 4px; transition: width 0.5s ease;
+}
+

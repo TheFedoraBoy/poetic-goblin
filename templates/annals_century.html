@@ -42,10 +42,10 @@
                 <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.5rem;">Stories added by fellow chroniclers.</p>
                 <div class="story-list">
                     {% for us in user_stories %}
-                    <a href="{{ url_for('annals_user_story', story_id=us.id) }}" class="story-link" style="border-left-color:var(--blue);">
-                        <span class="story-link-icon">🖊️</span>
+                    <a href="{{ url_for('annals_user_story', story_id=us.id) }}" class="story-link{% if us.is_canon %} annals-story-canon{% endif %}" style="border-left-color:var(--blue);">
+                        <span class="story-link-icon">{% if us.is_canon %}⭐{% else %}🖊️{% endif %}</span>
                         <div style="flex:1;">
-                            <div class="story-link-title">{{ us.title|censor }}</div>
+                            <div class="story-link-title">{{ us.title|censor }}{% if us.is_canon %} <span class="annals-canon-badge">⭐ Canon</span>{% endif %}</div>
                             <div style="font-size:0.78rem;color:var(--text-dim);margin-top:0.1rem;">{{ us.content[:80]|censor }}...</div>
                         </div>
                         <div style="font-size:0.7rem;color:var(--text-dim);flex-shrink:0;">by @{{ us.username }}</div>

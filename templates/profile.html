@@ -27,10 +27,21 @@
         <div class="content-main">
             <!-- Profile Header -->
             <div class="profile-header">
+                {% if scribe_tier.title %}
+                <div class="profile-avatar-ring profile-avatar-ring-{{ scribe_tier.border }}">
+                {% endif %}
                 {% if profile_user.char_avatar %}<img src="{{ profile_user.char_avatar }}" class="profile-avatar-large" alt="">
-                {% else %}<div class="profile-avatar-large avatar-placeholder" style="width:100px;height:100px;font-size:2.5rem;margin:0 auto 1rem;position:relative;z-index:1;">{{ (profile_user.char_name or profile_user.username)[0]|upper }}</div>{% endif %}
+                {% else %}<div class="profile-avatar-large avatar-placeholder" style="width:100px;height:100px;font-size:2.5rem;margin:0 auto;position:relative;z-index:1;">{{ (profile_user.char_name or profile_user.username)[0]|upper }}</div>{% endif %}
+                {% if scribe_tier.title %}
+                </div>
+                {% endif %}
 
                 <h1 class="profile-display-name">{{ profile_user.char_name or profile_user.username }}</h1>
+                {% if scribe_tier.title %}
+                <div style="display:flex;justify-content:center;margin-top:0.3rem;margin-bottom:0.3rem;">
+                    <span class="scribe-badge scribe-badge-{{ scribe_tier.border }}">{{ scribe_tier.icon }} {{ scribe_tier.title }}</span>
+                </div>
+                {% endif %}
                 <div class="profile-username">@{{ profile_user.username }}</div>
                 {% if profile_user.char_race or profile_user.char_class %}<div style="font-family:var(--font-display);font-size:0.9rem;color:var(--blue);letter-spacing:0.04em;margin-top:0.3rem;">{% if profile_user.char_race %}{{ profile_user.char_race }}{% endif %}{% if profile_user.char_race and profile_user.char_class %} · {% endif %}{% if profile_user.char_class %}{{ profile_user.char_class }}{% endif %}</div>{% endif %}
 
@@ -67,6 +78,7 @@
                 <!-- Stats -->
                 <div class="profile-stats">
                     <div class="profile-stat"><div class="profile-stat-value">{{ total_posts }}</div><div class="profile-stat-label">Posts</div></div>
+                    <div class="profile-stat"><div class="profile-stat-value">{{ annals_count }}</div><div class="profile-stat-label">Annals</div></div>
                     <a href="{{ url_for('followers_list', username=profile_user.username) }}" class="profile-stat" style="text-decoration:none;color:inherit;"><div class="profile-stat-value" id="follower-count">{{ follower_count }}</div><div class="profile-stat-label">Followers</div></a>
                     <a href="{{ url_for('following_list', username=profile_user.username) }}" class="profile-stat" style="text-decoration:none;color:inherit;"><div class="profile-stat-value">{{ following_count }}</div><div class="profile-stat-label">Following</div></a>
                 </div>
@@ -103,6 +115,35 @@
         </div>
 
         <aside class="sidebar">
+            {% if scribe_tier.title %}
+            <div class="sidebar-card">
+                <h3>{{ scribe_tier.icon }} Scribe Rank</h3>
+                <div style="text-align:center;margin-bottom:0.5rem;">
+                    <span class="scribe-badge scribe-badge-{{ scribe_tier.border }}" style="font-size:0.85rem;padding:0.3rem 0.75rem;">{{ scribe_tier.icon }} {{ scribe_tier.title }}</span>
+                </div>
+                <div style="font-size:0.82rem;color:var(--text-muted);text-align:center;margin-bottom:0.5rem;">{{ scribe_tier.desc }}</div>
+                <div style="font-size:0.82rem;color:var(--text-muted);text-align:center;">📜 {{ annals_count }} stor{{ 'y' if annals_count == 1 else 'ies' }} contributed</div>
+                {% if next_tier %}
+                <div style="margin-top:0.75rem;">
+                    <div style="font-size:0.75rem;color:var(--text-dim);display:flex;justify-content:space-between;">
+                        <span>Next: {{ next_tier.tier.icon }} {{ next_tier.tier.title }}</span>
+                        <span>{{ next_tier.stories_needed }} more</span>
+                    </div>
+                    <div class="tier-progress-bar">
+                        <div class="tier-progress-fill" style="width:{{ ((annals_count - scribe_tier.min) / (next_tier.tier.min - scribe_tier.min) * 100)|round|int if next_tier.tier.min > scribe_tier.min else 100 }}%;background:{{ next_tier.tier.color }};"></div>
+                    </div>
+                </div>
+                {% else %}
+                <div style="font-size:0.75rem;color:var(--text-dim);text-align:center;margin-top:0.5rem;">🏛️ Maximum rank achieved!</div>
+                {% endif %}
+            </div>
+            {% elif annals_count == 0 %}
+            <div class="sidebar-card">
+                <h3>📜 Scribe Rank</h3>
+                <div style="font-size:0.82rem;color:var(--text-muted);text-align:center;">No Annals contributions yet.</div>
+                <div style="font-size:0.75rem;color:var(--text-dim);text-align:center;margin-top:0.3rem;">Contribute 1 story to earn the 🖋️ <strong>Inkblot</strong> title!</div>
+            </div>
+            {% endif %}
             <div class="sidebar-card">
                 <h3><img class="px-icon" src="/static/icons/icon-feed.svg" alt=""> Info</h3>
                 <div style="font-size:0.85rem;color:var(--text-muted);line-height:1.8;">

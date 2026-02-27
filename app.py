@@ -23,6 +23,7 @@ from database import get_db, close_db, init_db
 from storage import save_upload, allowed_file
 from email_service import send_verification_email, send_password_reset_email, send_welcome_email
 from annals_data import AGES as ANNALS_AGES, ANNALS_INTRO
+from helpers import SCRIBE_TIERS, get_scribe_tier, get_next_tier
 from moderation import censor_text, is_text_allowed, check_image_safety
 
 # ─── Sentry Error Monitoring ─────────────────────────────────────────────────
@@ -447,6 +448,8 @@ def inject_globals():
         elysal_characters=ELYSAL_CHARACTERS,
         annals_ages=ANNALS_AGES,
         unread_message_count=unread_count,
+        get_scribe_tier=get_scribe_tier,
+        get_next_tier=get_next_tier,
     )
 
 @app.template_filter('timeago')
@@ -1286,10 +1289,16 @@ def profile(username):
     if session.get('user_id') != user['id']:
         is_following = db.fetchone('SELECT follower_id FROM follows WHERE follower_id=%s AND followed_id=%s',
                                    (session['user_id'], user['id'])) is not None
+    annals_count_row = db.fetchone('SELECT COUNT(*) as c FROM annals_stories WHERE author_id = %s', (user['id'],))
+    annals_story_count = annals_count_row['c'] if annals_count_row else 0
+    scribe_tier = get_scribe_tier(annals_story_count)
+    next_tier = get_next_tier(annals_story_count)
     return render_template('profile.html', profile_user=user, posts=posts, post_sessions=post_sessions,
                            all_characters=all_characters, follower_count=fc['c'], following_count=fing['c'],
                            is_following=is_following, page=page,
-                           total_pages=(total + per_page - 1) // per_page, total_posts=total)
+                           total_pages=(total + per_page - 1) // per_page, total_posts=total,
+                           annals_story_count=annals_story_count, annals_count=annals_story_count,
+                           scribe_tier=scribe_tier, next_tier=next_tier)
 
 @app.route('/follow/<username>', methods=['POST'])
 @login_required
@@ -1759,7 +1768,30 @@ def annals_user_story(story_id):
         return redirect(url_for('annals_home'))
     age = next((a for a in ANNALS_AGES if a['number'] == story['age_number']), None)
     century = next((c for c in age['centuries'] if c['number'] == story['century_number']), None) if age else None
-    return render_template('annals_user_story.html', story=story, age=age, century=century, ages=ANNALS_AGES)
+    author_count_row = db.fetchone('SELECT COUNT(*) as c FROM annals_stories WHERE author_id = %s', (story['author_id'],))
+    author_annals_count = author_count_row['c'] if author_count_row else 0
+    author_tier = get_scribe_tier(author_annals_count)
+    return render_template('annals_user_story.html', story=story, age=age, century=century, ages=ANNALS_AGES,
+                           author_tier=author_tier, author_annals_count=author_annals_count)
+
+@app.route('/annals/hall-of-scribes')
+def hall_of_scribes():
+    db = get_db()
+    scribes = db.fetchall('''
+        SELECT u.username, c.name as char_name, c.avatar_url as char_avatar,
+               COUNT(a.id) as story_count
+        FROM annals_stories a
+        JOIN users u ON a.author_id = u.id
+        LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
+        GROUP BY u.id, u.username, c.name, c.avatar_url
+        ORDER BY story_count DESC
+        LIMIT 50
+    ''')
+    my_count = 0
+    if 'user_id' in session:
+        row = db.fetchone('SELECT COUNT(*) as c FROM annals_stories WHERE author_id = %s', (session['user_id'],))
+        my_count = row['c'] if row else 0
+    return render_template('hall_of_scribes.html', scribes=scribes, my_count=my_count)
 
 @app.route('/annals/story/<story_id>/edit', methods=['GET', 'POST'])
 @login_required
@@ -2055,6 +2087,20 @@ def admin_delete_annals_story(story_id):
     db.execute('DELETE FROM annals_stories WHERE id = %s', (story_id,))
     flash(f'Annals entry "{story["title"]}" deleted by admin.', 'info')
     return redirect(url_for('annals_century', age_num=story['age_number'], century_num=story['century_number']))
+
+@app.route('/admin/annals/<story_id>/canon', methods=['POST'])
+@admin_required
+def admin_toggle_canon(story_id):
+    db = get_db()
+    story = db.fetchone('SELECT id, title, is_canon FROM annals_stories WHERE id = %s', (story_id,))
+    if not story:
+        flash('Annals entry not found.', 'error')
+        return redirect(url_for('annals_home'))
+    new_val = 0 if story.get('is_canon') else 1
+    db.execute('UPDATE annals_stories SET is_canon = %s WHERE id = %s', (new_val, story_id))
+    status = 'marked as Canon' if new_val else 'removed from Canon'
+    flash(f'"{story["title"]}" {status}.', 'success')
+    return redirect(url_for('annals_user_story', story_id=story_id))
 
 # ─── Init ─────────────────────────────────────────────────────────────────────
 

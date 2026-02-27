@@ -177,7 +177,7 @@ def close_db(exception=None):
 
 # ─── Schema ──────────────────────────────────────────────────────────────────
 
-SCHEMA_VERSION = 12
+SCHEMA_VERSION = 13
 
 SQLITE_SCHEMA = f"""
 CREATE TABLE IF NOT EXISTS schema_version (version INTEGER);
@@ -287,6 +287,7 @@ CREATE TABLE IF NOT EXISTS annals_stories (
     century_number INTEGER NOT NULL,
     title TEXT NOT NULL,
     content TEXT NOT NULL,
+    is_canon INTEGER DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE
 );
@@ -438,6 +439,7 @@ MYSQL_SCHEMA = [
         century_number INT NOT NULL,
         title VARCHAR(200) NOT NULL,
         content LONGTEXT NOT NULL,
+        is_canon TINYINT DEFAULT 0,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (author_id) REFERENCES users(id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4""",
@@ -576,6 +578,7 @@ POSTGRES_SCHEMA = [
         century_number INTEGER NOT NULL,
         title VARCHAR(200) NOT NULL,
         content TEXT NOT NULL,
+        is_canon INTEGER DEFAULT 0,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )""",
     "CREATE INDEX IF NOT EXISTS idx_posts_author ON posts(author_id)",
@@ -750,6 +753,14 @@ def _migrate(db, db_type, from_version):
             except Exception:
                 pass
         print("[Poetic Goblin] Migration v12: Added admin/ban columns.")
+    if current_version < 13:
+        # v13: Add is_canon to annals_stories
+        try:
+            col_type = {'mysql': 'TINYINT DEFAULT 0', 'postgres': 'INTEGER DEFAULT 0', 'sqlite': 'INTEGER DEFAULT 0'}
+            db.execute(f"ALTER TABLE annals_stories ADD COLUMN is_canon {col_type.get(db_type, col_type['sqlite'])}")
+        except Exception:
+            pass
+        print("[Poetic Goblin] Migration v13: Added is_canon to annals_stories.")
     # Update schema version
     try:
         db.execute('UPDATE schema_version SET version = %s', (SCHEMA_VERSION,))
