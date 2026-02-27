@@ -139,6 +139,101 @@ def send_verification_email(to_email, username, token):
     return send_email(to_email, subject, html, text)
 
 
+def send_welcome_email(to_email, username):
+    """Send a welcome email explaining what Poetic Goblin is and what you can do."""
+    feed_url = f"{Config.BASE_URL}/feed"
+    character_url = f"{Config.BASE_URL}/character/create"
+    annals_url = f"{Config.BASE_URL}/annals"
+    subject = "Welcome to Poetic Goblin — your adventure begins! 🧌"
+    html = f"""
+    <div style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:2rem;background:#fafaf7;border-radius:12px;">
+        <div style="text-align:center;margin-bottom:1.5rem;">
+            <span style="font-size:2.5rem;">🧌</span>
+        </div>
+        <h1 style="color:#1a3a5c;text-align:center;margin-bottom:0.5rem;">Welcome to Poetic Goblin!</h1>
+        <p style="text-align:center;color:#666;margin-bottom:1.5rem;">Hey <strong>{username}</strong>, we're thrilled to have you in the realm.</p>
+
+        <p style="color:#333;line-height:1.7;">
+            Poetic Goblin is a social platform built for D&amp;D fans and fantasy lovers.
+            It's a place to share stories, showcase art, log campaigns, and connect with
+            fellow adventurers — all through the lens of your characters.
+        </p>
+
+        <h2 style="color:#1a3a5c;font-size:1.1rem;margin-top:1.5rem;">Here's what you can do:</h2>
+
+        <table style="width:100%;border-collapse:collapse;margin:1rem 0;">
+            <tr>
+                <td style="padding:0.6rem 0.8rem;vertical-align:top;font-size:1.3rem;">⚔️</td>
+                <td style="padding:0.6rem 0.8rem;color:#333;">
+                    <strong>Create characters</strong> — Build your adventurers with races, classes,
+                    traits, backstories, and avatars. Switch between them any time.
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:0.6rem 0.8rem;vertical-align:top;font-size:1.3rem;">📜</td>
+                <td style="padding:0.6rem 0.8rem;color:#333;">
+                    <strong>Share stories &amp; art</strong> — Post tales from your campaigns,
+                    share character art, maps, and tag them with locations and ages from
+                    the World of Elysal.
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:0.6rem 0.8rem;vertical-align:top;font-size:1.3rem;">🗡️</td>
+                <td style="padding:0.6rem 0.8rem;color:#333;">
+                    <strong>Log campaigns</strong> — Record your sessions with multi-part
+                    campaign logs so your party's journey is never forgotten.
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:0.6rem 0.8rem;vertical-align:top;font-size:1.3rem;">📖</td>
+                <td style="padding:0.6rem 0.8rem;color:#333;">
+                    <strong>Explore the Annals of Elysal</strong> — Read the shared lore of our
+                    fantasy world and contribute your own stories to its history.
+                </td>
+            </tr>
+            <tr>
+                <td style="padding:0.6rem 0.8rem;vertical-align:top;font-size:1.3rem;">💬</td>
+                <td style="padding:0.6rem 0.8rem;color:#333;">
+                    <strong>Connect</strong> — Follow other adventurers, comment on posts,
+                    and send direct messages to plan your next quest.
+                </td>
+            </tr>
+        </table>
+
+        <h2 style="color:#1a3a5c;font-size:1.1rem;margin-top:1.5rem;">Getting started:</h2>
+        <p style="color:#333;line-height:1.7;">
+            Your first step is to <a href="{character_url}" style="color:#ff6b2b;font-weight:600;">forge a character</a>.
+            Once you do, you'll unlock the <a href="{feed_url}" style="color:#ff6b2b;font-weight:600;">feed</a>,
+            the <a href="{annals_url}" style="color:#ff6b2b;font-weight:600;">Annals</a>, and everything else
+            the realm has to offer.
+        </p>
+
+        <div style="text-align:center;margin:2rem 0;">
+            <a href="{character_url}" style="display:inline-block;padding:0.75rem 2rem;background:#ff6b2b;color:white;text-decoration:none;border-radius:8px;font-weight:bold;font-size:1.1rem;">Create Your Character</a>
+        </div>
+
+        <hr style="border:none;border-top:1px solid #e0e0e0;margin:1.5rem 0;">
+        <p style="color:#bbb;font-size:0.78rem;text-align:center;">
+            You're receiving this because you signed up at Poetic Goblin. Happy adventuring!
+        </p>
+    </div>
+    """
+    text = (
+        f"Welcome to Poetic Goblin, {username}!\n\n"
+        "Poetic Goblin is a social platform for D&D fans and fantasy lovers. "
+        "Share stories, showcase art, log campaigns, and connect with fellow adventurers.\n\n"
+        "What you can do:\n"
+        "- Create characters with races, classes, traits, and backstories\n"
+        "- Share stories, art, and maps tagged with World of Elysal lore\n"
+        "- Log multi-session campaigns\n"
+        "- Explore and contribute to the Annals of Elysal\n"
+        "- Follow adventurers, comment, and send direct messages\n\n"
+        f"Get started by creating your first character: {character_url}\n\n"
+        "Happy adventuring!"
+    )
+    return send_email(to_email, subject, html, text)
+
+
 def send_password_reset_email(to_email, username, token):
     """Send password reset link."""
     reset_url = f"{Config.BASE_URL}/reset-password/{token}"

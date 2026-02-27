@@ -23,7 +23,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from config import Config
 from database import get_db, close_db, init_db
 from storage import save_upload, allowed_file
-from email_service import send_verification_email, send_password_reset_email
+from email_service import send_verification_email, send_password_reset_email, send_welcome_email
 from annals_data import AGES as ANNALS_AGES, ANNALS_INTRO
 from moderation import censor_text, is_text_allowed, check_image_safety
 
@@ -493,11 +493,13 @@ def register():
              verification_token if Config.REQUIRE_EMAIL_VERIFICATION else ''))
         if Config.REQUIRE_EMAIL_VERIFICATION:
             send_verification_email(email, username, verification_token)
+            send_welcome_email(email, username)
             flash('Account created! Check your email to verify.', 'success')
             return redirect(url_for('login'))
         else:
             session['user_id'] = user_id
             session.permanent = True
+            send_welcome_email(email, username)
             flash('Account created! Now forge your first character.', 'success')
             return redirect(url_for('create_character'))
     return render_template('register.html')
