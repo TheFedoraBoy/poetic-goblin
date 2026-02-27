@@ -130,6 +130,7 @@ def set_security_headers(response):
         f"img-src {img_sources}; "
         "font-src 'self' https://fonts.gstatic.com; "
         f"connect-src {connect_sources}; "
+        "frame-src https://advanceprep.wufoo.com; "
         "frame-ancestors 'none'"
     )
     if Config.SESSION_COOKIE_SECURE:
