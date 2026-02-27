@@ -1784,13 +1784,350 @@ The Fifth Age was over. The Annals were about to begin."""}
             ]}
         ]
     },
+    {
+        "number": 6,
+        "name": "A Leap of Faith",
+        "year_start": 2501,
+        "year_end": 3000,
+        "description": """The Sixth Age was an age of ideas. Philosophy, science, and political theory erupted across Fondore with an intensity that made the old institutions nervous and the young populations excited. The printing press equivalent arrived in Clarity and within a generation, pamphlets were more dangerous than swords. Ceresy faced its most serious internal crisis since the Cereyian Wars, and the nations of Fondore began to grapple with questions that had no easy answers: What is a citizen? What does a king owe his people? And what happens when the people decide the answer is: everything?
+
+The name of the age comes from the Cereyst doctrine of the same name — the leap of faith that Illiman asked his followers to take when they abandoned the old gods and embraced his teachings. But the leaps of the Sixth Age were not religious. They were political, intellectual, and social. The printing press put ideas into the hands of people who had never had ideas before, or rather, who had always had them but had never been able to share them at scale. Pamphlets circulated through the streets of Boulavar and Raxona and Clarity arguing for things that would have been heretical a century earlier: popular sovereignty, religious freedom, the abolition of serfdom, the radical notion that a farmer's opinion about governance was as valid as a king's.
+
+Not everyone agreed. The kings, predictably, did not agree. The Church did not agree. The aristocracies of every nation did not agree. And the disagreements were not settled in salons and lecture halls but in the streets, on the barricades, and in the fields where the armies of the old order met the armies of the new. The Sixth Age was an age of faith — faith not in God, but in the terrifying, exhilarating possibility that the world could be different from what it had always been.""",
+        "centuries": [
+            {"number": 1, "name": "First Century",
+             "description": "The Printing Revolution. A Leimish inventor develops a method for mass-producing written texts, and within a generation the technology transforms Fondorian civilization. Ideas that once traveled at the speed of a monk's pen now travel at the speed of commerce, and the old gatekeepers of knowledge — the Church, the universities, the royal courts — discover that they can no longer control what people read.",
+             "stories": [
+                {"title": "The Press at Clarity",
+                 "content": """The inventor's name was Odren Celle, and he was a direct descendant of Raist Celle, the man who had built the first deepwater ship three ages earlier. The Celle family, it seemed, had a gift for building machines that changed the world and a corresponding inability to profit from them. Raist had died in modest circumstances while shipwrights across Fondore grew rich on his designs. Odren would follow the same pattern.
+
+The press was not a single invention but a combination of existing technologies arranged in a new way: movable type, cast from metal molds that could be reused indefinitely; an oil-based ink that adhered to the type and transferred cleanly to paper; and a screw press adapted from the wine presses used in Leimish vineyards. The result was a machine that could produce hundreds of identical pages in the time it took a monk to copy one.
+
+Odren built his first press in a workshop in Clarity and used it to print a copy of Illiman's Teachings, which was both commercially shrewd and symbolically resonant. The first mass-produced book in the history of Elysal was the foundational text of its dominant religion, and the implications were immediate: if anyone could own a copy of Illiman's words, then anyone could interpret them, and the Church's monopoly on religious truth was broken before the ink was dry.
+
+The press spread with the speed of a technology whose time has come. Within a decade, presses were operating in Boulavar, Raxona, Oradova, and Rin Nohara. Within a generation, they were everywhere. The cost of a book fell from a laborer's yearly wage to a week's earnings. Literacy, which had been a luxury of the wealthy and the religious, became a practical skill that even farmers could justify acquiring, because the pamphlets and broadsheets that the presses produced contained information — market prices, agricultural techniques, political arguments — that was directly useful to their lives.
+
+The institutions of the old order reacted with the alarm of gatekeepers who have just discovered that the gate has been removed. The Cereyst Church attempted to regulate printing, requiring that all texts receive ecclesiastical approval before publication. This worked approximately as well as attempting to regulate the weather. The presses printed what people would buy, and people would buy anything that was interesting, scandalous, or forbidden, preferably all three at once.
+
+Klae, whose own work was produced on a printing press, had obvious sympathy for the invention. He wrote: 'The press did not create new ideas. It created new audiences for old ones, and the audiences, once assembled, proved impossible to disperse.'"""},
+
+                {"title": "The Pamphlet War",
+                 "content": """The first great political crisis of the printing age was not a war of armies but a war of paper.
+
+It began in Gecha, where the relationship between the Imperator and the population had been deteriorating since the empire's contraction. A philosopher from Gisup Geronus named Theocles Arim published a pamphlet — forty pages, cheaply printed, sold for the price of a loaf of bread — arguing that the Imperator's authority derived not from divine right or military conquest but from the consent of the governed. If the governed withdrew their consent, the authority ceased to exist.
+
+The argument was not new. Political theorists had been making similar claims in university lecture halls for decades. But lecture halls held hundreds. The pamphlet sold thousands. Then tens of thousands. Theocles's argument, which had been an academic curiosity, became a popular movement.
+
+The Imperator's response was predictable: ban the pamphlet, arrest the author, destroy the presses. Theocles was imprisoned. His pamphlet was publicly burned. Three printing houses in Gisup Geronus were shuttered by imperial soldiers.
+
+The result was the opposite of what the Imperator intended. The banned pamphlet became the most sought-after text in Gecha. Copies were smuggled across provincial borders, reprinted in secret workshops, and read aloud in taverns where the illiterate could absorb its arguments by ear. The arrest of Theocles made him a martyr. The destruction of the presses made the printers heroes.
+
+The Pamphlet War — as it came to be called — lasted for years, fought not with swords but with ink. The imperial government produced its own pamphlets defending the Imperator's authority. Theocles's supporters produced counter-pamphlets demolishing the defense. Satirists produced pamphlets mocking both sides. The Cereyst Church produced pamphlets arguing that the entire debate was irrelevant because authority came from God, a position that convinced nobody who was not already convinced.
+
+The Pamphlet War did not overthrow the Imperator. It did something more lasting: it established the principle that political authority could be publicly questioned, that arguments could be mass-distributed, and that public opinion — the collective judgment of thousands of ordinary people reading the same text and reaching their own conclusions — was a force that no government could ignore.
+
+Klae wrote: 'The Pamphlet War proved that ideas, once printed, cannot be unprinted. The Imperator could burn every copy of Theocles's pamphlet in Gecha and the argument would survive, because it had entered the minds of the people who read it, and minds do not burn as easily as paper.'"""}
+            ]},
+
+            {"number": 2, "name": "Second Century",
+             "description": "The Reformations. The printing press unleashes a wave of religious reform that splits Ceresy along lines that have been forming since the Rundelian Heresy of the Second Age. The Cereyst Church, already weakened by the crusades and the rise of national churches, faces a challenge that no amount of institutional authority can suppress.",
+             "stories": [
+                {"title": "The Ninety-Seven Failures",
+                 "content": """A Raxonian monk named Vorstag Helmunn nailed a document to the door of the Great Temple in Raxona, which was a traditional method of publishing in a kingdom that had more doors than printing presses. The document listed ninety-seven specific failures of the Cereyst Church: corruption, venality, the sale of spiritual indulgences, the accumulation of wealth by an institution whose founder had owned nothing, the hypocrisy of priests who preached poverty from gilded pulpits.
+
+None of these criticisms were new. The Rundelian movement had been making similar arguments for ages. But Vorstag's document was different in two ways. First, it was specific: he named names, cited amounts, described particular instances of clerical corruption with the kind of documentary evidence that is very difficult to dismiss. Second, it was printed. Within weeks of its publication, copies of the Ninety-Seven Failures had been distributed across Raxone and into Lambridge, Epervinay, and even Gecha, where the document was technically illegal and therefore enormously popular.
+
+The Church's response was excommunication, which had historically been a devastating punishment — a person cut off from the Church was cut off from God, from community, from salvation. Vorstag received the news of his excommunication while eating breakfast and reportedly said, 'Good. Now I can say what I really think.'
+
+What he really thought was that the Church had no authority to excommunicate anyone, because the Church's authority was not biblical but institutional — a human invention that had been claiming divine sanction for centuries without justification. Illiman had never established a Church. He had never appointed a High Cere. He had never suggested that access to God required an intermediary with a collection plate.
+
+The Reformations that followed Vorstag's publication split Ceresy into three broad camps: the Orthodox, who maintained the authority of the High Cere and the institutional Church; the Rundelians, who practiced communal worship without clerical hierarchy; and the new Reformists, who went further than either, arguing for an entirely personal relationship with the divine that required no church, no priest, and no institution of any kind.
+
+The split was not merely theological. It was political. Raxone, Lambridge, and Epervinay aligned with the Reformists, because Reformist theology conveniently delegitimized the Church's political influence in their territories. Gecha and Hyacinth remained Orthodox, because the Cereyst institutional structure supported their existing power arrangements. Mural Cere, naturally, insisted that everyone else was heretical.
+
+Klae, who was not religious, found the Reformations fascinating as a social phenomenon. He wrote: 'Vorstag did not destroy the Church. He gave people permission to notice that the Church had been destroying itself for centuries. The printing press merely ensured that the noticing happened everywhere at once.'"""},
+
+                {"title": "The Burning Season",
+                 "content": """The Reformations were not settled by argument. They were settled, as most things in Elysal are, by violence.
+
+The Burning Season — so called because the primary method of expressing theological disagreement was arson — swept across Fondore in the second century of the Sixth Age. Orthodox communities burned Reformist meeting houses. Reformists burned Orthodox churches. Both sides burned each other's pamphlets, which by this point were being produced faster than they could be destroyed, making the burnings more symbolic than practical.
+
+The violence was worst in the border regions where Orthodox and Reformist populations overlapped. In the Geckish provinces closest to Epervinay, mixed communities that had coexisted for centuries suddenly discovered that their neighbors' interpretation of Illiman's teachings was not merely wrong but existentially threatening. Families were divided. Friendships were destroyed. A merchant in Aemore who had traded with his Orthodox neighbor for twenty years set the neighbor's shop on fire because someone had told him — via pamphlet, naturally — that Orthodox Ceresy was a corruption of Illiman's true message, and corruption must be purged.
+
+The kings tried to contain the violence. Some tried by enforcing one denomination over another, which made them heroes to one side and tyrants to the other. Some tried by declaring religious tolerance, which both sides interpreted as weakness. Some tried by ignoring the problem entirely, which did not make it go away.
+
+The Burning Season lasted, by most historical reckonings, approximately two decades. It tapered off not because the theological disputes were resolved — they never were — but because the populations involved grew exhausted by the effort of hating their neighbors and simultaneously feeding their families. Exhaustion is the most underrated force in history. It has ended more conflicts than any treaty.
+
+The aftermath was a Fondore permanently divided along religious lines. The Reformist North, the Orthodox South, and a contested middle ground where both denominations existed in uneasy proximity. This division would map onto political alliances for centuries, adding a religious dimension to conflicts that were already complicated by territorial, economic, and ethnic rivalries.
+
+Klae wrote of the Burning Season: 'Illiman walked the roads of Fondore teaching people to be kind. Two thousand years later, his followers were burning each other's houses over disagreements about how to be kind. There is a lesson in this, but I am not sure it is a lesson anyone wants to learn.'"""}
+            ]},
+
+            {"number": 3, "name": "Third Century",
+             "description": "The Terminal War. The religious divisions of the Reformation erupt into a continental conflict that engulfs every major power in Fondore. The Terminal War is fought for God, for territory, for revenge, and for reasons that nobody can articulate clearly. It is the longest and most destructive war in Fondorian history.",
+             "stories": [
+                {"title": "The War That Ate the World",
+                 "content": """The Terminal War began, like most catastrophes, with a series of small events that nobody recognized as catastrophic until it was too late.
+
+A Reformist preacher was murdered in a Geckish border town. The local Reformist community rioted. The Geckish garrison restored order with excessive force. Epervinay, whose population was Reformist and whose government was looking for an excuse to challenge Geckish influence on its borders, protested. The Gechann dismissed the protest. Epervinay mobilized its cavalry. Raxone, bound by treaty to defend Epervinay, mobilized its army. The Gechann, faced with a potential Northern invasion, called on Hyacinth and Mural Cere. And suddenly, every major power in Fondore was at war.
+
+The Terminal War lasted thirty-seven years. This number is important. Thirty-seven years means that a child born in the first year of the war would be middle-aged before it ended. An entire generation grew up knowing nothing but war. Soldiers who enlisted as young men fought until they were old, or until they were dead, whichever came first. Economies that had been geared toward production were geared toward destruction. Cities that had taken centuries to build were destroyed in weeks.
+
+The fighting was everywhere and nowhere. Unlike the focused campaigns of earlier conflicts, the Terminal War was fought across the entirety of Fondore, in every province, every border region, every contested territory. The Raxonians and Pervins fought the Gechann and Hyacinth in the central plains. The Debrears, seizing the opportunity of everyone else's distraction, invaded the Leimlands. Lambridge fought on three fronts simultaneously: against the Debrears in the south, against Geckish raiding parties in the east, and against its own population in the west, where Reformist and Orthodox communities were fighting each other regardless of what the foreign armies were doing.
+
+The war produced heroes and monsters in roughly equal proportions. It produced technological innovations — better weapons, better fortifications, better methods of killing — and cultural devastation. It produced widows, orphans, refugees, and veterans who could not be reintegrated into societies that no longer existed. It produced, in short, everything that war produces, at a scale that Fondore had never experienced.
+
+Klae devoted more pages to the Terminal War than to any other event in the Annals. He did this not because the war was fascinating but because it was important, and importance does not always coincide with fascination. He wrote: 'The Terminal War was the moment Fondore learned the cost of its own convictions. The bill was thirty-seven years long, and it was paid in blood.'"""},
+
+                {"title": "The Children of the War",
+                 "content": """There is a Pervin song from the Terminal War era that Klae recorded during his research in Epervinay. It is sung by women, in the evening, and it goes:
+
+Klae did not transcribe the melody, because the Annals are a written document and melodies resist transcription. But he described the song's subject: the children of the war. The generation born during the fighting, raised in its shadow, shaped by its privations.
+
+These children knew things that no child should know. They knew the sound of cavalry at a distance and how to calculate whether the sound was coming closer. They knew which root vegetables could be eaten raw if the cooking fires had to be doused to avoid detection. They knew that a door barred from the inside was not necessarily safe, because soldiers could break doors. They knew that adults lied about when the war would end, because adults had been lying about it for as long as the children could remember.
+
+A Leimish educator named Emelle Clairdwell — a minor member of the royal family who had dedicated her life to teaching rather than governing — established schools for war orphans in the Leimbordur passes, where the mountain terrain provided some protection from the fighting. The schools taught reading, mathematics, history, and the Cereyst principles of mercy and forgiveness, though the last subject was difficult to teach to children whose parents had been killed by people who claimed to follow the same principles.
+
+Emelle's schools survived the war. They became the model for the public education systems that several nations would adopt in the following centuries. The curriculum was practical — designed to produce citizens who could read, calculate, and think critically — and it was deliberately non-denominational, because Emelle understood that teaching children to hate their neighbors' religion was how the war had started in the first place.
+
+The children of the war grew up and became the adults who ended it. They did not end it through military victory or diplomatic brilliance. They ended it through the simple, devastating refusal to continue. A generation that had grown up surrounded by death decided, collectively, that they had seen enough death. This is not the kind of decision that gets recorded in treaties. It is the kind of decision that makes treaties possible.
+
+Klae wrote: 'The Terminal War was ended by the people who had the least reason to believe in peace and the most reason to demand it. They had been children when the world caught fire. They put it out because no one else would.'"""}
+            ]},
+
+            {"number": 4, "name": "Fourth Century",
+             "description": "The Philosophers of Oradova. In the aftermath of the Terminal War, a generation of thinkers emerges in the universities of Hyacinth, producing philosophical works that challenge every assumption about governance, religion, and the relationship between the individual and the state. The ideas they generate will fuel revolutions for centuries.",
+             "stories": [
+                {"title": "The University in the Ruins",
+                 "content": """The University of Oradova had been damaged during the Terminal War — a stray artillery barrage had collapsed the western lecture hall and the library had lost approximately a third of its collection to a fire that nobody could definitively attribute to either side, which was typical of the war's talent for destroying things without taking responsibility. But the university survived, as universities tend to, because the people who inhabit them are stubborn and the ideas they contain are fireproof.
+
+In the decades following the war, Oradova became the intellectual capital of Fondore. The city's position in Hyacinth — neutral during much of the fighting, culturally prestigious, and governed by the Cynthians, who valued scholarship with an intensity that other nations found excessive — made it a magnet for thinkers who had been displaced by the war. Geckish political theorists, Raxonian military philosophers, Leimish moral theologians, Pervin agricultural scientists, Waydrani historians — they all converged on Oradova's rebuilt lecture halls and began the work of understanding what had just happened to the world.
+
+The question that dominated the philosophical discourse was deceptively simple: why? Why had the war happened? Why had it lasted so long? Why had civilizations that had produced poetry, music, architecture, and philosophy been unable to resolve a theological dispute without thirty-seven years of slaughter?
+
+The answers varied. The Geckish theorists blamed institutional failure — the Concert of Nations treaty had lacked enforcement mechanisms, and without enforcement, agreements were merely suggestions. The Raxonian philosophers blamed human nature — men were violent, and violence was the natural state from which civilization was a temporary and fragile departure. The Leimish theologians blamed the Church — or rather, the corruption of the Church, which had turned a religion of peace into a weapon of war.
+
+But the most influential answer came from a Cynthian philosopher named Lyssandre Elan, who argued that the problem was not institutions, not human nature, and not religion. The problem was power. Specifically, the concentration of power in the hands of individuals — kings, Imperators, High Ceres — who were not accountable to the people whose lives their decisions destroyed. The solution, Lyssandre argued, was not better kings but fewer of them. The solution was democracy.
+
+Klae read Lyssandre's work and found it compelling but incomplete. He wrote: 'Lyssandre was right that concentrated power is dangerous. She did not adequately address the question of whether distributed power is less dangerous, or merely dangerous in different ways. The Karagonese experiment suggests the latter, though it also suggests that different dangers are preferable to the familiar ones.'"""},
+
+                {"title": "The Banned Lectures",
+                 "content": """Lyssandre Elan's lectures were attended by hundreds of students and were, within a year of their commencement, banned by the Cynthian crown.
+
+This was awkward, because the Cynthians prided themselves on their commitment to intellectual freedom, and banning a philosopher's lectures was the kind of thing that Gecha did, not Hyacinth. The king — a young Cynthian named Aelyr Lomei, who had inherited the throne and a set of political problems that his education had not prepared him for — justified the ban on the grounds that Lyssandre's arguments were 'destabilizing to the social order,' which was accurate in the same way that calling fire 'destabilizing to wood' is accurate.
+
+Lyssandre responded by moving her lectures underground. She taught in private homes, in taverns, in the back rooms of bookshops. Her students, who had been mildly interested before the ban, became fanatically devoted afterward, because nothing makes an idea more attractive than telling young people they are not allowed to hear it.
+
+The Banned Lectures, as they became known, covered the full range of Lyssandre's political philosophy. She argued for popular sovereignty — the idea that legitimate government derives its authority from the governed. She argued for separation of powers — the division of governmental authority among multiple institutions to prevent any one from becoming tyrannical. She argued for individual rights — freedoms of speech, religion, and assembly that no government could abridge. And she argued for the abolition of hereditary monarchy, which was the argument that had gotten her banned in the first place.
+
+The lectures were transcribed by students and printed — illegally — on presses that operated in the Oradova underground. Within years, copies had spread across Fondore. The Raxonians read them and found them interesting but impractical. The Gecks read them and found them threatening. The Pervins read them and found them obvious, because the Pervins had always suspected that kings were unnecessary and now had a philosopher to confirm it.
+
+King Aelyr eventually lifted the ban, recognizing that it was doing more to promote Lyssandre's ideas than any amount of lecturing could have. Lyssandre returned to the university and continued teaching until her death, by which time her students occupied positions of influence in every government in Fondore.
+
+Klae met Lyssandre's granddaughter during his research in Oradova. She told him that her grandmother had always said that the most important thing about the Banned Lectures was not the ideas but the banning. 'The ban taught people that ideas are dangerous,' she said. 'And dangerous ideas are the only kind worth having.'"""}
+            ]},
+
+            {"number": 5, "name": "Fifth Century",
+             "description": "The Pervin Republic. Inspired by the philosophers of Oradova and the example of Karagon, Epervinay becomes the first nation in Fondore to abolish its monarchy and establish a republic. The transition is messy, violent, and ultimately transformative — not just for the Pervins but for every nation watching.",
+             "stories": [
+                {"title": "The Last Minister of Epervinay",
+                 "content": """The Pervin monarchy — or rather, the Pervin ministership, since the Pervins had never quite gotten around to calling their rulers kings — ended not with a revolution but with a resignation.
+
+Minister Garan Havenaugh, the latest in a long line of Havenaughs who had governed Epervinay since the Second Age War, stood before the National Assembly in Ryad's Landing and read a statement that Klae obtained from the Assembly archives. It read, in its essential parts: 'I have served this nation as my family has served it for centuries. We served because we were needed. We are no longer needed. The people of Epervinay are capable of governing themselves, and it is past time we let them prove it.'
+
+This was not, despite appearances, an act of selfless nobility. Garan was a pragmatist who had read Lyssandre's work and observed the Karagonese republic and concluded that hereditary governance was a luxury that Epervinay could no longer afford. The nation faced threats on every border. The cavalry needed expansion. The economy needed modernization. And the population — literate, opinionated, and armed with pamphlets — was increasingly unwilling to accept decisions made by a single family, however distinguished.
+
+The transition to a republic was messy. The first elections were chaotic, marked by vote-buying, intimidation, and a memorable incident in which a candidate for the new Pervin Senate challenged his opponent to a duel on the floor of the Assembly, which was ruled out of order but won him considerable popular support. The constitution, drafted by a committee of lawyers, philosophers, and military officers, went through seventeen revisions before being ratified, and the final version still contained three contradictions that nobody noticed until years later.
+
+But it worked. The Pervin Republic, modeled loosely on Karagon but adapted to Fondorian conditions, established an elected senate, an independent judiciary, and a chief executive — called the First Citizen, because the Pervins found the title 'president' too Geckish — who served a fixed term and could be removed by popular vote.
+
+The other nations of Fondore watched with a mixture of fascination and horror. Fascination because the experiment was unprecedented on the continent. Horror because, if it succeeded, it would demonstrate that monarchy was not the natural order of things, and every king in Fondore would face the question: if the Pervins can govern themselves, why can't my people?
+
+Klae wrote: 'The Pervin Republic was the most dangerous idea in Fondore. Not because it was radical — Karagon had been a republic for centuries — but because it was close. Karagon was across the ocean. Epervinay was next door.'"""},
+
+                {"title": "The First Election",
+                 "content": """The first election in Epervinay was, by any objective measure, a disaster. It was also, by the standards of democratic transitions, a resounding success. The distinction between the two is a matter of expectations.
+
+Eleven candidates stood for the position of First Citizen. Three of them were qualified. Two of them were popular. One of them — a retired cavalry general named Lans Paronis — was both. The remaining candidates ranged from the earnestly incompetent to the deliberately absurd, including a goat herder from the Paronis Hills who ran on a platform of mandatory Kript distribution and received, to everyone's alarm, seven percent of the vote.
+
+The campaign lasted three months and was conducted primarily through pamphlets, public speeches, and the kind of personal attacks that make modern political observers cringe. Lans Paronis was accused of being a Geckish spy, a Raxonian puppet, and an atheist, none of which were true. His primary opponent, a merchant named Della Erogan, was accused of being a Cereyst fundamentalist, a Debrear sympathizer, and a woman, the last of which was true and, in the opinion of a significant portion of the electorate, disqualifying.
+
+Della lost the election. She lost it narrowly, and she contested the result, and the Pervin judiciary — newly independent and desperate to establish its authority — ruled that the election was valid but that future elections should include provisions to prevent the specific irregularities that had occurred, a ruling that satisfied nobody and established an important precedent.
+
+Lans Paronis became the first First Citizen of the Pervin Republic. His inaugural address, delivered on the steps of the Assembly in Ryad's Landing, was characteristically Pervin: short, practical, and devoid of grandeur. He told the assembled crowd that he would serve them to the best of his ability, that he expected them to replace him if he failed, and that he was looking forward to the day when the election of a First Citizen was boring, because boring meant the system was working.
+
+The system was not yet boring. It would take generations to become boring, and the journey from chaos to routine would involve crises, scandals, constitutional amendments, and at least one attempted military coup that failed because the general who planned it forgot to secure the telegraph office. But the Pervin Republic survived its first election, which was the hardest test, and everything that followed was, in comparison, merely difficult.
+
+Klae wrote: 'The first election was imperfect. Every election since has been imperfect. The Pervins consider this a feature, not a flaw. A perfect election would mean that everyone agreed, and the Pervins have never agreed about anything, which is precisely why they need a republic.'"""}
+            ]},
+
+            {"number": 6, "name": "Sixth Century",
+             "description": "The Fall of the Clairdwells. The Leimish dynasty that has ruled Lambridge since the Second Age faces its greatest crisis. The Terminal War has drained the treasury, the Schvainese Rebellion revealed cracks in the kingdom's unity, and the ideas of Oradova are spreading through a population that is beginning to question whether a knight's code written on a wet island centuries ago is still the best foundation for a modern government.",
+             "stories": [
+                {"title": "The Twilight of Chivalry",
+                 "content": """The Knights of Lambridge had been the soul of the kingdom since its founding. They were the military order that had liberated the Leimlands, the protectors of the Clairdwell dynasty, the living embodiment of the code of honor that Emantine Asaundier had written on the Isles of Schvaine. They were also, by the Sixth Age, an anachronism.
+
+The world had changed. Warfare was no longer decided by armored knights on horseback charging into formation. It was decided by disciplined infantry, by cavalry that fought with lances and pistols rather than swords, by artillery that could reduce a castle wall to rubble from a mile away. The Knights, who trained with sword and shield and rode in plate armor, were magnificent and obsolete, and the gap between magnificence and obsolescence was the gap through which the kingdom was falling.
+
+The problem was not merely military. The Knights were also a social institution: a hereditary aristocracy whose authority derived from a code of honor that valued personal combat, loyalty to the crown, and a romantic ideal of service that had more to do with poetry than governance. They controlled vast estates, collected rents from tenants, and sat in the Royal Council, where they voted on policy with the same conviction they brought to the tournament field and approximately the same understanding of economics.
+
+The Clairdwell king — a well-meaning but ineffectual man named Emmet III — recognized the problem but lacked the political will to address it. Reforming the Knights meant reforming the aristocracy, and reforming the aristocracy meant confronting the very class that his dynasty depended on for support. He spent his reign making speeches about modernization and doing nothing about it, which is the governing style of a man who understands the problem and fears the solution.
+
+The population of Lambridge, increasingly literate and increasingly exposed to the ideas coming out of Oradova, grew impatient. Pamphlets circulated arguing for constitutional reform, for limitations on aristocratic privilege, for the kind of representative government that the Pervins had already established. The Knights dismissed these arguments as the complaints of merchants and farmers who did not understand the responsibilities of governance. The merchants and farmers, who understood their own lives perfectly well, were not persuaded.
+
+Klae visited Lambridge during this period and found a kingdom that was eating itself. He wrote: 'The Leimish are the most cultured people in Fondore, and they are using their culture to avoid confronting their reality. The Knights are beautiful. The kingdom needs plumbers.'"""},
+
+                {"title": "The Constitutional Crisis",
+                 "content": """King Emmet III died without resolving anything, which was consistent with his reign. His son, Emmet IV, inherited a kingdom that was functionally ungovernable: the Knights controlled the military, the merchants controlled the economy, the Ardenese controlled the shipping, and nobody controlled the situation.
+
+The crisis came to a head over a tax bill. The Royal Council, dominated by the Knights, proposed a levy on merchant trade to fund the military. The merchants, who were already paying more in taxes than the Knights' estates, refused. The Ardenese Trade Federations threatened to withhold their ships. The Knights threatened to seize the ships by force. Everyone threatened everyone, and for several weeks the kingdom hovered on the edge of civil war.
+
+The resolution came from an unexpected source: the Schvainese. The islanders, who had won representative government through the Compromise of Tides and had been practicing it successfully for centuries, proposed a model that Klae described as 'so sensible that it annoyed everyone equally.' A constitutional monarchy, in which the king retained ceremonial authority and a limited executive role, while a parliament — elected by a broad franchise that included merchants, farmers, and craftsmen — held legislative power. The Knights would retain their military function but lose their political privilege. The Arden Federations would retain their commercial autonomy but submit to parliamentary taxation.
+
+Nobody liked it. The king did not like sharing power. The Knights did not like losing privilege. The merchants did not like the prospect of being taxed by a parliament that might include Knights. The Ardenese did not like submitting to any authority they had not created themselves.
+
+But everyone disliked the alternative more. Civil war in Lambridge would destroy the kingdom, and the Debrears, the Gechann, and the Raxonians were all watching the borders with predatory interest. The Leimish, who valued their independence above all things, recognized that they could not afford to fight each other when enemies were waiting to take advantage.
+
+The Clairdwell Constitution was ratified in a ceremony that was considerably less dramatic than the crisis that had produced it. Emmet IV signed it with visible reluctance. The first parliamentary elections were held the following year. The Knights, to their astonishment, won several seats, because the population that had resented their privilege still respected their service.
+
+Klae wrote: 'The Clairdwell Constitution was not a revolution. It was a compromise, which is less exciting but more durable. Revolutions devour their children. Compromises merely disappoint them.'"""}
+            ]},
+
+            {"number": 7, "name": "Seventh Century",
+             "description": "The Geckish Civil War. The Gechann Empire, weakened by debt, territorial loss, and the growing irrelevance of the Imperator, tears itself apart in a civil war between the reformist city-states and the conservative military establishment. The result reshapes the most powerful nation in southern Fondore.",
+             "stories": [
+                {"title": "The Day the Senate Burned",
+                 "content": """The Gechann Civil War began when a mob in Boulavar set fire to the Imperial Senate.
+
+The mob was composed of ordinary Geckish citizens — dockworkers, laborers, market vendors, the kind of people who had never been invited into the Senate and had never expected to be. They were angry about bread prices, which had tripled in a year due to a combination of crop failure, imperial mismanagement, and the Arden banks calling in loans at the worst possible moment. They were angry about conscription, which pulled their sons into an army that defended borders the empire no longer controlled. They were angry about the Imperator, who lived in Palasor surrounded by marble while his citizens lived in wooden tenements surrounded by rats.
+
+The Senate fire was not planned. It was the spontaneous expression of a fury that had been building for decades, ignited by a specific grievance — the announcement that bread subsidies would be cut to fund a military expedition that nobody wanted — and fueled by the general sense that the imperial system had failed and nobody in authority was willing to admit it.
+
+The fire spread. Not physically — the Senate was stone and didn't burn well — but politically. The Boulavar uprising inspired similar movements in Suntrae, Gisup Geronus, and Jayvlun. The old democratic traditions of the city-states, suppressed during the imperial era, reasserted themselves with volcanic force. Citizens who had been subjects for generations remembered that their great-grandparents had elected their leaders, and they wanted that right back.
+
+The Imperator, ruling from Palasor with an army that was loyal but underpaid, declared martial law. The reformist city-states declared their independence from the empire. And the Gechann, who had built the most efficient military machine in Fondorian history, turned that machine on themselves.
+
+The civil war lasted five years, which was mercifully short by Fondorian standards. It was fought primarily in the central plains between Boulavar and Palasor, and it was ugly — not the disciplined, professional warfare that the legions were famous for, but the chaotic, bitter fighting of a nation devouring itself. Families were divided. Legions that had fought side by side for decades found themselves on opposite sides of a battle line. The famous Geckish discipline, which had conquered half of Fondore, proved equally effective at destroying the other half.
+
+Klae wrote: 'The Geckish Civil War was the empire's final act: a machine built for conquest that, having run out of things to conquer, consumed itself.'"""},
+
+                {"title": "The Gechann Republic",
+                 "content": """The empire died. What replaced it was, depending on your perspective, either a triumph of democratic ideals or a rebranding exercise.
+
+The Gechann Republic was established in the aftermath of the civil war, modeled partly on the Pervin Republic, partly on the ancient Geckish traditions of elective governance, and partly on the necessity of finding any arrangement that would stop the fighting. The Imperator was deposed — exiled to Vera, which the Gecks apparently considered punishment enough — and the old title of Supremus was revived, though the new Supremus was elected by a broader franchise than the original had been.
+
+The Thirteen Families, who had survived the empire by the simple expedient of funding both sides of the civil war, retained their economic power. The merchant class, which had driven the reform movement, gained political representation. The military, which had been the empire's defining institution, was reduced in size and placed under civilian control, a change that the generals accepted with the stiff courtesy of professionals who know they have lost and see no benefit in losing ungracefully.
+
+The republic was not a democracy in the modern sense. The franchise was limited to property-owning men, which excluded most of the population that had actually fought the revolution. Women could not vote. The poor could not vote. The Waydrani, who had administered the empire and administered the republic with equal competence, could not vote because they were classified as provincial subjects rather than citizens.
+
+These limitations were significant, and the people excluded from the franchise noted them immediately and loudly. But the republic represented a genuine departure from the imperial system, and the principle of elected governance — however imperfectly implemented — was established in the heart of southern Fondore.
+
+The Pervins, who had established their republic a century earlier, watched the Geckish transition with the smug satisfaction of pioneers. The Raxonians, still a monarchy, watched with the nervous interest of a kingdom that suspected its own population might be getting ideas. And the Leimish, who had already compromised their way to a constitutional monarchy, nodded approvingly and suggested that the Gecks might benefit from some Leimish-designed furniture for their new senate chamber, because the Leimish never missed an opportunity to sell something beautiful.
+
+Klae wrote: 'The Gechann went from an empire to a republic in the space of five years, which is either proof that political systems can change rapidly or proof that the Gechann had been a republic all along and had merely been pretending to be an empire.'"""}
+            ]},
+
+            {"number": 8, "name": "Eighth Century",
+             "description": "The Luschnypp Ascendant. While nations reformed and rebuilt, the Luschnypp Syndicate expanded from its base in Capera Cuza into an international organization with agents in every major city. The Syndicate thrived on the chaos of the age, offering services that governments could not provide and could not suppress.",
+             "stories": [
+                {"title": "The Invisible Empire",
+                 "content": """The Luschnypp Syndicate had always been powerful. By the Sixth Age, it was ubiquitous.
+
+The expansion from Capera Cuza had been gradual and methodical. The Syndicate's Pkoyte founders understood organizational growth the way dwarves understand mining: you follow the vein, you shore up the tunnels, and you never dig faster than your supports can bear. They established cells in port cities first — Rin Nohara, Suntrae, Boulavar — because port cities have the combination of wealth, anonymity, and jurisdictional confusion that criminal enterprises require. From the ports, they moved inland, establishing contacts in capital cities, university towns, and military garrisons.
+
+The Syndicate's services were comprehensive. Assassination was the most famous, but it was not the most profitable. The real money was in information: the collection, analysis, and sale of intelligence that governments, merchants, and individuals could not obtain through legitimate channels. The Luschnypp knew which merchants were embezzling, which generals were planning coups, which diplomats were having affairs with people they shouldn't be having affairs with. They sold this information to the highest bidder, and occasionally to the lowest bidder as well, because chaos was good for business and the Luschnypp were very good at business.
+
+The Terminal War had been tremendously profitable. Every side needed intelligence. Every side needed assassinations. Every side needed plausible deniability for actions that could not be officially sanctioned. The Luschnypp provided all three, charging appropriately, and emerged from the war richer, more connected, and more deeply embedded in the political structures of every nation in Fondore than any legitimate institution.
+
+The Geckish Civil War was even better. Both the imperial forces and the reformists hired Luschnypp agents, sometimes to spy on each other and sometimes to spy on their own allies. The Syndicate's intelligence network was more comprehensive than either side's official intelligence services, and the Luschnypp exploited this advantage with the cheerful amorality that was their organizational culture.
+
+Klae investigated the Syndicate as thoroughly as his survival instincts would allow, which was not very thoroughly. He wrote: 'The Luschnypp Syndicate is the most successful government in Elysal. It has no borders, no constitution, and no legitimacy. It has only competence, which it has demonstrated consistently for centuries. This should concern everyone who believes that legitimacy and competence are connected, because the Syndicate proves that they are not.'"""},
+
+                {"title": "The Shoalene Masters",
+                 "content": """The Syndicate's leadership came from Shoale, the Pkoyte mountain kingdom in central Metzerul that most Fondorians had never heard of and most Metzerulan civilizations preferred not to think about.
+
+The Pkoyte of Shoale were dwarves — shorter than humans, broader, stronger, and possessed of a cultural disposition toward patience that other races found unnerving. Where a human criminal enterprise might plan months ahead, the Luschnypp planned decades. Their organizational structure was hierarchical, secretive, and bound by oaths that were, in the Pkoyte tradition, more sacred than marriage, parenthood, or life itself. A member of the Syndicate who betrayed its secrets did not merely die. They ceased to exist — their name was erased from Pkoyte records, their family was shunned, and their body was disposed of in a manner that ensured no burial rites could be performed. In Pkoyte culture, which placed enormous importance on ancestral continuity, this was a fate worse than any physical punishment.
+
+The Shoalene Masters — the Syndicate's ruling council — operated from a location that nobody outside the organization knew. Klae, who made inquiries, was told by a contact in Capera Cuza that the Masters met 'underground,' which could have been literal or figurative or both. The council set the organization's strategic direction, approved major contracts, and maintained the network of agreements with governments, merchant houses, and other criminal organizations that allowed the Syndicate to operate across international borders without interference.
+
+The most remarkable thing about the Shoalene Masters was their self-restraint. The Syndicate had the resources and the reach to destabilize any government in Fondore. It could have toppled kings, crashed economies, started wars. But it did not, because instability was bad for the specific kind of business the Syndicate conducted. A world at war was a world where clients were too distracted to pay their bills. A world in chaos was a world where information lost its value because nobody was in a position to act on it.
+
+The Syndicate wanted a world that was stable enough to generate wealth but unstable enough to generate demand for its services. It wanted, in other words, exactly the world that existed: imperfect, corrupt, and perpetually in need of the kind of help that no legitimate institution could provide.
+
+Klae concluded his investigation of the Syndicate with a sentence that captures both his admiration and his horror: 'The Luschnypp have mastered the art of making themselves necessary. This is the most dangerous skill an organization can possess, because necessity is the one argument that morality cannot overcome.'"""}
+            ]},
+
+            {"number": 9, "name": "Ninth Century",
+             "description": "The Treaty of Clarity. After decades of political transformation, the nations of Fondore convene to establish a new international order. The Treaty of Clarity — signed in the rebuilt capital of Lambridge — is the most comprehensive diplomatic agreement in Fondorian history, establishing principles of sovereignty, trade, and mutual defense that will govern the continent through the next age.",
+             "stories": [
+                {"title": "The Congress at Clarity",
+                 "content": """The Congress at Clarity was the Concert of Nations written in a larger hand.
+
+Representatives from every Fondorian power — and, for the first time, observers from Karagon, Lirza, and even the Pridekin of Tzun — gathered in the rebuilt cathedral city to negotiate a framework for international relations in an era when the old certainties had been dismantled. The Gechann Empire was gone, replaced by a republic. The Clairdwell absolute monarchy was gone, replaced by a constitutional system. Epervinay was a republic. Raxone was still a monarchy but a reformed one. And the relationships between these transformed nations needed to be renegotiated from the ground up.
+
+The Congress was chaired by Lambridge, which had the advantage of being trusted by everyone and allied with no one. The Leimish delegation, led by the Clairdwell prime minister — a position that would have been incomprehensible to Emantine Asaundier but that his spiritual descendants accepted as necessary — managed the negotiations with the diplomatic finesse that was the Leimish national talent.
+
+The agenda was broader than the Concert of Nations had been. Beyond borders and trade, the Congress addressed religious freedom, the rights of minorities within sovereign states, the regulation of the Arden banks, and the status of colonial territories in Tzun and Metzerul. The Karagonese observer used the occasion to deliver a blistering speech about Fondorian colonialism that made every delegate uncomfortable and that Klae transcribed in full because he believed discomfort was educational.
+
+The Treaty of Clarity emerged after months of negotiation. It established a framework of mutual recognition among the Fondorian powers, guaranteed freedom of religion, created a system of international arbitration, and imposed regulations on the banking houses that limited — though did not eliminate — their ability to manipulate sovereign governments through debt.
+
+It was not a perfect document. The colonial provisions were weak, because the colonial powers refused strong provisions. The banking regulations had loopholes that the Arden houses identified before the ink was dry. And the principle of sovereignty, while affirmed, lacked the enforcement mechanisms that would have given it teeth.
+
+But the Treaty of Clarity was, in its way, a miracle. Nations that had been at war for decades sat in the same room and agreed on rules. Republics and monarchies negotiated as equals. Fondorians and non-Fondorians spoke to each other not as conquerors and subjects but as sovereign entities with mutual interests.
+
+Klae called the Treaty 'the high-water mark of Fondorian civilization. Everything before it was building toward this moment. Everything after it was an attempt to live up to its promise.'"""},
+
+                {"title": "The Karaf Speech",
+                 "content": """The most memorable moment of the Congress at Clarity was not a negotiation or a treaty signing. It was a speech, delivered by the Karagonese observer, a woman named Talis Shura, to an audience that did not want to hear it.
+
+Talis was a diplomat by training and a revolutionary by temperament, which made her the worst possible person to send to a diplomatic conference, and precisely the right one. She had been instructed by the Karagonese Senate to observe and report. She chose to observe, report, and also set fire to the complacency of every delegate in the room.
+
+Her speech lasted twenty minutes. She spoke in Common, with the slight accent of the Karaf dialect, and she did not raise her voice. She did not need to. The content was sufficient.
+
+She reminded the assembled delegates of the Karaf history: the enslavement, the escape on the Kola Tai, the children deposited on an empty island, the centuries of building a free nation from nothing. She reminded them of the Icrazan Genocide, which the Gechann had committed and the other nations had allowed. She reminded them of the colonies in Tzun and Metzerul, where Fondorian nations were extracting resources and exploiting populations in ways that were functionally indistinguishable from the slavery that every delegate claimed to abhor.
+
+Then she asked a question. She asked it quietly, and every delegate heard it.
+
+'You are here to build a new order. You are here to establish principles of sovereignty and mutual respect. These are admirable goals. My question is simple: do these principles apply to everyone, or only to you?'
+
+The silence lasted long enough to be uncomfortable. The Geckish delegate shifted in his seat. The Raxonian delegate studied his notes. The Leimish chair suggested a recess for refreshments.
+
+Talis sat down. The Congress resumed. The colonial provisions of the Treaty remained weak. The principles of sovereignty applied, in practice, primarily to the Fondorian nations that had the military power to enforce them.
+
+But Talis's question hung in the air, unanswered, and it would continue to hang there for centuries. Klae recorded the speech in full. He wrote: 'She asked the question that the Congress had been designed to avoid. She asked it anyway, because the Karaf have never had the luxury of politeness. They know what happens to people who do not ask difficult questions. They become the people that difficult questions are asked about.'"""}
+            ]},
+
+            {"number": 10, "name": "Tenth Century",
+             "description": "New Faiths. The Sixth Age closes with a Fondore that is intellectually transformed but spiritually exhausted. The Reformations have fractured Ceresy beyond repair. The philosophers of Oradova have challenged every assumption. And in the spaces left by the retreat of old certainties, new movements — spiritual, philosophical, and political — are taking root.",
+             "stories": [
+                {"title": "After Illiman",
+                 "content": """Two and a half thousand years after Illiman walked the roads of the Pasav, the religion he had founded was unrecognizable.
+
+Orthodox Ceresy survived in the Gechann Republic and in Mural Cere, maintained by an institutional Church that had lost its political power but retained its spiritual authority over hundreds of millions of believers. The Reformist Churches dominated the North, practicing a stripped-down version of Ceresy that emphasized personal faith, communal worship, and a pointed rejection of clerical hierarchy. And beyond the formal denominations, a kaleidoscope of smaller movements had sprung up: mystical orders, philosophical societies, meditation circles, and groups that claimed to have discovered what Illiman had 'really meant,' which was invariably whatever the group's founder wanted him to have meant.
+
+The most significant new movement was not religious at all. It was called Rationalism, and it emerged from the universities of Oradova with the serene confidence of an idea whose time has come. The Rationalists argued that truth could be discovered not through revelation or tradition but through observation, experiment, and reason. They did not deny the existence of God — most of them considered the question unanswerable — but they argued that the natural world operated according to laws that could be understood without reference to the divine, and that understanding those laws was a more productive use of human intelligence than arguing about theology.
+
+Rationalism was not popular with the churches. It was not popular with the kings, who derived much of their legitimacy from divine sanction. It was not popular with the common people, who found the Rationalists' insistence on evidence-based thinking exhausting and their habit of questioning everything annoying. But it took root in the universities, in the scientific academies, and in the minds of the engineers and inventors who would, in the next age, transform the physical world as thoroughly as the philosophers had transformed the intellectual one.
+
+Klae, who spent his career observing the consequences of belief, found Rationalism simultaneously attractive and insufficient. He wrote: 'The Rationalists are right that the world operates according to laws. They are wrong to think that knowing the laws is sufficient. A man can understand the mechanics of a river and still drown in it. Knowledge is not wisdom. It is the raw material from which wisdom is, occasionally, constructed.'"""},
+
+                {"title": "The Sixth Age's Gift",
+                 "content": """The Sixth Age ended with a world that was fundamentally different from the one it had inherited. The printing press had democratized knowledge. The Reformations had shattered religious unity. The Terminal War had demonstrated the cost of ideological conflict. The philosophers had challenged the legitimacy of hereditary power. Two nations had become republics. One had become a constitutional monarchy. And the ideas that had driven these transformations were still spreading, carried by printed pamphlets and educated citizens into every corner of Elysal.
+
+The gift of the Sixth Age — if it could be called a gift, and many of the people who received it were not sure — was the idea that things could change. This sounds obvious. It is not. For most of human history, the assumption had been that the world was essentially static: kings ruled because kings had always ruled, churches taught because churches had always taught, farmers farmed and soldiers fought and merchants traded and the social order was as fixed as the mountains. The Sixth Age demolished this assumption. It proved that kings could be deposed, churches could be reformed, and the social order was a human construction that could be reconstructed.
+
+This was liberating. It was also terrifying. If everything could change, then nothing was safe. If tradition was not sacred, then what was? If kings could fall, then who could be trusted to govern? The exhilaration of possibility and the anxiety of uncertainty coexisted in every nation, in every family, in every individual who lived through the age, and the tension between them would define the centuries to come.
+
+The Seventh Age would be the age of consequences — the age when the ideas of the Sixth were tested against the realities of power, and the results were mixed, as results always are when theory meets practice.
+
+Klae closed his account of the Sixth Age with a passage that was, for him, unusually personal: 'I grew up on an island where every citizen had a voice. I traveled the world and found that most citizens had none. The Sixth Age was the age when the world began to wonder whether my island was the exception or the future. I believe it was the future. I acknowledge that I may be wrong. But the leap of faith that the age is named for is precisely this: believing that things can be better, in the full knowledge that the belief may be mistaken, and leaping anyway.'"""}
+            ]}
+        ]
+    },
 ]
 
-# Ages 6-8: structure in place, stories to be written
+# Ages 7-8: structure in place, stories to be written
 for age_data in [
-    (6, "A Leap of Faith", 2501, 3000,
-     "The Sixth Age was an age of ideas. Philosophy, science, and political theory erupted across Fondore with an intensity that made the old institutions nervous and the young populations excited. The printing press equivalent arrived in Clarity and within a generation, pamphlets were more dangerous than swords. Ceresy faced its most serious internal crisis since the Cereyian Wars, and the nations of Fondore began to grapple with questions that had no easy answers: What is a citizen? What does a king owe his people? And what happens when the people decide the answer is: everything?",
-     ["The Printing Revolution", "The Reformations", "The Terminal War", "The Philosophers of Oradova", "The Pervin Republic", "Fall of the Clairdwells", "The Geckish Civil War", "The Luschnypp Ascendant", "The Treaty of Clarity", "New Faiths"]),
     (7, "A Sacred Hegemony", 3001, 3500,
      "The Seventh Age saw the great powers of Fondore settle into a precarious balance that historians would later call the Sacred Hegemony — not because it was holy, but because disturbing it was considered sacrilege by the diplomats who maintained it. Gecha, Raxone, and Hyacinth formed the three pillars of continental order, each checking the others while smaller nations navigated the spaces between them. It was an age of standing armies, professional diplomats, absolute monarchs, and the slow realization that the old ways of doing things were running out of time.",
      ["The Three Pillars", "Absolutism in Gecha", "The Cynthian Renaissance", "Raxone Colonizes Perut", "The Karagon Crisis", "Court Intrigue in Clarity", "The Assassin's Age", "The Pervin Question", "The Naval Arms Race", "Cracks in the Hegemony"]),
