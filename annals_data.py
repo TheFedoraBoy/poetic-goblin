@@ -2124,13 +2124,358 @@ Klae closed his account of the Sixth Age with a passage that was, for him, unusu
             ]}
         ]
     },
+    {
+        "number": 7,
+        "name": "A Sacred Hegemony",
+        "year_start": 3001,
+        "year_end": 3500,
+        "description": """The Seventh Age saw the great powers of Fondore settle into a precarious balance that historians would later call the Sacred Hegemony — not because it was holy, but because disturbing it was considered sacrilege by the diplomats who maintained it. Gecha, Raxone, and Hyacinth formed the three pillars of continental order, each checking the others while smaller nations navigated the spaces between them. It was an age of standing armies, professional diplomats, absolute monarchs, and the slow realization that the old ways of doing things were running out of time.
+
+The ideas of the Sixth Age — democracy, individual rights, popular sovereignty — had not been forgotten. They had been absorbed, partially implemented, and partially suppressed. The Pervin Republic endured. The Gechann Republic functioned, after a fashion. The Clairdwell Constitution survived in Lambridge. But the great monarchies of Raxone and Hyacinth resisted reform, and the balance of power that maintained continental peace also maintained the status quo, which was convenient for kings and less convenient for everyone else.
+
+Beyond Fondore, the world was changing in ways that the Sacred Hegemony could not account for. The Lirzan Kingdom had rebuilt its strength. The Karagonese Republic was projecting power across the Erezetta. The Wintermen of Perut, who had been a footnote in Fondorian histories for centuries, were organizing into something that looked disturbingly like a nation. And in the deep oceans, the Mermassa — the underwater civilization that most surface dwellers regarded as legend — were watching the surface world with the analytical patience of an intelligence that operated on geological timescales.
+
+The Sacred Hegemony held. But the world it was designed to govern was outgrowing it, the way a child outgrows a suit of armor: inevitably, uncomfortably, and with increasing urgency.""",
+        "centuries": [
+            {"number": 1, "name": "First Century",
+             "description": "The Three Pillars. The continental order crystallizes around three great powers: the Gechann Republic in the south, the Kingdom of Raxone in the north, and the Kingdom of Hyacinth in the west. Their mutual rivalry, managed through an intricate web of treaties, alliances, and professional diplomacy, produces a period of peace that is simultaneously stable and suffocating.",
+             "stories": [
+                {"title": "The Diplomats' World",
+                 "content": """Peace, it turned out, was harder than war.
+
+War had clear objectives: take that hill, hold that river, kill that enemy. Peace required something more complicated: the continuous management of competing interests by people who were trained to smile while they threatened each other. The diplomatic corps that maintained the Sacred Hegemony were the most skilled negotiators in Fondorian history, and they needed to be, because the system they maintained was held together by nothing stronger than the mutual conviction that the alternative was worse.
+
+The Three Pillars — Gecha, Raxone, and Hyacinth — were not allies. They were competitors who had agreed not to compete violently, which is a different thing entirely. Each maintained a standing army large enough to deter the others. Each maintained a diplomatic service whose primary function was to monitor the other two for signs of aggression, ambition, or the kind of internal weakness that might tempt a neighbor into opportunism. The intelligence services — official and unofficial — were the largest employers in every capital.
+
+The smaller nations — Lambridge, Epervinay, Deberania, the remnants of Mural Cere — navigated the spaces between the Pillars with varying degrees of skill. Lambridge, as always, maintained its independence through diplomatic virtuosity and the strategic importance of the Leimbordur passes. Epervinay's republic was tolerated because it was too small to threaten anyone and too well-armed to absorb easily. Deberania lurked in its forests, neither trusted nor feared, waiting with the patience that was the Debrear national characteristic.
+
+The system produced peace. It also produced stagnation. Innovation was dangerous, because any change in the balance of power — a new weapon, a new alliance, a new idea — threatened the equilibrium that everyone depended on. The great powers spent more energy maintaining the status quo than improving it, and the populations they governed grew increasingly frustrated with governments that defined success as the absence of disaster rather than the presence of progress.
+
+A Geckish political satirist captured the mood in a pamphlet that Klae found in the Boulavar archives: 'The Sacred Hegemony has given us peace, stability, and the certainty that tomorrow will be exactly like today. We are grateful. We are also dying of boredom.'
+
+Klae, who understood both the value and the cost of stability, wrote: 'The Sacred Hegemony was the most successful peacekeeping system in Fondorian history. It prevented war for decades. It also prevented everything else.'"""},
+
+                {"title": "The Cynthian Court",
+                 "content": """Of the Three Pillars, Hyacinth was the most refined and the most brittle.
+
+The Cynthian court at Oradova had been the cultural center of Fondore since the newcomers had arrived with their pointed ears and their unsettling grace in the Third Age. The court's patronage had produced the greatest music, art, architecture, and philosophy on the continent. Its diplomats were the most skilled. Its language was the language of international relations. Its fashions were copied in every capital. Oradova was, by universal acknowledgment, the most beautiful city in the world.
+
+It was also the most unequal. The Cynthians — the sharp-eared ruling class — controlled the government, the military, the church, and the economy. The Pervins — the original human inhabitants of the peninsula — served as laborers, servants, and soldiers. The gap between the two populations was not merely economic or political. It was physical: the Cynthians lived longer, healed faster, and possessed sensory acuity that humans could not match. They were, in the most literal sense, superior beings, and they governed accordingly.
+
+The Cynthian king — Aelyr IV, a descendant of the king who had banned Lyssandre's lectures — ruled with the benevolent condescension that characterized his dynasty. The Pervins were well-treated, by the standards of subject populations. They had access to education, to medical care, to the legal system. What they did not have was power, and the distinction between comfort and freedom was one that the Cynthian court found difficult to understand, because comfort was what they offered and freedom was not something they believed humans could handle.
+
+The Pervin population of Hyacinth watched the Pervin Republic across the border with feelings that the Cynthian court preferred not to examine. Their cousins — ethnically identical, culturally similar — were governing themselves, electing their leaders, and living in a nation where the shape of one's ears did not determine one's prospects. The comparison was uncomfortable for everyone: for the Cynthians, who could not explain why their Pervins did not deserve the same rights; for the Pervins, who could not explain why they tolerated a system their cousins had rejected; and for the diplomats, who could see the tension building and could do nothing about it without disturbing the Sacred Hegemony.
+
+Klae visited the Cynthian court and found it magnificent and tragic. He wrote: 'Oradova is a masterpiece built on a contradiction: a civilization that values beauty above all things and cannot see the ugliness at its foundation.'"""}
+            ]},
+
+            {"number": 2, "name": "Second Century",
+             "description": "The Industrious Age. New technologies — powered machinery, improved metallurgy, advances in chemistry and engineering — begin to transform the economies of Fondore. The changes are gradual at first, then sudden, and they reshape not just how things are made but who makes them and under what conditions.",
+             "stories": [
+                {"title": "The Engines of Boulavar",
+                 "content": """The first powered loom was built in a workshop in Boulavar by a Geckish engineer named Telos Arim Gisupus, and it is not an exaggeration to say that it changed the world more thoroughly than any army.
+
+The loom was driven by a water wheel — an ancient technology — connected to the weaving mechanism through a system of gears and cams that translated the wheel's rotation into the complex back-and-forth motion required to produce cloth. A single powered loom could do the work of twelve weavers. It did not need to rest, did not need to eat, and did not form opinions about working conditions.
+
+The textile industry was the first to be transformed. Within a generation, powered looms had replaced hand weavers across the Geckish heartland. The cloth that had once been produced by skilled artisans in their homes was now produced by unskilled laborers in large workshops — factories, as they came to be called — that housed dozens of machines operated by workers whose primary skill was the ability to keep the machines fed with thread.
+
+The social consequences were immediate. The hand weavers, who had been among the most prosperous artisans in Gecha, were ruined. They could not compete with machines that worked faster, produced more, and required less skill. Some found work in the factories. Others did not. The towns that had been centers of hand weaving — small, prosperous communities built around the craft — emptied as their populations migrated to the factory cities, where work was available but life was different: crowded, regulated, and stripped of the independence that artisans had valued above income.
+
+The factory owners, naturally, prospered. They were a new class — neither aristocrats nor traditional merchants but industrial capitalists, men who owned not land but machines, and whose wealth derived not from rents or trade but from the organized exploitation of human labor in combination with mechanical power. They built estates outside the factory cities. They bought seats in the Geckish Senate. They became, in everything but title, the new aristocracy.
+
+Klae visited the factories of Boulavar and was repelled. He wrote: 'The machines are magnificent. The conditions in which they operate are not. I watched a child — he could not have been more than ten — feed thread into a loom for twelve hours, and I thought: this is progress, and progress is not the same thing as improvement.'"""},
+
+                {"title": "The Mill Towns",
+                 "content": """The factories needed workers. The workers needed somewhere to live. The result was the mill town: a new form of human settlement that had no precedent in Fondorian history and that nobody had planned, which is why it looked like nobody had planned it.
+
+Mill towns grew around the factories the way barnacles grow around a hull: organically, haphazardly, and with no regard for the comfort of anyone involved. Workers' housing was built by the factory owners — rows of identical wooden structures, packed as tightly as the land allowed, with shared privies and no running water. The streets were unpaved. The air smelled of the chemical dyes used in the textile process. Children played in the same gutters that served as the town's drainage system.
+
+The workers who lived in these towns were, in many cases, former farmers. The agricultural changes of the Sixth Age — improved techniques, consolidation of land holdings, the slow displacement of smallholders by larger operations — had pushed millions of people off the land and into the cities. They came looking for work. They found it, but the work was different from anything their ancestors had known: repetitive, mechanical, governed by the clock rather than the sun, and performed in conditions that treated human beings as components of a machine.
+
+The social structures that had governed rural life — extended families, village communities, the rhythms of planting and harvest — did not survive the transition. Mill town life was atomized. Workers lived next to strangers. Families were separated by shift schedules. Children went to the factory instead of the field, and learned to operate a loom before they learned to read.
+
+Not every mill town was a hellscape. Some factory owners, motivated by conscience or calculation, built model communities with schools, medical facilities, and housing that met basic standards of decency. These exceptions were noted approvingly by reformers and used by factory owners to argue that regulation was unnecessary because enlightened self-interest would provide. The reformers pointed out that the model communities were exceptions precisely because most factory owners were not enlightened.
+
+Klae spent a week in a mill town outside Aemore. He talked to workers, factory owners, children, and the Cereyst priest who served the community, a man who looked ten years older than his age and who told Klae that his congregation's most common prayer was for the strength to get through the next shift.
+
+Klae wrote: 'The mill towns are the future, and the future is not what the philosophers promised. It is louder, dirtier, and more efficient than the past, and it cares less about the people who inhabit it.'"""}
+            ]},
+
+            {"number": 3, "name": "Third Century",
+             "description": "The Workers' Question. The industrial transformation produces a new social class — the urban working poor — and a new political question: what does society owe to the people whose labor produces its wealth? The answers range from nothing to everything, and the debate reshapes the political landscape of every industrial nation.",
+             "stories": [
+                {"title": "The Aemore Uprising",
+                 "content": """The workers of the Aemore textile district did not have a political philosophy. They had a grievance.
+
+The grievance was specific: a reduction in wages at the largest factory in Aemore, imposed by the owner to offset a decline in cloth prices caused by overproduction. The workers, who were already earning barely enough to feed their families, could not absorb the cut. They gathered at the factory gate on a cold morning and refused to enter. This was the first organized labor strike in Geckish history, and the factory owner's response established a precedent as well: he called the militia.
+
+The militia arrived at noon. The workers — approximately three hundred men and women standing in the street, cold, angry, and armed with nothing but their presence — were ordered to disperse. They did not. The militia commander, a former legionary named Gaius Thryvyc Saulius, later testified that he ordered his men to advance with fixed bayonets. He did not order them to fire. The firing, he said, was 'the result of nervous men in a confused situation,' which was both true and insufficient.
+
+Seventeen workers were killed. Forty-three were wounded. The street outside the factory was stained with blood that the rain took three days to wash away. The survivors fled, regrouped, and returned the next morning, in greater numbers, to stand in the same street.
+
+The Aemore Uprising, as it became known, lasted two weeks. It spread from the textile district to the docks, to the metalworks, to the shipyards. Workers who had never met the textile laborers walked off their jobs in solidarity, shutting down the economic output of the second-largest city in Gecha. The Geckish Senate, alarmed, debated the crisis with the urgency of men who had suddenly realized that the people who made everything could also stop making everything.
+
+The uprising ended with a compromise: wages were partially restored, and the Senate appointed a commission to investigate working conditions in the factory districts. The commission's report, published six months later, documented conditions that shocked the public and embarrassed the industrial class: child labor, unsafe machinery, toxic chemicals, working hours that left no time for family or rest.
+
+The report did not solve the problem. But it named it, and naming a problem is the first step toward addressing it.
+
+Klae wrote: 'The Aemore Uprising taught the industrial class a lesson it should have learned from the Pervin Wars: you cannot take everything from people and expect them to remain docile. People who have nothing to lose will eventually prove it.'"""},
+
+                {"title": "The Philosophers of Labor",
+                 "content": """The workers' question produced its own philosophers, and they were not the kind who lectured in universities.
+
+The most influential was a Waydrani woman named Tessik Moran — no relation to the architect of Palasor, though she shared his surname and his talent for building things that made powerful people uncomfortable. Tessik had grown up in a mill town, worked in a textile factory from the age of eight, and taught herself to read using discarded pamphlets that she collected from the factory floor. By the time she was thirty, she had published three books on labor economics that were read in every industrial nation in Fondore and banned in most of them.
+
+Tessik's central argument was deceptively simple: labor creates value. Without workers, machines are inert metal. Without workers, factories are empty buildings. Without workers, the wealth that the industrial class enjoys does not exist. Therefore, workers are entitled to a share of the value they create — not as charity, not as a concession, but as a right.
+
+This argument was not new in substance. What was new was the audience. Tessik wrote not for academics but for workers. Her prose was clear, direct, and deliberately free of the academic jargon that made most philosophical texts inaccessible to the people they were about. She published cheap editions of her books — priced at a day's wages — and distributed them through the same networks that carried pamphlets and political broadsheets.
+
+The response was polarized. Workers found in Tessik's writing a language for grievances they had always felt but never been able to articulate. Factory owners found in it a threat to the social order. Governments found in it both: a legitimate critique that demanded response and a radical challenge that demanded suppression.
+
+Tessik was arrested, released, arrested again, and finally exiled to Karagon, where the republic's commitment to free expression was less qualified than Fondore's. She continued writing from exile, and her books continued to circulate in the mill towns, carried by workers who hid them under floorboards and read them by candlelight after the factory shift ended.
+
+Klae met Tessik during his research in Karagon. She was in her sixties, still sharp, still angry. She told him: 'I did not invent the workers' question. The workers invented it every morning when they walked into the factory. I merely wrote it down.' Klae used this quote as the epigraph for his chapter on the industrial age, because he believed that the best history is written by people who lived it."""}
+            ]},
+
+            {"number": 4, "name": "Fourth Century",
+             "description": "The Mermassa Surface. The underwater civilization of the Mermassa, which has existed since the early ages of Elysal, makes its first sustained contact with the surface world. The encounter challenges every assumption that surface civilizations hold about intelligence, governance, and the limits of the known world.",
+             "stories": [
+                {"title": "The People Beneath",
+                 "content": """The Mermassa had been watching for a long time.
+
+The underwater civilization that inhabited the deep trenches and continental shelves of Elysal's oceans had been aware of surface dwellers since at least the First Age, when King Tessarion III of the Mermassa had discovered humans and established Marinas Cove as a contact point. Since then, the Mermassa had maintained a policy of observation without engagement — watching the surface world's wars, trade routes, and technological development with the patient interest of a civilization that measured its history in millennia rather than centuries.
+
+The decision to make sustained contact in the Seventh Age was not driven by curiosity. It was driven by necessity. The industrial development of the surface nations was beginning to affect the oceans. Factory waste was flowing into rivers that fed into the sea. Shipping traffic was increasing, disturbing the migration patterns of the deep-ocean species that the Mermassa depended on. And the fishing fleets that the surface nations deployed were harvesting the shallow waters with an intensity that was visibly depleting the marine populations.
+
+The first formal Mermassa embassy arrived at Rin Nohara in the fourth century of the Seventh Age, surfacing in the harbor in a vessel that the dockworkers described as a 'ship that breathed.' The Mermassa ambassador — a tall, blue-skinned figure with the distinctive gills and webbed hands of the deep-water people — requested an audience with the Arden Trade Federations, because the Mermassa had been observing Fondorian politics long enough to understand that the people who controlled the shipping controlled the conversation.
+
+The meeting was, by all accounts, extraordinary. The Mermassa ambassador spoke Common Speak with a precision that suggested centuries of listening to surface conversations — from below the waterline, through ship hulls, a detail that Klae found simultaneously impressive and unsettling. He presented the Mermassa's concerns about ocean pollution and overfishing, provided evidence that was based on observations spanning centuries, and requested a treaty governing surface-ocean relations.
+
+The Ardenese were stunned. The other nations of Fondore were more so. The existence of the Mermassa had been known in a vague, legendary way — stories of mer-folk, the old tale of Kaed receiving gills from King Tessarion — but the idea that an entire civilization existed beneath the waves, with its own governments, its own technology, its own understanding of the world, was a conceptual shock that the surface nations struggled to absorb.
+
+Klae wrote: 'The Mermassa did not discover us. They had known about us for millennia. We discovered them, which is a humbling distinction, because it means that the most intelligent civilization in Elysal had been watching us the entire time and had chosen, until now, not to introduce themselves.'"""},
+
+                {"title": "The Ocean Accords",
+                 "content": """Negotiating a treaty with a civilization that lived underwater presented logistical challenges that no diplomat had anticipated.
+
+The meetings could not be held at sea — the Mermassa delegates could surface for limited periods, but extended negotiations required an environment where both parties were comfortable. The solution was a purpose-built facility on the Arden coast: a partially submerged chamber with one half flooded to Mermassa specifications and the other half dry for the surface delegates, separated by a glass wall through which the two sides could see each other and connected by an open channel through which they could hear.
+
+The Mermassa negotiating style was unlike anything the Fondorian diplomats had encountered. The underwater people did not argue, threaten, or bluff. They presented data: centuries of observations on fish populations, water quality, shipping patterns, and the cascading effects of surface activity on the marine ecosystem. The data was irrefutable, because it had been collected over timescales that surface civilizations could not match.
+
+The surface diplomats, accustomed to negotiations conducted through posturing and compromise, found this approach disorienting. When the Geckish representative attempted to dispute the Mermassa's data on overfishing, the Mermassa ambassador produced records going back eight hundred years showing the exact decline in fish populations corresponding to the exact increase in Fondorian fishing activity. The Geckish representative had no response, because his government's records on the subject went back approximately forty years and contradicted each other.
+
+The Ocean Accords that emerged from the negotiations were remarkably comprehensive. Fishing limits were established for the first time. Waste disposal into rivers and coastal waters was regulated. Shipping lanes were designated to minimize disruption to marine migration. And a permanent embassy was established — the Tidal House, built on the Arden coast — where Mermassa and surface representatives could maintain ongoing dialogue.
+
+The Accords were, predictably, resented by the fishing industry, the factory owners, and the shipping companies, all of whom stood to lose revenue. They were also, predictably, violated — not immediately, but gradually, as the economic pressures that had caused the problems in the first place reasserted themselves. The Mermassa, who had expected this, maintained their observation posts and their records, documenting each violation with the patience of a people who had been watching the surface world fail to meet its own standards for three thousand years.
+
+Klae attended the signing of the Ocean Accords and found the ceremony moving. He wrote: 'For the first time in history, the surface world acknowledged that the oceans were not empty. They were inhabited by a civilization older than ours, wiser than ours, and more patient than ours. Whether we deserve their patience remains to be seen.'"""}
+            ]},
+
+            {"number": 5, "name": "Fifth Century",
+             "description": "The Perut Awakening. The Wintermen of Perut — the northern people who have existed on the margins of Fondorian awareness for millennia — emerge as a unified nation. Their unification sends a tremor through the Sacred Hegemony, because a strong Perut changes the balance of power in the North in ways that nobody can predict.",
+             "stories": [
+                {"title": "The Gathering of Clans",
+                 "content": """The Wintermen had never been a nation. They had been a people — a collection of clans scattered across the frozen territories north of Raxone, united by language, culture, and the shared experience of living in a climate that killed anyone who wasn't paying attention. But they had never had a central government, a standing army, or the kind of institutional structure that the surface world required before it would take you seriously.
+
+This changed in the fifth century of the Seventh Age, when a clan leader named Kael Frostmane called the Gathering — the first assembly of all Wintermen clans in recorded history.
+
+The Gathering took place on the ice plains of central Perut, in conditions that would have killed a Fondorian delegation before the first day of talks was concluded. Temperatures were well below freezing. The wind carried ice particles that abraded exposed skin. The delegates sat on blocks of compacted snow around a fire that had to be continuously fed because the cold consumed it faster than the fuel could sustain it.
+
+Kael's argument was straightforward: the Wintermen were being encroached upon. Raxonian settlements were pushing into traditionally Wintermen territory. Fondorian fishing fleets were depleting the coastal waters that the Wintermen depended on. The Sacred Hegemony, which claimed to maintain peace, maintained a peace that did not include the Wintermen because nobody had asked the Wintermen if they wanted to be included.
+
+The clans debated for three weeks. Some wanted alliance with Raxone. Some wanted war with Raxone. Some wanted to continue the traditional policy of isolation, arguing that the surface world's problems were the surface world's problems and that engaging with them would only create new ones. Kael listened to all of them, because the Wintermen tradition required that every voice be heard before any decision was made, and then he presented his proposal: a confederation.
+
+The Perut Confederation would unite the clans under a council of clan leaders, with Kael as first among equals. The confederation would maintain a standing militia, establish diplomatic relations with Raxone and the other Fondorian powers, and present a unified front to a world that had been ignoring the Wintermen for too long.
+
+The vote was not unanimous. It was close enough. The Perut Confederation was established, and for the first time in history, the Wintermen spoke with one voice.
+
+Klae, who traveled to Perut during his research and nearly died of exposure, wrote: 'The Wintermen have been surviving in conditions that would kill the rest of us since before we knew they existed. Their unification should surprise no one. A people who can survive the ice can survive anything, including the politics of the surface world.'"""},
+
+                {"title": "The Ice Embassy",
+                 "content": """The Perut Confederation's first diplomatic act was to send an embassy to Raxona, which created a protocol crisis of the first order.
+
+The Raxonians were accustomed to receiving ambassadors from civilized nations — nations with capitals, and palaces, and diplomatic credentials printed on vellum. The Wintermen ambassador, a woman named Yrsa Iceveil, arrived at the gates of Raxona on foot, accompanied by four warriors and a sled pulled by a creature that the Raxonian guards described in their report as 'a bear, but wrong.' She carried no credentials. She carried a carved bone token — the symbol of the Perut Confederation — and a message from Kael Frostmane that was delivered orally, because the Wintermen had a written language but considered oral transmission more trustworthy.
+
+The message was diplomatic in content and blunt in delivery: the Wintermen wanted recognized borders, the cessation of Raxonian encroachment into Perut territory, and trade agreements that reflected the value of the resources — ice-minerals, whale oil, frost-resistant timber — that the Wintermen controlled and the Raxonians wanted.
+
+King Aldren V of Raxone received Yrsa in the throne room. The meeting was, by all accounts, awkward. The Raxonians were not accustomed to negotiating with people they had spent centuries regarding as barbarians. Yrsa was not accustomed to negotiating with people who lived in heated buildings and considered this normal. The cultural gap was enormous.
+
+But the negotiation succeeded, because both sides needed something the other had. Raxone needed Perut's resources. Perut needed Raxone's recognition. The resulting treaty — carved into a block of glacier ice that was stored in the Royal Raxonian Vault, where it did not melt, because the Wintermen knew how to treat ice so it lasted — established the first formal border between Raxone and Perut and created a trade framework that would endure for centuries.
+
+The other Fondorian powers observed with interest. The Perut Confederation added a new variable to the Sacred Hegemony's carefully balanced equation, and the diplomats who maintained the balance were not sure whether the variable would stabilize or destabilize the system.
+
+Klae wrote: 'The Wintermen asked for nothing extraordinary. They asked to be recognized as people, which should not require negotiation but always does.'"""}
+            ]},
+
+            {"number": 6, "name": "Sixth Century",
+             "description": "The Colonial Reckoning. The overseas territories that Fondorian nations have maintained since the Era of Sail begin to push back. Colonial populations — mixed-race, culturally hybrid, economically exploited — demand self-governance, and the imperial powers discover that the ideas they exported along with their soldiers and merchants have come back to haunt them.",
+             "stories": [
+                {"title": "The Tzunadaine Revolt",
+                 "content": """The colony at Sheah Suraya had been a Fondorian outpost on the northern coast of Tzun for centuries. It had grown from a trading post into a city, from a city into a provincial capital, from a provincial capital into the administrative center of a colonial territory that extracted resources from Tzun and shipped them to Fondore with the regularity of a heartbeat and the morality of a parasite.
+
+The colonial population was mixed. Fondorian settlers — Geckish merchants, Raxonian soldiers, Ardenese traders — occupied the upper strata. The local Tzunadaine, who had inhabited the territory since before the Fondorians arrived, occupied the lower. Between them was a growing class of mixed-race inhabitants who belonged fully to neither world and were treated accordingly by both.
+
+The revolt began not among the Tzunadaine but among the mixed-race population — the people who had been educated in Fondorian schools, who had read Lyssandre's philosophy and Tessik Moran's labor theory, who spoke Common as a first language and who understood, with painful clarity, that the principles their colonial masters professed did not apply to them.
+
+The leader of the revolt was a woman named Aika Shoto, the daughter of a Geckish merchant and a Tzunadaine mother. She had been educated at the colonial university in Sheah Suraya, where she had studied the Pervin Republic's constitution, the Clairdwell Constitution, and the Karagonese model of governance. She had also studied her own people's history — the Mark of Tzun, the Pridekin genocide, the centuries of colonial extraction — and concluded that Fondorian principles of self-governance applied to Tzun as well as Fondore, and that if the colonial powers would not extend those principles voluntarily, they would be extended by force.
+
+The revolt was organized, disciplined, and strategically brilliant. Aika's forces seized the harbor at Sheah Suraya, cutting the colony's supply line to Fondore. They occupied the colonial administrative buildings. They issued a declaration of independence that was written in both Common and Tzunadaine, signifying that the new nation belonged to both populations.
+
+The Fondorian response was confused. The Sacred Hegemony, which maintained peace in Fondore, had no framework for colonial conflicts. The Gechann wanted to crush the revolt. The Raxonians, who had no significant colonial holdings, were indifferent. Hyacinth, which had its own colonial problems, was sympathetic in private and hostile in public.
+
+Klae wrote: 'The colonists had taught their subjects to read. The subjects had read the colonists' own philosophers. And now the colonists were shocked that the ideas they had exported were being used against them. The irony was perfect. The consequences were bloody.'"""},
+
+                {"title": "The Letter from Sheah Suraya",
+                 "content": """Aika Shoto wrote a letter to the Geckish Senate after the seizure of Sheah Suraya. Klae obtained a copy from the Gechann Republic's diplomatic archives and published it in the Annals because he believed it was one of the most important documents of the Seventh Age.
+
+The letter was addressed not to the Senate as an institution but to 'the citizens of the Gechann Republic, who claim to believe in popular sovereignty.' It read, in its essential parts:
+
+'You teach us that government derives its authority from the consent of the governed. We have withdrawn our consent. You teach us that all persons are endowed with natural rights. We are asserting ours. You teach us that tyranny must be resisted. We are resisting.
+
+We have read your philosophers. We have studied your constitutions. We have absorbed the principles you claim to hold sacred. And we have concluded that you do not mean them — or rather, that you mean them only for yourselves, and that the rest of the world exists to serve your purposes without sharing your rights.
+
+We do not accept this. We will not accept this. Tzun belongs to the people of Tzun, as Fondore belongs to the people of Fondore. This is not a radical proposition. It is the proposition you taught us.'
+
+The letter was published in the Geckish press and created a political crisis. The Senate could not suppress it without appearing to contradict its own principles. It could not endorse it without abandoning its colonial holdings. The debate that followed — in the Senate, in the press, in the taverns and factories and universities — was the most honest conversation the Gechann Republic had ever had about the gap between its ideals and its practices.
+
+The Tzunadaine revolt was eventually suppressed — the military resources of the Gechann, even in their diminished state, were more than sufficient to recapture a colonial port. But Aika Shoto's letter survived, and it was read across Fondore and beyond, in every colony and every subject territory, by every population that had been told to believe in principles that were not applied to them.
+
+Klae wrote: 'Aika Shoto did not defeat the Gechann Empire with her letter. She did something more lasting: she defeated its argument.'"""}
+            ]},
+
+            {"number": 7, "name": "Seventh Century",
+             "description": "The Lirzan Renaissance. The Lirzan Kingdom, recovering from the Geckish genocide of the Fourth Age, enters a period of cultural and scientific achievement that astonishes the world. The dragonborn, who were nearly exterminated, lead a civilization that produces some of the most significant advances in medicine, engineering, and natural philosophy of any age.",
+             "stories": [
+                {"title": "The Return of the Dragonborn",
+                 "content": """They had been nearly destroyed. The Icrazan Genocide of the Fourth Age had targeted the dragonborn specifically — the ruling class of Lirzan society, the fire-breathers, the keepers of ancient knowledge that predated human civilization. The Gechann had calculated that removing the dragonborn would render the remaining lizardfolk population docile and exploitable. The calculation had been correct in the short term and catastrophically wrong in the long term.
+
+The dragonborn who survived the genocide had fled to the deepest jungle, to the volcanic mountains of the interior, to places so remote and so dangerous that the Geckish legions could not follow. They had survived in small groups, preserving their traditions orally because written records could be captured and destroyed. They had kept their language, their science, their understanding of the natural world that was, in many areas, more advanced than anything the surface civilizations of Fondore had produced.
+
+The Lirzan Renaissance began when the dragonborn came down from the mountains.
+
+They returned to a society that had been without them for centuries and that had, in their absence, stagnated. The lizardfolk populations of the lowlands had survived Geckish colonialism and its aftermath, but they had lost the leadership class that had driven Lirzan innovation for millennia. The return of the dragonborn was both a reunification and a revolution: old knowledge meeting new circumstances, ancient understanding applied to modern problems.
+
+The first achievements were medical. Dragonborn alchemists, working with techniques that combined empirical observation with a chemical understanding that the Fondorian sciences were only beginning to approach, developed treatments for diseases that had been killing lizardfolk and humans alike for centuries. Fever sickness — the plague that had devastated Fondore in the Fifth Age — was not cured but was rendered manageable through a Lirzan compound that reduced mortality from one in five to one in fifty.
+
+The dragonborn shared their knowledge freely. This was a deliberate political choice: the best way to ensure that no one attempted another genocide was to make the dragonborn indispensable. A civilization that produces the medicines you need to survive is a civilization you do not exterminate.
+
+Klae visited the Lirzan capital of Imbraxione during the Renaissance and was overwhelmed. He wrote: 'The dragonborn returned from the edge of extinction and built a civilization that the people who tried to destroy them could not match. This is not revenge. It is something more profound: it is proof that what they were nearly killed for — their intelligence, their knowledge, their difference — was the most valuable thing in the world.'"""},
+
+                {"title": "The Volcanic University",
+                 "content": """The University of Imbraxione was built on the slopes of Mount Boudazi, the active volcano that had shaped the dragonborn city since its founding in the First Age. The location was deliberate. The dragonborn understood volcanic activity — the geothermal vents, the mineral deposits, the ecosystems that thrived in the extreme heat — with an intimacy that was partly scientific and partly ancestral. They had evolved from creatures of fire, and fire was still their element.
+
+The university became the most important center of natural philosophy in Elysal, not because it was the largest or the best-funded but because it asked questions that nobody else was asking. Fondorian science, shaped by the Rationalist tradition of the Sixth Age, focused on the mechanical: how things moved, how forces acted, how machines could be built. Lirzan science focused on the organic: how living things grew, how ecosystems functioned, how the chemical processes that sustained life could be understood and manipulated.
+
+The most famous product of the university was the Boudazi Treatise — a comprehensive analysis of volcanic geology, produced by a team of dragonborn researchers who had been studying Mount Boudazi for three generations. The Treatise demonstrated that volcanic activity was not random or divine but the result of predictable geological processes that could be monitored and, to some extent, anticipated. For a civilization built on the slopes of an active volcano, this was not academic knowledge. It was survival.
+
+But the Treatise's implications extended far beyond Imbraxione. It demonstrated a method: careful observation over long timescales, systematic recording of data, and the derivation of general principles from specific cases. This method — which the Fondorians would later call the scientific method and claim as their own — had been practiced by the Lirzan dragonborn for millennia.
+
+The university attracted students from across Elysal. Fondorian naturalists traveled to Imbraxione to study alongside lizardfolk researchers. Karagonese chemists exchanged techniques with dragonborn alchemists. Even Mermassa scientists — who communicated through written texts sealed in waterproof containers and delivered to the university's coastal annex — contributed to the institution's work.
+
+Klae spent six months at the university and called it 'the most important place in Elysal that most people have never heard of.' He added: 'If knowledge has a home, it is here, on a volcano, surrounded by people who breathe fire and study everything. The combination is, I will admit, alarming. It is also magnificent.'"""}
+            ]},
+
+            {"number": 8, "name": "Eighth Century",
+             "description": "The Pridekin Question. The Pridekin of Tzun, subjugated since the Mark of Tzun in the Second Age, begin a long struggle for autonomy that will test the limits of every principle the civilized world claims to hold. The Pridekin are not like other peoples. They do not forgive. They do not forget. And they have been waiting a very long time.",
+             "stories": [
+                {"title": "The Hunters Remember",
+                 "content": """The Pridekin brain does not work like a human brain. This is not a metaphor or a generalization. It is a biological fact that shapes everything about Pridekin society, including their approach to history.
+
+Humans forget. Not completely — the broad outlines of traumatic events are preserved — but the emotional intensity of a memory fades with time, and the fading is a survival mechanism. A human who carried every grief, every injustice, every wound with the same raw intensity that they felt in the moment would be unable to function. The softening of memory is what allows humans to forgive, to reconcile, to move on.
+
+The Pridekin do not have this mechanism. Their memories are stored with full emotional fidelity, and they are passed down through oral traditions that emphasize precise reproduction rather than narrative adaptation. A Pridekin alive in the Seventh Age experienced the Mark of Tzun — the genocide, the scalping of Head Pridestalker Shallowbreath, the enslavement of their people — with an intensity that was functionally identical to the experience of a Pridekin who had lived through it personally. The event was not history. It was a wound that had never closed, carried by every generation with the same raw pain.
+
+This made reconciliation with the Tzunadaine effectively impossible. The Tzunadaine kingdom of Middle Tzun, which had perpetrated the Mark, had evolved over the millennia into a more moderate society. The current Tzunadaine leadership expressed regret, offered reparations, proposed frameworks for autonomy. But the Pridekin rejected every offer, not because the offers were insufficient but because the Pridekin could not forgive what they could not forget, and they could not forget anything.
+
+The Pridekin autonomy movement was not a political campaign. It was a slow, patient, generational reclamation of territory and identity that the Tzunadaine could delay but could not prevent. The Pridekin moved back into their ancestral lands. They rebuilt their dens. They resumed the hunts that had defined their culture. They did not ask permission.
+
+Klae, who interviewed Pridekin during his research in Tzun, found the experience profoundly disorienting. He wrote: 'I asked a Pridekin elder about the Mark of Tzun, expecting a historical account. She described it as if it had happened yesterday. Every detail. Every name. Every death. She was not remembering. She was reliving. And I understood, for the first time, that forgiveness is not a universal virtue. It is a human one, and the Pridekin are not human.'"""},
+
+                {"title": "The Pride Restored",
+                 "content": """The reclamation of the Pridelands was not a war. It was a migration — a slow, unstoppable movement of Pridekin families back into the savannahs and grasslands that had been taken from them during the Mark of Tzun.
+
+The Tzunadaine garrisons that had been established in Pridekin territory during the conquest found themselves increasingly surrounded by a population that had no interest in confrontation but also no interest in leaving. The Pridekin simply occupied the land. They built their dens, they hunted their prey, they raised their cubs, and they treated the Tzunadaine soldiers as irrelevant obstacles in a landscape that had been theirs since before the Tzunadaine had existed.
+
+The Tzunadaine government, which had been dealing with colonial revolts in its northern territories and economic problems at home, lacked the political will and the military resources to forcibly remove an entire population from territory that, by any historical measure, belonged to them. The generals proposed military options. The politicians rejected them, because the international community — sensitized by Talis Shura's speech at the Congress of Clarity and by the growing consensus that indigenous populations had rights — would not tolerate another genocide.
+
+The result was a de facto partition. The Pridelands became Pridekin territory again, not through treaty or negotiation but through the simple fact that the Pridekin were there and were not going to leave. The Tzunadaine retained nominal sovereignty but exercised no practical authority. The border between the two territories was not marked by a wall or a fence but by the point at which Tzunadaine patrols stopped going, which coincided precisely with the point at which Pridekin hunting parties began.
+
+The arrangement was unsatisfying to everyone who valued neatness. It was also stable, which is more than can be said for most political arrangements that are designed to be neat. The Pridekin did not want a treaty. They did not want recognition. They wanted their land, and they took it, and the world — which had spent centuries debating principles of sovereignty and self-determination — discovered that the simplest form of self-determination is the refusal to be anywhere else.
+
+Klae found the Pridekin approach both admirable and disturbing. He wrote: 'They did not ask. They did not negotiate. They returned, and the world accommodated them, because the alternative was a confrontation that nobody wanted with a people who do not understand the concept of backing down.'"""}
+            ]},
+
+            {"number": 9, "name": "Ninth Century",
+             "description": "The Long Peace. The Sacred Hegemony enters its final phase — a period of stability so prolonged that people begin to mistake it for permanence. The great powers maintain their balance. The smaller nations prosper in the spaces between them. The world, for a generation, seems to work.",
+             "stories": [
+                {"title": "The Illusion of Forever",
+                 "content": """The Long Peace lasted, depending on how you count, between forty and sixty years. By the standards of Fondorian history, this was remarkable. Wars had been so constant throughout the ages that the absence of war felt unnatural, like a silence in a room that has always been full of noise.
+
+The peace was maintained by the Sacred Hegemony's balance of power, by the exhaustion of populations that had lived through the Terminal War and its aftermath, by the economic prosperity that industrial development had produced for the middle and upper classes, and by the simple demographic fact that the generation that had known war was dying and the generation that replaced it had never heard a cannon fired in anger.
+
+The Long Peace produced a literature of optimism. Philosophers in Oradova wrote about the end of war. Economists in Boulavar argued that trade had made conflict obsolete. Diplomats in every capital congratulated themselves on the system they had built and the stability it maintained. A Leimish poet — one of the last great poets of the Clairdwell tradition — wrote a poem about the Sacred Hegemony that contained the line: 'We have built a house that will not fall.'
+
+The house was already falling.
+
+The industrial transformation had created social pressures that the Hegemony's political structures could not accommodate. The workers' movements were growing stronger, demanding rights that the ruling classes were not prepared to concede. The colonial populations were in various stages of revolt. The Wintermen of Perut and the Pridekin of Tzun were asserting claims that the international system had no mechanism to address. And the environmental damage that the Mermassa had warned about was accelerating, changing the ecosystems that surface civilizations depended on in ways that nobody fully understood.
+
+Klae, writing from the perspective of a later age, saw the Long Peace for what it was: not a solution but a pause. He wrote: 'The Long Peace was not peace. It was the absence of war, which is not the same thing. Peace requires justice. The Long Peace required only that the unjust maintain their power long enough for everyone to forget what justice looked like.'"""},
+
+                {"title": "The Last Garden Party",
+                 "content": """Klae included this story not because it was historically significant but because he believed it captured the mood of the Long Peace better than any political analysis.
+
+In the final years of the Seventh Age, the Cynthian court at Oradova hosted a garden party. This was not unusual — the Cynthians hosted garden parties with the regularity that other nations hosted military parades — but this particular party has been preserved in the historical record because a young Leimish painter named Emelle Rin Nohara attended and produced a painting that would become one of the most famous images of the age.
+
+The painting shows the garden of the Royal Palace of Oradova on a summer afternoon. The guests — Cynthian nobles, Fondorian diplomats, Ardenese merchants, military officers from every nation — are arranged across the lawn in carefully curated groupings. They are beautifully dressed. They are holding crystal glasses. The garden is in full bloom, and the light is the golden light of late afternoon that painters call the dying hour.
+
+What makes the painting remarkable is what is not shown. Beyond the garden wall, the factory smoke of the industrial districts is visible as a thin grey line on the horizon. The painting does not comment on this. The painter simply included it, and the contrast between the garden's beauty and the smoke's ugliness creates a tension that every viewer feels but that the guests in the painting do not appear to notice.
+
+The painting was titled 'The Last Garden Party,' though Emelle painted it years before the events that justified the title. She claimed later that she had not intended the name as a prophecy. She had simply felt, standing in that garden, watching those beautiful people drink those beautiful drinks in that beautiful light, that it could not last. That the world was balanced on something that was about to tip.
+
+Klae saw the painting in the Clarity Museum of Art and stood before it for a long time. He wrote: 'The painting shows people who believe the world will always be this beautiful, this comfortable, this kind to them. The smoke on the horizon says otherwise. The painter saw the smoke. The guests did not. This is the difference between an artist and a diplomat: the artist shows what is there.'"""}
+            ]},
+
+            {"number": 10, "name": "Tenth Century",
+             "description": "The Breaking. The Sacred Hegemony collapses. The balance of power that maintained continental peace for generations unravels in a cascade of crises that no diplomat can manage and no army can solve. The Seventh Age ends not with a war but with the realization that the system designed to prevent war has made the next one inevitable.",
+             "stories": [
+                {"title": "The Cascade",
+                 "content": """The Sacred Hegemony did not collapse because of a single event. It collapsed because of all of them, simultaneously.
+
+The workers' movements in Gecha, which had been growing for a century, erupted into a general strike that shut down the industrial heartland. The colonial revolt in Tzun spread from Sheah Suraya to the interior, and the Geckish garrison was overwhelmed. The Perut Confederation, emboldened by decades of successful diplomacy, demanded territorial concessions from Raxone that the Raxonian crown could not concede without appearing weak. The Pervins, whose republic had been the most stable government in Fondore for three centuries, elected a nationalist First Citizen who began an aggressive military buildup on the Geckish border.
+
+Each crisis was manageable in isolation. Together, they overwhelmed the diplomatic infrastructure that the Sacred Hegemony depended on. The ambassadors who had maintained the balance of power for generations found themselves unable to address one crisis without exacerbating another. A concession to Perut angered the Raxonian nationalists. Support for the Geckish government alienated the workers' movement. Military intervention in Tzun drew resources away from the Fondorian borders. Every solution created a new problem.
+
+The final blow came from an unexpected direction: the Mermassa. The underwater civilization, which had been monitoring the surface world's environmental degradation with increasing alarm, delivered an ultimatum to the Tidal House embassy: address the ocean pollution within five years, or the Mermassa would close the shipping lanes. The ultimatum was not a threat of military action. It was a statement of capability. The Mermassa controlled the deep ocean, and a civilization that controlled the deep ocean could make surface shipping impossible simply by refusing to allow it.
+
+The Sacred Hegemony had been designed to manage competition between the Three Pillars. It had no mechanism for managing simultaneous domestic crises, colonial revolts, indigenous rights claims, environmental ultimatums, and the realization that the surface world's most powerful nations were, in the final analysis, dependent on the goodwill of a civilization that lived underwater.
+
+Klae wrote: 'The Hegemony was a house of cards, and the cards were arguments. When the arguments stopped being persuasive, the house fell. It did not fall because anyone pushed it. It fell because the wind changed.'"""},
+
+                {"title": "The View from Lipse",
+                 "content": """Klae was on Lipse when the Seventh Age ended. He had returned to the island of his birth after decades of traveling the world, collecting stories, interviewing witnesses, and assembling the vast manuscript that would become the Annals. He was sixty-seven years old, his hair was grey, his joints ached from decades of sleeping in uncomfortable places, and he had seen enough of the world to understand it and not enough to accept it.
+
+He sat on the hill above Catcher's Rim — the same hill where he had sat as a young man, reading history books and dreaming of writing one — and watched the ships in the harbor. Trade vessels from Fondore, fishing boats from Acumfrial, a Karagonese merchant ship with the distinctive red hull that identified the Karaf republic's fleet. The world, from this vantage point, looked small and manageable and very far away.
+
+A friend — a librarian at the Library of Spires named Pellae, a descendant of the Waydrani scholar who had founded the collection — sat beside him and asked the question that everyone on Lipse was asking: what happens next?
+
+Klae considered. He had spent his life studying what had happened before, and the patterns he had observed were not encouraging. The Sacred Hegemony had collapsed. The balance of power that had maintained peace was gone. The great powers were turning inward, consumed by domestic crises. The smaller nations were arming themselves. The colonial peoples were demanding freedom. And the natural world — the oceans, the forests, the climate itself — was showing signs of strain that no political system had been designed to address.
+
+'I don't know,' Klae said. This was the honest answer, and Klae had always preferred honest answers to comfortable ones.
+
+'Will there be war?' Pellae asked.
+
+'There is always war,' Klae said. 'The question is whether there will also be something else.'
+
+He went back to his desk in the Library of Spires and continued writing. The Annals would not be finished for another decade. But the bones of the work were there: eight ages of history, thousands of stories, the testimony of a world that had been building and destroying and rebuilding itself for four thousand years. He did not know if anyone would read it. He wrote it anyway, because the sailor on the dock had been right: what else are you going to do with a lifetime?
+
+The Seventh Age was over. The Eighth — the Age of Solitude — was beginning. And Klae, sitting in a library on a small island that nobody had wanted, picked up his pen and kept going."""}
+            ]}
+        ]
+    },
 ]
 
-# Ages 7-8: structure in place, stories to be written
+# Age 8: structure in place, stories to be written
 for age_data in [
-    (7, "A Sacred Hegemony", 3001, 3500,
-     "The Seventh Age saw the great powers of Fondore settle into a precarious balance that historians would later call the Sacred Hegemony — not because it was holy, but because disturbing it was considered sacrilege by the diplomats who maintained it. Gecha, Raxone, and Hyacinth formed the three pillars of continental order, each checking the others while smaller nations navigated the spaces between them. It was an age of standing armies, professional diplomats, absolute monarchs, and the slow realization that the old ways of doing things were running out of time.",
-     ["The Three Pillars", "Absolutism in Gecha", "The Cynthian Renaissance", "Raxone Colonizes Perut", "The Karagon Crisis", "Court Intrigue in Clarity", "The Assassin's Age", "The Pervin Question", "The Naval Arms Race", "Cracks in the Hegemony"]),
     (8, "The Age of Solitude", 3501, 4000,
      "The Eighth Age earned its melancholy name not from isolation but from the growing sense, felt across all of Elysal, that the world was changing faster than anyone could follow. Steam power arrived. Factories rose in Boulavar and Raxona. Railways began to connect cities that had taken weeks to travel between. The old feudal order crumbled under the weight of new money, new ideas, and new weapons that could kill at distances the knights of Lambridge would have found obscene. It was an age of revolutions, both industrial and political, and by the time it ended, the world that Hipolyptica had built from a collection of stone huts was unrecognizable.",
      ["The Steam Revolution", "The Factory Cities", "The Great Upheaval", "Railways and Rifles", "The Democratic Movements", "Twilight of Kings", "The Workers' Revolt", "The Colonial Reckoning", "The Annals Begin", "The Unwritten Chapter"]),
