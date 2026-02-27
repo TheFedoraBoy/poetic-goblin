@@ -14,8 +14,8 @@ logger = logging.getLogger('poetic_goblin')
 # ─── Scribe Tier System ──────────────────────────────────────────────────────
 
 SCRIBE_TIERS = [
-    {'min': 50, 'title': 'Annalist',     'icon': '🏛️', 'color': '#ff6f00', 'border': 'legendary', 'desc': 'Living legend of Elysal\'s history'},
-    {'min': 20, 'title': 'Lorekeeper',   'icon': '📜', 'color': '#7b1fa2', 'border': 'purple',    'desc': 'Guardian of Elysal\'s deepest knowledge'},
+    {'min': 50, 'title': 'Professor',    'icon': '🏛️', 'color': '#ff6f00', 'border': 'legendary', 'desc': 'Living legend of Elysal\'s history'},
+    {'min': 25, 'title': 'Lorekeeper',   'icon': '📜', 'color': '#7b1fa2', 'border': 'purple',    'desc': 'Guardian of Elysal\'s deepest knowledge'},
     {'min': 10, 'title': 'Chronicler',   'icon': '✨', 'color': '#f9a825', 'border': 'gold',      'desc': 'Trusted recorder of the ages'},
     {'min': 5,  'title': 'Scribe',       'icon': '🪶', 'color': '#9e9e9e', 'border': 'silver',    'desc': 'Dedicated contributor to the Annals'},
     {'min': 1,  'title': 'Inkblot',      'icon': '🖋️', 'color': '#8d6e63', 'border': 'bronze',    'desc': 'Took their first step into history'},
@@ -159,8 +159,8 @@ CHARACTER_CLASSES = ['Warrior', 'Rogue', 'Ranger', 'Paladin', 'Cleric', 'Wizard'
 # ─── Scribe Tier System ──────────────────────────────────────────────────────
 
 SCRIBE_TIERS = [
-    {'min': 50, 'title': 'Annalist',     'icon': '🏛️', 'color': '#ff6f00',  'border': 'legendary',  'desc': 'Living legend of Elysal\'s history'},
-    {'min': 20, 'title': 'Lorekeeper',   'icon': '📜', 'color': '#7b1fa2',  'border': 'purple',     'desc': 'Guardian of ancient knowledge'},
+    {'min': 50, 'title': 'Professor',    'icon': '🏛️', 'color': '#ff6f00',  'border': 'legendary',  'desc': 'Living legend of Elysal\'s history'},
+    {'min': 25, 'title': 'Lorekeeper',   'icon': '📜', 'color': '#7b1fa2',  'border': 'purple',     'desc': 'Guardian of ancient knowledge'},
     {'min': 10, 'title': 'Chronicler',   'icon': '🪶', 'color': '#ffd700',  'border': 'gold',       'desc': 'Dedicated recorder of the ages'},
     {'min': 5,  'title': 'Scribe',       'icon': '✒️', 'color': '#c0c0c0',  'border': 'silver',     'desc': 'Trusted contributor to the Annals'},
     {'min': 1,  'title': 'Inkblot',      'icon': '🖋️', 'color': '#cd7f32',  'border': 'bronze',     'desc': 'First mark upon the page'},
