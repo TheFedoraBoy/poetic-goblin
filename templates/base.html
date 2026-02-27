@@ -43,6 +43,11 @@
             <a href="{{ url_for('account_settings') }}" class="nav-link {% if request.endpoint == 'account_settings' %}active{% endif %}" title="Settings">
                 <img class="px-icon" src="/static/icons/icon-gear.svg" alt="">
             </a>
+            {% if current_user and current_user.is_admin %}
+            <a href="{{ url_for('admin_dashboard') }}" class="nav-link {% if request.endpoint and request.endpoint.startswith('admin') %}active{% endif %}" title="Admin" style="color:var(--orange);">
+                ⚙️
+            </a>
+            {% endif %}
             <a href="{{ url_for('profile', username=current_user.username) }}" class="nav-link nav-identity">
                 {% if current_user.char_avatar %}
                 <img src="{{ current_user.char_avatar }}" class="nav-avatar" alt="">

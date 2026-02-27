@@ -378,6 +378,25 @@ def character_required(f):
         return f(*args, **kwargs)
     return decorated
 
+def admin_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if 'user_id' not in session:
+            return redirect(url_for('login'))
+        db = get_db()
+        try:
+            user = db.fetchone('SELECT id, is_admin FROM users WHERE id = %s', (session['user_id'],))
+            if not user:
+                session.clear()
+                return redirect(url_for('login'))
+            if not user.get('is_admin'):
+                abort(403)
+        except Exception:
+            session.clear()
+            return redirect(url_for('login'))
+        return f(*args, **kwargs)
+    return decorated
+
 def get_current_user():
     """Get the current user, cached per request via Flask's g object."""
     if hasattr(g, '_cached_current_user'):
@@ -386,7 +405,7 @@ def get_current_user():
         db = get_db()
         try:
             user = db.fetchone('''
-                SELECT u.id, u.username, u.email, u.joined_at, u.show_explicit,
+                SELECT u.id, u.username, u.email, u.joined_at, u.show_explicit, u.is_admin,
                        c.id as char_id, c.name as char_name, c.trait1, c.trait2, c.trait3,
                        c.backstory, c.avatar_url as char_avatar
                 FROM users u LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
@@ -557,8 +576,12 @@ def login():
         username = request.form.get('username', '').strip()
         password = request.form.get('password', '')
         db = get_db()
-        user = db.fetchone('SELECT id, username, password_hash, email_verified FROM users WHERE username = %s', (username,))
+        user = db.fetchone('SELECT id, username, password_hash, email_verified, is_banned, ban_reason FROM users WHERE username = %s', (username,))
         if user and check_password_hash(user['password_hash'], password):
+            if user.get('is_banned'):
+                reason = user.get('ban_reason') or 'violation of our Terms of Service'
+                flash(f'This account has been suspended: {reason}', 'error')
+                return render_template('login.html')
             if Config.REQUIRE_EMAIL_VERIFICATION and not user['email_verified']:
                 flash('Please verify your email first. Check your inbox, or click below to resend.', 'warning')
                 return render_template('login.html', show_resend=True, resend_username=username)
@@ -1775,6 +1798,227 @@ def annals_delete_story(story_id):
     db.execute('DELETE FROM annals_stories WHERE id = %s', (story_id,))
     flash('Story removed from the Annals.', 'info')
     return redirect(url_for('annals_century', age_num=story['age_number'], century_num=story['century_number']))
+
+# ─── Routes: Admin Panel ──────────────────────────────────────────────────────
+
+@app.route('/admin')
+@admin_required
+def admin_dashboard():
+    db = get_db()
+    # Overview stats
+    user_count = db.fetchone('SELECT COUNT(*) as c FROM users')['c']
+    post_count = db.fetchone('SELECT COUNT(*) as c FROM posts')['c']
+    report_count = db.fetchone("SELECT COUNT(*) as c FROM reports WHERE status = 'pending'")['c']
+    banned_count = db.fetchone('SELECT COUNT(*) as c FROM users WHERE is_banned = 1')['c']
+    return render_template('admin.html', tab='dashboard',
+                           user_count=user_count, post_count=post_count,
+                           report_count=report_count, banned_count=banned_count)
+
+@app.route('/admin/users')
+@admin_required
+def admin_users():
+    db = get_db()
+    q = request.args.get('q', '').strip()
+    try:
+        page = max(1, int(request.args.get('page', 1)))
+    except (ValueError, TypeError):
+        page = 1
+    per_page = 30
+    offset = (page - 1) * per_page
+    if q:
+        like_q = '%{}%'.format(escape_like(q))
+        total = db.fetchone('SELECT COUNT(*) as c FROM users WHERE username LIKE %s OR email LIKE %s', (like_q, like_q))['c']
+        users = db.fetchall('''
+            SELECT u.*, c.name as char_name,
+                   (SELECT COUNT(*) FROM posts WHERE author_id = u.id) as post_count
+            FROM users u LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
+            WHERE u.username LIKE %s OR u.email LIKE %s
+            ORDER BY u.joined_at DESC LIMIT %s OFFSET %s
+        ''', (like_q, like_q, per_page, offset))
+    else:
+        total = db.fetchone('SELECT COUNT(*) as c FROM users')['c']
+        users = db.fetchall('''
+            SELECT u.*, c.name as char_name,
+                   (SELECT COUNT(*) FROM posts WHERE author_id = u.id) as post_count
+            FROM users u LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
+            ORDER BY u.joined_at DESC LIMIT %s OFFSET %s
+        ''', (per_page, offset))
+    return render_template('admin.html', tab='users', users=users,
+                           search_query=q, page=page,
+                           total_pages=(total + per_page - 1) // per_page, total_users=total)
+
+@app.route('/admin/users/<user_id>/ban', methods=['POST'])
+@admin_required
+def admin_ban_user(user_id):
+    db = get_db()
+    target = db.fetchone('SELECT id, username, is_admin FROM users WHERE id = %s', (user_id,))
+    if not target:
+        flash('User not found.', 'error')
+        return redirect(url_for('admin_users'))
+    if target.get('is_admin'):
+        flash('Cannot ban an admin account.', 'error')
+        return redirect(url_for('admin_users'))
+    reason = request.form.get('reason', 'Violation of Terms of Service').strip()
+    if not reason:
+        reason = 'Violation of Terms of Service'
+    db.execute('UPDATE users SET is_banned = 1, ban_reason = %s WHERE id = %s', (reason, user_id))
+    flash(f'Banned @{target["username"]}: {reason}', 'info')
+    return redirect(url_for('admin_users'))
+
+@app.route('/admin/users/<user_id>/unban', methods=['POST'])
+@admin_required
+def admin_unban_user(user_id):
+    db = get_db()
+    target = db.fetchone('SELECT id, username FROM users WHERE id = %s', (user_id,))
+    if not target:
+        flash('User not found.', 'error')
+        return redirect(url_for('admin_users'))
+    db.execute("UPDATE users SET is_banned = 0, ban_reason = '' WHERE id = %s", (user_id,))
+    flash(f'Unbanned @{target["username"]}.', 'success')
+    return redirect(url_for('admin_users'))
+
+@app.route('/admin/reports')
+@admin_required
+def admin_reports():
+    db = get_db()
+    status_filter = request.args.get('status', 'pending')
+    if status_filter not in ('pending', 'resolved', 'dismissed', 'all'):
+        status_filter = 'pending'
+    if status_filter == 'all':
+        reports = db.fetchall('''
+            SELECT r.*, u.username as reporter_name
+            FROM reports r JOIN users u ON r.reporter_id = u.id
+            ORDER BY r.created_at DESC LIMIT 100
+        ''')
+    else:
+        reports = db.fetchall('''
+            SELECT r.*, u.username as reporter_name
+            FROM reports r JOIN users u ON r.reporter_id = u.id
+            WHERE r.status = %s
+            ORDER BY r.created_at DESC LIMIT 100
+        ''', (status_filter,))
+    # Enrich reports with the content being reported
+    for r in reports:
+        r['target_preview'] = ''
+        r['target_author'] = ''
+        if r['reported_type'] == 'post':
+            post = db.fetchone('''
+                SELECT p.content, u.username FROM posts p
+                JOIN users u ON p.author_id = u.id WHERE p.id = %s
+            ''', (r['reported_id'],))
+            if post:
+                r['target_preview'] = (post['content'] or '')[:200]
+                r['target_author'] = post['username']
+        elif r['reported_type'] == 'comment':
+            comment = db.fetchone('''
+                SELECT c.content, u.username FROM comments c
+                JOIN users u ON c.author_id = u.id WHERE c.id = %s
+            ''', (r['reported_id'],))
+            if comment:
+                r['target_preview'] = (comment['content'] or '')[:200]
+                r['target_author'] = comment['username']
+        elif r['reported_type'] == 'message':
+            msg = db.fetchone('''
+                SELECT m.content, u.username FROM messages m
+                JOIN users u ON m.sender_id = u.id WHERE m.id = %s
+            ''', (r['reported_id'],))
+            if msg:
+                r['target_preview'] = (msg['content'] or '')[:200]
+                r['target_author'] = msg['username']
+        elif r['reported_type'] == 'user':
+            reported_user = db.fetchone('SELECT username FROM users WHERE id = %s', (r['reported_id'],))
+            if reported_user:
+                r['target_author'] = reported_user['username']
+                r['target_preview'] = f'User profile: @{reported_user["username"]}'
+    return render_template('admin.html', tab='reports', reports=reports, status_filter=status_filter)
+
+@app.route('/admin/reports/<report_id>/resolve', methods=['POST'])
+@admin_required
+def admin_resolve_report(report_id):
+    db = get_db()
+    action = request.form.get('action', 'dismiss')  # 'resolve', 'dismiss', 'delete_content', 'ban_user'
+    report = db.fetchone('SELECT * FROM reports WHERE id = %s', (report_id,))
+    if not report:
+        flash('Report not found.', 'error')
+        return redirect(url_for('admin_reports'))
+    if action == 'delete_content':
+        # Delete the reported content
+        if report['reported_type'] == 'post':
+            db.execute('DELETE FROM campaign_sessions WHERE post_id = %s', (report['reported_id'],))
+            db.execute('DELETE FROM comments WHERE post_id = %s', (report['reported_id'],))
+            db.execute('DELETE FROM likes WHERE post_id = %s', (report['reported_id'],))
+            db.execute('DELETE FROM posts WHERE id = %s', (report['reported_id'],))
+            flash('Post deleted.', 'info')
+        elif report['reported_type'] == 'comment':
+            db.execute('DELETE FROM comments WHERE id = %s', (report['reported_id'],))
+            flash('Comment deleted.', 'info')
+        elif report['reported_type'] == 'message':
+            db.execute('DELETE FROM messages WHERE id = %s', (report['reported_id'],))
+            flash('Message deleted.', 'info')
+        db.execute("UPDATE reports SET status = 'resolved', resolved_by = %s, resolved_at = CURRENT_TIMESTAMP WHERE id = %s",
+                   (session['user_id'], report_id))
+    elif action == 'ban_user':
+        # Find the author and ban them
+        author_id = None
+        if report['reported_type'] == 'post':
+            row = db.fetchone('SELECT author_id FROM posts WHERE id = %s', (report['reported_id'],))
+            if row: author_id = row['author_id']
+        elif report['reported_type'] == 'comment':
+            row = db.fetchone('SELECT author_id FROM comments WHERE id = %s', (report['reported_id'],))
+            if row: author_id = row['author_id']
+        elif report['reported_type'] == 'message':
+            row = db.fetchone('SELECT sender_id FROM messages WHERE id = %s', (report['reported_id'],))
+            if row: author_id = row['sender_id']
+        elif report['reported_type'] == 'user':
+            author_id = report['reported_id']
+        if author_id:
+            target = db.fetchone('SELECT username, is_admin FROM users WHERE id = %s', (author_id,))
+            if target and not target.get('is_admin'):
+                reason = f'Report #{report_id[:8]}: {report["reason"]}'
+                db.execute('UPDATE users SET is_banned = 1, ban_reason = %s WHERE id = %s', (reason, author_id))
+                flash(f'Banned @{target["username"]}.', 'info')
+            elif target and target.get('is_admin'):
+                flash('Cannot ban admin accounts.', 'error')
+        db.execute("UPDATE reports SET status = 'resolved', resolved_by = %s, resolved_at = CURRENT_TIMESTAMP WHERE id = %s",
+                   (session['user_id'], report_id))
+    elif action == 'dismiss':
+        db.execute("UPDATE reports SET status = 'dismissed', resolved_by = %s, resolved_at = CURRENT_TIMESTAMP WHERE id = %s",
+                   (session['user_id'], report_id))
+        flash('Report dismissed.', 'info')
+    else:
+        db.execute("UPDATE reports SET status = 'resolved', resolved_by = %s, resolved_at = CURRENT_TIMESTAMP WHERE id = %s",
+                   (session['user_id'], report_id))
+        flash('Report resolved.', 'info')
+    return redirect(url_for('admin_reports'))
+
+@app.route('/admin/posts/<post_id>/delete', methods=['POST'])
+@admin_required
+def admin_delete_post(post_id):
+    db = get_db()
+    post = db.fetchone('SELECT id FROM posts WHERE id = %s', (post_id,))
+    if not post:
+        flash('Post not found.', 'error')
+        return redirect(url_for('admin_dashboard'))
+    db.execute('DELETE FROM campaign_sessions WHERE post_id = %s', (post_id,))
+    db.execute('DELETE FROM comments WHERE post_id = %s', (post_id,))
+    db.execute('DELETE FROM likes WHERE post_id = %s', (post_id,))
+    db.execute('DELETE FROM posts WHERE id = %s', (post_id,))
+    flash('Post deleted by admin.', 'info')
+    referrer = request.form.get('referrer', '')
+    return redirect(referrer or url_for('admin_dashboard'))
+
+@app.route('/admin/comments/<comment_id>/delete', methods=['POST'])
+@admin_required
+def admin_delete_comment(comment_id):
+    db = get_db()
+    comment = db.fetchone('SELECT id FROM comments WHERE id = %s', (comment_id,))
+    if not comment:
+        flash('Comment not found.', 'error')
+        return redirect(url_for('admin_dashboard'))
+    db.execute('DELETE FROM comments WHERE id = %s', (comment_id,))
+    flash('Comment deleted by admin.', 'info')
+    referrer = request.form.get('referrer', '')
+    return redirect(referrer or url_for('admin_dashboard'))
 
 # ─── Init ─────────────────────────────────────────────────────────────────────
 

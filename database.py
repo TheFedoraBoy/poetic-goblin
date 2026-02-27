@@ -177,7 +177,7 @@ def close_db(exception=None):
 
 # ─── Schema ──────────────────────────────────────────────────────────────────
 
-SCHEMA_VERSION = 11
+SCHEMA_VERSION = 12
 
 SQLITE_SCHEMA = f"""
 CREATE TABLE IF NOT EXISTS schema_version (version INTEGER);
@@ -194,6 +194,9 @@ CREATE TABLE IF NOT EXISTS users (
     reset_token TEXT DEFAULT '',
     reset_token_expires TIMESTAMP DEFAULT NULL,
     show_explicit INTEGER DEFAULT 0,
+    is_admin INTEGER DEFAULT 0,
+    is_banned INTEGER DEFAULT 0,
+    ban_reason TEXT DEFAULT '',
     joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE TABLE IF NOT EXISTS characters (
@@ -305,6 +308,8 @@ CREATE TABLE IF NOT EXISTS reports (
     reported_id TEXT NOT NULL,
     reason TEXT NOT NULL DEFAULT '',
     status TEXT NOT NULL DEFAULT 'pending',
+    resolved_by TEXT DEFAULT NULL,
+    resolved_at TIMESTAMP DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE
 );
@@ -340,6 +345,9 @@ MYSQL_SCHEMA = [
         reset_token VARCHAR(64) DEFAULT '',
         reset_token_expires DATETIME DEFAULT NULL,
         show_explicit TINYINT DEFAULT 0,
+        is_admin TINYINT DEFAULT 0,
+        is_banned TINYINT DEFAULT 0,
+        ban_reason TEXT DEFAULT NULL,
         joined_at DATETIME DEFAULT CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4""",
     """CREATE TABLE IF NOT EXISTS characters (
@@ -451,6 +459,8 @@ MYSQL_SCHEMA = [
         reported_id VARCHAR(36) NOT NULL,
         reason TEXT NOT NULL,
         status VARCHAR(20) NOT NULL DEFAULT 'pending',
+        resolved_by VARCHAR(36) DEFAULT NULL,
+        resolved_at DATETIME DEFAULT NULL,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (reporter_id) REFERENCES users(id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4""",
@@ -486,6 +496,9 @@ POSTGRES_SCHEMA = [
         reset_token VARCHAR(64) DEFAULT '',
         reset_token_expires TIMESTAMP DEFAULT NULL,
         show_explicit SMALLINT DEFAULT 0,
+        is_admin SMALLINT DEFAULT 0,
+        is_banned SMALLINT DEFAULT 0,
+        ban_reason TEXT DEFAULT '',
         joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )""",
     """CREATE TABLE IF NOT EXISTS characters (
@@ -583,6 +596,8 @@ POSTGRES_SCHEMA = [
         reported_id VARCHAR(36) NOT NULL,
         reason TEXT NOT NULL DEFAULT '',
         status VARCHAR(20) NOT NULL DEFAULT 'pending',
+        resolved_by VARCHAR(36) DEFAULT NULL,
+        resolved_at TIMESTAMP DEFAULT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )""",
     """CREATE TABLE IF NOT EXISTS blocks (
@@ -711,6 +726,30 @@ def _migrate(db, db_type, from_version):
             except Exception as e:
                 print(f"[Poetic Goblin] Migration v11 note: {e}")
         print("[Poetic Goblin] Migration v11: Added performance indexes.")
+    if from_version < 12:
+        # v12: Add is_admin, is_banned, ban_reason columns to users
+        for col, types in [
+            ('is_admin', {'mysql': 'TINYINT DEFAULT 0', 'postgres': 'SMALLINT DEFAULT 0', 'sqlite': 'INTEGER DEFAULT 0'}),
+            ('is_banned', {'mysql': 'TINYINT DEFAULT 0', 'postgres': 'SMALLINT DEFAULT 0', 'sqlite': 'INTEGER DEFAULT 0'}),
+            ('ban_reason', {'mysql': 'TEXT DEFAULT NULL', 'postgres': "TEXT DEFAULT ''", 'sqlite': "TEXT DEFAULT ''"}),
+        ]:
+            try:
+                col_type = types.get(db_type, types['sqlite'])
+                db.execute(f"ALTER TABLE users ADD COLUMN {col} {col_type}")
+                print(f"[Poetic Goblin] Migration v12: Added '{col}' column to users.")
+            except Exception:
+                pass  # Column may already exist
+        # Add resolved_by and resolved_at to reports table
+        for col, types in [
+            ('resolved_by', {'mysql': 'VARCHAR(36) DEFAULT NULL', 'postgres': 'VARCHAR(36) DEFAULT NULL', 'sqlite': 'TEXT DEFAULT NULL'}),
+            ('resolved_at', {'mysql': 'DATETIME DEFAULT NULL', 'postgres': 'TIMESTAMP DEFAULT NULL', 'sqlite': 'TIMESTAMP DEFAULT NULL'}),
+        ]:
+            try:
+                col_type = types.get(db_type, types['sqlite'])
+                db.execute(f"ALTER TABLE reports ADD COLUMN {col} {col_type}")
+            except Exception:
+                pass
+        print("[Poetic Goblin] Migration v12: Added admin/ban columns.")
     # Update schema version
     try:
         db.execute('UPDATE schema_version SET version = %s', (SCHEMA_VERSION,))
