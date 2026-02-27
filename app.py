@@ -421,6 +421,7 @@ def inject_globals():
                 logger.debug('Unread count query failed: %s', e)
     return dict(
         current_user=user,
+        current_year=datetime.now().year,
         elysal_locations=ELYSAL_LOCATIONS,
         elysal_ages=ELYSAL_AGES,
         elysal_characters=ELYSAL_CHARACTERS,

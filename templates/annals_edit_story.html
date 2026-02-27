@@ -28,6 +28,10 @@
                         <label class="form-label">Your Story</label>
                         <textarea name="content" class="form-input" rows="12" minlength="50" maxlength="20000" required style="min-height:250px;line-height:1.7;resize:vertical;">{{ story.content }}</textarea>
                     </div>
+                    <div style="padding:0.6rem 0.8rem;background:var(--bg-light);border-radius:8px;border-left:3px solid var(--orange);margin-bottom:1rem;font-size:0.8rem;color:var(--text-muted);line-height:1.5;">
+                        ⚖️ Annals contributions are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" style="color:var(--blue);">CC BY-SA 4.0</a>.
+                        <a href="{{ url_for('terms_of_service') }}#annals-license" style="color:var(--blue);">Details →</a>
+                    </div>
                     <div style="display:flex;gap:0.75rem;">
                         <button type="submit" class="btn btn-primary">Save Changes</button>
                         <a href="{{ url_for('annals_user_story', story_id=story.id) }}" class="btn btn-ghost">Cancel</a>

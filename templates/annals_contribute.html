@@ -55,6 +55,14 @@
                         </div>
                     </div>
 
+                    <div style="padding:0.75rem 1rem;background:var(--bg-light);border-radius:8px;border-left:3px solid var(--orange);margin-bottom:1rem;font-size:0.82rem;color:var(--text-muted);line-height:1.6;">
+                        <strong>⚖️ Contribution License:</strong> By submitting this story, you agree to license it under
+                        <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer" style="color:var(--blue);">CC BY-SA 4.0</a>.
+                        This means your story becomes part of the shared world of Elysal and others may read, share, and build upon it with credit.
+                        You retain authorship credit but cannot later claim exclusive rights.
+                        <a href="{{ url_for('terms_of_service') }}#annals-license" style="color:var(--blue);">Full details →</a>
+                    </div>
+
                     <div style="display:flex;gap:0.75rem;">
                         <button type="submit" class="btn btn-orange"><img class="px-icon" src="/static/icons/icon-story.svg" alt=""> Add to the Annals</button>
                         <a href="{{ url_for('annals_home') }}" class="btn btn-ghost">Cancel</a>
