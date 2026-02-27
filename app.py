@@ -2025,6 +2025,18 @@ def admin_delete_comment(comment_id):
     referrer = request.form.get('referrer', '')
     return redirect(referrer or url_for('admin_dashboard'))
 
+@app.route('/admin/annals/<story_id>/delete', methods=['POST'])
+@admin_required
+def admin_delete_annals_story(story_id):
+    db = get_db()
+    story = db.fetchone('SELECT id, title, age_number, century_number FROM annals_stories WHERE id = %s', (story_id,))
+    if not story:
+        flash('Annals entry not found.', 'error')
+        return redirect(url_for('annals_home'))
+    db.execute('DELETE FROM annals_stories WHERE id = %s', (story_id,))
+    flash(f'Annals entry "{story["title"]}" deleted by admin.', 'info')
+    return redirect(url_for('annals_century', age_num=story['age_number'], century_num=story['century_number']))
+
 # ─── Init ─────────────────────────────────────────────────────────────────────
 
 print("\n🧌 Poetic Goblin — Starting up...")

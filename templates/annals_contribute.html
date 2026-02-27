@@ -64,10 +64,30 @@
                     </div>
 
                     <div style="display:flex;gap:0.75rem;">
-                        <button type="submit" class="btn btn-orange"><img class="px-icon" src="/static/icons/icon-story.svg" alt=""> Add to the Annals</button>
+                        <button type="button" id="annals-submit-btn" class="btn btn-orange"><img class="px-icon" src="/static/icons/icon-story.svg" alt=""> Add to the Annals</button>
                         <a href="{{ url_for('annals_home') }}" class="btn btn-ghost">Cancel</a>
                     </div>
                 </form>
+
+                <!-- Annals Confirmation Modal -->
+                <div id="annals-confirm-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:1000;align-items:center;justify-content:center;">
+                    <div style="background:var(--bg-card);border-radius:12px;padding:1.5rem;max-width:460px;width:90%;box-shadow:var(--shadow-lg);">
+                        <h3 style="margin-bottom:0.75rem;">📜 Hold, Scribe!</h3>
+                        <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.7;margin-bottom:0.75rem;">
+                            The Annals of Elysal are a <strong>living history</strong> — not a tavern napkin. Before you commit your tale to the ages, a few reminders:
+                        </p>
+                        <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.7;margin-bottom:0.5rem;">
+                            📖 <strong>Make it fit the world.</strong> Your story should make sense within Elysal's lore, timeline, and setting. Check the Age and Century you're writing in.<br><br>
+                            ✍️ <strong>Put in some effort.</strong> This doesn't need to be a novel, but Thandrik has standards. Low-effort posts, memes, copypasta, and "lol goblin fart" entries will be removed.<br><br>
+                            🚫 <strong>No trolling.</strong> Entries that are clearly joke spam, off-topic, or written to grief the world will be deleted and repeat offenders may be banned.<br><br>
+                            ❤️ <strong>Have fun with it.</strong> Elysal is built by its community. Your story genuinely matters — make it one worth telling.
+                        </p>
+                        <div style="display:flex;gap:0.5rem;justify-content:flex-end;margin-top:1rem;">
+                            <button type="button" onclick="document.getElementById('annals-confirm-modal').style.display='none'" class="btn btn-ghost" style="padding:0.5rem 1rem;">Go Back</button>
+                            <button type="button" id="annals-confirm-submit" class="btn btn-orange" style="padding:0.5rem 1rem;">I Understand — Submit My Story</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         {{ annals_sidebar(ages) }}
@@ -77,6 +97,29 @@
 
 {% block scripts %}
 <script>
+    // Annals confirmation modal
+    const annalsForm = document.querySelector('form.form-stack');
+    const submitBtn = document.getElementById('annals-submit-btn');
+    const modal = document.getElementById('annals-confirm-modal');
+    const confirmBtn = document.getElementById('annals-confirm-submit');
+
+    submitBtn.addEventListener('click', function() {
+        // Validate form first
+        if (!annalsForm.checkValidity()) {
+            annalsForm.reportValidity();
+            return;
+        }
+        modal.style.display = 'flex';
+    });
+
+    confirmBtn.addEventListener('click', function() {
+        annalsForm.submit();
+    });
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === this) this.style.display = 'none';
+    });
+
     // Century data keyed by age number
     const centuryData = {
         {% for age in ages %}
