@@ -264,7 +264,7 @@ The first Fondorian contact was a shipwreck — Pervin sailors blown onto black 
 
 The Gechann attempted to colonize Metzerul during the height of their empire. The jungle ate them. Outposts rotted in the humidity, supply lines were cut, and the Lirzan resistance made every garrison untenable. The withdrawal of the Fourteenth Legion — the last Geckish unit to leave, marching six hundred miles through hostile jungle while the Lirzans watched from the treeline without attacking — became one of the most famous retreats in military history.
 
-Metzerul's civilizations predate Fondore's. The Lirzans had kingdoms, science, and a written language while the Ghenyarians were still arguing about shell currency. The Dwarves of Shoale were carving cities into the mountains while Fondorian cultures were building huts. And in the frozen north, behind the Styrmwall, the Wintermen of Perut have been holding back horrors that the rest of Elysal prefers not to think about for four thousand years without being thanked for it.
+Metzerul's civilizations predate Fondore's. The Lirzans had kingdoms, science, and a written language while the Ghenyarians were still arguing about shell currency. The Dwarves of Shoale were carving cities into the mountains while Fondorian cultures were building huts. And in the frozen north, behind the Styrmwall — a fortification built by the Hiyalmites in an earlier age — the Wintermen of Perut have been holding back horrors that the rest of Elysal prefers not to think about for four thousand years without being thanked for it.
 
 Klae visited Metzerul during his research and found it humbling. He wrote: 'The discovery of Metzerul was not really a discovery at all. The Lirzans had known about Fondore. The only people who thought the world was unknown were the people who had never bothered to ask anyone else.'""",
         "countries": [
@@ -302,14 +302,14 @@ Klae wrote: 'The Lirzans watched us arrive, watched us fail, and watched us leav
                 "color": "#708090",
                 "name": "Perut",
                 "aliases": "The Winterlands, The Ice Wall",
-                "capital": "No centralized capital (confederation of holds)",
-                "peoples": "Wintermen — hardy, insular, builders of the Styrmwall",
+                "capital": "Criolle",
+                "peoples": "Wintermen — hardy, insular, defenders of the Styrmwall",
                 "languages": "Winterman dialects, minimal Common Speak",
                 "religion": "Pre-Cereyst traditions focused on survival, endurance, and the defense against what lies beyond the ice",
                 "government": "Confederation of holds, recently recognized as a nation",
                 "description": """The Wintermen have been defending the world for four thousand years, and the world has spent most of that time not noticing.
 
-On the frozen northern reaches of Metzerul, behind a wall of ice and stone called the Styrmwall, the Wintermen have held back horrors that the rest of Elysal prefers not to think about. What exactly lies beyond the Styrmwall is a matter of considerable debate and minimal firsthand testimony, because the people who cross the wall to investigate tend not to come back, and the people who defend it tend not to talk about what they've seen.
+On the frozen northern reaches of Metzerul, behind a wall of ice and stone called the Styrmwall — built by the Hiyalmites in an age so distant that the reasons for its construction have become legend — the Wintermen have held back horrors that the rest of Elysal prefers not to think about. What exactly lies beyond the Styrmwall is a matter of considerable debate and minimal firsthand testimony, because the people who cross the wall to investigate tend not to come back, and the people who defend it tend not to talk about what they've seen.
 
 The Wintermen are small, stubborn, and organized around holds — fortified communities built into the ice and rock of Metzerul's frozen interior. Their entire culture is oriented around defense: defense of the wall, defense of each other, defense against a cold that kills the unprepared and merely punishes everyone else. They are not a people who waste words, and their reputation for insularity is earned, because when your primary interaction with the outside world consists of foreign hunters wandering into your territory and telling stories about ice goblins, a certain wariness is justified.
 
@@ -559,14 +559,14 @@ Klae wrote of his home: 'Acumfrial is not much to look at. It is cold, it is sma
                 "color": "#34495e",
                 "name": "Hiyalm",
                 "aliases": "The Frozen Shore, The Hiyalmite Nation",
-                "capital": "Various coastal settlements",
+                "capital": "Styrmwall",
                 "peoples": "Hiyalmites — hardy coastal people, fishermen, traders, and scholars",
                 "languages": "Hiyalmite, Common Speak",
                 "religion": "Mixed traditions; Ceresy present but adapted to local customs",
                 "government": "Loose confederation of coastal communities with democratic traditions",
                 "description": """Hiyalm is the nation that nobody remembers founding, which is appropriate for a people who have always been more interested in surviving than in declaring themselves.
 
-The Hiyalmites occupy the frozen coastline of Acumfrial — fishing communities and trading settlements scattered along shores that are ice-locked for much of the year and merely hostile the rest of it. They are not a large people, not a powerful people, and not a people who appear in the military histories that Fondorian scholars consider important. They fish. They trade. They endure. And they have been doing all three for long enough that endurance has become their defining characteristic.
+The Hiyalmites occupy the frozen coastline of Acumfrial — fishing communities and trading settlements scattered along shores that are ice-locked for much of the year and merely hostile the rest of it. Their capital, Styrmwall, is also their greatest achievement: a massive fortification of ice and stone built in an age so ancient that the original purpose of its construction has passed from history into legend. The wall stands on the northern reaches of Metzerul, and the Wintermen of Perut have garrisoned it for millennia, holding back whatever lies beyond. The Hiyalmites built it. The Wintermen defend it. Neither people discusses the arrangement in detail, which suggests it works. They are not a large people, not a powerful people, and not a people who appear in the military histories that Fondorian scholars consider important. They fish. They trade. They endure. And they have been doing all three for long enough that endurance has become their defining characteristic.
 
 What the Hiyalmites produced, quietly and without fanfare, was a culture of openness that the larger, louder civilizations of Fondore never managed. Hiyalmite communities accepted refugees, exiles, and wanderers from every nation in Elysal. They did not ask where you came from. They asked whether you could help with the nets. This radical indifference to origin — born from the practical reality that anyone willing to live on a frozen coast was welcome to share the work — became the foundation of the democratic traditions that would flourish on Lipse.
 
