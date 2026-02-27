@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% from "_annals_sidebar.html" import annals_sidebar %}
+{% block title %}{{ story.title }} — The Annals{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="annals-layout">
+        <div class="annals-content">
+            <div class="annals-breadcrumb">
+                <a href="{{ url_for('annals_home') }}">The Annals</a>
+                <span class="sep">›</span>
+                <a href="{{ url_for('annals_age', age_num=age.number) }}">{{ age.name }}</a>
+                <span class="sep">›</span>
+                <a href="{{ url_for('annals_century', age_num=age.number, century_num=century.number) }}">{{ century.name }}</a>
+                <span class="sep">›</span>
+                <span>{{ story.title }}</span>
+            </div>
+
+            <div class="annals-article">
+                <div style="display:flex;gap:0.4rem;margin-bottom:0.75rem;">
+                    <span class="post-type-badge campaign">{{ age.name }}</span>
+                    <span class="post-type-badge story">{{ century.name }}</span>
+                </div>
+                <div class="annals-article-title">{{ story.title }}</div>
+                <div class="annals-article-subtitle">From the {{ century.name }} of {{ age.name }}</div>
+                <hr class="annals-divider">
+                <div class="annals-article-body">{{ story.content }}</div>
+
+                <hr class="annals-divider">
+                <div style="font-size:0.82rem;color:var(--text-dim);font-style:italic;padding:0.75rem;background:var(--bg-light);border-radius:8px;border-left:3px solid var(--orange);">
+                    <img class="px-icon" src="/static/icons/icon-quill.svg" alt=""> Excerpted from the Annals of Elysal, maintained by Thandrik Ironquill in the vaults of Karak Thandrim. All accounts are preserved as received — the Keeper makes no judgments on their veracity.
+                </div>
+            </div>
+
+            {# Story navigation #}
+            <div style="display:flex;justify-content:space-between;margin-top:1rem;">
+                {% if story_idx > 0 %}
+                <a href="{{ url_for('annals_story', age_num=age.number, century_num=century.number, story_idx=story_idx - 1) }}" class="btn btn-ghost" style="max-width:45%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">← {{ century.stories[story_idx - 1].title[:40] }}{% if century.stories[story_idx - 1].title|length > 40 %}...{% endif %}</a>
+                {% else %}
+                <a href="{{ url_for('annals_century', age_num=age.number, century_num=century.number) }}" class="btn btn-ghost">← Back to {{ century.name }}</a>
+                {% endif %}
+                {% if story_idx < century.stories|length - 1 %}
+                <a href="{{ url_for('annals_story', age_num=age.number, century_num=century.number, story_idx=story_idx + 1) }}" class="btn btn-primary" style="max-width:45%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{{ century.stories[story_idx + 1].title[:40] }}{% if century.stories[story_idx + 1].title|length > 40 %}...{% endif %} →</a>
+                {% else %}
+                <a href="{{ url_for('annals_century', age_num=age.number, century_num=century.number) }}" class="btn btn-primary">Back to {{ century.name }} →</a>
+                {% endif %}
+            </div>
+        </div>
+        {{ annals_sidebar(ages, active_age=age) }}
+    </div>
+</div>
+{% endblock %}

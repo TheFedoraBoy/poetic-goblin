@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Privacy Policy — Poetic Goblin{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="content-narrow" style="max-width:700px;margin:0 auto;padding:2rem 1rem;">
+        <h1 style="color:var(--blue-dark);margin-bottom:0.5rem;">🛡️ Privacy Policy</h1>
+        <p style="color:var(--text-dim);margin-bottom:2rem;">Last updated: {{ last_updated }}</p>
+
+        <div class="legal-content" style="line-height:1.8;color:var(--text-secondary);">
+            <h2>What We Collect</h2>
+            <p>When you create an account, we collect your username, email address, and encrypted password. When you use Poetic Goblin, we store the content you create: characters, posts, comments, messages, and Annals contributions.</p>
+            <p>We also collect basic technical data (IP address, browser type) for security purposes like rate limiting and abuse prevention. We do not use tracking cookies or third-party analytics.</p>
+
+            <h2>How We Use Your Data</h2>
+            <p>Your data is used solely to operate the Poetic Goblin platform — displaying your content, enabling social features (likes, follows, DMs), and securing your account. We do not sell, rent, or share your personal data with third parties for marketing purposes.</p>
+
+            <h2>Email Communications</h2>
+            <p>We send emails only for account verification, password resets, and critical service announcements. We will never send marketing emails without your explicit opt-in consent.</p>
+
+            <h2>Image Uploads</h2>
+            <p>Images you upload (avatars, art/map posts) are stored on our secure cloud infrastructure. We automatically strip location metadata (EXIF data) from uploaded images to protect your privacy.</p>
+
+            <h2>Data Retention</h2>
+            <p>Your data is retained as long as your account is active. If you delete your account, we will delete your personal data within 30 days, except where we are required by law to retain it.</p>
+
+            <h2>Your Rights</h2>
+            <p>You can view, edit, or delete your content at any time through your account settings. To request full account deletion or a copy of your data, contact us at the email below.</p>
+
+            <h2>Security</h2>
+            <p>Passwords are hashed using industry-standard algorithms. All connections use HTTPS encryption. We implement rate limiting and CSRF protection to defend against common attacks.</p>
+
+            <h2>Children</h2>
+            <p>Poetic Goblin is not directed at children under 13. If we learn that a child under 13 has provided personal information, we will delete their account promptly.</p>
+
+            <h2>Changes</h2>
+            <p>We may update this policy from time to time. Significant changes will be announced on the platform.</p>
+
+            <h2>Contact</h2>
+            <p>Questions about your privacy? Contact us at <strong>privacy@poeticgoblin.com</strong>.</p>
+        </div>
+
+        <div style="margin-top:2rem;text-align:center;">
+            <a href="{{ url_for('feed') if current_user else url_for('index') }}" style="color:var(--blue);text-decoration:none;">← Back to Poetic Goblin</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

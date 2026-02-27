@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% from "_annals_sidebar.html" import annals_sidebar %}
+{% block title %}The Annals of Elysal — Poetic Goblin{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="annals-layout">
+        <div class="annals-content">
+            <div style="display:flex;gap:0.75rem;align-items:stretch;margin-bottom:0;">
+                <form class="annals-search-bar" action="{{ url_for('annals_search') }}" method="GET" style="flex:1;margin-bottom:0;">
+                    <input type="text" name="q" placeholder="Search the Annals — events, characters, locations...">
+                    <button type="submit"><img class="px-icon" src="/static/icons/icon-search.svg" alt=""> Search</button>
+                </form>
+                <a href="{{ url_for('annals_contribute') }}" class="btn btn-orange" style="white-space:nowrap;display:flex;align-items:center;gap:0.3rem;flex-shrink:0;">🖊️ Contribute</a>
+            </div>
+
+            <div class="annals-article">
+                <div class="annals-article-title"><img class="px-icon" src="/static/icons/icon-book.svg" alt=""> The Annals of Elysal</div>
+                <div class="annals-article-subtitle">8,000 Years of History — Compiled by Thandrik Ironquill, Keeper of the Annals</div>
+                <hr class="annals-divider">
+                <div class="annals-article-body">{{ intro }}</div>
+
+                <hr class="annals-divider">
+                <h2 style="font-size:1.3rem;color:var(--blue-dark);margin-bottom:1rem;">The Eight Ages of Elysal</h2>
+
+                {% for age in ages %}
+                <a href="{{ url_for('annals_age', age_num=age.number) }}" style="text-decoration:none;color:inherit;display:block;">
+                    <div style="display:flex;gap:1rem;align-items:flex-start;padding:1rem;margin:0.5rem 0;background:var(--bg-light);border:1px solid var(--border-light);border-radius:8px;border-left:3px solid var(--blue);transition:all 0.2s;" onmouseover="this.style.borderLeftColor='var(--orange)';this.style.background='var(--blue-pale)'" onmouseout="this.style.borderLeftColor='var(--blue)';this.style.background='var(--bg-light)'">
+                        <div style="flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--blue);color:white;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.1rem;">{{ age.number }}</div>
+                        <div>
+                            <div style="font-family:var(--font-display);font-size:1.05rem;color:var(--text-primary);letter-spacing:0.03em;">{{ age.name }}</div>
+                            <div style="font-size:0.82rem;color:var(--text-dim);margin-top:0.1rem;">Years {{ age.year_start }} — {{ age.year_end }} · {{ age.centuries|length }} centuries</div>
+                            <div style="font-size:0.85rem;color:var(--text-muted);margin-top:0.3rem;line-height:1.5;">{{ age.description[:180] }}...</div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {{ annals_sidebar(ages) }}
+    </div>
+</div>
+{% endblock %}

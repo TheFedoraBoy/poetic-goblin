@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% from "_post_card.html" import render_post %}
+{% from "_pagination.html" import render_pagination %}
+{% block title %}Explore — Poetic Goblin{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="main-layout">
+        <div class="content-main">
+            <h2 style="margin-bottom:1.5rem;"><img class="px-icon" src="/static/icons/icon-compass.svg" alt=""> Explore the Realm</h2>
+
+            {% if suggested_users %}
+            <div class="card" style="margin-bottom:1.5rem;">
+                <h3 style="font-size:0.85rem;color:var(--blue);font-family:var(--font-display);letter-spacing:0.06em;margin-bottom:0.75rem;">Adventurers to Follow</h3>
+                {% for u in suggested_users %}
+                <div class="user-item">
+                    {% if u.char_avatar %}<img src="{{ u.char_avatar }}" class="user-item-avatar" alt="">
+                    {% else %}<div class="user-item-avatar avatar-placeholder" style="width:40px;height:40px;font-size:1rem;">{{ (u.char_name or u.username)[0]|upper }}</div>{% endif %}
+                    <div class="user-item-info">
+                        <a href="{{ url_for('profile', username=u.username) }}" class="user-item-name">{{ u.char_name or u.username }}</a>
+                        <div class="user-item-title">@{{ u.username }}{% if u.trait1 %} · {{ u.trait1 }}{% endif %}</div>
+                    </div>
+                    <button class="btn btn-primary btn-follow follow-btn" data-username="{{ u.username }}">Follow</button>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="divider">Popular Posts</div>
+
+            {% if posts %}
+                {% for post in posts %}
+                    {{ render_post(post, sessions=post_sessions.get(post.id)) }}
+                {% endfor %}
+                {{ render_pagination(page, total_pages, 'explore') }}
+            {% else %}
+                <div class="empty-state">
+                    <img class="px-icon" src="/static/icons/icon-compass.svg" alt="">
+                    <h3>The realm is empty</h3>
+                    <p>No posts yet. Be the first explorer!</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3><img class="px-icon" src="/static/icons/icon-compass.svg" alt=""> About Elysal</h3>
+                <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">
+                    Elysal is the shared world where adventures unfold. Tag your posts with Elysal locations, ages, and characters — or create your own lore!
+                </p>
+            </div>
+        </aside>
+    </div>
+</div>
+{% endblock %}

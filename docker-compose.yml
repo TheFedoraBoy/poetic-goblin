@@ -1,0 +1,58 @@
+# ─── Poetic Goblin — Docker Compose ──────────────────────────────────────
+# Run the full production stack locally:
+#   docker compose up --build
+#
+# This gives you: App + PostgreSQL + Redis
+# Access at http://localhost:8000
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - SECRET_KEY=change-me-to-a-random-64-char-string-in-production
+      - DB_TYPE=postgres
+      - DATABASE_URL=postgresql://poetic_goblin:goblinpass@db:5432/poetic_goblin
+      - STORAGE_TYPE=local
+      - EMAIL_TYPE=console
+      - REQUIRE_EMAIL_VERIFICATION=false
+      - RATELIMIT_ENABLED=true
+      - RATELIMIT_STORAGE_URI=redis://redis:6379
+      - BASE_URL=http://localhost:8000
+      - SESSION_COOKIE_SECURE=false
+      # Uncomment for Sentry:
+      # - SENTRY_DSN=https://your-dsn@sentry.io/123
+      # Uncomment for S3/R2:
+      # - STORAGE_TYPE=s3
+      # - AWS_ACCESS_KEY_ID=your-key
+      # - AWS_SECRET_ACCESS_KEY=your-secret
+      # - AWS_S3_BUCKET=your-bucket
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: poetic_goblin
+      POSTGRES_PASSWORD: goblinpass
+      POSTGRES_DB: poetic_goblin
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U poetic_goblin"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+
+volumes:
+  pgdata:

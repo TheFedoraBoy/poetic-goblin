@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% from "_annals_sidebar.html" import annals_sidebar %}
+{% block title %}Search: {{ q }} — The Annals{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="annals-layout">
+        <div class="annals-content">
+            <div class="annals-breadcrumb">
+                <a href="{{ url_for('annals_home') }}">The Annals</a>
+                <span class="sep">›</span>
+                <span>Search</span>
+            </div>
+
+            <form class="annals-search-bar" action="{{ url_for('annals_search') }}" method="GET">
+                <input type="text" name="q" placeholder="Search the Annals..." value="{{ q }}">
+                <button type="submit"><img class="px-icon" src="/static/icons/icon-search.svg" alt=""> Search</button>
+            </form>
+
+            {% if q %}
+            <div style="font-family:var(--font-display);font-size:0.9rem;color:var(--text-muted);margin-bottom:1rem;letter-spacing:0.04em;">
+                {{ results|length }} result{{ 's' if results|length != 1 }} for "{{ q }}"
+            </div>
+            {% endif %}
+
+            {% if results %}
+                {% for r in results %}
+                <div class="search-result-item">
+                    <span class="search-result-type {{ r.type }}">
+                        {% if r.type == 'age' %}Age{% elif r.type == 'century' %}Century{% elif r.type == 'user_story' %}Community{% else %}Story{% endif %}
+                    </span>
+                    {% if r.type == 'age' %}
+                    <a href="{{ url_for('annals_age', age_num=r.age.number) }}" class="search-result-title">{{ r.title }}</a>
+                    {% elif r.type == 'century' %}
+                    <a href="{{ url_for('annals_century', age_num=r.age.number, century_num=r.century.number) }}" class="search-result-title">{{ r.title }}</a>
+                    {% elif r.type == 'user_story' %}
+                    <a href="{{ url_for('annals_user_story', story_id=r.story_id) }}" class="search-result-title">{{ r.title|censor }}</a>
+                    <span style="font-size:0.75rem;color:var(--text-dim);margin-left:0.5rem;">by @{{ r.username }}</span>
+                    {% else %}
+                    <a href="{{ url_for('annals_story', age_num=r.age.number, century_num=r.century.number, story_idx=r.story_idx) }}" class="search-result-title">{{ r.title }}</a>
+                    {% endif %}
+                    <div class="search-result-snippet">{{ r.snippet }}</div>
+                </div>
+                {% endfor %}
+            {% elif q %}
+                <div class="empty-state">
+                    <img class="px-icon" src="/static/icons/icon-search.svg" alt="">
+                    <h3>No results found</h3>
+                    <p>The Annals hold no records matching "{{ q }}". Try a different term.</p>
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <img class="px-icon" src="/static/icons/icon-book.svg" alt="">
+                    <h3>Search the Annals</h3>
+                    <p>Enter keywords to search across 8,000 years of Elysal's history.</p>
+                </div>
+            {% endif %}
+        </div>
+        {{ annals_sidebar(ages) }}
+    </div>
+</div>
+{% endblock %}

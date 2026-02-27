@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% from "_post_card.html" import render_post with context %}
+{% from "_pagination.html" import render_pagination with context %}
+{% block title %}Feed — Poetic Goblin{% endblock %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="main-layout">
+        <div class="content-main">
+            <!-- Search Bar -->
+            <form class="search-bar" method="GET" action="{{ url_for('feed') }}">
+                <input type="text" name="q" placeholder="Search posts, characters, locations..." value="{{ search_query }}">
+                <button type="submit"><img class="px-icon" src="/static/icons/icon-search.svg" alt=""> Search</button>
+            </form>
+
+            <!-- Create Post Button -->
+            <a href="{{ url_for('create_post') }}" class="create-post-btn"><img class="px-icon" src="/static/icons/icon-quill.svg" alt=""> Create a Post</a>
+
+            {% if search_query %}
+            <div class="divider" style="display:flex;justify-content:space-between;align-items:center;">
+                <span>Results for "{{ search_query }}"</span>
+                <a href="{{ url_for('feed') }}" class="btn btn-ghost btn-sm">Clear</a>
+            </div>
+                {% if users_found %}
+                <div class="search-results-users">
+                    <h3><img class="px-icon" src="/static/icons/icon-user.svg" alt=""> Users Found</h3>
+                    {% for u in users_found %}
+                    <div class="user-item">
+                        {% if u.char_avatar %}<img src="{{ u.char_avatar }}" class="user-item-avatar" alt="">
+                        {% else %}<div class="user-item-avatar avatar-placeholder" style="width:40px;height:40px;font-size:1rem;">{{ (u.char_name or u.username)[0]|upper }}</div>{% endif %}
+                        <div class="user-item-info">
+                            <a href="{{ url_for('profile', username=u.username) }}" class="user-item-name">{{ u.char_name or u.username }}</a>
+                            <div class="user-item-title">@{{ u.username }}{% if u.trait1 %} · {{ u.trait1 }}{% endif %}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% else %}
+            <div class="divider">Latest Tales</div>
+            {% endif %}
+
+            {% if posts %}
+                {% for post in posts %}
+                    {{ render_post(post, sessions=post_sessions.get(post.id), show_delete=(post.author_id == session.get('user_id', '')), show_edit=(post.author_id == session.get('user_id', ''))) }}
+                {% endfor %}
+                {{ render_pagination(page, total_pages, 'feed', q=search_query) }}
+            {% else %}
+                <div class="empty-state">
+                    <img class="px-icon" src="/static/icons/icon-feed.svg" alt="">
+                    <h3>{% if search_query %}No results found{% else %}The tavern is quiet...{% endif %}</h3>
+                    <p>{% if search_query %}Try a different search term.{% else %}No tales yet. Be the first to share!{% endif %}</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3><img class="px-icon" src="/static/icons/icon-mask.svg" alt=""> Your Character</h3>
+                <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.75rem;">
+                    {% if current_user.char_avatar %}<img src="{{ current_user.char_avatar }}" style="width:40px;height:40px;border-radius:50%;border:2px solid var(--orange);object-fit:cover;" alt="">
+                    {% else %}<div class="avatar-placeholder" style="width:40px;height:40px;font-size:1rem;">{{ current_user.char_name[0]|upper }}</div>{% endif %}
+                    <div>
+                        <div style="font-family:var(--font-display);font-size:0.9rem;color:var(--text-primary);">{{ current_user.char_name }}</div>
+                        <div style="font-size:0.78rem;color:var(--text-dim);">@{{ current_user.username }}</div>
+                    </div>
+                </div>
+                {% if current_user.trait1 %}
+                <div style="display:flex;gap:0.3rem;flex-wrap:wrap;margin-bottom:0.75rem;">
+                    <span class="trait-badge">{{ current_user.trait1 }}</span>
+                    <span class="trait-badge">{{ current_user.trait2 }}</span>
+                    <span class="trait-badge">{{ current_user.trait3 }}</span>
+                </div>
+                {% endif %}
+                <a href="{{ url_for('character_pool') }}" class="btn btn-ghost btn-sm btn-block"><img class="px-icon" src="/static/icons/icon-mask.svg" alt=""> Manage Characters</a>
+            </div>
+
+            <div class="sidebar-card">
+                <h3><img class="px-icon" src="/static/icons/icon-compass.svg" alt=""> World of Elysal</h3>
+                <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">
+                    Tag your posts with locations, ages, and characters from the world of Elysal — or create your own!
+                </p>
+            </div>
+        </aside>
+    </div>
+</div>
+{% endblock %}
