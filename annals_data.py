@@ -1038,7 +1038,23 @@ The Erezetta islands, as they came to be called, were not the goal. They were st
 
 The world was opening up. The blank edges of Penelue's map were being filled in, one voyage at a time, by men who were either very brave or very lost. Most were both. The distinction between exploration and desperation is thinner than historians like to admit.
 
-Klae recorded a saying that was common among sailors of the early Third Age: 'The horizon is a liar. It promises you the edge of the world, and when you get there, it moves.' The saying was meant as a warning. It was taken as an invitation."""}
+Klae recorded a saying that was common among sailors of the early Third Age: 'The horizon is a liar. It promises you the edge of the world, and when you get there, it moves.' The saying was meant as a warning. It was taken as an invitation."""},
+                {"title": 'The Hero of the Century: Zif',
+                 "content": """Zif was not human. This detail, which should have defined his life, turned out to be the least important thing about him.
+
+He was Submassa — one of the underwater people, a Mermassa sub-race adapted for shallow coastal waters rather than the deep trenches. Submassa were smaller than their deep-water cousins, with pale blue-green skin and gills that could process both salt and fresh water. They were rare in surface communities, though not unheard of: a few had established themselves in the port cities of Fondore, where their ability to work underwater made them invaluable to the shipping industry.
+
+Zif grew up in Suntrae, raised by a Geckish dockmaster who had found him orphaned on the waterfront and had taken him in with the pragmatic compassion that characterized the best of Geckish culture. He learned Common before he learned Mermassa. He ate cooked food, wore clothes, and attended a Geckish school where his classmates regarded him with a mixture of curiosity and the casual cruelty that children reserve for anyone who is different.
+
+He was, by every account, kind. Conspicuously, stubbornly, almost aggressively kind — as if he had decided early in life that the world's failure to be gentle to him would not prevent him from being gentle to the world. He worked on the docks, diving to inspect hulls, retrieve dropped cargo, and perform the underwater maintenance that surface workers could not. He was liked by the dockworkers, tolerated by the merchants, and largely invisible to the city's aristocracy.
+
+This changed on a summer afternoon when Ashara Vellyc, the twelve-year-old daughter of the Governor General of Suntrae, was attacked by a bull shark while swimming in the harbor. The harbor guards were too far away. The boats could not reach her in time. Zif, who was working on a nearby hull, saw the blood in the water and dove.
+
+He reached Ashara before the shark completed its second pass. He put himself between the girl and the animal, using his body as a shield while he guided her toward the surface. The shark struck him twice. He held the girl above water until the harbor boats arrived. By the time they pulled him out, he had lost too much blood to survive.
+
+He died on the dock, surrounded by humans who had spent his life overlooking him and who would spend the rest of theirs remembering him.
+
+Klae wrote: 'He was not one of us. He saved one of ours. The distinction mattered to everyone except him.'"""}
             ]},
             {"number": 2, "name": 'Second Century',
              "description": 'The Strangers from the Sea. Tall, sharp-featured people with pointed ears arrive on the shores of the Cynthian peninsula in ships of unfamiliar design. They call themselves Cynthians and claim to come from a land not recorded in any history. Their arrival transforms the western peninsula and begins one of the most enduring mysteries of Elysal.',
@@ -1072,7 +1088,23 @@ The relationship between the Cynthians and the Pervins of Hyacinth would become 
 
 What was clear was that they considered themselves superior to the Pervins, and they expressed this superiority not through violence but through condescension. The Pervins were welcomed in Cynthian society the way a child is welcomed at an adult dinner: tolerated, patronized, and expected to be grateful for the invitation.
 
-Klae spent considerable time in Oradova and found the city breathtaking. He also found it sad, in the particular way that a beautiful thing built on an ugly foundation is sad. He wrote: 'Oradova is a monument to what the Cynthians could create. It is also a monument to what they could not see: that the people they built it on top of had built something there first.'"""}
+Klae spent considerable time in Oradova and found the city breathtaking. He also found it sad, in the particular way that a beautiful thing built on an ugly foundation is sad. He wrote: 'Oradova is a monument to what the Cynthians could create. It is also a monument to what they could not see: that the people they built it on top of had built something there first.'"""},
+                {"title": 'The Hero of the Century: Skerout Slot',
+                 "content": """The Styrmwall had stood for millennia — the great barrier constructed by the Hiyalmites to protect the islands of Hiyalm from the styrmbeasts that rose from the deep trenches of the northern ocean. The Wall was not a single structure but a system: watchtowers, signal fires, reinforced breakwaters, and the styrmwalkers — the men and women who patrolled the Wall's length, watching for the telltale disturbance in the water that signaled an approaching beast.
+
+Skerout Slot was a styrmwalker. He had been one for thirty years, which was long even by the standards of a profession whose practitioners were selected for endurance and replaced when they broke. He was Hiyalmite — stocky, wind-burned, quiet in the way that people who spend their lives watching the ocean become quiet, because the ocean teaches patience and the wind teaches you to stop talking.
+
+The beast that attacked the Wall in the second century of the Third Age was, by the accounts of the surviving styrmwalkers, the largest styrmbeast in living memory. It struck the eastern section at dawn, rising from the deep with the slow, terrible momentum of something that weighs more than a ship and is angrier than the sea. The impact shattered two watchtowers and breached the breakwater, opening a gap through which the beast could reach the fishing villages on the other side.
+
+Skerout was stationed on the eastern section. He saw the breach. He saw the beast pushing through. And he did the thing that styrmwalkers were trained to do but hoped they would never have to: he went into the gap.
+
+The gap was twenty feet wide. Skerout was one man with a harpoon. The beast was sixty feet of armored muscle and fury. The mathematics were not favorable.
+
+He held the gap for nearly an hour, driving his harpoon into the beast's vulnerable spots — the eyes, the gill slits, the soft tissue around the jaw — while the beast thrashed against the broken breakwater and Skerout's body absorbed impacts that should have killed him several times over. He did not kill the beast. He delayed it long enough for the other styrmwalkers to evacuate the fishing villages and for the Wall's repair crews to begin closing the breach.
+
+When the breach was sealed, Skerout was still in the gap. The beast retreated to the deep. Skerout did not retreat anywhere. They found him wedged between the broken stones, his harpoon still in his hand, his body broken but his position held.
+
+Klae wrote: 'The Styrmwall is the greatest defensive structure in Elysal. Skerout Slot was, for one hour, the greatest part of it.'"""}
             ]},
             {"number": 3, "name": 'Third Century',
              "description": "The Kingdom of Hyacinth. The Cynthian newcomers consolidate their hold on the western peninsula and formally establish the Kingdom of Hyacinth. The Pervins within Hyacinth's borders are absorbed as a lower class. Meanwhile, the Kingdom of Lambridge grows in strength behind the Leimbordur, and the Arden coast becomes a hub of maritime innovation.",
@@ -1102,7 +1134,23 @@ Out of this chaos, a political entity emerged. The Arden Trade Federations — a
 
 The Arden Trade Federations would become one of the most influential political entities in Fondore, not because they had an army but because they had ships. In an age of sail, the people who controlled the ships controlled the world. The Ardenese understood this before anyone else, and they profited accordingly.
 
-Klae called the Ardent shipwrights 'the midwives of the new age.' They did not build the world that was coming. They built the vehicles that carried everyone to it."""}
+Klae called the Ardent shipwrights 'the midwives of the new age.' They did not build the world that was coming. They built the vehicles that carried everyone to it."""},
+                {"title": 'The Hero of the Century: Ema Vela',
+                 "content": """Ema Vela was the most famous actress in Lambridge, and she used that fame to stop a war, which is not a sentence that military historians are accustomed to writing.
+
+She was born in Debrenia — the border region between the Leimlands and Deberania where Leimish and Debrear communities existed in uneasy proximity, intermarrying often enough to blur the ethnic lines that their respective kingdoms insisted on maintaining. Ema's mother was Leimish. Her father was Debrear. She grew up bilingual, bicultural, and acutely aware that the border conflict that had defined both nations for centuries was, at the community level, less a war than a family argument.
+
+She left Debrenia for Clarity as a young woman, drawn by the theater, which was the one Leimish institution that accepted talent regardless of origin. Her beauty was legendary — Klae recorded descriptions from three separate sources, all of which used the word 'devastating,' which is an unusual adjective for a face but apparently accurate. Her talent was equally remarkable. She performed the great Leimish tragedies with an emotional intensity that left audiences weeping, which the Leimish considered the highest form of entertainment.
+
+Her fame brought her into the orbit of the Knights of Vendabaine, the order that served as the military elite of Lambridge. Several of the senior knights were admirers — of her art, certainly, and of other qualities that the histories are too polite to specify. Ema cultivated these relationships with the strategic intelligence of a woman who understood that influence is a resource and that beauty, judiciously deployed, is a form of power.
+
+When she learned that the Clairdwell court was planning a punitive expedition against the Debrear settlements in Debrenia — a response to a series of border raids that had killed several Leimish farmers — she moved. She appealed directly to the Knights of Vendabaine, not as an actress but as a daughter of Debrenia, arguing that the planned attack would destroy the mixed communities where Leimish and Debrear families lived together, communities that represented the possibility of peace rather than the inevitability of war.
+
+The Knights listened. They intervened with the Clairdwell court, arguing that the expedition was disproportionate. The court, which valued the Knights' support more than it valued a border raid's revenge, cancelled the attack.
+
+Ema Vela never performed again. She returned to Debrenia and spent the rest of her life running a school for children of mixed families.
+
+Klae wrote: 'She played tragedies on stage and prevented one in life. The stage was the smaller achievement.'"""}
             ]},
             {"number": 4, "name": 'Fourth Century',
              "description": 'Beyond the Horizon. Fondorian ships cross the Erezetta Ocean and make contact with the island continent of Karagon, discovering a civilization built on the ruins of genocide. Meanwhile, Pervin and Leimish explorers probe the dark beaches of Metzerul and encounter the Lirzans for the first time.',
@@ -1136,7 +1184,21 @@ Communication was impossible at first. The Lirzan language, Sizzeracisenn, bore 
 
 Three of the seven survivors eventually made it back to Fondore, years later, on a Lirzan trading vessel that had begun to probe the Erezetta in the opposite direction. They brought with them stories of a continent larger than Fondore, inhabited by lizardfolk, dragonborn, dwarves, giants, and creatures that breathed fire. The stories were met with skepticism in the courts of Fondore and with enthusiasm in the taverns, which tells you everything about where truth goes to be believed.
 
-Klae noted that the discovery of Metzerul was not really a discovery at all. The Lirzans had known about Fondore. The Wintermen of the northern wastes had been crossing the ice bridges for centuries. The only people who thought the world was unknown were the people who had never bothered to ask anyone else."""}
+Klae noted that the discovery of Metzerul was not really a discovery at all. The Lirzans had known about Fondore. The Wintermen of the northern wastes had been crossing the ice bridges for centuries. The only people who thought the world was unknown were the people who had never bothered to ask anyone else."""},
+                {"title": 'The Hero of the Century: Raist Skellet',
+                 "content": """Raist Skellet was a pirate, which is a word that means different things depending on whether you are the one doing the pirating or the one being pirated.
+
+He was born in Rin Nohara, the son of a dockhand and a washerwoman, and he joined the Arden navy at fourteen because the navy offered food, shelter, and the opportunity to see the world, three things that his childhood had not provided. He was a competent sailor and an adequate officer, but he discovered early that the navy's rigid hierarchy chafed against a temperament that preferred improvisation to obedience. He deserted at twenty-three, stole a sloop, and began a career of maritime theft that would last thirty years and reshape the geography of commerce.
+
+Skellet was not a romantic figure. He was a pragmatist who recognized that the uncharted islands of the western ocean — the volcanic chains and coral atolls that the Fondorian maps marked as 'uninhabited' — were perfectly habitable if you did not mind the heat, the storms, and the complete absence of civilization. He settled on Womparti, a large island that the Gechann had claimed on paper and never bothered to visit, and began building.
+
+What he built was the Rim Work: a network of pirate outposts, trading posts, and independent harbors scattered across the western islands, connected by informal agreements and the shared understanding that the laws of Fondore did not apply. The Rim Work was not a nation. It was a market — a place where goods of any origin could be bought, sold, or exchanged without questions about provenance, legality, or the moral implications of commerce conducted at sword-point.
+
+The Rim Work thrived because it filled a need. The legitimate trade routes were controlled by the Arden Federations, which charged fees that many merchants considered extortionate. The Rim Work offered an alternative: faster, cheaper, and illegal, which for many merchants was a price worth paying.
+
+Skellet governed the Rim Work with a loose hand and a simple code: pay your debts, honor your agreements, and do not steal from other pirates, because pirates who steal from each other are just thieves with boats. He died at fifty-seven on Womparti, wealthy, respected by his peers, and wanted by every navy in Fondore.
+
+Klae visited the Rim Work during his research and found it fascinating. He wrote: 'Skellet built a civilization from crime. It was not a good civilization, but it was a functional one, and functionality is rarer than goodness.'"""}
             ]},
             {"number": 5, "name": 'Fifth Century',
              "description": "Holy Fire. The growing power of national churches threatens the unity of Ceresy. The High Cere in Mural Cere calls for a holy war to reassert religious authority over the wayward kingdoms. The First Holy War — Fondore's first true crusade — reshapes the political and spiritual landscape of the continent.",
@@ -1168,7 +1230,21 @@ The High Cere declared victory. The holy lands were liberated. A crusader state 
 
 The crusader state lasted less than a century. The Gechann retook the territory in a campaign so efficient that it barely qualified as a war. But the First Holy War's legacy was not territorial. It was psychological. It proved that Ceresy could be weaponized, that kings could use God as a justification for conquest, and that ordinary men would march across a desert and kill strangers if someone in a robe told them it was righteous.
 
-Illiman, who had died on a road carrying nothing of value, would have recognized none of it as his."""}
+Illiman, who had died on a road carrying nothing of value, would have recognized none of it as his."""},
+                {"title": 'The Hero of the Century: Cruel Old Windel',
+                 "content": """His real name was Abrax Windel, and he was not, by the accounts of the people who knew him before fame ruined him, particularly cruel. He was a Raxonian sailor from the port town of Voskraad who had gone to sea at twelve and discovered that the ocean was the only place where the social hierarchies that governed life on land did not apply. On a ship, the man who climbed the rigging fastest was the man who mattered most, and Abrax climbed faster than anyone.
+
+He worked his way through the ranks of a Rim Work pirate vessel — starting as a deckhand, advancing to bosun, then first mate, then captain when the previous captain fell overboard during a storm and was not, to everyone's knowledge, pushed. As captain, Abrax was disciplined, strategic, and possessed of a talent for identifying which ships carried the most valuable cargo, a skill he attributed to 'reading the waterline,' which was either a nautical technique or a poetic way of describing robbery.
+
+His most famous raid was the capture of the Cynthian treasure ship Aurelia Solenne, which was carrying, among other valuables, the Heart of Oradova — a diamond the size of a child's fist that was being transported from the Cynthian mines to the royal treasury. The capture was executed with textbook precision: Abrax shadowed the Aurelia Solenne for three days, attacked at dawn when the watch was changing, and took the ship without losing a man.
+
+The Heart of Oradova made Abrax the most wanted pirate in Fondore and the richest man in the Rim Work. He buried the diamond, along with the bulk of his accumulated treasure, on one of the Rim Work's unnamed islands, because carrying that much wealth on a ship was an invitation to mutiny.
+
+The mutiny came anyway. His own crew, led by his first mate — a man named Dolgar Rheed, who had been waiting for exactly this opportunity — seized the ship while Abrax was ashore. They sailed away without him, leaving him on the island with a flask of water and a knife.
+
+Abrax Windel — Cruel Old Windel, as the stories would remember him — was never seen again. Neither was the Heart of Oradova. Both are still on an island somewhere in the Rim Work, assuming the stories are true, which Klae could neither confirm nor deny.
+
+Klae wrote: 'The treasure is probably still there. So, possibly, is Windel. The Rim Work has never found either, but it has never stopped looking.'"""}
             ]},
             {"number": 6, "name": 'Sixth Century',
              "description": 'Novus Gecharium. The Geckish city-states, emboldened by their defeat of the crusaders and enriched by trade, begin to expand beyond their traditional borders. The Supremus Leader declares a Novus Gecharium — a New Gecha — and the first stirrings of Geckish imperialism reshape the power dynamics of southern Fondore.',
@@ -1200,7 +1276,27 @@ Instead, the Waydrani did what they had always done: they adapted. They learned 
 
 The Geckish discovered, to their occasional discomfort, that the people they had conquered were smarter than they were. A Geckish proverb from this era captures the dynamic: 'A Waydrani will advise you to your face, profit from your back, and mourn at your funeral, and the only dishonest part is the mourning.' The Waydrani found this offensive. They also found it accurate, which was more offensive.
 
-Klae, himself a member of a small and often-overlooked people, had obvious sympathy for the Waydrani. He wrote: 'They survived not by fighting but by being needed. It is a quieter form of resistance, and no less courageous, and it has the considerable advantage of leaving you alive at the end.'"""}
+Klae, himself a member of a small and often-overlooked people, had obvious sympathy for the Waydrani. He wrote: 'They survived not by fighting but by being needed. It is a quieter form of resistance, and no less courageous, and it has the considerable advantage of leaving you alive at the end.'"""},
+                {"title": 'The Hero of the Century: Cael Liedech',
+                 "content": """Cael Liedech was a descendant of Sans the Avenger — the great Pervin rebel who had massacred a Cynthian garrison and won the Battle of Broken Shields during the Second Age War. The Liedech name carried weight in Epervinay. It carried a death sentence in Hyacinth. Cael, who possessed his ancestor's courage and none of his ancestor's prudence, carried both into the most romantic disaster in Fondorian history.
+
+His plan was political. Cael had spent years organizing Pervin resistance cells in the border regions between Epervinay and Hyacinth, and he had concluded that the Cynthians would never voluntarily release the Pervins living under their rule. They needed leverage. The most valuable leverage available was a royal hostage.
+
+Princess Solenne Aelyr — third in line to the Cynthian throne, known for her scholarship and her charity work among the Pervin communities of eastern Hyacinth — was traveling through the border region with a modest escort when Cael's cell intercepted her carriage. The abduction was clean. No casualties. Cael sent a message to the Cynthian court: release the Pervins, or the princess does not come home.
+
+What happened next was not part of the plan.
+
+Solenne was not what Cael had expected. She was intelligent, compassionate, and possessed of a quiet fury about the treatment of Pervins that made Cael's own outrage seem performative by comparison. She had been working, within the system, for Pervin rights. She had been failing, within the system, because the system was designed to resist exactly the kind of change she was pursuing. She understood Cael's frustration because she shared it.
+
+They talked. For weeks, in the farmhouse where Solenne was held, they talked about politics, about justice, about the Pervin communities that both of them cared about in different ways. And somewhere in those conversations, Cael Liedech fell in love with the woman he was holding hostage, which is the kind of strategic failure that no military training can prevent.
+
+He let her go. No conditions. No demands. He simply opened the door and told her she was free.
+
+Solenne returned to the Cynthian court. She did not reveal Cael's location. The Cynthian intelligence service found him anyway, three months later, in a safehouse in the Paronis Hills. He was killed resisting arrest, though the official report's description of the arrest suggests that 'resistance' is a generous characterization of what was, in practice, an execution.
+
+Solenne never married. She continued her work for Pervin rights until her death, with a quiet determination that her family found baffling and her Pervin allies found familiar.
+
+Klae wrote: 'He kidnapped a princess and fell in love. She was captured and set free. Neither of them got what they wanted. Both of them got what they deserved, which was each other, briefly, and the memory of it forever.'"""}
             ]},
             {"number": 7, "name": 'Seventh Century',
              "description": 'The Arden Ascendancy. The Arden Trade Federations reach the height of their influence, controlling the maritime trade routes that connect Fondore to the newly discovered continents. Rin Nohara becomes one of the wealthiest cities in the world. Meanwhile, the first permanent Fondorian settlements are established on Karagon and on the coasts of Metzerul.',
@@ -1230,7 +1326,27 @@ The Tzunadaine regarded the settlement with suspicion. The Pridekin ignored it e
 
 The colony was a preview of what was coming. Fondore had discovered that there were lands beyond the ocean, and those lands had things that Fondore wanted. The acquisition of those things would be, in the coming ages, conducted through trade where possible and through force where convenient. The distinction between the two was never as clear as the merchants pretended, and the people on the receiving end of Fondorian expansion rarely had the luxury of pretending at all.
 
-Klae found Sheah Suraya's founding ledger in a Geckish archive. The first entry listed the colony's assets: 'Two warehouses, one dock, forty-seven merchants, twelve guards, and one priest.' The last item was an afterthought. In the Third Age, God traveled in the cargo hold."""}
+Klae found Sheah Suraya's founding ledger in a Geckish archive. The first entry listed the colony's assets: 'Two warehouses, one dock, forty-seven merchants, twelve guards, and one priest.' The last item was an afterthought. In the Third Age, God traveled in the cargo hold."""},
+                {"title": "The Hero of the Century: Muk 'Brak The Lender",
+                 "content": """Muk 'Brak was the most cheerful criminal in the history of organized crime, and his cheerfulness was, in the end, what saved his conscience.
+
+He was Mura — a desert merchant from the trading towns of Mural Cere, where commerce was conducted with a gregariousness that Fondorian traders found exhausting and Mural Cereyns found essential. A deal, in Mura culture, was not just a transaction. It was a relationship, and relationships required conversation, hospitality, and the exchange of family news before any money changed hands. Muk 'Brak was the best conversationalist in Mural Cere, which made him the best merchant, which made him the ideal front man for the Luschnypp Syndicate's expansion into the holy desert.
+
+He was the first human to work directly with the Pkoyte leadership. The Syndicate had always been a Pkoyte operation, run from Shoale with the racial insularity that dwarves brought to everything. Muk 'Brak's charm, his commercial connections, and his intimate knowledge of Mural Cereyn society made him invaluable. He established the Syndicate's operations in Ulure Cere — the largest trading city in the desert — building a network of moneylending, information brokering, and smuggling that generated enormous profits with minimal violence.
+
+The minimal violence was Muk 'Brak's contribution. He believed, with the conviction of a man who had grown up in a culture that valued hospitality above all things, that crime could be conducted civilly. You could lend money at unfair rates without breaking people's legs. You could smuggle goods without killing the competition. You could gather intelligence without assassination.
+
+The newcomers who arrived from Capera Cuza did not share this philosophy. They were Pkoyte hardliners who viewed Muk 'Brak's gentle approach as weakness, and they began pushing the Ulure Cere operation toward the darker methods that characterized the Syndicate elsewhere: extortion, assassination, the systematic intimidation of anyone who interfered with business.
+
+Muk 'Brak watched the transformation with growing horror. He had built this operation. He had introduced the Syndicate to Mural Cere. And now the thing he had built was becoming something he could not tolerate.
+
+He destroyed it. Over the course of six months, he systematically dismantled the network he had created — leaking information to the Mural Cereyn authorities, warning targets of planned assassinations, and burning the financial records that connected the Syndicate's operations to its leadership.
+
+The Syndicate tried to kill him. They failed, because Muk 'Brak knew every alley, every safehouse, and every escape route in Ulure Cere, and because the Mura merchants who had been his friends protected him with the fierce loyalty that the Mura reserve for their own.
+
+He died in his seventies, in a market stall in Ulure Cere, selling dates and telling stories.
+
+Klae wrote: 'He built a monster and then killed it. The world does not often produce men with the courage to destroy their own work. Muk 'Brak was gregarious enough to do it with a smile.'"""}
             ]},
             {"number": 8, "name": 'Eighth Century',
              "description": 'The Barren Wars. Territorial disputes between the expanding Fondorian powers erupt into a series of conflicts fought across disputed borderlands. The fighting is inconclusive but exhausting, and the wars earn their name from the desolation they leave in their wake.',
@@ -1260,7 +1376,21 @@ Tesh replanted. The armies came back. He replanted again. They came back again. 
 
 By the end of the Barren Wars, Tesh Ghorvan was sixty years old and the field was bare. The topsoil had been compacted by boots and hooves until nothing would grow. He stood in the center of it and looked at the sky and did whatever a man does when everything he has built has been taken by people who will never know his name.
 
-Klae found Tesh Ghorvan's story in a Pervin oral history collected by a monk in Havenaugh. He placed it in the Annals alongside the accounts of generals and kings and treaties, because he believed that the farmer's field was as true an account of the Barren Wars as any military history, and considerably more honest."""}
+Klae found Tesh Ghorvan's story in a Pervin oral history collected by a monk in Havenaugh. He placed it in the Annals alongside the accounts of generals and kings and treaties, because he believed that the farmer's field was as true an account of the Barren Wars as any military history, and considerably more honest."""},
+                {"title": 'The Hero of the Century: Tigar Pridestalker',
+                 "content": """Tigar was born with the wrong name. Among the Pridekin, the title 'Pridestalker' was reserved for the elite warriors — the hunters who tracked the great predators of the Tzunadaine savannah and who served as the military aristocracy of Pridekin society. Tigar was not a warrior. He was, by Pridekin standards, gentle — a gatherer, a storyteller, a keeper of the den-songs that the Pridekin used to record their history and transmit their culture across generations.
+
+He lived not among his own people but with a family of Tzunadaine farmers — the Harashi family, who had settled on the edge of Pridekin territory and who had, through years of quiet coexistence, earned the trust of the local Pridekin community. Tigar had been injured as a cub — a hunting accident that left him with a permanent limp — and the Harashi family had nursed him back to health. He stayed, because the Harashi were kind and because kindness, in Tigar's experience, was rarer than strength and more worthy of loyalty.
+
+The colonial expedition arrived on a spring morning: a company of Geckish soldiers and surveyors sent to map the territory and establish a resource extraction operation. The Harashi family's farm was in the path of the survey, and the Geckish captain informed the family that they would need to relocate. When Jorem Harashi — the family's patriarch, a quiet man who had never raised his voice to anyone — asked where they were supposed to go, the captain did not answer.
+
+Tigar watched this exchange from the doorway of the farmhouse. He understood, with the clarity that Pridekin memory provides, what was happening. He had heard the stories of the Mark of Tzun, of the systematic destruction of Pridekin communities, of the colonial machinery that consumed land and people with equal indifference. He knew what came after the surveyors.
+
+When the Geckish soldiers returned the next morning to enforce the relocation, Tigar met them at the gate. He was one Pridekin with a limp and a hunting spear. There were twenty soldiers with Geckish steel.
+
+He fought long enough for the Harashi family to escape through the back fields. He killed four soldiers before the fifth brought him down. The Harashi family reached the Pridekin lands, where they were sheltered by Tigar's pride.
+
+Klae recorded the Harashi family's account. Jorem Harashi wept as he told it. He said: 'He was not a warrior. He was our friend. He fought because we could not, and he died because he would not leave.'"""}
             ]},
             {"number": 9, "name": 'Ninth Century',
              "description": 'The Contested City. On the border between Lirzan and Wintermen territory in northern Metzerul, the city of Capera Cuza becomes one of the most fought-over pieces of real estate in the world. Claimed by both the Lirzans and the Wintermen, it exists in a state of permanent tension that makes it the most dangerous and most profitable city on the continent.',
@@ -1288,7 +1418,23 @@ By the end of the Third Age, the Luschnypp had agents in every major city in Met
 
 Klae investigated the Syndicate during his research and was, by his own admission, terrified. He wrote: 'I was told, by a person whose identity I will not record, that the Luschnypp had considered killing me during my visit to Capera Cuza, decided I was not worth the effort, and then billed me for the consultation.' He never determined if this was true. He left the city the next morning.
 
-The Luschnypp Syndicate is the shadow that every other institution in Elysal casts. Kings rule by daylight. The Syndicate rules by dark. And in Capera Cuza, where two nations pretend to share a city that neither controls, the dark has always been where the real business gets done."""}
+The Luschnypp Syndicate is the shadow that every other institution in Elysal casts. Kings rule by daylight. The Syndicate rules by dark. And in Capera Cuza, where two nations pretend to share a city that neither controls, the dark has always been where the real business gets done."""},
+                {"title": 'The Hero of the Century: Eren Doutaik',
+                 "content": """Eren Doutaik spoke Snowtongue. This fact alone would have made him unusual among Raxonian military officers. That he spoke it fluently, with the guttural consonants and the elongated vowels that the Wintermen used for formal occasions, made him extraordinary. That he had learned it as a child, from a Wintermen woman who had worked in his family's household and whom he had loved as a second mother, made him something the Raxonian military establishment found profoundly uncomfortable: a man who regarded the Wintermen as people.
+
+He was assigned as an adjutant to the Wintermen auxiliary legions — the units of Wintermen warriors who served in the Raxonian army under Raxonian officers, fighting Raxone's wars in exchange for the nominal recognition of Wintermen territorial rights. The assignment was considered a dead end. The auxiliaries were poorly supplied, poorly treated, and commanded by officers who regarded them as expendable.
+
+Eren changed this. Not dramatically — he was a junior officer without political influence — but persistently. He advocated for better equipment. He insisted that Wintermen warriors be addressed by their clan titles, not by the Raxonian nicknames that the other officers used. He translated orders into Snowtongue, ensuring that the Wintermen soldiers understood what they were being asked to do and why, a courtesy that no previous adjutant had considered necessary.
+
+The Wintermen noticed. They began to trust him, which in Wintermen culture was not a word applied lightly. Trust, for the Wintermen, was earned over years and revoked in an instant, and Eren earned it by the simple method of treating them as he would have treated any Raxonian unit: with respect, competence, and the assumption that their lives mattered.
+
+He petitioned the Raxonian court for Wintermen rights — formal recognition of their territories, the end of forced auxiliary service, the right to govern their own communities. The petition was well-argued, well-documented, and completely ignored. He petitioned again. He was ignored again. He petitioned a third time and was dismissed from his position, because persistence in the service of an unpopular cause is indistinguishable, in the eyes of bureaucracy, from insubordination.
+
+Eren retired to a small house on the Raxonian frontier, within walking distance of the Wintermen territories. He continued to advocate for Wintermen rights until his death, writing letters that were not answered and proposals that were not read.
+
+The Wintermen did not forget. When the Perut Confederation was established centuries later, the first act of the new council was to send a delegation to Eren Doutaik's grave, carrying a carved bone token — the highest honor the Wintermen bestow on an outsider.
+
+Klae wrote: 'He failed. His cause succeeded, long after his death. This is the arithmetic of justice: the down payment is always a life.'"""}
             ]},
             {"number": 10, "name": 'Tenth Century',
              "description": 'The End of Discovery. The Era of Sail closes with the world largely mapped and the major civilizations in contact with one another. The age of exploration is giving way to the age of exploitation, and the ships that once carried curious explorers now carry soldiers, merchants, and the machinery of empire. The world is no longer unknown. It is merely unconquered.',
@@ -1318,7 +1464,23 @@ Tomorrow we sail for home. The map is full now, or full enough. We know where ev
 
 Illiman who died on a road, carrying nothing, help us carry what we have found back to the people who sent us, and help them understand that the world is not ours. It was here before us. It will be here after. We are only passing through.'
 
-Klae published this prayer as the final entry for the Third Age. He believed, correctly, that no historian could say it better."""}
+Klae published this prayer as the final entry for the Third Age. He believed, correctly, that no historian could say it better."""},
+                {"title": 'The Hero of the Century: Arco The Great',
+                 "content": """Arco Revelyc was not a hero. He was a pit fighter — a man who punched other men for money in the underground fighting rings of Boulavar, where the law did not reach and the only rule was that there were no rules. Klae included him in the Annals not as a moral exemplar but as a mirror: a man whose life reflected the world that produced him more honestly than any politician or philosopher.
+
+He was an orphan, born during one of the Barren Wars in a refugee camp outside Aemore. His parents were dead, his name was chosen by the camp administrator who processed him, and his childhood was a series of institutions, streets, and fights — first for survival, then for food, then for the attention of the men who ran the fighting pits, who recognized in the scrawny, furious boy a talent for violence that could be monetized.
+
+The pits were Boulavar's worst-kept secret: underground arenas where men — and occasionally women, and very occasionally non-humans — fought bare-knuckled for purses that ranged from a few coppers to substantial fortunes, depending on the caliber of the fighters and the wealth of the spectators. The fights were brutal, frequently disabling, and occasionally fatal. The spectators included dockworkers, merchants, minor nobles, and at least one Geckish senator, who attended in disguise and whose identity Klae knew but declined to publish.
+
+Arco was the greatest fighter the pits had ever produced. He was not the largest, not the fastest, and not the most technically skilled. He was the most relentless — a man who absorbed punishment that would have stopped anyone else and kept moving forward, because moving forward was the only thing he had ever known how to do. He ruled the Boulavar underground for twelve years, which was an eternity in a profession where careers were measured in months and retirement was usually involuntary.
+
+His most famous fight was against Shabadalla, a Gesdea fighter from the eastern provinces who was undefeated in thirty-seven bouts and who outweighed Arco by forty pounds. The fight lasted three rounds. Arco dropped Shabadalla with a combination that the spectators described, in various accounts, as 'impossible,' 'beautiful,' and 'the kind of thing you see once and remember forever.'
+
+Arco retired at thirty-five, which was ancient for a pit fighter. He opened a tavern in the dock district with his winnings and spent the rest of his life serving drinks to the same men who had once bet on whether he would survive the night.
+
+Klae met Arco in his tavern. He was missing three teeth and walked with a limp. He told Klae: 'I was born in a war and raised in a pit. The world gave me fists. I used them. That's my story.'
+
+Klae wrote: 'That's his story. It is also the story of every child born into violence who was given no choice about who they became. Arco was not a hero. He was a survivor, and survival, in Boulavar's underground, was heroism enough.'"""}
             ]}
         ]
     },
@@ -1365,7 +1527,25 @@ The effect on Fondore was immediate. The kingdoms that had fought the Gechann to
 
 Within a generation, the Gechann had conquered Waydren formally, absorbed the border territories that had been contested during the Barren Wars, and established a military presence in northern Mural Cere that the desert monks could not dislodge. The empire was expanding, and it was expanding with a professional efficiency that made resistance feel not just futile but obsolete.
 
-Klae noted, with his characteristic precision, that the Gechann army's greatest weapon was not the pilum or the gladius or the shield wall. It was the road. Every territory the legions conquered was connected to the empire by a paved road, and every road led back to Boulavar. The empire did not just conquer land. It connected it."""}
+Klae noted, with his characteristic precision, that the Gechann army's greatest weapon was not the pilum or the gladius or the shield wall. It was the road. Every territory the legions conquered was connected to the empire by a paved road, and every road led back to Boulavar. The empire did not just conquer land. It connected it."""},
+                {"title": 'The Hero of the Century: Kaed Otticus',
+                 "content": """Kaed Otticus was the finest general the Gechann Empire ever produced, and the empire tried to kill him for it.
+
+He rose through the legions on merit alone — a rarity in the later imperial period, when officer commissions were sold to the wealthy and military rank was more a matter of connections than competence. Kaed had no connections. He was the son of a centurion from the provinces, educated in the legion camps, promoted through a series of campaigns in which his tactical brilliance was matched only by his refusal to tolerate incompetence in his superiors, a quality that made him invaluable on the battlefield and insufferable at headquarters.
+
+His campaigns were legendary. He pacified the Waydrani border in three months, a task his predecessor had failed to accomplish in three years. He defeated a Debrear raiding force that outnumbered his legion two to one by luring them into a river crossing and attacking while they were split between both banks. He was, in every sense that the Geckish valued, the ideal soldier: disciplined, brilliant, and victorious.
+
+The order that broke him came during the Epervinay campaign. The Imperator, frustrated by Pervin resistance, commanded Kaed to raze the Pervin town of Erielle — a civilian settlement with no military value whose destruction was intended as a message. The order specified that no distinction was to be made between combatants and non-combatants. Women. Children. Everyone.
+
+Kaed refused. He sent a message to Palasor that Klae recovered from the imperial archives: 'I am a soldier of the Gechann Empire. I am not a butcher. Find someone else.'
+
+The Imperator found someone else. The town of Erielle was destroyed by a different legion. Kaed, watching from his camp, made a decision that would make him either a traitor or a liberator, depending on which history you read.
+
+He turned his legion against the empire. He marched on Palasor, defeated the garrison with the contemptuous ease of a great general fighting a mediocre one, and established an independent Geckish state in the imperial capital. The state lasted four years — long enough to demonstrate that an alternative to imperial rule was possible, not long enough to make it permanent. The empire regrouped, besieged Palasor, and overwhelmed Kaed's defenses through sheer numerical superiority.
+
+Kaed died on the walls of Palasor, fighting. His independent state died with him. But the precedent survived: a Geckish general had looked at the empire's orders and said no, and the word echoed for centuries.
+
+Klae wrote: 'He was the best they had. They wasted him, as empires waste everything that is better than they deserve.'"""}
             ]},
             {"number": 2, "name": 'Second Century',
              "description": 'The Pervin Wars. The Gechann Empire turns its attention to Epervinay, the small but fierce nation that had won its independence in the Second Age War. The resulting conflict produces some of the most celebrated resistance fighters in Fondorian history, and demonstrates that professional armies can be beaten by people with nothing left to lose.',
@@ -1403,7 +1583,27 @@ The Gechann withdrew. Not completely — they maintained a military presence on 
 
 She never wrote a memoir. She never commissioned a statue. When she died, she was buried in the family plot in Havenaugh, and the inscription on her stone was the same as every other Havenaugh buried there: name, dates, and the Pervin word for home.
 
-Klae wrote: 'She saved her country by being too stubborn to admit it was lost. This is not a military strategy. It is a Pervin one.'"""}
+Klae wrote: 'She saved her country by being too stubborn to admit it was lost. This is not a military strategy. It is a Pervin one.'"""},
+                {"title": 'The Hero of the Century: Barrin Rous The Art Thief',
+                 "content": """The story of Barrin Rous is the most famous love story in Elysal, and it is, like most love stories, a tragedy.
+
+He was half Raxonian, half Geckish — a combination that gave him his father's size and his mother's cleverness, along with a face that belonged to neither culture and attracted attention in both. He was a thief by profession, educated by the street, and possessed of a talent for entering buildings that their owners considered impenetrable, a skill he attributed to patience, planning, and the observation that most locks are designed to stop people who don't understand locks.
+
+He fell in love with a painter. Her name was Lessa Medelune — the daughter of a Geckish nobleman, a woman of extraordinary beauty whose own talent was the canvas rather than the crime. She painted portraits that the Geckish aristocracy competed to commission, and she painted Barrin once, in secret, in the garret above her father's estate where they met on nights when the household slept.
+
+They planned to run away together. They had money saved. They had a route mapped. They had a ship waiting in Suntrae that would carry them to Karagon, where nobody knew them and nobody would care that a nobleman's daughter had chosen a thief.
+
+Her father found out. He came after Barrin with soldiers and dogs and the fury of a man whose honor mattered more to him than his daughter's happiness. Barrin had a choice: go to Lessa, fight, and probably die with her in the crossfire. Or run.
+
+He ran.
+
+Years later, living under a false name in the Rim Work, he learned that Lessa had died. The accounts say of a broken heart, which Klae found implausible as a medical diagnosis and entirely plausible as an emotional one. She had stopped painting. She had stopped eating. She had stopped, by degrees, living.
+
+Barrin's response was the most extraordinary criminal career in Fondorian history. He spent the next twenty years stealing Lessa's paintings. Every one. From the galleries of Boulavar, from the private collections of the Thirteen Families, from the palace of the Imperator himself — every canvas that bore her hand, he took. The thefts were masterful, audacious, and conducted with a precision that suggested a man who had nothing left to lose and nothing left to live for except the work.
+
+He was never caught. He was never identified. The paintings were never recovered. Somewhere in the world, in a room that nobody knows about, every painting Lessa Medelune ever made hangs on the walls, seen by no one except the man who loved her and left her and could not forgive himself for either.
+
+Klae wrote: 'He stole her art so no one else could see her beauty. This is either the greatest love story ever told or the saddest. I suspect it is both.'"""}
             ]},
             {"number": 3, "name": 'Third Century',
              "description": "The Fall of Vera. The ancient Kingdom of Vera, once the mightiest naval power in the world, collapses under the weight of its own slave economy and Geckish military pressure. The island kingdom that built the first transoceanic empire becomes a Geckish dependency, and the Karaf slaves who built Vera's wealth are freed — not by Veran conscience but by Geckish pragmatism.",
@@ -1437,7 +1637,25 @@ The Gechann provided, to their credit, a rudimentary transition program. Land gr
 
 Some Karaf left Vera entirely. They sailed to Karagon, where the free Karaf nation had been building a civilization for millennia. The reunion was complicated: the Karagonese Karaf had developed a culture so different from the Veran Karaf that they were, in many ways, different peoples who happened to share a skin color and a history of suffering.
 
-Klae spent months interviewing Karaf communities on both Vera and Karagon. He concluded: 'Freedom given is not the same as freedom taken. The Karaf of Karagon earned theirs with blood. The Karaf of Vera received theirs from the same kind of power that had stolen it in the first place. Both are free. Neither has forgotten.'"""}
+Klae spent months interviewing Karaf communities on both Vera and Karagon. He concluded: 'Freedom given is not the same as freedom taken. The Karaf of Karagon earned theirs with blood. The Karaf of Vera received theirs from the same kind of power that had stolen it in the first place. Both are free. Neither has forgotten.'"""},
+                {"title": 'The Hero of the Century: Penecor The Wise',
+                 "content": """Penecor Gevlyc Boulavaranus was poor for fifty years and rich for three, and what he did with those three years earned him the name that history remembers.
+
+He was a merchant — a small one, operating a single stall in the Boulavar market district, selling dried fish and pickled vegetables to dockworkers who could not afford the better stalls. His margins were thin, his customers were poorer than he was, and his ambitions, such as they were, extended no further than keeping his stall open and his family fed.
+
+The plague changed this. When the fever swept through Gecha during the upheavals of the Fourth Age, the markets collapsed, the supply chains failed, and the population of Boulavar — particularly the poor, who lived in the crowded tenements of the dock district — began to starve. The wealthy retreated to their estates. The government, consumed by the military crisis, could not or would not help.
+
+Penecor, who had spent fifty years learning how to move goods through difficult markets, found himself uniquely positioned. He knew the suppliers. He knew the routes. He knew which warehouses had been abandoned with their contents intact and which ships in the harbor carried cargo that their owners could no longer sell. He began buying — at the fire-sale prices that plague and panic produce — and distributing.
+
+He did not distribute for profit. He distributed for free.
+
+The food that Penecor moved through Boulavar's dock district during the plague years kept an estimated eight thousand people alive. He bought grain from abandoned warehouses. He negotiated with ship captains who were desperate to sell cargo they could not transport. He organized distribution points in the market squares, staffed by volunteers who were mostly his former customers, and he ran the operation with the same meticulous attention to margins and logistics that he had applied to his fish stall, except that the margins were now measured in lives rather than coins.
+
+The effort made him rich, perversely. The contacts he had established, the reputation he had built, and the gratitude of a population that owed him their survival translated, after the plague subsided, into commercial success that exceeded anything his fish stall could have produced. He was wealthy for the first time in his life.
+
+He gave it away. He funded clinics. He established food banks. He endowed a school for the children of plague victims. He died with approximately the same amount of money he had started with, which was almost nothing.
+
+Klae wrote: 'He made his fortune during a plague and spent it on the people the plague would have killed. This is either sainthood or madness. In Penecor's case, it was accounting.'"""}
             ]},
             {"number": 4, "name": 'Fourth Century',
              "description": 'The Rise of the Karagon. While the Gechann Empire expands across Fondore, the Karaf nation on Karagon emerges as an unlikely power. Built on the ruins of Veran colonialism and sustained by a fierce egalitarian culture, Karagon develops its own navy, its own trade routes, and its own ideas about how a nation should be governed.',
@@ -1467,7 +1685,23 @@ The navy's first major test came when a Geckish trading fleet, emboldened by the
 
 The Gechann, who were stretched thin by their continental empire, decided that Karagon was not worth the effort. The island republic was left alone, which was all the Karagonese had ever wanted. They continued to trade with Fondore — Karaf merchants were welcome in every port — but they traded on their own terms, and any nation that attempted to impose terms on them discovered what the fire pots were for.
 
-Klae noted that Karagon's independence was maintained not by diplomacy or alliances but by the simple, brutal logic of naval superiority. The Karagonese could not defeat the Gechann Empire in a war. But they could make any invasion so expensive that no Imperator would consider it worthwhile. This is the strategy of the small and the determined, and it has a perfect record against the large and the distracted."""}
+Klae noted that Karagon's independence was maintained not by diplomacy or alliances but by the simple, brutal logic of naval superiority. The Karagonese could not defeat the Gechann Empire in a war. But they could make any invasion so expensive that no Imperator would consider it worthwhile. This is the strategy of the small and the determined, and it has a perfect record against the large and the distracted."""},
+                {"title": 'The Hero of the Century: Kem Kironk',
+                 "content": """Kem Kironk was half Pkoyte and half Hiyalmite, a combination so unusual that most people who heard it assumed he was joking. He was not. His mother was a Hiyalmite fisherwoman who had traveled to Shoale on a trading vessel and had fallen for a Pkoyte miner named Grom, whose chief attractions were his reliability, his kindness, and his ability to carry objects that weighed more than he did, which is saying something because Grom was a dwarf.
+
+Kem inherited his father's build — short, broad, strong enough to swing a pickaxe for twelve hours without complaint — and his mother's temperament, which was cheerful, curious, and entirely unsuited to the underground life that Shoale demanded. He worked the mines because the mines were what Shoale had to offer, and he worked them well, because Kem did everything well when he could be convinced to do it at all.
+
+The bandits came on a night when the mine's guard detail was away. They were Lirzan — renegade lizardfolk from the border territories who had discovered that miners, who spent their lives underground and their evenings exhausted, were easy targets. They captured the entire mining crew: twenty-three Pkoyte and human workers, bound and marched through the jungle toward a labor camp where they would be worked until they broke and replaced with the next batch.
+
+Kem was not captured. He had been in a side tunnel when the bandits struck, and he emerged to find the mine empty, the tools scattered, and the trail of twenty-three pairs of boots leading into the jungle.
+
+He followed the trail for two days. He did not sleep. He did not plan, because planning requires time and Kem understood that every hour he delayed was an hour closer to a camp from which rescue would be impossible. He found the bandit camp on the second night: a clearing in the jungle where the captives were tied to trees and the bandits — seven of them — were sleeping around a fire.
+
+Kem killed them while they slept. This was not honorable. It was not heroic in the way that ballads prefer. It was practical, in the way that a man who has followed a trail for two days without sleeping is practical: efficient, brutal, and entirely focused on the only thing that mattered, which was the twenty-three people tied to the trees.
+
+He freed the miners. He led them back to Shoale. He went back to work the next day, because the mine did not operate itself.
+
+Klae wrote: 'He did not do it for glory. He did it because they were his people and they were in the dark. He went into the dark after them. That is all.'"""}
             ]},
             {"number": 5, "name": 'Fifth Century',
              "description": 'The Icrazan Genocide. The Gechann Empire, seeking to secure its holdings in Metzerul, launches a campaign against the Lirzan Kingdom that escalates into one of the worst atrocities in Elysali history. The dragonborn ruling class is specifically targeted, and the events of this century leave scars that will never fully heal.',
@@ -1503,7 +1737,23 @@ The Lirzans resisted with everything they had. Dragonborn warriors fought to the
 
 Klae recorded the Icrazan Genocide in the flattest, most clinical language he could manage. He did not editorialize. He did not moralize. He simply listed the numbers, the dates, the names of the dead where they could be recovered, and the names of the commanders who gave the orders. He believed that the facts, presented without adornment, were condemnation enough.
 
-He was right."""}
+He was right."""},
+                {"title": 'The Hero of the Century: Zumaraya the Keeper',
+                 "content": """When the Gechann came for the dragonborn, Zumaraya hid the children.
+
+She was a dragonborn elder — old enough that the smoke from her nostrils had turned from amber to grey, which among the dragonborn indicated an age beyond what most surface civilizations could imagine. She was the Keeper of the Den — the custodian of the communal nursery where dragonborn eggs were incubated and hatchlings were raised during their first vulnerable years. It was an honored position, held by the oldest and most trusted member of the community, and it became, during the genocide, the most important position in the Lirzan Kingdom.
+
+The Geckish legions targeted the dragonborn systematically. They had learned, through intelligence that Klae suspected came from the Luschnypp, to identify the physical markers that distinguished dragonborn from common lizardfolk: the vestigial wing-bones, the darker scales, the smoke. They raided villages, separated the dragonborn, and killed them.
+
+Zumaraya saw what was coming before the legions reached her territory. She gathered every dragonborn child she could find — forty-seven hatchlings and juveniles from the surrounding communities — and led them into the deep jungle, to a network of volcanic caves beneath Mount Boudazi that only the Keepers knew about. The caves were hot, dark, and dangerous, but they were invisible to the Geckish scouts who relied on surface trails and whose maps did not extend underground.
+
+Zumaraya kept the children alive in the caves for three years. She fed them on jungle plants and cave fish. She taught them the old songs, the old stories, the knowledge that the dragonborn had accumulated over millennia. She kept them quiet when Geckish patrols passed overhead. She kept them warm when the volcanic vents shifted and the caves cooled. She kept them, above all, alive.
+
+When the Geckish withdrawal came, Zumaraya led the children out of the caves and into the sunlight. Forty-seven had entered. Forty-three emerged. Four had died of fever in the darkness, and Zumaraya buried them in the caves with the proper rites, because even in extremity, the dead deserve their dignity.
+
+The forty-three survivors became the nucleus of the dragonborn recovery. Their descendants would lead the Lirzan Renaissance centuries later, building the Volcanic University and the civilization that astonished the world. Every dragonborn alive in the later ages could trace their lineage back to the children of the cave, and through them, to the old woman who had carried them into the dark and brought them back to the light.
+
+Klae wrote: 'She saved a people by hiding them in a mountain. The mountain kept her secret. The children kept her memory. That is how civilizations survive.'"""}
             ]},
             {"number": 6, "name": 'Sixth Century',
              "description": 'Palasor City. At the height of its power, the Gechann Empire builds Palasor, a new capital designed to project imperial grandeur across the world. The city becomes a monument to Geckish ambition — and, eventually, a monument to the hubris that accompanies it.',
@@ -1531,7 +1781,21 @@ But the games served a political purpose that went beyond entertainment. They ke
 
 The games also served as a pressure valve for the empire's military culture. The Gechann glorified martial prowess, but the legions were fighting on distant frontiers, and the average citizen of Palasor would never see a real battle. The arena provided a substitute: controlled violence, presented as spectacle, allowing the population to participate vicariously in the martial virtues that the empire claimed as its identity.
 
-Klae attended a re-enactment during his visit to the ruins, staged by a local historical society with considerably fewer resources than the original. He found it disturbing, not because of the violence — which was simulated — but because of the enthusiasm. 'The audience cheered,' he wrote, 'at the moment the Verans died. They have been cheering at this moment for centuries. I do not think they know what they are cheering for.'"""}
+Klae attended a re-enactment during his visit to the ruins, staged by a local historical society with considerably fewer resources than the original. He found it disturbing, not because of the violence — which was simulated — but because of the enthusiasm. 'The audience cheered,' he wrote, 'at the moment the Verans died. They have been cheering at this moment for centuries. I do not think they know what they are cheering for.'"""},
+                {"title": 'The Hero of the Century: Thessik Moran the Elder',
+                 "content": """The architect of Palasor was Waydrani, which meant that the greatest monument to Geckish imperial ambition was designed by a man whose own people had been conquered by the empire he was glorifying. Thessik Moran found this irony deeply amusing. He was, apparently, the only one who did.
+
+Thessik was recruited — or conscripted, depending on which source you trust — from the university at Hypolta, where he had been teaching mathematics and engineering to students who were, in his professional opinion, adequate. The Imperator wanted a capital that would make visitors feel small. Thessik wanted to build the most beautiful city in the world. These goals were not identical, but they were compatible, and the compromise between them produced Palasor.
+
+He was a small man — Waydrani typically were — with a quiet voice and an absolute conviction that he was right about everything, a conviction that the evidence consistently supported. He argued with the Imperator about the placement of the senate hall. He argued with the engineers about the load-bearing capacity of the marble columns. He argued with the Cereyst priests about the height of the temple spires, which he wanted taller than tradition allowed because 'God can see further than the High Cere gives Him credit for.'
+
+The city took twenty years to build. Thessik supervised every detail, from the grand avenue that could accommodate three legions marching abreast to the drainage system that prevented the flat plain from flooding during the spring rains. He designed buildings that were both magnificent and functional, which is harder than designing buildings that are only one or the other. He insisted on public spaces — parks, gardens, fountains — that the military planners considered wasteful and that the population would consider essential.
+
+He also, quietly and without official authorization, incorporated Waydrani design elements throughout the city. The proportions of the columns followed Waydrani mathematical ratios. The layout of the public gardens reflected Waydrani principles of harmony. The drainage system was based on Waydrani engineering from Hypolta. The Imperator wanted a Geckish city. Thessik gave him a Waydrani masterpiece wearing a Geckish uniform.
+
+He was never acknowledged for this. The official histories credit the city to Geckish ambition and Geckish engineering. Thessik, who had expected nothing else, returned to Hypolta after the construction was complete and resumed teaching.
+
+Klae, who recognized Waydrani design when he saw it, wrote: 'The greatest Geckish city was designed by a Waydrani. The Gechann built an empire. The Waydrani built the empire's buildings. History remembers the empire. The buildings are still standing.'"""}
             ]},
             {"number": 7, "name": 'Seventh Century',
              "description": 'The Second Holy War. Emboldened by Geckish overextension, the High Cere calls a second crusade to retake the holy lands of Mural Cere. The war is larger, bloodier, and more cynical than the first, and it produces a generation of disillusioned soldiers who return home questioning everything they were told to believe.',
@@ -1563,7 +1827,23 @@ The Gechann Empire, which had weathered the crusade with minimal territorial los
 
 He was wrong about that, as Imperators often are about things that do not involve legions. The religious transformation that the veterans brought home would reshape Fondorian society more profoundly than any military campaign, because it changed what people believed, and what people believe determines what they are willing to fight for and what they are willing to accept.
 
-Klae, who was himself not religious, understood this. He wrote: 'The veterans came home and said: I have seen what is done in God's name, and I do not believe God wants it. This is a small sentence. It brought down cathedrals.'"""}
+Klae, who was himself not religious, understood this. He wrote: 'The veterans came home and said: I have seen what is done in God's name, and I do not believe God wants it. This is a small sentence. It brought down cathedrals.'"""},
+                {"title": 'The Hero of the Century: Brother Aldous of Ramal Cere',
+                 "content": """Brother Aldous was a Cereyst monk who went to war and came back a pacifist, which was the wrong thing to be in a kingdom that was still enthusiastic about crusading.
+
+He was Leimish — a younger son of a minor Clairdwell family who had entered the monastic order at Clarity because he had a genuine vocation and because the alternatives, for a younger son with no inheritance, were the military or the merchant marine. Aldous chose God over swords and ledgers, and for fifteen years he lived the contemplative life: prayer, study, gardening, and the quiet satisfaction of a man who has found his place in the world.
+
+The Second Holy War disrupted this satisfaction. The Clairdwell court called for volunteers from every institution in Lambridge, including the monasteries, and Aldous — motivated by duty, by faith, and by the sincere belief that the holy lands could be liberated without excessive bloodshed — volunteered as a chaplain.
+
+What he saw in the Pasav destroyed his faith in the war, though not his faith in God. The crusading army killed civilians. It sacked cities. It committed atrocities that the chaplains were expected to bless and that Aldous could not reconcile with the teachings of the man whose name was on every banner. He wrote letters to the Clairdwell court describing what he had witnessed. The letters were not acknowledged.
+
+He returned to Lambridge a changed man. He spent the rest of his life writing — not theology but testimony, detailed accounts of the crusade's violence that he published at his own expense and distributed through the monasteries, the universities, and anyone who would read them. The accounts were unflinching, specific, and devastating to the crusading mythology that Lambridge had built around the holy wars.
+
+The Church tried to silence him. He could not be excommunicated — his monastic order protected him — but he was transferred to increasingly remote postings, ending at a tiny monastery on the Schvainese coast where the nearest parish was three days' walk away.
+
+He continued writing. His accounts became the primary source for later historians — including Klae — who wanted to understand what the crusades had actually been like, as opposed to what the ballads said they had been like. The difference, Aldous demonstrated, was the difference between a painting and a photograph: the painting shows you what the artist wants you to see, and the photograph shows you what was there.
+
+Klae wrote: 'Brother Aldous told the truth about a war that his kingdom preferred to remember as glorious. The truth was not glorious. It was necessary.'"""}
             ]},
             {"number": 8, "name": 'Eighth Century',
              "description": 'The Kingdom of the North Divided. The Raxonian monarchy, weakened by the princely feuds and the costs of the crusade, fractures into warring factions. The War of Snow — a civil war fought across the frozen North — produces one of the most devastating conflicts in Raxonian history and permanently alters the balance of power in northern Fondore.',
@@ -1595,7 +1875,21 @@ The representatives came. They drank. They argued. They drank more. Inge Torvald
 
 The truce held, not because of its legal framework — which was minimal — but because of its practical foundation. The Raxonians were exhausted. The economy was shattered. The army, what was left of it, wanted to go home. And the tavern-keepers, who understood their countrymen better than any politician, had given both sides an exit that allowed them to stop fighting without admitting they had been wrong to start.
 
-Klae found the Frozen Truce deeply characteristic of Raxone. He wrote: 'Other nations end their wars with treaties signed in palaces. The Raxonians ended theirs in a tavern, brokered by a woman who was tired of cleaning blood off her floorboards. I am not sure which approach is more civilized, but I know which one I prefer.'"""}
+Klae found the Frozen Truce deeply characteristic of Raxone. He wrote: 'Other nations end their wars with treaties signed in palaces. The Raxonians ended theirs in a tavern, brokered by a woman who was tired of cleaning blood off her floorboards. I am not sure which approach is more civilized, but I know which one I prefer.'"""},
+                {"title": 'The Hero of the Century: Inge Torvaldssen',
+                 "content": """The woman who ended the War of Snow was a tavern-keeper, and she ended it the way she ran her tavern: by refusing to let anyone leave until they had settled their bill.
+
+Inge Torvaldssen ran the largest inn in Voskraad, a border town that had changed hands four times during the civil war and whose population had developed the survival strategy of serving whoever was in charge and keeping their opinions in the cellar with the Kript. Inge had served Raxonian soldiers from both factions. She had bandaged their wounds, fed them from her kitchen, and listened to their grievances with the professional patience of a woman who had been hearing men's complaints for thirty years and was not impressed by any of them.
+
+She organized the Frozen Truce. The details of this are recorded elsewhere in the Annals, but what the main account does not capture is the sheer force of will required to get two warring factions into the same room and keep them there.
+
+She bullied. She shamed. She appealed to the soldiers' memories of the towns they had destroyed, the friends they had killed, the families they had orphaned. When the representatives of Prince Varek's faction threatened to walk out, she blocked the door and told them that if they wanted to leave, they would have to move her, and that she weighed more than she looked and was considerably angrier. When the representatives of Prince Aldren's faction demanded unconditional surrender, she poured them another round and told them that unconditional surrender was what you demanded from enemies, and that these men were not enemies — they were Raxonians who had forgotten how to be Raxonians, and she would remind them if it took all winter.
+
+It nearly did. The negotiations lasted three weeks, during which Inge fed both delegations from her kitchen, slept approximately four hours per night, and consumed more Kript than any of the delegates, which was a diplomatic gesture because in Raxone, the person who drinks the most is the person everyone trusts the most.
+
+She was not mentioned in the treaty. Tavern-keepers do not appear in official documents. But she was there, at the signing, standing in the corner of her own inn with her arms crossed and her expression suggesting that if anyone changed their mind, she would be having words.
+
+Klae wrote of Inge at length. She was, he believed, the most important person in the War of Snow: the person who made peace possible by making war intolerable. He concluded: 'Diplomats end wars with treaties. Inge ended one with stubbornness, Kript, and the moral authority of a woman who was sick of cleaning blood off her floors. I have met kings with less authority.'"""}
             ]},
             {"number": 9, "name": 'Ninth Century',
              "description": 'The Schvainese Rebellion. The Isles of Schvaine, long a Leimish territory and the birthplace of the Knights of Lambridge, erupt in revolt against the Clairdwell dynasty. The rebellion forces Lambridge to confront the contradiction at the heart of its national identity: a kingdom founded on liberation that has become, in its own small way, an oppressor.',
@@ -1627,7 +1921,25 @@ The resolution was called the Compromise of Tides, negotiated on a beach at low 
 
 The terms gave the Schvainese most of what they wanted. Elected governors. Proportional representation. The fishing tax was repealed and replaced with a voluntary contribution to the Leimish navy, which amounted to the same thing but was phrased differently, and phrasing matters to the Leimish. The Clairdwell king issued a formal statement acknowledging the debt that Lambridge owed to the Isles of Schvaine, which was not quite an apology but was close enough for the Schvainese to accept.
 
-The Compromise of Tides was not a revolution. It was a correction — a small adjustment to a relationship that had been out of balance for centuries. Klae found it significant precisely because it was small. He wrote: 'The great revolutions get the histories. The small corrections get the results. The Schvainese did not overthrow their kingdom. They reminded it of its own principles, which is harder and more important.'"""}
+The Compromise of Tides was not a revolution. It was a correction — a small adjustment to a relationship that had been out of balance for centuries. Klae found it significant precisely because it was small. He wrote: 'The great revolutions get the histories. The small corrections get the results. The Schvainese did not overthrow their kingdom. They reminded it of its own principles, which is harder and more important.'"""},
+                {"title": 'The Hero of the Century: Colm Devane',
+                 "content": """Colm Devane was a fisherman. He is remembered for a speech, which is unusual for a man who spent most of his life not talking, because the sea teaches you that words are less useful than weather and considerably less reliable.
+
+He lived on the largest of the Schvainese islands, in a cottage that overlooked the harbor where his father and his grandfather and his great-grandfather had launched their boats. The Devane family had been fishing the Schvainese waters since before the Knights of Lambridge had used the islands as a training ground, and Colm felt a proprietary relationship with the sea that no mainland tax collector could understand or override.
+
+The fishing tax was the catalyst. The Clairdwell court, straining under military expenses, imposed a levy on Schvainese catches that would have taken approximately a quarter of Colm's income — income that was already modest, because fishing is not a profession that produces wealth and is instead a profession that produces fish, which is a different thing.
+
+Colm stood up in the town assembly. He was not a speaker. He had never addressed a public gathering. He was a man who mended nets and gutted fish and knew the tides better than he knew his own children's names, and he stood in a room full of his neighbors and said the thing that everyone was thinking and nobody had said.
+
+His speech — reconstructed by Klae from six different oral accounts, which agreed on the substance if not the exact wording — was simple. The Schvainese had given Lambridge everything: their islands, their sons, their loyalty. They had sheltered the Knights. They had crewed the navy. They had paid their taxes without complaint for centuries. And what had they received? A new tax. A governor they had not chosen. And the expectation that they would continue to give without receiving, because that was what islands did: they gave, and the mainland took.
+
+'We gave them an island to fight from,' Colm said. 'And they gave us a tax to pay. We sheltered their knights, and they sent us their governors. We are the cradle of Lambridge, and Lambridge has forgotten who rocked it.'
+
+The assembly voted to withhold the tax. The rebellion had begun.
+
+Colm did not lead the rebellion. He went back to fishing, because the fish did not care about politics and someone needed to feed the island while the politicians sorted things out. He is remembered not for what he did after the speech but for the speech itself: the moment when a quiet man said a loud thing and a nation listened.
+
+Klae wrote: 'He said what needed saying and went back to work. This is the Schvainese in miniature: they do what is necessary and then they do what is practical.'"""}
             ]},
             {"number": 10, "name": 'Tenth Century',
              "description": 'The Long Shadow. The Gechann Empire reaches its maximum extent and begins to show the first signs of the decline that will define the next age. The conquered peoples are restless, the treasury is strained, the legions are spread thin across half the world. The Fourth Age ends not with a collapse but with a tremor — the first warning that the ground beneath the empire is not as solid as the marble of Palasor suggests.',
@@ -1663,7 +1975,23 @@ Tell the children I am well. I am not, but tell them anyway.
 
 Your husband, from the edge of everything.'
 
-Klae published this letter as the final entry for the Fourth Age. He believed, and was probably correct, that the centurion on the frontier understood the empire's condition better than the Imperator in Palasor."""}
+Klae published this letter as the final entry for the Fourth Age. He believed, and was probably correct, that the centurion on the frontier understood the empire's condition better than the Imperator in Palasor."""},
+                {"title": 'The Hero of the Century: Elara Vyc Jayvlunnus',
+                 "content": """Elara was the first woman elected to the Geckish Senate, and the Senate spent the next twenty years trying to pretend she wasn't there.
+
+She was from Jayvlun — the most democratic of the Geckish city-states, which had always been uncomfortable with the imperial system and which had retained, even during the height of the Imperators, a tradition of civic participation that the other city-states found quaint. Jayvlun elected its own local officials. Jayvlun held public debates. Jayvlun allowed women to own property, which the other city-states found either progressive or scandalous depending on their politics.
+
+Elara ran for the Senate because nobody else would. The seat that Jayvlun held in the imperial legislature had been vacant for three years, because the previous senator had died and no man in Jayvlun was willing to serve in a body that they considered corrupt, ineffective, and embarrassingly located in Palasor, which was too far away and too hot. Elara, who had been managing the city-state's finances for a decade and who was, by every objective measure, the most qualified candidate in Jayvlun, put her name forward.
+
+The Senate's reaction was instructive. There was no law against women serving — the early Geckish federation had not considered the possibility and had therefore not prohibited it — but the custom was exclusively male, and custom, in Gecha, had the force of law. Elara's opponents challenged her eligibility. The challenge was reviewed by the Senate's legal committee, which spent six months searching for a rule that excluded women and, finding none, was forced to seat her.
+
+She served for twelve years. She was ignored, interrupted, and excluded from committee assignments. She responded by being more prepared, more knowledgeable, and more persistent than any of her colleagues, a strategy that did not make her popular but made her impossible to dismiss. She pushed through legislation on commercial regulation, public sanitation, and the legal rights of Waydrani residents — none of which were glamorous and all of which were necessary.
+
+When she retired, the Senate did not acknowledge her service. Jayvlun did. They named a public building after her — the Elara Civic Hall, where the city-state's democratic assemblies are still held.
+
+Klae met Elara during his research. She was seventy-three, sharp-eyed, and unimpressed by historians. She told him: 'I did not change the Senate. I survived it. Sometimes survival is the revolution.'
+
+Klae wrote: 'She walked into a room that did not want her and stayed until the room adjusted. The room is still adjusting. She considers this progress.'"""}
             ]}
         ]
     },
