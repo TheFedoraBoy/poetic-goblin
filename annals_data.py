@@ -6,7 +6,11 @@ Klae was not a historian by training. He was a clerk's apprentice who read too m
 
 The Annals cover eight ages, eighty centuries, and thousands of stories of noble heroes, tragic villains, despotic kings and their peasant usurpers, wise monks and treacherous rogues, and everything in between. From the first civilization of the Ghenyarians in Waydren, to the steam and iron of the Age of Solitude, the Annals provide an account of a world that has been at war with itself since the moment it learned how to hold a weapon, and at peace with itself in the rare and precious moments it chose to put one down.
 
-Is your story in here? Perhaps buried under some sheets of parchment and cobwebs, waiting for a young scholar to blow off the dust and be enthralled by your tale. Klae certainly hoped so. He was fond of saying that history was not the study of the dead but of the living, because every person walking the streets of Boulavar or fishing off the docks of Catcher's Rim was the end product of eight thousand years of decisions, mistakes, love affairs, murders, and lucky breaks. The Annals do not judge. They simply remember, so that we don't have to do it alone."""
+Is your story in here? Perhaps buried under some sheets of parchment and cobwebs, waiting for a young scholar to blow off the dust and be enthralled by your tale. Klae certainly hoped so. He was fond of saying that history was not the study of the dead but of the living, because every person walking the streets of Boulavar or fishing off the docks of Catcher's Rim was the end product of eight thousand years of decisions, mistakes, love affairs, murders, and lucky breaks. The Annals do not judge. They simply remember, so that we don't have to do it alone.
+
+[Inscribed on the first page of the original manuscript, in Klae's hand:]
+
+To whoever reads this: I was one man with a pen and a lifetime. I could not record every story. I could not visit every village, interview every soldier, sit at every hearth. The stories I missed outnumber the stories I found, and the people I never met lived lives as worthy of remembrance as the people I did. If these pages move you, go find the stories I could not. The world is full of them. They are waiting. They have always been waiting. — K.K., Library of Spires, Catcher's Rim"""
 
 AGES = [
     {
@@ -2990,7 +2994,21 @@ The Cynthian king — Aelyr IV, a descendant of the king who had banned Lyssandr
 
 The Pervin population of Hyacinth watched the Pervin Republic across the border with feelings that the Cynthian court preferred not to examine. Their cousins — ethnically identical, culturally similar — were governing themselves, electing their leaders, and living in a nation where the shape of one's ears did not determine one's prospects. The comparison was uncomfortable for everyone: for the Cynthians, who could not explain why their Pervins did not deserve the same rights; for the Pervins, who could not explain why they tolerated a system their cousins had rejected; and for the diplomats, who could see the tension building and could do nothing about it without disturbing the Sacred Hegemony.
 
-Klae visited the Cynthian court and found it magnificent and tragic. He wrote: 'Oradova is a masterpiece built on a contradiction: a civilization that values beauty above all things and cannot see the ugliness at its foundation.'"""}
+Klae visited the Cynthian court and found it magnificent and tragic. He wrote: 'Oradova is a masterpiece built on a contradiction: a civilization that values beauty above all things and cannot see the ugliness at its foundation.'"""},
+                {"title": 'The Hero of the Century: Ambassador Cyrenne Aelyr',
+                 "content": """Cyrenne Aelyr was a Cynthian diplomat who spent forty years preventing wars that nobody thanked her for preventing, because the nature of successful diplomacy is that nothing happens and nobody notices.
+
+She was born into the Cynthian court — a minor branch of the royal family, close enough to power to understand it and far enough from the throne to be useful rather than decorative. She entered the diplomatic service at twenty-two, an age when most Cynthian nobles were attending concerts and debating poetry. Cyrenne attended negotiating sessions and debated tariffs, which she found more interesting because tariffs had consequences and poetry, in her experience, did not.
+
+She served as Hyacinth's ambassador to Gecha, to Raxone, and to the Arden Federations, each posting lasting a decade, each requiring a different set of skills. In Gecha, she navigated the chaotic politics of the republic's senate. In Raxone, she managed the prickly pride of a military monarchy. In Rin Nohara, she negotiated with bankers who regarded diplomacy as a subset of commerce and who measured every treaty in potential revenue.
+
+Her greatest achievement was invisible. During a border crisis between Raxone and Gecha — a dispute over mining rights in the Leimbordur foothills that the military establishments of both nations were eager to escalate — Cyrenne conducted parallel negotiations with both governments, in both capitals, simultaneously. She flew between Raxona and Boulavar on merchant vessels, sleeping on ships, revising treaty language in her cabin, and arriving at each capital with proposals that gave both sides enough to claim victory without giving either side enough to claim dominance.
+
+The treaty was signed. The crisis passed. The newspapers reported it as a minor diplomatic adjustment. Nobody outside the foreign ministries knew how close the continent had come to war, and Cyrenne preferred it that way, because a diplomat who takes credit for preventing a crisis is a diplomat who makes the next crisis harder to prevent.
+
+She retired to Oradova at seventy, where she grew roses and wrote memoirs that the Cynthian court suppressed because they were too honest.
+
+Klae obtained a copy. He wrote: 'She held the Sacred Hegemony together with patience, intelligence, and the willingness to let other people take credit for her work. If the Hegemony lasted as long as it did, it was because of people like Cyrenne, who maintained it in silence while the men who claimed to maintain it made speeches.'"""}
             ]},
             {"number": 2, "name": 'Second Century',
              "description": 'The Industrious Age. New technologies — powered machinery, improved metallurgy, advances in chemistry and engineering — begin to transform the economies of Fondore. The changes are gradual at first, then sudden, and they reshape not just how things are made but who makes them and under what conditions.',
@@ -3020,7 +3038,23 @@ Not every mill town was a hellscape. Some factory owners, motivated by conscienc
 
 Klae spent a week in a mill town outside Aemore. He talked to workers, factory owners, children, and the Cereyst priest who served the community, a man who looked ten years older than his age and who told Klae that his congregation's most common prayer was for the strength to get through the next shift.
 
-Klae wrote: 'The mill towns are the future, and the future is not what the philosophers promised. It is louder, dirtier, and more efficient than the past, and it cares less about the people who inhabit it.'"""}
+Klae wrote: 'The mill towns are the future, and the future is not what the philosophers promised. It is louder, dirtier, and more efficient than the past, and it cares less about the people who inhabit it.'"""},
+                {"title": 'The Hero of the Century: Telos Arim Gisupus',
+                 "content": """Telos Arim Gisupus built the first powered loom and spent the rest of his life regretting what it did to the people who used to do the weaving by hand.
+
+He was a Geckish engineer — a brilliant, restless man from a family of textile merchants who had grown up watching weavers work and who had understood, from an early age, that the repetitive motions of the loom could be replicated by a machine if someone could figure out the mechanical linkages. Telos figured out the mechanical linkages. He was twenty-seven. He thought he was improving the world.
+
+The loom worked. It worked magnificently. A single powered loom could do the work of twelve weavers, and it did not need rest, food, or the kind of social consideration that human workers required. The textile merchants, who understood margins better than morality, adopted the technology with an enthusiasm that Telos found gratifying and then, increasingly, disturbing.
+
+The hand weavers were ruined. Telos watched communities that had thrived for generations collapse as their primary industry was rendered obsolete by his invention. He watched families that had been prosperous become destitute. He watched children who had been destined for skilled apprenticeships enter the factories as unskilled machine operators, trading a craft for a wage and a future for a shift.
+
+He tried to help. He funded retraining programs for displaced weavers. He lobbied the Geckish Senate for labor protections. He designed safety mechanisms for the looms that the factory owners removed because they slowed production. He argued, with increasing frustration, that the purpose of machinery was to improve human life, not to replace human livelihood.
+
+Nobody listened. The machinery was too profitable. The factory owners were too powerful. And Telos, who had created the most transformative technology of his age, discovered that invention is easy and responsibility is impossible — that once you give the world a tool, you cannot control how the world uses it.
+
+He died at fifty-nine, in his workshop, surrounded by designs for machines he had decided not to build. His journal, recovered by Klae from the Gisupus family archives, contained a final entry: 'I made a machine that weaves cloth. It weaves cloth better than any human. I did not consider what would happen to the humans. This is the engineer's sin: we solve the problem and forget the people.'
+
+Klae wrote: 'He invented the future and was horrified by it. The future came anyway.'"""}
             ]},
             {"number": 3, "name": 'Third Century',
              "description": "The Workers' Question. The industrial transformation produces a new social class — the urban working poor — and a new political question: what does society owe to the people whose labor produces its wealth? The answers range from nothing to everything, and the debate reshapes the political landscape of every industrial nation.",
@@ -3054,7 +3088,21 @@ The response was polarized. Workers found in Tessik's writing a language for gri
 
 Tessik was arrested, released, arrested again, and finally exiled to Karagon, where the republic's commitment to free expression was less qualified than Fondore's. She continued writing from exile, and her books continued to circulate in the mill towns, carried by workers who hid them under floorboards and read them by candlelight after the factory shift ended.
 
-Klae met Tessik during his research in Karagon. She was in her sixties, still sharp, still angry. She told him: 'I did not invent the workers' question. The workers invented it every morning when they walked into the factory. I merely wrote it down.' Klae used this quote as the epigraph for his chapter on the industrial age, because he believed that the best history is written by people who lived it."""}
+Klae met Tessik during his research in Karagon. She was in her sixties, still sharp, still angry. She told him: 'I did not invent the workers' question. The workers invented it every morning when they walked into the factory. I merely wrote it down.' Klae used this quote as the epigraph for his chapter on the industrial age, because he believed that the best history is written by people who lived it."""},
+                {"title": 'The Hero of the Century: Tessik Moran',
+                 "content": """Tessik Moran was born in a mill town, worked in a factory from the age of eight, taught herself to read from discarded pamphlets, and wrote the books that changed how the world thought about work. She was the most important philosopher of the industrial age, and she never set foot in a university.
+
+She was Waydrani — born in the factory district of Aemore, where the air smelled of chemical dye and the children started work before they started school, if they started school at all. Her father operated a loom. Her mother sorted fibers. Tessik fed thread into a spinning machine for twelve hours a day, six days a week, and spent her one free day reading whatever she could find: pamphlets, newspapers, the occasional book borrowed from a sympathetic foreman's wife.
+
+Her education was accidental and ferocious. She read philosophy meant for university students and understood it better than they did, because she understood the conditions that philosophy described. When the philosophers wrote about labor, they wrote abstractly. Tessik had calluses on her hands and chemical burns on her arms. Abstraction was a luxury she could not afford.
+
+Her central argument was deceptively simple: labor creates value. Without workers, machines are inert metal. Therefore, workers are entitled to a share of the value they create — not as charity but as a right. She wrote this argument in clear prose, priced her books at a day's wages, and distributed them through the same networks that carried political pamphlets.
+
+The response was predictable. Workers found a language for grievances they had always felt. Factory owners found a threat. Governments found both. Tessik was arrested, released, arrested again, and exiled to Karagon.
+
+She continued writing from exile. Her books circulated in the mill towns, hidden under floorboards and read by candlelight. She was sixty when Klae met her in Karagon. She was still sharp, still angry. She told him: 'I did not invent the workers' question. The workers invented it every morning when they walked into the factory. I merely wrote it down.'
+
+Klae used this as the epigraph for his chapter on the industrial age. He wrote: 'She gave the workers their philosophy. The philosophy was simple: you matter. The simplicity was the point.'"""}
             ]},
             {"number": 4, "name": 'Fourth Century',
              "description": 'The Mermassa Surface. The underwater civilization of the Mermassa, which has existed since the early ages of Elysal, makes its first sustained contact with the surface world. The encounter challenges every assumption that surface civilizations hold about intelligence, governance, and the limits of the known world.',
@@ -3086,7 +3134,23 @@ The Ocean Accords that emerged from the negotiations were remarkably comprehensi
 
 The Accords were, predictably, resented by the fishing industry, the factory owners, and the shipping companies, all of whom stood to lose revenue. They were also, predictably, violated — not immediately, but gradually, as the economic pressures that had caused the problems in the first place reasserted themselves. The Mermassa, who had expected this, maintained their observation posts and their records, documenting each violation with the patience of a people who had been watching the surface world fail to meet its own standards for three thousand years.
 
-Klae attended the signing of the Ocean Accords and found the ceremony moving. He wrote: 'For the first time in history, the surface world acknowledged that the oceans were not empty. They were inhabited by a civilization older than ours, wiser than ours, and more patient than ours. Whether we deserve their patience remains to be seen.'"""}
+Klae attended the signing of the Ocean Accords and found the ceremony moving. He wrote: 'For the first time in history, the surface world acknowledged that the oceans were not empty. They were inhabited by a civilization older than ours, wiser than ours, and more patient than ours. Whether we deserve their patience remains to be seen.'"""},
+                {"title": 'The Hero of the Century: King Tessarion VII of the Mermassa',
+                 "content": """The Mermassa king who authorized first sustained contact with the surface world was, by Mermassa standards, a radical, which meant he was willing to consider changing a policy that had been in place for only two thousand years.
+
+Tessarion VII ruled the Mermassa from the deep-water capital of Coralheim — a city built in a submarine trench that no surface dweller had ever seen and that Klae could describe only from secondhand accounts provided by Mermassa diplomats, who were authorized to share certain details and who communicated those details with the precise, data-driven manner that characterized everything the Mermassa did.
+
+The decision to contact the surface world was not made casually. The Mermassa had been observing surface civilizations since the First Age, maintaining detailed records of shipping patterns, fish populations, water quality, and the behavior of the surface peoples, whom they regarded with a mixture of scientific interest and the mild alarm that a biologist feels when studying an invasive species.
+
+The industrial pollution that was flowing into the oceans from Fondorian factories forced the issue. Tessarion convened the Deep Council — the governing body of the Mermassa, which operated on a timescale that surface politicians would have found incomprehensible — and presented data showing that surface activity was degrading the marine environment at a rate that would, within centuries, threaten the Mermassa's own survival.
+
+The Council debated for what Klae was told was 'an appropriate period,' which he estimated, based on Mermassa temporal references, to be approximately three years. The debate centered not on whether to contact the surface but on whether the surface was capable of responding constructively, a question that the Mermassa's three-thousand-year observation record suggested the answer to was 'probably not.'
+
+Tessarion argued for engagement anyway. His position, as Klae reconstructed it from diplomatic sources, was that the Mermassa had two choices: watch the surface world destroy the shared ocean, or attempt to convince the surface world to stop. The first option was safe and guaranteed failure. The second was risky and offered the possibility of success. Tessarion preferred risk to certainty.
+
+The embassy was sent. The Ocean Accords were signed. The surface world learned that it shared the planet with a civilization older, wiser, and more patient than itself.
+
+Klae wrote: 'Tessarion VII took a risk that his predecessors had avoided for millennia. The risk has not yet paid off. But the alternative — silence while the ocean died — was worse than any risk, and Tessarion understood this, which is why he spoke.'"""}
             ]},
             {"number": 5, "name": 'Fifth Century',
              "description": 'The Perut Awakening. The Wintermen of Perut — the northern people who have existed on the margins of Fondorian awareness for millennia — emerge as a unified nation. Their unification sends a tremor through the Sacred Hegemony, because a strong Perut changes the balance of power in the North in ways that nobody can predict.',
@@ -3120,7 +3184,23 @@ But the negotiation succeeded, because both sides needed something the other had
 
 The other Fondorian powers observed with interest. The Perut Confederation added a new variable to the Sacred Hegemony's carefully balanced equation, and the diplomats who maintained the balance were not sure whether the variable would stabilize or destabilize the system.
 
-Klae wrote: 'The Wintermen asked for nothing extraordinary. They asked to be recognized as people, which should not require negotiation but always does.'"""}
+Klae wrote: 'The Wintermen asked for nothing extraordinary. They asked to be recognized as people, which should not require negotiation but always does.'"""},
+                {"title": 'The Hero of the Century: Kael Frostmane',
+                 "content": """Kael Frostmane united the Wintermen, and he did it by asking them a question they had been avoiding for a thousand years: what are we waiting for?
+
+He was a clan leader from the central ice plains — a man of medium height, medium build, and extraordinary patience, three qualities that were unremarkable among the Wintermen individually but devastating in combination. He had led his clan through three winters that should have killed them, negotiated hunting rights with neighboring clans without a single fatality, and earned the trust of people who did not give trust easily, which is to say all Wintermen.
+
+The Gathering was his idea. No one had ever called a meeting of all Wintermen clans because no one had ever believed that all Wintermen clans would attend. The clans were independent, proud, and separated by distances that could only be crossed on foot through conditions that killed the unprepared. Kael sent messengers to every clan he could reach, and the messengers carried a simple invitation: come to the ice plains. We need to talk.
+
+They came. Not all of them — some clans were too remote, some too suspicious — but enough. Enough to fill the ice plain with fires and shelters and the low murmur of people who had never been in the same place before and who were not sure whether to be excited or alarmed.
+
+Kael's speech to the Gathering was not recorded in writing, because the Wintermen did not write speeches. It was preserved in oral tradition, passed from speaker to speaker with the precision that the Wintermen brought to all oral transmission. The speech, as Klae reconstructed it from multiple Wintermen sources, lasted approximately four hours — short by Wintermen standards — and covered a single theme: the Wintermen were a people, not a collection of clans, and a people deserved to be treated as such by the world that had been ignoring them.
+
+He did not demand war. He did not promise conquest. He proposed a confederation: a loose alliance that would preserve clan independence while presenting a unified face to the outside world. The proposal was practical, modest, and exactly calibrated to the Wintermen's distrust of centralized authority.
+
+The vote was close. The Confederation was established. And Kael Frostmane, who had spent his life leading a single clan through the ice, became the first leader of a nation.
+
+Klae wrote: 'He asked the Wintermen what they were waiting for. The answer was: someone to ask the question.'"""}
             ]},
             {"number": 6, "name": 'Sixth Century',
              "description": 'The Colonial Reckoning. The overseas territories that Fondorian nations have maintained since the Era of Sail begin to push back. Colonial populations — mixed-race, culturally hybrid, economically exploited — demand self-governance, and the imperial powers discover that the ideas they exported along with their soldiers and merchants have come back to haunt them.',
@@ -3154,7 +3234,23 @@ The letter was published in the Geckish press and created a political crisis. Th
 
 The Tzunadaine revolt was eventually suppressed — the military resources of the Gechann, even in their diminished state, were more than sufficient to recapture a colonial port. But Aika Shoto's letter survived, and it was read across Fondore and beyond, in every colony and every subject territory, by every population that had been told to believe in principles that were not applied to them.
 
-Klae wrote: 'Aika Shoto did not defeat the Gechann Empire with her letter. She did something more lasting: she defeated its argument.'"""}
+Klae wrote: 'Aika Shoto did not defeat the Gechann Empire with her letter. She did something more lasting: she defeated its argument.'"""},
+                {"title": 'The Hero of the Century: Aika Shoto',
+                 "content": """Aika Shoto was half Geckish, half Tzunadaine, and fully committed to the proposition that the people of Tzun had the right to govern themselves. This proposition cost her everything.
+
+She was born in Sheah Suraya, the colonial capital on the Tzunadaine coast. Her father was a Geckish merchant. Her mother was Tzunadaine. Aika grew up between two worlds, speaking two languages, and understanding, with the clarity that only a child of two cultures can achieve, that the relationship between those cultures was not a partnership but an extraction.
+
+She was educated at the colonial university, where she read Lyssandre, Tessik Moran, and the constitution of the Pervin Republic. She also studied Tzunadaine history — the Mark of Tzun, the Pridekin genocide, the centuries of colonial administration that had enriched Fondore and impoverished Tzun. She concluded that the principles her colonial education taught her applied to the colony as well as the colonizer.
+
+She organized the revolt with the precision of a military campaign and the conviction of a philosopher. She seized the harbor, cutting the colony's supply line. She occupied the administrative buildings. She issued a declaration of independence written in both Common and Tzunadaine.
+
+Her letter to the Geckish Senate — published in the Annals — was her masterpiece: a document that used the colonists' own principles to demolish their justification for colonial rule. The letter created a political crisis that the Senate could not resolve without either abandoning its principles or abandoning its colony.
+
+The revolt was suppressed. The Geckish military was too powerful for a colonial resistance to defeat. Aika was captured, tried, and imprisoned. She died in a Geckish prison at the age of forty-seven, having spent the last twelve years of her life in a cell.
+
+But her letter survived. It was read across Fondore and beyond, in every colony and every subject territory, by every population that had been told to believe in principles that were not applied to them.
+
+Klae wrote: 'She did not defeat the Gechann with her letter. She did something more lasting: she defeated its argument. Arguments, unlike armies, cannot be rebuilt once they are destroyed.'"""}
             ]},
             {"number": 7, "name": 'Seventh Century',
              "description": 'The Lirzan Renaissance. The Lirzan Kingdom, recovering from the Geckish genocide of the Fourth Age, enters a period of cultural and scientific achievement that astonishes the world. The dragonborn, who were nearly exterminated, lead a civilization that produces some of the most significant advances in medicine, engineering, and natural philosophy of any age.',
@@ -3184,7 +3280,23 @@ But the Treatise's implications extended far beyond Imbraxione. It demonstrated 
 
 The university attracted students from across Elysal. Fondorian naturalists traveled to Imbraxione to study alongside lizardfolk researchers. Karagonese chemists exchanged techniques with dragonborn alchemists. Even Mermassa scientists — who communicated through written texts sealed in waterproof containers and delivered to the university's coastal annex — contributed to the institution's work.
 
-Klae spent six months at the university and called it 'the most important place in Elysal that most people have never heard of.' He added: 'If knowledge has a home, it is here, on a volcano, surrounded by people who breathe fire and study everything. The combination is, I will admit, alarming. It is also magnificent.'"""}
+Klae spent six months at the university and called it 'the most important place in Elysal that most people have never heard of.' He added: 'If knowledge has a home, it is here, on a volcano, surrounded by people who breathe fire and study everything. The combination is, I will admit, alarming. It is also magnificent.'"""},
+                {"title": 'The Hero of the Century: Imbraxis Boudazi',
+                 "content": """The dragonborn who led the Lirzan Renaissance was a chemist, which is not the heroic origin that most people expect from a figure who transformed a civilization.
+
+Imbraxis Boudazi was descended from the children of the cave — the forty-three dragonborn hatchlings who had survived the Icrazan Genocide hidden in the volcanic tunnels beneath Mount Boudazi. This heritage gave her two things: a name that carried the weight of survival, and access to the volcanic chemistry that the cave-dwellers had studied for three generations in the dark.
+
+She was small for a dragonborn — slight, quick-moving, with scales that shimmered copper in sunlight and smoke that curled from her nostrils when she was thinking, which was constantly. She did not breathe fire in the traditional sense. She breathed ideas, which were more dangerous.
+
+Her work at the Volcanic University focused on the medicinal properties of volcanic compounds — the minerals, gases, and chemical reactions produced by the geothermal activity that the dragonborn had studied since before the surface civilizations had learned to write. She isolated compounds that treated fever, infection, and the wasting diseases that had plagued both lizardfolk and humans for centuries. The fever compound alone — a mixture that reduced mortality from one in five to one in fifty — saved more lives than any army had ever taken.
+
+She shared her discoveries freely. This was deliberate strategy as much as generosity. The Icrazan Genocide had taught the dragonborn that being dispensable was fatal. Imbraxis made the dragonborn indispensable: a people whose knowledge the world needed to survive.
+
+She also opened the Volcanic University to foreign students, breaking the isolation that had characterized dragonborn scholarship since the genocide. Fondorian naturalists, Karagonese chemists, and even Mermassa researchers contributed to an institution that became the most important center of scientific knowledge in Elysal.
+
+Imbraxis lived to be very old — dragonborn lifespans exceeded human ones by decades — and she spent her final years teaching, which she considered more important than research because research discovered knowledge and teaching distributed it.
+
+Klae spent six months at the university. He wrote: 'She turned survival into renaissance. The dragonborn were nearly destroyed for what they knew. Imbraxis ensured that what they knew would save the world that tried to destroy them. This is not revenge. It is grace.'"""}
             ]},
             {"number": 8, "name": 'Eighth Century',
              "description": 'The Pridekin Question. The Pridekin of Tzun, subjugated since the Mark of Tzun in the Second Age, begin a long struggle for autonomy that will test the limits of every principle the civilized world claims to hold. The Pridekin are not like other peoples. They do not forgive. They do not forget. And they have been waiting a very long time.',
@@ -3212,7 +3324,23 @@ The result was a de facto partition. The Pridelands became Pridekin territory ag
 
 The arrangement was unsatisfying to everyone who valued neatness. It was also stable, which is more than can be said for most political arrangements that are designed to be neat. The Pridekin did not want a treaty. They did not want recognition. They wanted their land, and they took it, and the world — which had spent centuries debating principles of sovereignty and self-determination — discovered that the simplest form of self-determination is the refusal to be anywhere else.
 
-Klae found the Pridekin approach both admirable and disturbing. He wrote: 'They did not ask. They did not negotiate. They returned, and the world accommodated them, because the alternative was a confrontation that nobody wanted with a people who do not understand the concept of backing down.'"""}
+Klae found the Pridekin approach both admirable and disturbing. He wrote: 'They did not ask. They did not negotiate. They returned, and the world accommodated them, because the alternative was a confrontation that nobody wanted with a people who do not understand the concept of backing down.'"""},
+                {"title": 'The Hero of the Century: Jorem Harashi',
+                 "content": """Jorem Harashi was a Tzunadaine farmer who adopted a Pridekin cub and lost his farm because of it and never regretted either.
+
+He lived on the edge of the Pridelands — the contested territory where Tzunadaine settlements and Pridekin hunting grounds overlapped in the uneasy coexistence that passed for peace in a region that had known genocide. His farm was small, his family was large, and his neighbors regarded his friendship with the local Pridekin community as somewhere between eccentric and suicidal.
+
+The cub — a Pridekin juvenile named Tigar, who had been injured in a hunting accident — was brought to Jorem's farmhouse by a Pridekin elder who knew that Jorem was the only Tzunadaine in the region who could be trusted with a Pridekin child. Jorem set the cub's broken leg, fed him, and let him stay. The stay became permanent.
+
+Tigar grew up in the Harashi household as a member of the family. He learned Tzunadaine customs. The Harashi children learned Pridekin hunting techniques. The neighbors' disapproval evolved, slowly and reluctantly, into grudging acceptance, because Jorem's farm was productive, his family was happy, and the Pridekin community, which had regarded all Tzunadaine as enemies, began to make exceptions for the family that had sheltered one of their own.
+
+When Geckish colonists came to survey the territory, it was Tigar who died defending the family that had raised him. Jorem never recovered from the loss. He spent the rest of his life advocating for Pridekin rights in the Tzunadaine government, testifying before councils that did not want to hear what he had to say: that the Pridekin were people, that coexistence was possible, and that the proof had lived in his house and called him father.
+
+He was largely ignored. He continued anyway, because the Pridekin do not forget and Jorem, who had lived among them, had learned not to forget either.
+
+Klae recorded Jorem's testimony. The old farmer wept as he spoke about Tigar. He said: 'He was not my blood. He was my son. The difference matters only to people who have never loved.'
+
+Klae wrote: 'Jorem Harashi proved that the borders between peoples are thinner than the peoples believe. A farm on the edge of the Pridelands. A cub with a broken leg. A family that did not ask what species its children were. This is how peace begins: not with treaties but with kitchen tables.'"""}
             ]},
             {"number": 9, "name": 'Ninth Century',
              "description": 'The Long Peace. The Sacred Hegemony enters its final phase — a period of stability so prolonged that people begin to mistake it for permanence. The great powers maintain their balance. The smaller nations prosper in the spaces between them. The world, for a generation, seems to work.',
@@ -3240,7 +3368,23 @@ What makes the painting remarkable is what is not shown. Beyond the garden wall,
 
 The painting was titled 'The Last Garden Party,' though Emelle painted it years before the events that justified the title. She claimed later that she had not intended the name as a prophecy. She had simply felt, standing in that garden, watching those beautiful people drink those beautiful drinks in that beautiful light, that it could not last. That the world was balanced on something that was about to tip.
 
-Klae saw the painting in the Clarity Museum of Art and stood before it for a long time. He wrote: 'The painting shows people who believe the world will always be this beautiful, this comfortable, this kind to them. The smoke on the horizon says otherwise. The painter saw the smoke. The guests did not. This is the difference between an artist and a diplomat: the artist shows what is there.'"""}
+Klae saw the painting in the Clarity Museum of Art and stood before it for a long time. He wrote: 'The painting shows people who believe the world will always be this beautiful, this comfortable, this kind to them. The smoke on the horizon says otherwise. The painter saw the smoke. The guests did not. This is the difference between an artist and a diplomat: the artist shows what is there.'"""},
+                {"title": 'The Hero of the Century: Emelle Rin Nohara',
+                 "content": """The painting that captured the end of an age was made by a woman who was twenty-three years old and who had no idea she was painting history.
+
+Emelle Rin Nohara was a Leimish artist — born in Clarity, trained in Oradova, and possessed of a talent for seeing things that other people preferred not to notice. Her professors at the Oradovan academy had praised her technique and criticized her subjects, which tended toward the uncomfortable: factory workers with chemical burns, mill town children with hollow eyes, the gap between the beautiful Cynthian architecture and the poverty it overlooked.
+
+She was invited to the garden party at the Royal Palace of Oradova because her family had connections and because the Cynthian court liked to be seen patronizing young artists, a practice that was intended to demonstrate cultural sophistication and that occasionally, as in Emelle's case, backfired.
+
+She brought her sketchbook. She drew the guests in the garden — the nobles, the diplomats, the merchants, all beautiful and comfortable and certain that the world would continue to be beautiful and comfortable. She drew the garden in full bloom. She drew the golden afternoon light.
+
+And she drew the factory smoke on the horizon.
+
+She did not intend the smoke as commentary. She was simply drawing what she saw, which was a garden party in front of an industrial skyline, beauty in the foreground and consequence in the background. The painting that resulted — completed over six months in her studio, from the sketches she had made that afternoon — captured a mood that she could not have articulated but that everyone who saw it recognized: the feeling that something was ending.
+
+She titled it 'The Last Garden Party,' and when people asked why, she said she didn't know. She said it felt right. The title preceded the events that justified it by years, which either makes Emelle a prophet or a woman who paid attention, and paying attention is more reliable than prophecy.
+
+The painting hangs in the Clarity Museum of Art. Klae stood before it for a long time. He wrote: 'The painting shows people who believe the world will always be this beautiful, this comfortable, this kind to them. The smoke on the horizon says otherwise. The painter saw the smoke. The guests did not. This is the difference between an artist and a diplomat: the artist shows what is there.'"""}
             ]},
             {"number": 10, "name": 'Tenth Century',
              "description": 'The Breaking. The Sacred Hegemony collapses. The balance of power that maintained continental peace for generations unravels in a cascade of crises that no diplomat can manage and no army can solve. The Seventh Age ends not with a war but with the realization that the system designed to prevent war has made the next one inevitable.',
@@ -3274,7 +3418,21 @@ Klae considered. He had spent his life studying what had happened before, and th
 
 He went back to his desk in the Library of Spires and continued writing. The Annals would not be finished for another decade. But the bones of the work were there: eight ages of history, thousands of stories, the testimony of a world that had been building and destroying and rebuilding itself for four thousand years. He did not know if anyone would read it. He wrote it anyway, because the sailor on the dock had been right: what else are you going to do with a lifetime?
 
-The Seventh Age was over. The Eighth — the Age of Solitude — was beginning. And Klae, sitting in a library on a small island that nobody had wanted, picked up his pen and kept going."""}
+The Seventh Age was over. The Eighth — the Age of Solitude — was beginning. And Klae, sitting in a library on a small island that nobody had wanted, picked up his pen and kept going."""},
+                {"title": 'The Hero of the Century: Pellae Aymundra II',
+                 "content": """The woman who held the Library of Spires together during the Breaking was named after the woman who built it, and she was worthy of the name.
+
+Pellae Aymundra II was the head librarian of the Library of Spires during the collapse of the Sacred Hegemony — the period when the international order that had maintained peace for generations fell apart and the diplomatic, economic, and military systems that connected the nations of Fondore ceased to function. Ships stopped sailing. Trade routes closed. The flow of books, manuscripts, and correspondence that had been the Library's lifeblood dried up.
+
+Pellae kept the Library open. This sounds simple. It was not. The Library depended on donations, on trade, on the goodwill of nations that were, during the Breaking, consumed by their own crises. Funding disappeared. Staff left. The building — always at the mercy of Lipse's brutal weather — needed repairs that there was no money to make.
+
+She improvised. She negotiated with the Karagonese navy, which still controlled the Erezetta shipping lanes, for passage of book shipments. She traded the Library's copying services — monks trained in manuscript reproduction — for supplies from the Arden merchants who still operated during the crisis. She opened the Library as a neutral meeting ground for diplomats from nations that had stopped talking to each other, because a library is a place where people are expected to be quiet and listen, and listening was what the diplomats needed to do.
+
+She also preserved the collection. During the worst of the crisis, when it seemed possible that the political collapse would spread to Lipse itself, Pellae organized the copying of the most irreplaceable manuscripts — the oldest texts, the unique documents, the works that existed nowhere else — and distributed the copies to trusted institutions across Fondore, so that if the Library burned, the knowledge would survive.
+
+The Library did not burn. Pellae held it together through stubbornness, resourcefulness, and the conviction that the world would eventually need its memory again, and that someone had to keep the memory intact until then.
+
+Klae, who was working on the Annals during this period, relied on Pellae's Library and Pellae's friendship. He wrote: 'She kept the lights on while the world went dark. This is not a metaphor. The Library of Spires remained lit during the Breaking because Pellae Aymundra II refused to let it go out. She is the reason the Annals exist, and the reason the world still has its memory.'"""}
             ]}
         ]
     },
@@ -3317,7 +3475,25 @@ The cultural influence was equally profound. Pervin literature, Pervin music, an
 
 This was not universally welcomed. The monarchies of Raxone and Hyacinth viewed the Pervin model as a threat to their existence, which it was. The Geckish Republic, which called itself a republic but functioned as an oligarchy, resented the comparison with a democracy that actually worked. The Debrears, who had never abandoned their feudal structures, regarded the entire concept of popular sovereignty with the contempt that military cultures reserve for ideas they cannot defeat with weapons.
 
-Klae, who admired the Pervins while acknowledging their limitations, wrote: 'The Pervins proved that ordinary people can govern themselves. They also proved that governing yourself is harder than being governed by someone else, because the responsibility is yours and the excuses are fewer. This is the true cost of freedom, and the Pervins have been paying it honestly for three centuries.'"""}
+Klae, who admired the Pervins while acknowledging their limitations, wrote: 'The Pervins proved that ordinary people can govern themselves. They also proved that governing yourself is harder than being governed by someone else, because the responsibility is yours and the excuses are fewer. This is the true cost of freedom, and the Pervins have been paying it honestly for three centuries.'"""},
+                {"title": 'The Hero of the Century: Lans Paronis',
+                 "content": """The first person elected to lead a Fondorian nation was a farmer who had never wanted to lead anything larger than a harvest crew.
+
+Lans Paronis was Pervin — born in the hill country that had produced every important Pervin for the last three thousand years, raised on a farm that grew the same crops his family had grown since the Cynthian withdrawal, and possessed of a temperament so even that his neighbors described him as 'the calmest man in a country of calm people,' which was, in Epervinay, a significant compliment.
+
+He ran for the presidency of the new Pervin Republic because his village asked him to, and because refusing would have been rude, and because Pervins did not refuse requests from their neighbors without a reason that the neighbors considered adequate, and 'I don't want to' was not, in Pervin culture, an adequate reason.
+
+His campaign was conducted on horseback. He rode from village to village, speaking to assemblies of farmers, craftsmen, and retired soldiers who wanted to know what kind of man was asking for their vote. Lans told them the truth: he was a farmer. He knew soil, weather, and livestock. He did not know politics, diplomacy, or the management of a nation-state. He would learn. He would listen. He would try not to ruin anything.
+
+This radical honesty was, paradoxically, the most effective campaign strategy in the history of electoral politics. The Pervins, who had been governed for millennia by people who claimed to know what they were doing and demonstrably did not, found a man who admitted ignorance and promised competence refreshing beyond measure.
+
+He won. He served for eight years. He was not a great president — he was a good one, which is harder and rarer. He balanced the budget. He maintained the army. He kept Epervinay out of foreign entanglements. He established the precedent that a president serves and then leaves, which was the most important thing any first president can do.
+
+He returned to his farm after his term. He grew crops. He raised livestock. He answered letters from his successors when they asked for advice, which they did frequently, because Lans Paronis knew one thing that no political education could teach: how to lead without needing to be led.
+
+Klae visited him. Lans was seventy, weathered, and surrounded by goats. He told Klae: 'Governing is like farming. You plant what you can, you tend what grows, and you do not take credit for the rain.'
+
+Klae wrote: 'The first elected leader in Fondore was the least ambitious man in the room. This was not a coincidence. It was the point.'"""}
             ]},
             {"number": 2, "name": 'Second Century',
              "description": "The Railway Age. The construction of rail networks across Fondore collapses the distances that have defined the continent's geography for millennia. Cities that took weeks to travel between are now days apart. The economic and social consequences are immediate, profound, and deeply unequal.",
@@ -3349,7 +3525,21 @@ The tunnel was built. It took seven years and the lives of approximately three h
 
 The first train passed through the Leimbordur Tunnel on a spring morning, emerging from the southern face of the mountain into the sunlight of the Geckish plains. The event was witnessed by thousands of spectators on both sides of the border. A Leimish brass band played. A Geckish choir sang. The Debrears, whose territory the train would eventually cross, sent a representative who stood at the edge of the crowd, watched the train pass, and said nothing.
 
-Klae attended the opening ceremony. He wrote: 'The mountains that kept the Leimish safe for three thousand years were pierced by a tunnel in seven. I do not know whether this makes us more connected or more vulnerable. Perhaps it is both, and perhaps the distinction matters less than we think.'"""}
+Klae attended the opening ceremony. He wrote: 'The mountains that kept the Leimish safe for three thousand years were pierced by a tunnel in seven. I do not know whether this makes us more connected or more vulnerable. Perhaps it is both, and perhaps the distinction matters less than we think.'"""},
+                {"title": 'The Hero of the Century: Hilda Torvaldssen',
+                 "content": """Hilda Torvaldssen was the great-granddaughter of Inge Torvaldssen — the tavern-keeper who had brokered the Frozen Truce — and she inherited her ancestor's two most important qualities: stubbornness and the ability to make people sit down and listen.
+
+She was a Raxonian engineer, one of the first women admitted to the Royal Engineering Corps, and she was assigned to the most controversial construction project in Fondorian history: the Leimbordur Tunnel. The project needed someone who could manage the competing demands of Leimish politicians, Geckish investors, Pkoyte mining crews, and the mountain itself, which was not interested in being tunneled through and expressed its objections through rockfalls, flooding, and the occasional collapse.
+
+Hilda managed all of them. She managed the Pkoyte crews by speaking passable Shoalespeak and by respecting their expertise, which was greater than any surface engineer's and which they would share only with people who acknowledged it. She managed the Geckish investors by delivering weekly progress reports that were honest about delays and optimistic about outcomes, a combination that kept the money flowing without creating false expectations. She managed the Leimish politicians by ignoring them, which was the only effective strategy.
+
+She managed the mountain by being smarter than it. When the southern section hit an underground river that flooded the tunnel, Hilda designed a drainage system that redirected the water into the Leimish irrigation network, turning a problem into an asset. When the northern section encountered a seam of unstable granite, she redesigned the tunnel's route around it, adding two months to the construction timeline but avoiding the kind of catastrophic collapse that would have ended the project entirely.
+
+Three hundred workers died during the seven-year construction. Hilda knew every name. She kept a private ledger in which she recorded the name, the date, and the cause of death of every worker killed on the project. The ledger was not required. Nobody asked her to keep it. She kept it because the names mattered, and because an engineer who forgets that her structures are built by people is not an engineer but a mathematician.
+
+The tunnel opened on schedule. Hilda attended the ceremony, stood at the back of the crowd, and said nothing, because the tunnel spoke for itself.
+
+Klae wrote: 'She built a hole through a mountain. The hole connected two worlds. The three hundred people who died building it are remembered in a ledger that she kept because no one else would. This is engineering: the marriage of ambition and cost, and the refusal to forget the cost.'"""}
             ]},
             {"number": 3, "name": 'Third Century',
              "description": 'The Hyacinth Revolution. The contradiction at the heart of the Kingdom of Hyacinth — a civilization of beauty built on the subjugation of its Pervin population — finally explodes. The revolution that follows transforms the western peninsula and forces the Cynthians to confront the question they have been avoiding since they arrived: what do they owe the people they displaced?',
@@ -3383,7 +3573,25 @@ The Treaty of Two Peoples established a new constitutional framework for Hyacint
 
 The treaty also addressed the deeper question: the Cynthians' relationship to the land they had colonized. The Pervins did not demand that the Cynthians leave. They demanded acknowledgment — a formal recognition that the Pervins had been there first, that the Cynthian arrival had been a displacement, and that the kingdom that both peoples now shared had been built on a foundation of inequality that the new constitution was designed to correct.
 
-Klae attended the signing ceremony and found it moving. He wrote: 'The Treaty of Two Peoples is not a perfect document. It is a compromise, and compromises satisfy no one completely. But it is the first time in three thousand years that the Cynthians and the Pervins of Hyacinth have agreed, formally and publicly, that they share a country. The sharing will be difficult. It will also be necessary.'"""}
+Klae attended the signing ceremony and found it moving. He wrote: 'The Treaty of Two Peoples is not a perfect document. It is a compromise, and compromises satisfy no one completely. But it is the first time in three thousand years that the Cynthians and the Pervins of Hyacinth have agreed, formally and publicly, that they share a country. The sharing will be difficult. It will also be necessary.'"""},
+                {"title": 'The Hero of the Century: Iraya Devuo',
+                 "content": """The woman who started the Hyacinth Revolution by singing a folk song in a concert hall did not plan a revolution. She planned to set down her tray.
+
+Iraya Devuo was a serving woman — Pervin, descended from the same Devuo family that had produced the first musical instrument maker in the First Age, a lineage that meant everything to the Pervins and nothing to the Cynthians who employed her. She worked events at the Royal Concert Hall of Oradova, carrying trays of crystal glasses to Cynthian nobles who did not see her, because servants, in Cynthian culture, were part of the furniture.
+
+She had been carrying trays for fourteen years. She had listened to Cynthian music — beautiful, technically perfect, emotionally controlled — for fourteen years. She had not, in fourteen years, been asked what kind of music she liked, because nobody asks the furniture for its opinion.
+
+On the night that changed Hyacinth, Iraya was carrying a tray during the second movement of a new Cynthian composition. She stopped. She set the tray down. She walked to the stage. And she sang.
+
+The song was old. It was a Pervin folk melody about the land — the hills and rivers that the Pervins had inhabited since before the Cynthians arrived. It was not sophisticated. It was not technically complex. It was honest, which is a different quality and a more dangerous one, because honesty in a room full of people who are pretending is a form of violence.
+
+The room broke open. Pervin staff joined her. Cynthian audience members fled or wept or both. The Night of Broken Spires became the catalyst for a revolution that had been building for three thousand years.
+
+Iraya did not seek leadership of the revolution. Leadership found her, because the Pervins needed a symbol and a woman who had set down her tray was the most powerful symbol available: the moment when the invisible became visible, when the silent became loud, when the furniture stood up and sang.
+
+She led the Pervin delegation in the negotiations that produced the Treaty of Two Peoples. She served in the new parliament for one term. Then she resigned and returned to music, because music was what she had always wanted to do, and the revolution had only ever been a means to the end of being allowed to do it.
+
+Klae wrote: 'She set down her tray. That is the entire revolution in four words. Everything else — the strike, the negotiations, the constitution — followed from the moment a woman decided she was done carrying things for people who did not see her.'"""}
             ]},
             {"number": 4, "name": 'Fourth Century',
              "description": 'The Debrear Reckoning. Deberania, the ancient forest kingdom that has lurked on the margins of Fondorian history since the Second Age, finally confronts the modern world. The result is a transformation more painful and more necessary than any the Debrears have faced since Bugutahff declared himself Thaumfuher.',
@@ -3415,7 +3623,25 @@ The result was the Thaugren Preserve — a protected area in the heart of the fo
 
 Greta Bugutahff spent her remaining years leading walking tours through the Preserve, showing visitors — Fondorian tourists, Leimish artists, Geckish naturalists — the trees that her ancestors had worshipped, the clearings where the old warrior councils had met, the streams where the Debrear children had played for millennia before anyone had thought to build a railway or a factory.
 
-Klae walked the Preserve with Greta during his research. She showed him a tree that was, by the best estimates, four thousand years old — as old as recorded history itself. He put his hand on the bark and felt something that he could not articulate, and he wrote: 'The tree was there before Hipolyptica founded the first city. It will be there after the last city falls. This is not a metaphor. It is a fact, and facts of this kind are the closest thing to wisdom that the natural world provides.'"""}
+Klae walked the Preserve with Greta during his research. She showed him a tree that was, by the best estimates, four thousand years old — as old as recorded history itself. He put his hand on the bark and felt something that he could not articulate, and he wrote: 'The tree was there before Hipolyptica founded the first city. It will be there after the last city falls. This is not a metaphor. It is a fact, and facts of this kind are the closest thing to wisdom that the natural world provides.'"""},
+                {"title": 'The Hero of the Century: Igorion XI of Deberania',
+                 "content": """The last Thaumfuher of Deberania was a man who loved his kingdom enough to destroy the thing that made it a kingdom, which is the kind of love that leaves scars.
+
+Igorion XI was named for conquerors, raised by warriors, and educated in a tradition that valued strength, loyalty, and the conviction that the Debrear way was the only way. He was, by every measure of his upbringing, the ideal Thaumfuher: physically imposing, martially skilled, and possessed of the fierce pride that the Debrears considered their defining virtue.
+
+He was also, inconveniently, intelligent. He could see the world beyond the Thaugren, and what he saw was a world that was leaving Deberania behind. The railway, the factory, the printing press — the technologies that were transforming every other nation in Fondore had not reached the forest kingdom, because the forest kingdom had spent three thousand years defining itself by its rejection of the outside world.
+
+The rejection was killing them. The timber trade was collapsing. The young were leaving. The warrior culture that had sustained the kingdom since Bugutahff was producing men who were excellent at fighting and useless at everything else, and in a world where fighting was no longer the primary means of acquiring power, uselessness was fatal.
+
+Igorion dissolved the Thaumatarchy. He opened the borders. He invited Waydrani administrators. He built schools and commissioned a railway. And then he abdicated, because a king who dismantles his own power must also dismantle himself.
+
+The abdication was not a grand gesture. It was a quiet one — a letter to the Thaumatarchy's successor council, read aloud in the great hall of Thaumarch Keep, in which Igorion explained that the kingdom he loved could not survive as a kingdom and that the nation it needed to become could not be built by a Thaumfuher. He signed the letter, put down the pen, and walked out of the Keep that his ancestors had occupied for millennia.
+
+He lived the rest of his life in a cottage at the edge of the Thaugren Preserve — the protected forest that Greta Bugutahff had established. He walked the old trails. He talked to the trees, which the neighbors found eccentric and which Igorion considered the most sensible conversations he had ever had.
+
+Klae visited him. Igorion was seventy, grey-bearded, and calm. He told Klae: 'I killed the old world so the new one could live. The old world was beautiful. The new one is necessary. I miss the beautiful one every day.'
+
+Klae wrote: 'He loved his kingdom enough to end it. I do not know a braver act.'"""}
             ]},
             {"number": 5, "name": 'Fifth Century',
              "description": 'The Global Turn. For the first time in history, the civilizations of Elysal begin to function as a single interconnected system. Trade routes span every ocean. Diplomatic networks link every continent. The actions of one nation ripple across the world in ways that no one can fully predict or control.',
@@ -3443,7 +3669,21 @@ The surface nations' response was, by now, predictable. The industrial powers �
 
 The Mermassa ambassador listened to the debate with the patience of a civilization that had been watching surface politics for three thousand years. When the arguments exhausted themselves, the ambassador spoke. The speech was short. It said, in essence: we have given you the data. We cannot make you act on it. But the ocean does not negotiate, and the ocean does not wait.
 
-Klae recorded the ambassador's speech and the silence that followed it. He wrote: 'The Mermassa have been the conscience of Elysal since they first surfaced. They speak not from morality but from measurement, which is more persuasive and less comfortable. They have told us what is happening. They cannot tell us what to do about it. That part is ours.'"""}
+Klae recorded the ambassador's speech and the silence that followed it. He wrote: 'The Mermassa have been the conscience of Elysal since they first surfaced. They speak not from morality but from measurement, which is more persuasive and less comfortable. They have told us what is happening. They cannot tell us what to do about it. That part is ours.'"""},
+                {"title": 'The Hero of the Century: Rashid Arim Boulavaranus',
+                 "content": """The man who organized the first global trade conference was a Geckish merchant who believed that the best way to prevent war was to make it unprofitable, which was a very Geckish idea and also, as it turned out, correct.
+
+Rashid was Ardenese by training and Geckish by birth — educated in the banking houses of Rin Nohara, seasoned in the trading ports of every continent, and possessed of the conviction, common to merchants of a certain generation, that commerce was civilization and that everything else — politics, religion, military power — was a distraction from the serious business of buying and selling things.
+
+He organized the first global trade conference because nobody else would. The nations of Elysal were connected by trade routes that spanned every ocean, but those routes were governed by a patchwork of bilateral agreements, regional customs, and the mutual understanding that the navy with the most ships got the best terms. This system worked, after a fashion, but it produced inefficiencies that cost money, which was the one thing that merchants could not tolerate.
+
+The conference brought together representatives from every major trading nation — Fondorian, Karagonese, Lirzan, and, for the first time, Mermassa, who sent a trade delegation because the surface economy affected the ocean economy and the Mermassa had decided that it was better to negotiate than to observe.
+
+Rashid chaired the proceedings with the brisk efficiency of a man who charged by the hour. He proposed standardized shipping regulations, uniform tariff structures, and a dispute resolution mechanism that did not involve cannon fire. The proposals were adopted, amended, violated, and eventually absorbed into the framework of international commerce.
+
+He was not a visionary. He was a pragmatist who understood that trade required rules and that rules required agreement and that agreement required someone willing to sit in a room with people he did not like and negotiate until everyone was equally dissatisfied, which was the definition of a fair deal.
+
+Klae wrote: 'He made the world's merchants talk to each other. They complained about it. They also stopped shooting at each other, which was the point.'"""}
             ]},
             {"number": 6, "name": 'Sixth Century',
              "description": "The People's Century. Across Fondore and beyond, the populations that have been governed for four thousand years begin to demand a voice in their own governance. The democratic movements of the Sixth Age, which had seemed radical, become mainstream. The monarchies that remain must adapt or face the consequences.",
@@ -3471,7 +3711,25 @@ The democratic world was not a utopia. Elections produced bad leaders as often a
 
 But it was better. Not perfect, not complete, not finished — but better than what had come before, in the specific and measurable sense that more people had more say over more aspects of their lives than at any point in the four-thousand-year history of Elysal.
 
-Klae, who had been born in the only democracy in the world and had watched the idea spread across the globe during his lifetime, allowed himself a rare moment of optimism. He wrote: 'The world is not yet what it should be. It is closer to what it should be than it has ever been. This is not a victory. It is a direction.'"""}
+Klae, who had been born in the only democracy in the world and had watched the idea spread across the globe during his lifetime, allowed himself a rare moment of optimism. He wrote: 'The world is not yet what it should be. It is closer to what it should be than it has ever been. This is not a victory. It is a direction.'"""},
+                {"title": 'The Hero of the Century: Aldren IX of Raxone',
+                 "content": """The king who gave up his power was standing at a window, watching twenty thousand people walk past his palace, and he understood that the choice was not between power and surrender but between grace and violence.
+
+Aldren IX of Raxone was the last absolute monarch in Fondore. He was thirty-four when the demonstration filled the streets of Raxona — young enough to fight, old enough to know that fighting would only delay the inevitable and destroy everything in the interim.
+
+He had been raised to rule. His education, his training, his entire identity had been built around the assumption that the Raxonian crown was the natural order of things and that the king's authority was both necessary and benevolent. He believed this. He was not wrong to believe it — his family had governed Raxone competently for generations. But competence is not the same as consent, and the twenty thousand people walking past his window were making a statement about consent that no amount of competence could refute.
+
+He drafted the constitution in six months. He transferred taxation, legislation, and domestic policy to an elected parliament. He retained the throne, the army, and foreign affairs — enough to maintain stability during the transition, not enough to reverse it.
+
+The transition was not smooth. His uncles conspired. His generals grumbled. His mother told him he was dishonoring his father's memory, which was the one argument that hurt, because Aldren loved his father and knew that his father would not have done what he was doing.
+
+He did it anyway. He signed the constitution in the great hall of the palace, with the parliament watching, and he said: 'The kingdom is yours. Govern it well.' Then he returned to his apartments and wept, because giving up power is not the same as not wanting it, and Aldren had wanted it very much.
+
+He served as constitutional monarch for thirty years. He attended state functions. He signed legislation he disagreed with. He bit his tongue so often that his dentist remarked on the wear. He was, by every measure, a good constitutional monarch, which meant he was a man who had once had the power to shape a nation and who now had the power to cut ribbons.
+
+Klae met him late in his reign. Aldren was sixty-four, dignified, and tired. He told Klae: 'I gave them what they asked for. I hope it was the right thing. I will never know.'
+
+Klae wrote: 'He gave a kingdom to its people. The people did not thank him, because you do not thank someone for returning what was always yours. But the giving was graceful, and grace, in politics, is the rarest virtue.'"""}
             ]},
             {"number": 7, "name": 'Seventh Century',
              "description": 'The Reconciliation. As the democratic world stabilizes, the nations of Elysal begin to confront the historical injustices that have accumulated over four thousand years. The process is painful, incomplete, and absolutely essential.',
@@ -3501,7 +3759,25 @@ The work was not finished. It could not be finished, because the injustices of f
 
 But the work was underway. For the first time in the history of Elysal, the civilizations that shared the world were attempting to share it honestly — to acknowledge what had been done, to understand why it had been done, and to build something different on the foundation of that understanding.
 
-Klae wrote: 'History is not a debt that can be repaid. It is a wound that can be acknowledged. The acknowledgment does not heal the wound. But it stops the wounded from having to pretend that the wound does not exist, and that pretense is, in many ways, worse than the original injury.'"""}
+Klae wrote: 'History is not a debt that can be repaid. It is a wound that can be acknowledged. The acknowledgment does not heal the wound. But it stops the wounded from having to pretend that the wound does not exist, and that pretense is, in many ways, worse than the original injury.'"""},
+                {"title": 'The Hero of the Century: Supremus Gaius Thryvyc Veradinus',
+                 "content": """The Supremus who apologized for the Icrazan Genocide was a man who had spent his political career avoiding difficult conversations and who discovered, at the age of sixty-one, that there was one conversation he could not avoid.
+
+Gaius Thryvyc Veradinus was a career politician — Geckish to the bone, trained in the Senate, skilled in the art of saying nothing with great eloquence. He had risen through the ranks of the Geckish political establishment by being reliable, inoffensive, and willing to compromise on everything, which made him the perfect candidate for the Supremus position in an era when the Geckish Republic wanted leadership that would not make headlines.
+
+The genocide apology was not his idea. It was the culmination of decades of advocacy by Lirzan diplomats, Fondorian historians, and a growing movement within Gecha itself that argued the republic could not claim moral authority in the modern world while refusing to acknowledge the worst crime in its history. Gaius had resisted the apology for years, not because he denied the genocide — the evidence was incontrovertible — but because he feared the political consequences of acknowledging it.
+
+What changed him was a visit to Imbraxione. The Lirzan government had invited a Geckish delegation to tour the Volcanic University and the memorial sites that the dragonborn had built to honor the victims of the genocide. Gaius went reluctantly. He returned transformed.
+
+He would not describe what he saw to Klae. He said only: 'I saw what we did. I cannot unsee it. No one who sees it can unsee it.'
+
+He delivered the apology in the rebuilt Senate hall. He read the names of the dragonborn commanders who had been killed. He described the campaign in the clinical language of the military records. He said the word sorry, and he meant it, which was the one thing his political training had not prepared him for: meaning what he said.
+
+The Lirzan ambassador extended her hand. Gaius took it. The gesture was broadcast across Fondore.
+
+After the ceremony, Gaius retired from politics. He said he had done the one thing that mattered and that everything else was footnotes. He spent his remaining years in a villa outside Boulavar, growing vegetables and refusing interviews.
+
+Klae wrote: 'He was a politician who, for one moment, stopped being a politician and became a human being. The moment was enough.'"""}
             ]},
             {"number": 8, "name": 'Eighth Century',
              "description": "The Library. Klae completes the Annals. The work that began with a conversation on a dock in Catcher's Rim reaches its conclusion in the same library where it was conceived. The final chapters are written in the Library of Spires, on an island that nobody wanted, by a man who spent his life listening to the world.",
@@ -3539,7 +3815,21 @@ I do not know what happens next. I am an old man sitting in a library on a small
 
 This is the Annals of Elysal. It is incomplete, as all histories must be. It is the best I could do.
 
-I hope it was enough.'"""}
+I hope it was enough.'"""},
+                {"title": 'The Hero of the Century: Pellae Aymundra III',
+                 "content": """Pellae Aymundra III was the head archivist of the Library of Spires during the years when Klae was writing the Annals, and she was, in every way that mattered, the person who made the Annals possible.
+
+She was Waydrani — the great-granddaughter of the original Pellae who had founded the Library, and she had inherited both the name and the conviction that knowledge was the only thing worth accumulating. She had run the Library for thirty years by the time Klae returned from his travels, and she ran it the way her great-grandmother had built it: with stubbornness, resourcefulness, and the belief that a library existed not for the librarians but for the people who needed it.
+
+Klae needed it desperately. He arrived on Lipse with fourteen trunks of documents, six hundred tomes of source material, and no system for organizing any of it. Pellae gave him a room — the east wing's upper gallery, where the light was best and the wind rattled the windows in a way that Klae found conducive to thought. She gave him access to the entire collection. She gave him research assistants — young archivists who tracked down obscure references, verified dates, and cross-checked sources with a thoroughness that Klae found both essential and slightly embarrassing, because their work occasionally proved his assumptions wrong.
+
+She also gave him something that no archive could provide: conversation. During the eleven years that Klae spent writing the Annals, Pellae was his primary intellectual companion — the person who challenged his interpretations, questioned his conclusions, and reminded him, when the weight of four thousand years of history threatened to overwhelm his ability to write about it, that the purpose of the work was not perfection but honesty.
+
+She read every chapter as he wrote it. Her marginal comments — preserved in the original manuscripts — are a masterclass in editorial judgment: sharp, specific, and delivered with the directness that the Waydrani considered a virtue and that everyone else considered blunt. When Klae's prose became overwrought, Pellae wrote 'simpler' in the margin. When his analysis became reductive, she wrote 'more.' When he got it right, she wrote nothing, because silence was the highest compliment a Waydrani archivist could pay.
+
+She outlived Klae by twelve years. She maintained the Library and the Annals until her death, ensuring that the work survived its author.
+
+Klae dedicated the Annals to her. The dedication reads: 'For Pellae, who kept the light on.' He never explained the dedication publicly. He did not need to. Everyone who knew them understood."""}
             ]},
             {"number": 9, "name": 'Ninth Century',
              "description": 'After the Annals. The world continues after Klae puts down his pen. The stories that follow are not his — they are gathered from other sources by the librarians of the Library of Spires who maintained the Annals after his death. They are included because Klae would have wanted them, and because the story does not stop when the historian does.',
@@ -3570,6 +3860,24 @@ Instead, she said: 'Because someone needs to listen.'
 The archivist smiled, because she had heard this answer before — not in these exact words, but in this exact spirit. It was the same answer that Klae would have given, and the same answer that anyone who takes up the work of history eventually arrives at: the world is full of stories, and someone needs to listen to them, and write them down, and make sure they are not forgotten.
 
 Kessa was hired. She began her work the next morning, shelving books in the east wing of the Library of Spires, in the same section where a young Hiyalmite man had shelved books centuries earlier, before he walked out the door and into the world and came back with six hundred tomes and the most ambitious history ever written.
+
+The work continues. It always continues. That is the point."""},
+                {"title": 'The Hero of the Century: Kessa Lael',
+                 "content": """Kessa Lael applied for the position of junior archivist at the Library of Spires because she wanted to continue a story that she believed was too important to end.
+
+She was eighteen, Hiyalmite, the daughter of a fisherman and a schoolteacher. She had read the Annals three times before she was old enough to apply. She had grown up on Lipse, in Catcher's Rim, walking the same streets Klae had walked, climbing the same hill, watching the same harbor. She was not Klae. She did not have his genius, his experience, or his forty-three years of accumulated testimony. She had something else: the conviction that the work mattered and the willingness to do it.
+
+The head archivist asked her one question: 'Why do you want to do this?' Kessa said: 'Because someone needs to listen.'
+
+She was hired. She began as all archivists began: shelving books, cataloguing donations, learning the Library's systems. She was methodical, careful, and possessed of a patience that her colleagues found unusual in someone her age, because patience is typically the province of people who have failed enough to understand that speed is not the same as progress.
+
+She began her own project within her first year: a continuation of the Annals, covering the period after Klae's death. She used his methods — interviews, letters, documents, the testimony of ordinary people — and she used his voice, or rather, she found her own voice, which was different from Klae's but animated by the same conviction: that every person's story mattered, that the forgotten deserved to be remembered, and that history was not a monument but a conversation between the dead and the living.
+
+Her work was not as good as Klae's. She knew this. She did it anyway, because the quality of the attempt is less important than the fact of it, and because the world continued to produce stories that deserved to be told, and someone had to tell them.
+
+She climbed the hill above Catcher's Rim in the evenings, after her shift, and sat where Klae had sat. She brought a notebook. She wrote. The sun set over the Erezetta. The ships came and went. The wind blew, as it always does on Lipse.
+
+Klae could not have written about Kessa, because she came after him. But the librarians who maintained the Annals after his death added her story, because they believed — and Klae would have agreed — that the hero of any century is the person who picks up the work and continues it.
 
 The work continues. It always continues. That is the point."""}
             ]},
@@ -3607,7 +3915,25 @@ The sun sets over the Erezetta. The ships in the harbor light their lanterns. Th
 
 It always continues.
 
-That is the point."""}
+That is the point."""},
+                {"title": 'The Hero of the Century: Kratikar Klae',
+                 "content": """The Annals do not contain a hero entry for their own author. Klae would not have written one. He would have found the idea embarrassing, self-indulgent, and contrary to the historian's principle of standing outside the story rather than inside it.
+
+Klae was wrong about many things — the dating of the Veran conquest, the population of early Palasor, the spelling of at least four Lirzan proper nouns — but this was the thing he was most wrong about: the idea that he was not part of the story he was telling.
+
+He was born on Lipse. He was Hiyalmite. He was a letterboy at the Library of Spires who shelved books and dreamed of writing one. He left the island at twenty-four and spent forty-three years listening to the world — kings and farmers, conquerors and slaves, builders and destroyers, the powerful and the powerless. He traveled every continent. He learned six languages badly and two well. He ate food that disagreed with him in every nation on Fondore. He was robbed, shipwrecked, arrested, and threatened by the Luschnypp Syndicate. He fell in love once and wrote about it never, which is the most revealing silence in the Annals.
+
+He returned to Lipse at sixty-seven with six hundred tomes and fourteen trunks. He wrote for eleven years. He finished the Annals on a quiet afternoon and said: 'That will have to do.'
+
+What he produced was the most ambitious work of history ever attempted: eight ages, eighty centuries, hundreds of stories, the testimony of a world that had been building and destroying and rebuilding itself for four thousand years. It was incomplete, as all histories must be. It was biased, as all histories are. It was written by a man who believed that every person's story mattered, that the farmer's testimony was as important as the king's, and that the purpose of history was not to glorify the powerful but to remember the forgotten.
+
+He was kind. He was curious. He was funnier than historians are supposed to be, and sadder than his humor suggested. He cared about people — not abstractly, not philosophically, but specifically: this person, in this place, with this story. He listened, which was his gift, and he wrote, which was his craft, and he combined the two into something that the world had never seen before and has not seen since.
+
+He died in his study at the Library of Spires, surrounded by his books, three years after completing the Annals. He was eighty-one years old. He was buried on the hill above Catcher's Rim, where he had sat as a young man and dreamed of writing a history of the world.
+
+The gravestone bears his name, two dates, and the Hiyalmite word for listener.
+
+It is enough. It was always enough."""}
             ]}
         ]
     }
