@@ -2472,37 +2472,356 @@ The Seventh Age was over. The Eighth — the Age of Solitude — was beginning. 
             ]}
         ]
     },
+    {
+        "number": 8,
+        "name": "The Age of Solitude",
+        "year_start": 3501,
+        "year_end": 4000,
+        "description": """The Eighth Age earned its melancholy name not from isolation but from the growing sense, felt across all of Elysal, that the world was changing faster than anyone could follow. Steam power arrived. Factories rose in Boulavar and Raxona. Railways began to connect cities that had taken weeks to travel between. The old feudal order crumbled under the weight of new money, new ideas, and new weapons that could kill at distances the knights of Lambridge would have found obscene. It was an age of revolutions, both industrial and political, and by the time it ended, the world that Hipolyptica had built from a collection of stone huts was unrecognizable.
+
+But the solitude of the Eighth Age was not the solitude of empty places. It was the solitude of crowded ones — the loneliness of a world where people were more connected than ever and less certain of what those connections meant. The old faiths had fractured. The old kingdoms had transformed. The old certainties — that kings ruled by right, that Ceresy spoke for God, that the social order was fixed and eternal — had been demolished by the printing press, the factory, and the philosopher's pen. In their place was freedom, which turned out to be heavier than anyone had expected.
+
+Klae wrote the Annals during the Eighth Age, and his perspective was shaped by it. He was a man of the modern world — skeptical, empirical, democratic — but he carried within him a deep awareness that modernity had costs that its enthusiasts preferred not to count. The Eighth Age gave humanity more power than it had ever possessed: the power to reshape the land, to cross the ocean in days, to kill from miles away, to print a million copies of an idea and scatter them across the world. Whether humanity possessed the wisdom to use that power well was the question that the Eighth Age posed and that the Annals, in their entirety, were an attempt to answer.""",
+        "centuries": [
+            {"number": 1, "name": "First Century",
+             "description": "The Great Realignment. The collapse of the Sacred Hegemony forces every nation in Fondore to renegotiate its relationships from scratch. Old alliances dissolve. New ones form. The map of power is redrawn by diplomats, generals, and — increasingly — by the populations themselves.",
+             "stories": [
+                {"title": "The New Map",
+                 "content": """The Sacred Hegemony's collapse did not produce a war. It produced something worse: uncertainty. For generations, every nation in Fondore had known its place — allied with this power, opposed to that one, balanced between the other two. The collapse removed the framework, and the nations of Fondore discovered that they had no idea how to relate to each other without it.
+
+The Great Realignment was not a conference or a treaty. It was a process — years of shifting alliances, broken promises, tentative agreements, and the kind of diplomatic improvisation that occurs when everyone is making it up as they go. The Three Pillars were gone. In their place was a constellation of powers of varying size and strength, each trying to secure its position in a world where the rules had changed.
+
+Raxone, the dominant military power, should have been able to dictate terms. It could not, because the domestic reforms of the previous ages had created a population that was no longer willing to fund imperial adventures. The Raxonian parliament — a grudging concession wrung from the monarchy by the merchant class — refused to authorize the military budgets that continental hegemony required. The army was still the best in Fondore. It was also smaller than it had been in a century.
+
+The Gechann Republic, which had been the economic engine of the Sacred Hegemony, was consumed by internal conflicts between the industrial class, the workers' movements, and the old Thirteen Families who still controlled the Senate. Geckish diplomats showed up at negotiations and made promises that their government could not keep, because the government changed its mind every time the Senate voted.
+
+Hyacinth remained beautiful, cultured, and paralyzed by the contradiction between its Cynthian ruling class and its Pervin majority. The Cynthian court made pronouncements about international order that nobody took seriously, because a nation that could not address the inequality within its own borders had no credibility addressing inequality between nations.
+
+Into this vacuum stepped the smaller powers: Lambridge, whose constitutional monarchy was the most stable government on the continent. Epervinay, whose republic had been functioning for three centuries and whose cavalry was still the fastest military force in Fondore. And Karagon, whose navy controlled the Erezetta and whose republic was willing to project power far beyond its shores.
+
+Klae wrote: 'The Great Realignment proved that power is not a possession. It is a performance, and the audience — the populations, the markets, the smaller nations watching from the edges — had stopped applauding.'"""},
+
+                {"title": "The Pervin Century",
+                 "content": """If the Fourth Age belonged to the Gechann and the Fifth to Raxone, the Eighth Age belonged to the Pervins. Not because Epervinay conquered anyone — the Pervins had never been conquerors, and conquest was not in their national character. But because the Pervin Republic, quietly and without fanfare, became the model that every other nation aspired to or feared.
+
+The republic had been functioning for three hundred years. It had survived external wars, internal crises, economic depressions, and the assassination of two First Citizens. It had done this without collapsing into dictatorship, without military coups, and without abandoning the principle that the government answered to the people rather than the other way around. This was not a perfect record. It was a record that no other nation could match.
+
+The Pervin diplomatic service — staffed by the descendants of farmers and horse breeders who had somehow produced the most skilled negotiators in Fondore — became the mediators of the Great Realignment. When Raxone and Gecha needed a neutral party to arbitrate a trade dispute, they called the Pervins. When Lambridge and Deberania needed someone to monitor the Leimbordur border, they called the Pervins. When the Mermassa needed a surface representative to enforce the Ocean Accords, they chose the Pervins, because the Pervins were the only nation whose word was trusted by both the surface and the deep.
+
+The cultural influence was equally profound. Pervin literature, Pervin music, and Pervin political philosophy became the dominant cultural exports of the age. The idea of the republic — government by the people, for the people, accountable to the people — spread through pamphlets and books and the example of a nation that had been practicing it longer than most nations had been pretending to.
+
+This was not universally welcomed. The monarchies of Raxone and Hyacinth viewed the Pervin model as a threat to their existence, which it was. The Geckish Republic, which called itself a republic but functioned as an oligarchy, resented the comparison with a democracy that actually worked. The Debrears, who had never abandoned their feudal structures, regarded the entire concept of popular sovereignty with the contempt that military cultures reserve for ideas they cannot defeat with weapons.
+
+Klae, who admired the Pervins while acknowledging their limitations, wrote: 'The Pervins proved that ordinary people can govern themselves. They also proved that governing yourself is harder than being governed by someone else, because the responsibility is yours and the excuses are fewer. This is the true cost of freedom, and the Pervins have been paying it honestly for three centuries.'"""}
+            ]},
+
+            {"number": 2, "name": "Second Century",
+             "description": "The Railway Age. The construction of rail networks across Fondore collapses the distances that have defined the continent's geography for millennia. Cities that took weeks to travel between are now days apart. The economic and social consequences are immediate, profound, and deeply unequal.",
+             "stories": [
+                {"title": "Iron Roads",
+                 "content": """The first railway in Fondore connected Boulavar to the port of Suntrae, a distance of approximately two hundred miles that had previously taken a merchant caravan two weeks to cover. The train completed the journey in fourteen hours. The merchants who had operated the caravan route were bankrupted within a year.
+
+The railway was a Geckish invention, built on Lirzan metallurgical advances and powered by Raxonian coal-burning engines. This combination — Geckish organization, Lirzan science, Raxonian engineering — was characteristic of the Eighth Age, in which no single nation could innovate alone and the most important advances came from the intersections between cultures.
+
+The construction of the rail network transformed Fondore's geography. The Leimbordur passes, which had been a strategic chokepoint for millennia, could be bypassed by tunnels that the new engineering techniques made possible. The great distances of Raxone, which had always limited the crown's ability to govern its frontier provinces, shrank to manageable size. The Geckish heartland, already the industrial center of the continent, became a hub connected to every major city by iron rails.
+
+The social consequences were as dramatic as the economic ones. Workers migrated along the rail lines, moving from countryside to factory city with a speed that previous generations could not have imagined. Ideas traveled with them — pamphlets, newspapers, political arguments that had once been confined to a single city now circulated across the continent within days. A workers' strike in Aemore could inspire a solidarity action in Raxona before the week was out.
+
+The railway also transformed war. Armies that had previously marched for weeks to reach a battlefield could now be transported in days. The strategic calculus that had governed Fondorian warfare for millennia — the slow accumulation of forces, the logistical limitations of distance and terrain — was overturned. A nation with railways could mobilize faster, concentrate forces faster, and sustain a military campaign at a tempo that pre-railway armies could not match.
+
+This was understood by every military planner on the continent, and the result was a railway-building race that consumed enormous quantities of capital and labor. The Gechann built the most extensive network. The Raxonians built the longest lines. The Leimish built the most elegant stations. The Pervins, characteristically, built a network that was smaller but better connected than anyone else's.
+
+Klae rode the railway during his research and found the experience both exhilarating and melancholy. He wrote: 'The world is smaller now. I can reach in a day what my grandparents took a month to reach. But I wonder if we have lost something in the shrinking — not distance, but the time to think about where we are going before we arrive.'"""},
+
+                {"title": "The Tunnels of the Leimbordur",
+                 "content": """The decision to tunnel through the Leimbordur was the most controversial engineering project in Fondorian history, and it was controversial for reasons that had nothing to do with engineering.
+
+The Leimbordur mountains had been Lambridge's primary defense since the kingdom's founding. The passes were narrow, easily defended, and controlled by the Knights of Lambridge — or rather, by the modern military that had inherited the Knights' responsibility. A tunnel through the mountains would bypass the passes entirely, connecting the Leimish heartland to the southern plains and, by extension, to Gecha, Deberania, and every other nation that had historically been kept at arm's length by geography.
+
+The engineering was feasible. The Lirzan tunneling techniques, combined with Geckish industrial capacity, made it possible to bore through the mountain at a cost that was high but manageable. The question was not whether the tunnel could be built but whether it should be built — whether the economic benefits of a rail connection between North and South outweighed the strategic risk of punching a hole through the country's most important natural defense.
+
+The Leimish parliament debated the question for three years. The industrialists argued for the tunnel: trade between North and South would generate wealth that would more than compensate for any strategic risk. The military argued against it: a tunnel could be used by an invading army as easily as by a merchant train. The Schvainese, who had a parliamentary voice since the Compromise of Tides, pointed out that Lambridge had been defending itself behind mountains for millennia and that the mountains had not always been sufficient, so perhaps it was time to try a different approach.
+
+The tunnel was built. It took seven years and the lives of approximately three hundred workers — Leimish, Geckish, Waydrani, and a team of Pkoyte dwarves from Shoale who were hired for their expertise in underground construction and who completed their section ahead of schedule and under budget, which annoyed the other teams considerably.
+
+The first train passed through the Leimbordur Tunnel on a spring morning, emerging from the southern face of the mountain into the sunlight of the Geckish plains. The event was witnessed by thousands of spectators on both sides of the border. A Leimish brass band played. A Geckish choir sang. The Debrears, whose territory the train would eventually cross, sent a representative who stood at the edge of the crowd, watched the train pass, and said nothing.
+
+Klae attended the opening ceremony. He wrote: 'The mountains that kept the Leimish safe for three thousand years were pierced by a tunnel in seven. I do not know whether this makes us more connected or more vulnerable. Perhaps it is both, and perhaps the distinction matters less than we think.'"""}
+            ]},
+
+            {"number": 3, "name": "Third Century",
+             "description": "The Hyacinth Revolution. The contradiction at the heart of the Kingdom of Hyacinth — a civilization of beauty built on the subjugation of its Pervin population — finally explodes. The revolution that follows transforms the western peninsula and forces the Cynthians to confront the question they have been avoiding since they arrived: what do they owe the people they displaced?",
+             "stories": [
+                {"title": "The Night of Broken Spires",
+                 "content": """The revolution began with music.
+
+The Cynthian court at Oradova hosted a concert — one of the regular cultural events that the court used to demonstrate its refined sensibility and that the Pervin service staff used to demonstrate their ability to carry trays without spilling. The program was a new work by a Cynthian composer, performed by a Cynthian orchestra, in a concert hall designed by a Cynthian architect. The audience was exclusively Cynthian. The staff was exclusively Pervin.
+
+During the second movement, a Pervin serving woman named Iraya Devuo — a descendant, as it happened, of Tasa Devuo, who had invented the first musical instrument in the First Age — set down her tray, walked to the stage, and began to sing.
+
+She sang a Pervin folk song. It was old — older than the Cynthians' arrival, older than the Kingdom of Hyacinth, a song that had been passed from mother to daughter for millennia and that had never been performed in a Cynthian concert hall because Pervin music was considered folk tradition rather than art. The song was about the land — the hills and rivers of the peninsula that the Pervins had inhabited since before recorded history.
+
+The Cynthians in the audience were stunned. The conductor stopped. The orchestra fell silent. Iraya sang alone, in a voice that Klae later described, based on accounts from witnesses, as 'clear enough to break something.'
+
+It broke something. The concert hall erupted. Pervin staff joined Iraya on the stage. Cynthian audience members, some furious and some weeping, tried to leave and found the doors blocked by a crowd of Pervin workers who had gathered outside. The Night of Broken Spires — named for the decorative spires on the concert hall's roof, which were damaged in the chaos — became the catalyst for a revolution that had been building for three thousand years.
+
+Within days, the Pervin population of Oradova was in open revolt. Not violent revolt — the Pervins, outnumbered and outgunned, knew better than to fight the Cynthian military directly. They simply stopped working. Every Pervin servant, laborer, factory worker, cook, cleaner, and gardener in the city walked off the job simultaneously, and the Cynthian ruling class discovered, with the shock of people who have never made their own meals, that a civilization cannot function without the people who actually do the work.
+
+Klae wrote: 'The revolution began with a woman singing a song. This is the most Pervin thing imaginable. The Pervins have always known that the most powerful weapon is not a sword. It is the refusal to be silent.'"""},
+
+                {"title": "The Treaty of Two Peoples",
+                 "content": """The Hyacinth Revolution lasted two years, and it was resolved not by arms but by the inescapable reality that the Cynthians could not run their own civilization without the Pervins.
+
+The general strike that began in Oradova spread across the peninsula within weeks. Pervin workers in every city, every town, every estate walked off the job. The fields went unplowed. The factories went silent. The harbors went unstaffed. The beautiful Cynthian cities, designed to function with an invisible underclass doing the manual labor, ground to a halt.
+
+The Cynthian military could have suppressed the strike by force. The generals recommended it. King Aelyr VII, to his credit, refused. He was a young king, educated by tutors who had read Lyssandre, and he understood that a kingdom maintained by force against the will of its majority population was not a kingdom but a prison. He also understood arithmetic: the Pervins outnumbered the Cynthians three to one, and an army, no matter how disciplined, cannot occupy its own country indefinitely.
+
+The negotiations were conducted in the grand hall of the Royal Palace of Oradova — the same palace that Pervin laborers had built, with Pervin stone, on Pervin land. The irony was noted by everyone present. The Pervin delegation was led by Iraya Devuo, who had become the revolution's symbolic leader despite having no political experience and no ambition for power. The Cynthian delegation was led by the king himself.
+
+The Treaty of Two Peoples established a new constitutional framework for Hyacinth. The monarchy was retained but reformed — the king became a constitutional monarch with ceremonial powers, like the Clairdwell model in Lambridge. A parliament was established with equal representation for Cynthians and Pervins, despite the Pervins' numerical majority — a concession that the Pervins accepted because they understood that the Cynthians would not agree to a system in which they were outvoted on every issue, and a system that the Cynthians would not accept was a system that would not survive.
+
+The treaty also addressed the deeper question: the Cynthians' relationship to the land they had colonized. The Pervins did not demand that the Cynthians leave. They demanded acknowledgment — a formal recognition that the Pervins had been there first, that the Cynthian arrival had been a displacement, and that the kingdom that both peoples now shared had been built on a foundation of inequality that the new constitution was designed to correct.
+
+Klae attended the signing ceremony and found it moving. He wrote: 'The Treaty of Two Peoples is not a perfect document. It is a compromise, and compromises satisfy no one completely. But it is the first time in three thousand years that the Cynthians and the Pervins of Hyacinth have agreed, formally and publicly, that they share a country. The sharing will be difficult. It will also be necessary.'"""}
+            ]},
+
+            {"number": 4, "name": "Fourth Century",
+             "description": "The Debrear Reckoning. Deberania, the ancient forest kingdom that has lurked on the margins of Fondorian history since the Second Age, finally confronts the modern world. The result is a transformation more painful and more necessary than any the Debrears have faced since Bugutahff declared himself Thaumfuher.",
+             "stories": [
+                {"title": "The Last Thaumfuher",
+                 "content": """Deberania was the last feudal state in Fondore, and it was feudal with an intensity that the other nations found both quaint and alarming. The Thaumfuher ruled from Thaumarch Keep in Foebrier with an authority that was absolute, traditional, and enforced by a warrior aristocracy that had changed remarkably little since Laur Bugutahff had unified the Debrear tribes in the Second Age.
+
+The kingdom had survived by being too difficult to conquer and too poor to exploit. The Thaugren forest was impenetrable to conventional armies. The Debrear warriors were ferocious defenders of their homeland. And Deberania's economy, based on timber, fur, and a stubbornly subsistence-level agriculture, offered nothing that the imperial powers considered worth the cost of invasion.
+
+But the railway changed the equation. The iron roads that connected the rest of Fondore bypassed Deberania entirely, which meant that the kingdom was no longer merely isolated — it was being left behind. The timber that had been Deberania's primary export was now cheaper to obtain from Raxonian forests that were connected to the rail network. The furs that Debrear trappers had sold in Leimish markets were now competed by Wintermen products shipped by rail from Perut. The kingdom's economy, never strong, was collapsing.
+
+The last Thaumfuher — Igorion XI, named for the conqueror of Clarity as every ambitious Debrear ruler was — looked at the world beyond his forests and saw a choice: modernize or die. He chose modernization, which in Deberania meant something closer to revolution, because modernizing a feudal state requires dismantling the feudal structures that its ruling class depends on.
+
+Igorion dissolved the Thaumatarchy — the warrior council that had governed alongside the Thaumfuher since the kingdom's founding. He opened Deberania's borders to foreign trade. He invited Waydrani administrators to establish a civil service. He built schools. He commissioned a railway from Foebrier to the Leimish border. And he abdicated, because he understood that a king who dismantles his own power must also dismantle himself, or the dismantling will not be believed.
+
+The Debrears responded with the confusion of a people whose entire identity had been built around traditions that their ruler had just declared obsolete. Some embraced the change. Some resisted violently. Most simply endured it, with the same grim determination that Debrears brought to everything.
+
+Klae visited Deberania during the transition and found it heartbreaking. He wrote: 'The Debrears are losing their world. They are gaining a future. Whether the exchange is fair depends on who you ask, and the Debrears, characteristically, are not sure.'"""},
+
+                {"title": "The Forest Remembers",
+                 "content": """The modernization of Deberania was necessary. It was also a form of cultural death, and the Debrears mourned it in their own way.
+
+The Thaugren forest, which had been the Debrears' home since before recorded history, was being cleared. The railway required timber. The new farms required land. The industrial economy that Deberania was trying to join required resources that could only be extracted from the forest that had defined the Debrear identity for millennia.
+
+A Debrear woman named Greta Bugutahff — a descendant of the founding dynasty, though the family had no political power since the abdication — organized a movement to preserve the old-growth forest in the heart of the Thaugren. Her argument was not economic. It was cultural: the forest was not merely a resource. It was the Debrear soul. The trees that grew in its deepest reaches were older than the kingdom, older than the tribes, older than the Debrears' memory of themselves. Cutting them down was not clearing land. It was erasing history.
+
+The movement attracted support from unexpected quarters. The Leimish, who understood cultural preservation, donated money. The Mermassa, who understood ecological preservation, provided data showing that the Thaugren forest played a critical role in the regional water cycle and that its destruction would have consequences that extended far beyond Deberania's borders. Even the Gechann Republic, whose industrial appetite was partly responsible for the demand for Debrear timber, acknowledged that some forests were worth more standing than felled.
+
+The result was the Thaugren Preserve — a protected area in the heart of the forest that was declared off-limits to development. It was not large enough to satisfy the preservationists and too large to satisfy the developers, which is the hallmark of a compromise that is approximately correct.
+
+Greta Bugutahff spent her remaining years leading walking tours through the Preserve, showing visitors — Fondorian tourists, Leimish artists, Geckish naturalists — the trees that her ancestors had worshipped, the clearings where the old warrior councils had met, the streams where the Debrear children had played for millennia before anyone had thought to build a railway or a factory.
+
+Klae walked the Preserve with Greta during his research. She showed him a tree that was, by the best estimates, four thousand years old — as old as recorded history itself. He put his hand on the bark and felt something that he could not articulate, and he wrote: 'The tree was there before Hipolyptica founded the first city. It will be there after the last city falls. This is not a metaphor. It is a fact, and facts of this kind are the closest thing to wisdom that the natural world provides.'"""}
+            ]},
+
+            {"number": 5, "name": "Fifth Century",
+             "description": "The Global Turn. For the first time in history, the civilizations of Elysal begin to function as a single interconnected system. Trade routes span every ocean. Diplomatic networks link every continent. The actions of one nation ripple across the world in ways that no one can fully predict or control.",
+             "stories": [
+                {"title": "The World Market",
+                 "content": """The Arden Exchange in Rin Nohara had always been the financial center of Fondore. By the Eighth Age, it was the financial center of the world.
+
+The Exchange processed transactions from every continent. Geckish textiles were traded for Lirzan metals. Raxonian timber was exchanged for Karagonese agricultural products. Wintermen ice-minerals were sold to Cynthian jewelers. Pridekin crossbow components were bought by every army on every continent. The volume of trade that passed through the Exchange on a single day exceeded the annual economic output of most nations in the First Age.
+
+The system worked because it was based on trust — specifically, the trust that the Arden banks would honor their commitments, that the currencies they denominated were stable, and that the contracts they enforced were enforceable. This trust had been earned over centuries and could be destroyed in moments, a fragility that the bankers understood and that the nations they served preferred not to think about.
+
+The Global Turn — the moment when the world economy became truly interconnected — produced winners and losers on a scale that no previous economic system had achieved. Nations with resources that the world market valued prospered. Nations without them stagnated. The Lirzan Renaissance was partly funded by the global demand for dragonborn metallurgical expertise. The Karagonese republic's rise was partly driven by its control of the Erezetta shipping lanes. And the Wintermen of Perut, whose ice-minerals were essential to the new industrial chemistry, found themselves courted by nations that had spent centuries ignoring them.
+
+The losers were equally predictable. Subsistence economies that could not produce goods for the global market were marginalized. Indigenous populations whose lands contained resources that the market valued found those lands taken, purchased, or appropriated through legal mechanisms that were technically legitimate and morally bankrupt. The Pridekin, who controlled territory rich in minerals that the industrial nations needed, faced renewed pressure from the Tzunadaine government, which wanted to extract those minerals and did not consider Pridekin territorial claims an obstacle.
+
+Klae observed the Global Turn with the ambivalence of a man who understood economics and cared about people. He wrote: 'The world market has made us all neighbors. It has not made us all friends. A neighbor who buys your goods and exploits your labor is still an exploiter, and the fact that the exploitation is conducted through markets rather than armies does not make it less real.'"""},
+
+                {"title": "The Mermassa Warning",
+                 "content": """The Mermassa had been watching the surface world's industrial development with growing concern since the Ocean Accords of the Seventh Age. The concerns had not diminished. They had intensified.
+
+The ambassador who appeared at the Tidal House in the fifth century of the Eighth Age carried data that was, even by Mermassa standards, alarming. Ocean temperatures were rising. Fish populations were declining faster than the Accords' limits could account for. The chemical composition of seawater was changing in ways that the Mermassa's own marine biologists — who had been studying the oceans for longer than surface civilizations had existed — found unprecedented.
+
+The ambassador's message was delivered in the characteristic Mermassa style: calm, data-driven, and terrifying. The surface nations' industrial output was changing the climate. The effects were already measurable in the oceans and would, within centuries, become measurable on land. Rising sea levels. Shifting weather patterns. Agricultural disruptions. The ambassador did not speculate about the social consequences. The Mermassa dealt in data, not politics, and the data was sufficient.
+
+The surface nations' response was, by now, predictable. The industrial powers — Gecha, Raxone, and the Arden Federations — acknowledged the data and questioned its implications. The smaller nations, which had less industrial output and more coastline, were alarmed. The Karagonese, whose island republic was directly threatened by rising sea levels, demanded immediate action. The Pervins proposed a treaty. The Gechann proposed further study.
+
+The Mermassa ambassador listened to the debate with the patience of a civilization that had been watching surface politics for three thousand years. When the arguments exhausted themselves, the ambassador spoke. The speech was short. It said, in essence: we have given you the data. We cannot make you act on it. But the ocean does not negotiate, and the ocean does not wait.
+
+Klae recorded the ambassador's speech and the silence that followed it. He wrote: 'The Mermassa have been the conscience of Elysal since they first surfaced. They speak not from morality but from measurement, which is more persuasive and less comfortable. They have told us what is happening. They cannot tell us what to do about it. That part is ours.'"""}
+            ]},
+
+            {"number": 6, "name": "Sixth Century",
+             "description": "The People's Century. Across Fondore and beyond, the populations that have been governed for four thousand years begin to demand a voice in their own governance. The democratic movements of the Sixth Age, which had seemed radical, become mainstream. The monarchies that remain must adapt or face the consequences.",
+             "stories": [
+                {"title": "The Raxonian Spring",
+                 "content": """Raxone was the last great monarchy in Fondore, and it fell on a Tuesday.
+
+The revolution — if it could be called that; the Raxonians preferred the term 'adjustment' — began with a student demonstration in Raxona that was larger than the authorities expected, better organized than the authorities feared, and more peaceful than anyone had dared hope. Twenty thousand people marched through the capital, carrying banners that read 'Consent of the Governed' in Raxonian, Waydrani, and Common. They did not throw stones. They did not break windows. They simply walked, and the walking was enough.
+
+King Aldren IX watched the march from the palace and made a calculation that his predecessors had not been willing to make: the monarchy's survival depended on its willingness to share power. His grandfather had resisted reform and faced an assassination attempt. His father had made minor concessions that satisfied nobody. Aldren looked at twenty thousand citizens walking peacefully past his window and concluded that the time for minor concessions was over.
+
+The Raxonian Constitution was drafted in six months — a blistering pace for a document that restructured a kingdom that had existed for three and a half thousand years. The monarchy became constitutional: the king retained the throne, the army, and the foreign affairs portfolio. Everything else — taxation, legislation, domestic policy — was transferred to an elected parliament. The franchise was broad: every adult citizen, regardless of gender, wealth, or ethnic origin. The Waydrani, who had been administering the kingdom for centuries without political representation, voted for the first time and sent a bloc of representatives to parliament that immediately became the swing vote in every major debate.
+
+The transition was not entirely smooth. Several princes attempted to organize resistance and were stopped not by the army but by their own households, whose servants informed them that the staff would be joining the march and that dinner would consequently be late.
+
+Klae, who was present in Raxona for the march, found the revolution characteristically Raxonian: large, loud, and resolved before anyone got seriously hurt. He wrote: 'The Raxonians overthrew their absolute monarchy over a long weekend and were back at work by Wednesday. Other nations might have required a war. The Raxonians required a walk and a strongly worded letter. I have never been more fond of them.'"""},
+
+                {"title": "The World's Republics",
+                 "content": """By the sixth century of the Eighth Age, every major nation in Fondore was either a republic or a constitutional monarchy with an elected parliament. This was, by any historical standard, astonishing. Four thousand years of human civilization in Elysal had been governed primarily by kings, emperors, warlords, and the occasional Thaumfuher. The idea that ordinary people could choose their own leaders — an idea that had been radical in the Sixth Age and revolutionary in the Seventh — was now the norm.
+
+The transition was not complete. Not every nation's democracy was genuine. The Gechann Republic's elections were dominated by the wealthy. The Raxonian parliament was still learning how to function. Deberania's new government was fragile. And beyond Fondore, the democratic movement was uneven: Karagon's republic was robust, the Lirzan Kingdom had adopted a constitutional framework, but the Tzunadaine government remained autocratic, and the Pridekin had no interest in any system of governance that was not their own.
+
+But the principle was established. The idea that government derived its authority from the consent of the governed — Lyssandre's central argument, written in an underground lecture hall in Oradova centuries earlier — had become the default assumption of political life. Kings who wanted to remain kings had to earn the approval of their populations. Leaders who wanted to lead had to stand for election. And populations that wanted to be free had to do the hard, boring, essential work of governing themselves.
+
+The democratic world was not a utopia. Elections produced bad leaders as often as good ones. Parliaments were slow, argumentative, and frequently corrupt. The tyranny of the majority — the risk that democratic majorities would oppress democratic minorities — was a constant danger. And the gap between democratic ideals and democratic practice was wide enough to drive a cavalry charge through.
+
+But it was better. Not perfect, not complete, not finished — but better than what had come before, in the specific and measurable sense that more people had more say over more aspects of their lives than at any point in the four-thousand-year history of Elysal.
+
+Klae, who had been born in the only democracy in the world and had watched the idea spread across the globe during his lifetime, allowed himself a rare moment of optimism. He wrote: 'The world is not yet what it should be. It is closer to what it should be than it has ever been. This is not a victory. It is a direction.'"""}
+            ]},
+
+            {"number": 7, "name": "Seventh Century",
+             "description": "The Reconciliation. As the democratic world stabilizes, the nations of Elysal begin to confront the historical injustices that have accumulated over four thousand years. The process is painful, incomplete, and absolutely essential.",
+             "stories": [
+                {"title": "The Apology of the Gechann",
+                 "content": """The Gechann Republic's formal apology for the Icrazan Genocide was delivered by the Supremus in the rebuilt senate hall at Boulavar, and it was watched, via telegraph relay, by millions of people across Fondore.
+
+The apology was the product of decades of debate. The genocide had been committed by the old empire, which no longer existed. The current republic had no legal continuity with the empire that had ordered the extermination of the dragonborn. The Geckish people alive in the Eighth Age bore no personal responsibility for atrocities committed centuries earlier. Every one of these arguments had been made, repeatedly and at length, by Geckish politicians who did not want to apologize.
+
+They apologized anyway. The reason was not legal or political. It was moral. The Icrazan Genocide had been committed by a Geckish state, using Geckish soldiers, following Geckish orders. The nation that had inherited the empire's territory, its institutions, its wealth, and its name could not disown the empire's crimes without disowning its own history. And a nation that disowns its own history is a nation that cannot be trusted with its own future.
+
+The Supremus's speech was short. He read the names of the dragonborn commanders who had been killed. He described the campaign in the clinical language of the military records that had been preserved in the Geckish archives. He acknowledged that the genocide had been systematic, deliberate, and ordered by the highest levels of government. And he said the word that had taken centuries to arrive: sorry.
+
+The Lirzan ambassador was present. She was dragonborn — tall, scaled, with the vestigial wing-bones and the smoke-curling nostrils of her ancestors. She listened to the apology in silence. When the Supremus finished, she rose, crossed the senate floor, and extended her hand. The Supremus took it. The gesture was broadcast across Fondore.
+
+It did not heal the wound. Nothing could heal a wound that deep. But it acknowledged the wound, which is the first step in any reconciliation, and which the Gechann had been refusing to take for centuries.
+
+Klae attended the ceremony and found himself weeping, which was unusual for a historian who prided himself on emotional distance. He wrote: 'The apology does not undo what was done. It does not bring back the dead. It does not restore what was destroyed. But it says: we know what we did. We are ashamed of what we did. And we will carry the knowledge and the shame as long as we exist, because that is the least we owe.'"""},
+
+                {"title": "The Unfinished Work",
+                 "content": """The Geckish apology was the most dramatic act of historical reconciliation in the Eighth Age. It was not the only one, and it was not the most difficult.
+
+The most difficult reconciliations were the quiet ones — the ones that happened not in senate halls but in villages, in families, in the spaces between people who had been taught to hate each other for reasons they could no longer articulate. A Debrear farmer whose grandfather had cursed the Leimish sitting down to dinner with a Leimish merchant. A Cynthian noblewoman whose family had employed Pervin servants for centuries learning to address her former servants as equals. A Tzunadaine teacher explaining to her students that the Pridekin, whom their parents had been taught to fear, were people — not human people, but people — with rights and history and a grief that was older than the kingdom.
+
+These small reconciliations were, in aggregate, more important than the grand gestures. The treaties and apologies changed the official record. The dinner tables and schoolrooms changed the culture. And culture, as Klae understood, is where history actually lives — not in the archives but in the assumptions that people carry without examining them.
+
+The work was not finished. It could not be finished, because the injustices of four thousand years cannot be addressed in a single generation. The Karaf still lived on islands built on the ruins of their enslavement. The Pridekin still carried memories that could not fade. The Waydrani were still the cleverest servants in every room they entered. The Pervins of Hyacinth were still rebuilding a culture that had been suppressed for three millennia.
+
+But the work was underway. For the first time in the history of Elysal, the civilizations that shared the world were attempting to share it honestly — to acknowledge what had been done, to understand why it had been done, and to build something different on the foundation of that understanding.
+
+Klae wrote: 'History is not a debt that can be repaid. It is a wound that can be acknowledged. The acknowledgment does not heal the wound. But it stops the wounded from having to pretend that the wound does not exist, and that pretense is, in many ways, worse than the original injury.'"""}
+            ]},
+
+            {"number": 8, "name": "Eighth Century",
+             "description": "The Library. Klae completes the Annals. The work that began with a conversation on a dock in Catcher's Rim reaches its conclusion in the same library where it was conceived. The final chapters are written in the Library of Spires, on an island that nobody wanted, by a man who spent his life listening to the world.",
+             "stories": [
+                {"title": "Forty-Three Years",
+                 "content": """Kratikar Klae returned to Lipse in the eighth century of the Eighth Age, sixty-seven years old, carrying six hundred tomes of interviews, transcribed scrolls, collected letters, military records, personal journals, diplomatic archives, and his own notes, which filled fourteen trunks and required a dedicated cargo hold on the ship that brought him home.
+
+He had left Lipse at twenty-four. He had spent forty-three years traveling the world, visiting every continent, every major city, every battlefield and library and tavern and farmhouse that contained a piece of the story he was trying to tell. He had interviewed kings, farmers, soldiers, priests, merchants, sailors, criminals, scholars, and one Mermassa ambassador who had agreed to speak with him on the condition that Klae submerge himself to the waist in the Tidal House's contact pool, which he did, and which gave him a cold that lasted three weeks.
+
+He had been robbed twice, shipwrecked once, arrested in Deberania for asking too many questions, and threatened by the Luschnypp Syndicate for asking the wrong ones. He had eaten food that disagreed with him in every nation on Fondore and several that were not technically nations. He had learned to speak passable Geckish, terrible Raxonian, and a few phrases of Sizzeracisenn that made Lirzan diplomats smile for reasons he never fully understood.
+
+He had also fallen in love, once, with a Pervin archivist in Ryad's Landing whose name he never recorded in the Annals because she asked him not to. She is present in the work only as a gap — a conspicuous silence in the chapters on Epervinay that scholars would debate for centuries.
+
+Klae returned to the Library of Spires and began writing. The process took eleven years. He wrote by hand, in the careful script that the Hejem University letterboys were trained in, filling page after page with the history of a world that he had spent his life trying to understand. He wrote in the mornings, revised in the afternoons, and walked the cliffs above Catcher's Rim in the evenings, watching the ships and thinking about the stories he had not yet told.
+
+He finished the Annals on a quiet afternoon in autumn. He put down his pen, looked at the stack of manuscripts that filled an entire room of the library, and said — according to the librarian Pellae, who was present — 'That will have to do.'
+
+Klae died three years later, in his study at the Library of Spires, surrounded by his books. He was eighty-one years old. He was buried on the hill above Catcher's Rim, where he had sat as a young man and dreamed of writing a history of the world."""},
+
+                {"title": "The Last Page",
+                 "content": """The final page of the Annals of Elysal is not a summary. It is not a conclusion. It is not a moral or a lesson or a neat encapsulation of four thousand years of history. It is, characteristically, a question.
+
+Klae wrote:
+
+'I have spent my life collecting the stories of the world. I have listened to kings and farmers, conquerors and slaves, builders and destroyers, the powerful and the powerless. I have tried to record what they told me honestly, without judgment, though I acknowledge that the act of selection is itself a judgment and that no history is truly impartial. I have tried, and I have failed, and I have tried again, because trying is the only thing a historian can do.
+
+What have I learned?
+
+I have learned that people are capable of extraordinary cruelty and extraordinary kindness, and that the same person can be capable of both, sometimes on the same day. I have learned that empires rise and fall, and that the falling is not the end of the story but the beginning of a new one. I have learned that ideas are more durable than armies, that books outlast kingdoms, and that a song sung by a woman in a concert hall can bring down a government that a cavalry charge could not.
+
+I have learned that the world is larger than any one person can comprehend and smaller than any one person dares to believe. I have learned that the ocean has its own civilizations and the mountains have their own memories and the forests remember things that the people who cut them down have forgotten.
+
+I have learned that history is not the study of the dead. It is the study of the living — of the choices they made, the consequences they endured, and the world they left for the people who came after them.
+
+I do not know what happens next. I am an old man sitting in a library on a small island, and the world I have spent my life studying is changing faster than I can write about it. But I know this: the story is not over. It will never be over. As long as there are people who remember, and people who ask what happened, and people who care enough to write it down, the story continues.
+
+This is the Annals of Elysal. It is incomplete, as all histories must be. It is the best I could do.
+
+I hope it was enough.'"""}
+            ]},
+
+            {"number": 9, "name": "Ninth Century",
+             "description": "After the Annals. The world continues after Klae puts down his pen. The stories that follow are not his — they are gathered from other sources by the librarians of the Library of Spires who maintained the Annals after his death. They are included because Klae would have wanted them, and because the story does not stop when the historian does.",
+             "stories": [
+                {"title": "The Library Endures",
+                 "content": """After Klae's death, the Annals were maintained by the librarians of the Library of Spires, who understood that the work's value lay not in its completeness but in its continuation. Klae had written the story of the world up to his own time. The world, inconsiderately, kept going.
+
+The Library of Spires became a pilgrimage site — not religious, but intellectual. Scholars from every nation traveled to Lipse to read the Annals in their original form, to study Klae's methodology, and to contribute their own research to the collection. The Library's trustees established a fellowship program that invited historians from across Elysal to spend a year on Lipse, adding their work to the collection and absorbing the spirit of the place.
+
+The spirit was important. Lipse was still a democracy, still windswept, still populated by people who valued independence and tolerated eccentricity. The library was still open to anyone. The town of Catcher's Rim was still small, still muddy, and still the most cosmopolitan place per square foot in the world. A visitor to Lipse in the ninth century of the Eighth Age would have found Geckish historians arguing with Raxonian military scholars in the reading room, Lirzan naturalists comparing notes with Karagonese political theorists in the café, and a Mermassa researcher communicating through waterproofed manuscripts delivered to the library's coastal annex.
+
+The Annals grew. They grew unevenly, because the historians who contributed to them had different interests, different methodologies, and different standards of evidence. Some additions were brilliant. Some were mediocre. Some were wrong, and the process of correcting them — the scholarly debates, the competing interpretations, the inevitable discovery that what everyone believed was true was not — was, in its own way, as valuable as the original work.
+
+Klae would have approved. He had always understood that the Annals were not a monument but a foundation — a starting point for the continuing work of understanding the world. He had written on the first page: 'History is not the study of the dead but of the living.' The living were still studying, still arguing, still trying to make sense of a world that refused to hold still long enough to be understood.
+
+The Library of Spires stands. The Annals continue. And on the hill above Catcher's Rim, where a young man once sat reading a book and dreaming of writing one, the wind still blows, and the ships still come and go, and the world is still, as it has always been, a story in progress."""},
+
+                {"title": "A New Letterboy",
+                 "content": """In the ninth century of the Eighth Age, a young Hiyalmite woman named Kessa Lael applied for the position of letterboy at the Library of Spires. The position had not been called 'letterboy' in decades — it was now formally titled 'junior archivist' — but the locals still used the old name, because Lipse was the kind of place where traditions survived long after their original context had been forgotten.
+
+Kessa was eighteen, the daughter of a fisherman and a schoolteacher, and she had read the Annals cover to cover three times before she was old enough to apply for the position. She had grown up on stories of Klae — the letterboy who became the world's greatest historian — and she understood, with the clarity of youth, that the Annals were not finished, because history was not finished, and someone needed to keep writing.
+
+Her application was reviewed by the Library's head archivist, an elderly Waydrani woman named Pellae Aymundra III — a great-granddaughter of the original Pellae who had founded the collection. The archivist asked Kessa one question: 'Why do you want to do this?'
+
+Kessa thought about it. She could have said many things. She could have talked about Klae, about the importance of preserving history, about her admiration for the Annals, about her belief that understanding the past was essential to navigating the future. All of these things were true.
+
+Instead, she said: 'Because someone needs to listen.'
+
+The archivist smiled, because she had heard this answer before — not in these exact words, but in this exact spirit. It was the same answer that Klae would have given, and the same answer that anyone who takes up the work of history eventually arrives at: the world is full of stories, and someone needs to listen to them, and write them down, and make sure they are not forgotten.
+
+Kessa was hired. She began her work the next morning, shelving books in the east wing of the Library of Spires, in the same section where a young Hiyalmite man had shelved books centuries earlier, before he walked out the door and into the world and came back with six hundred tomes and the most ambitious history ever written.
+
+The work continues. It always continues. That is the point."""}
+            ]},
+
+            {"number": 10, "name": "Tenth Century",
+             "description": "The Present Day. The Annals reach the current era. The world is four thousand years old, measured from the founding of the first city. It is scarred, complicated, beautiful, and unfinished. The final entry is not an ending. It is, like everything in the Annals, a beginning.",
+             "stories": [
+                {"title": "The World at Four Thousand",
+                 "content": """Four thousand years after Hipolyptica united the tribes on the coast and built the first city from stone, the world is this:
+
+Seven continents, inhabited by twelve distinct peoples, connected by railways and ships and the invisible threads of trade and diplomacy and shared knowledge. The Gechann Republic, humbled by its imperial past but still the economic engine of Fondore. The Kingdom of Raxone, constitutional now, its parliament as boisterous as its taverns. Lambridge, behind its tunneled mountains, still beautiful, still diplomatic, still selling furniture. Epervinay, the oldest republic in Fondore, still stubborn, still free, still mounted on Havenaugh horses. Hyacinth, rebuilding itself as a nation of two peoples. Deberania, learning to be modern without forgetting how to be Debrear.
+
+Beyond Fondore: Karagon, the Karaf republic, projecting democratic values across the Erezetta. The Lirzan Kingdom, its dragonborn leading a scientific renaissance that benefits the entire world. The Perut Confederation, the Wintermen finally recognized as the nation they have always been. The Tzunadaine, struggling with the legacy of colonialism and the demands of the Pridekin. The Mermassa, patient as ever, watching from below.
+
+And Lipse. The island that nobody wanted, where a library holds the memory of the world, and where the democracy that Klae grew up in still functions: messy, slow, argumentative, and free.
+
+The world is not what it should be. It is closer to what it should be than it has ever been. The injustices of four thousand years have not been addressed. Some of them have been acknowledged. The wars that have defined every age have not been abolished. They have become less frequent, less devastating, and more widely condemned. The hierarchies that have kept some peoples above others have not been dismantled. They have been challenged, questioned, and in some cases reformed.
+
+This is not a victory. It is a direction. And a direction, as Klae understood, is all that history can offer: not a destination but a trajectory, not a promise but a possibility.
+
+The story continues."""},
+
+                {"title": "The Hill Above Catcher's Rim",
+                 "content": """If you visit Lipse today, you can walk to the hill above Catcher's Rim where Klae sat as a young man and where he is now buried. The grave is marked with a simple stone — no title, no honorific, no list of accomplishments. Just his name and two dates and the Hiyalmite word for listener.
+
+From the hill, you can see the harbor, where ships from every nation in Elysal still dock, bringing scholars to the Library of Spires and carrying the Library's publications out to the world. You can see the town, which has grown since Klae's time but has not changed in character: still small, still muddy, still argumentative about dock construction. You can see the Library itself, its four spires visible above the rooftops, still housing the largest open collection of knowledge in the world.
+
+And you can see the ocean, which goes on forever, or seems to, from this vantage point. The same ocean that Emmantine Jlain was blown across in the Third Age. The same ocean that the Mermassa inhabit, watching. The same ocean that separates the continents that Klae spent his life connecting through the act of writing their histories into a single story.
+
+The wind blows, as it always does on Lipse. The grass on the hill bends with it. The stone stands.
+
+A young archivist named Kessa Lael climbs the hill sometimes, after her shift at the Library, and sits where Klae sat. She brings a notebook, because she is working on a project of her own: a continuation of the Annals, covering the period after Klae's death, gathered from the same kind of sources he used — interviews, letters, documents, the testimony of ordinary people who lived through extraordinary times.
+
+She does not know if her work will be as good as his. She suspects it will not. She is doing it anyway, because the sailor on the dock was right: what else are you going to do with a lifetime?
+
+The sun sets over the Erezetta. The ships in the harbor light their lanterns. The Library's windows glow. And on the hill above Catcher's Rim, on an island that nobody wanted, the work continues.
+
+It always continues.
+
+That is the point."""}
+            ]}
+        ]
+    },
 ]
-
-# Age 8: structure in place, stories to be written
-for age_data in [
-    (8, "The Age of Solitude", 3501, 4000,
-     "The Eighth Age earned its melancholy name not from isolation but from the growing sense, felt across all of Elysal, that the world was changing faster than anyone could follow. Steam power arrived. Factories rose in Boulavar and Raxona. Railways began to connect cities that had taken weeks to travel between. The old feudal order crumbled under the weight of new money, new ideas, and new weapons that could kill at distances the knights of Lambridge would have found obscene. It was an age of revolutions, both industrial and political, and by the time it ended, the world that Hipolyptica had built from a collection of stone huts was unrecognizable.",
-     ["The Steam Revolution", "The Factory Cities", "The Great Upheaval", "Railways and Rifles", "The Democratic Movements", "Twilight of Kings", "The Workers' Revolt", "The Colonial Reckoning", "The Annals Begin", "The Unwritten Chapter"]),
-]:
-    num, name, ys, ye, desc, century_names = age_data
-    centuries = []
-    for ci, cname in enumerate(century_names, 1):
-        cent = {
-            "number": ci,
-            "name": f"{['First','Second','Third','Fourth','Fifth','Sixth','Seventh','Eighth','Ninth','Tenth'][ci-1]} Century",
-            "description": f"The {cname}. This century shaped the course of the {name} through events both grand and intimate. Scholars continue to debate its significance to this day.",
-            "stories": [
-                {"title": f"Chronicles of the {cname}",
-                 "content": f"[This chapter of the Annals awaits a chronicler. The events of the {cname} during the {name} are known in fragments — recovered scrolls, oral traditions, and the occasional archaeological discovery. Kratikar Klae left this entry open, trusting that a worthy scholar would one day fill these pages with the truth of what happened.]\n\nWhat is known: this was a period of significant change within the {name}. The forces that defined the age were particularly acute during this century.\n\nAdventurers, scholars, and witnesses: the Annals welcome your contributions."},
-                {"title": f"Voices from the {cname}",
-                 "content": f"[Collected testimonies from the {cname} — fragments gathered by Kratikar Klae during his decades of research.]\n\n'We thought we understood the world. We were wrong.' — Anonymous scholar, early {cname}\n\nThese pages remain open for new voices. The Annals are a living document, and the {cname} of the {name} deserves to be told in full."},
-            ]
-        }
-        centuries.append(cent)
-    AGES.append({
-        "number": num,
-        "name": name,
-        "year_start": ys,
-        "year_end": ye,
-        "description": desc,
-        "centuries": centuries,
-    })
-
-# Sort ages by number
-AGES.sort(key=lambda a: a["number"])
