@@ -177,7 +177,7 @@ def close_db(exception=None):
 
 # ─── Schema ──────────────────────────────────────────────────────────────────
 
-SCHEMA_VERSION = 10
+SCHEMA_VERSION = 11
 
 SQLITE_SCHEMA = f"""
 CREATE TABLE IF NOT EXISTS schema_version (version INTEGER);
@@ -318,6 +318,12 @@ CREATE TABLE IF NOT EXISTS blocks (
 );
 CREATE INDEX IF NOT EXISTS idx_reports_status ON reports(status);
 CREATE INDEX IF NOT EXISTS idx_blocks_blocker ON blocks(blocker_id);
+CREATE INDEX IF NOT EXISTS idx_likes_post_id ON likes(post_id);
+CREATE INDEX IF NOT EXISTS idx_comments_post_id ON comments(post_id);
+CREATE INDEX IF NOT EXISTS idx_posts_author_created ON posts(author_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_follows_followed ON follows(followed_id);
+CREATE INDEX IF NOT EXISTS idx_messages_conv_created ON messages(conversation_id, created_at);
+CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id);
 """
 
 MYSQL_SCHEMA = [
@@ -458,6 +464,12 @@ MYSQL_SCHEMA = [
     ) ENGINE=InnoDB""",
     "CREATE INDEX IF NOT EXISTS idx_reports_status ON reports(status)",
     "CREATE INDEX IF NOT EXISTS idx_blocks_blocker ON blocks(blocker_id)",
+    "CREATE INDEX idx_likes_post_id ON likes(post_id)",
+    "CREATE INDEX idx_comments_post_id ON comments(post_id)",
+    "CREATE INDEX idx_posts_author_created ON posts(author_id, created_at DESC)",
+    "CREATE INDEX idx_follows_followed ON follows(followed_id)",
+    "CREATE INDEX idx_messages_conv_created ON messages(conversation_id, created_at)",
+    "CREATE INDEX idx_conversations_users ON conversations(user1_id, user2_id)",
 ]
 
 POSTGRES_SCHEMA = [
@@ -581,6 +593,12 @@ POSTGRES_SCHEMA = [
     )""",
     "CREATE INDEX IF NOT EXISTS idx_reports_status ON reports(status)",
     "CREATE INDEX IF NOT EXISTS idx_blocks_blocker ON blocks(blocker_id)",
+    "CREATE INDEX IF NOT EXISTS idx_likes_post_id ON likes(post_id)",
+    "CREATE INDEX IF NOT EXISTS idx_comments_post_id ON comments(post_id)",
+    "CREATE INDEX IF NOT EXISTS idx_posts_author_created ON posts(author_id, created_at DESC)",
+    "CREATE INDEX IF NOT EXISTS idx_follows_followed ON follows(followed_id)",
+    "CREATE INDEX IF NOT EXISTS idx_messages_conv_created ON messages(conversation_id, created_at)",
+    "CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id)",
 ]
 
 
@@ -677,6 +695,22 @@ def _migrate(db, db_type, from_version):
             print("[Poetic Goblin] Migration v10: Added 'show_explicit' column to users.")
         except Exception as e:
             print(f"[Poetic Goblin] Migration v10 note: {e}")
+    if from_version < 11:
+        # v11: Add performance indexes for feed/profile queries
+        index_stmts = [
+            "CREATE INDEX IF NOT EXISTS idx_likes_post_id ON likes(post_id)",
+            "CREATE INDEX IF NOT EXISTS idx_comments_post_id ON comments(post_id)",
+            "CREATE INDEX IF NOT EXISTS idx_posts_author_created ON posts(author_id, created_at DESC)",
+            "CREATE INDEX IF NOT EXISTS idx_follows_followed ON follows(followed_id)",
+            "CREATE INDEX IF NOT EXISTS idx_messages_conv_created ON messages(conversation_id, created_at)",
+            "CREATE INDEX IF NOT EXISTS idx_conversations_users ON conversations(user1_id, user2_id)",
+        ]
+        for stmt in index_stmts:
+            try:
+                db.execute(stmt)
+            except Exception as e:
+                print(f"[Poetic Goblin] Migration v11 note: {e}")
+        print("[Poetic Goblin] Migration v11: Added performance indexes.")
     # Update schema version
     try:
         db.execute('UPDATE schema_version SET version = %s', (SCHEMA_VERSION,))

@@ -84,6 +84,7 @@ class Config:
     SESSION_COOKIE_SECURE = os.environ.get('SESSION_COOKIE_SECURE', 'false').lower() == 'true'
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = os.environ.get('SESSION_COOKIE_SAMESITE', 'Lax')
+    SESSION_LIFETIME_DAYS = int(os.environ.get('SESSION_LIFETIME_DAYS', 14))
 
     # ─── Error Monitoring (Sentry) ────────────────────────────────────
     SENTRY_DSN = os.environ.get('SENTRY_DSN', '')

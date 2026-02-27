@@ -10,6 +10,7 @@ import json
 import secrets
 import hmac
 import hashlib
+import logging
 from datetime import datetime, timedelta
 from functools import wraps
 
@@ -51,10 +52,18 @@ app.secret_key = Config.SECRET_KEY
 app.config['MAX_CONTENT_LENGTH'] = Config.MAX_CONTENT_LENGTH
 os.makedirs(Config.UPLOAD_FOLDER, exist_ok=True)
 
+logger = logging.getLogger('poetic_goblin')
+if not logger.handlers:
+    handler = logging.StreamHandler()
+    handler.setFormatter(logging.Formatter('[PoeticGoblin] %(levelname)s %(message)s'))
+    logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
+
 # Session security
 app.config['SESSION_COOKIE_SECURE'] = Config.SESSION_COOKIE_SECURE
 app.config['SESSION_COOKIE_HTTPONLY'] = Config.SESSION_COOKIE_HTTPONLY
 app.config['SESSION_COOKIE_SAMESITE'] = Config.SESSION_COOKIE_SAMESITE
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(days=Config.SESSION_LIFETIME_DAYS)
 
 # Register teardown
 app.teardown_appcontext(close_db)
@@ -98,6 +107,7 @@ def set_security_headers(response):
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['X-Frame-Options'] = 'SAMEORIGIN'
     response.headers['X-XSS-Protection'] = '1; mode=block'
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
 
     # Build dynamic img-src based on storage config
     img_sources = "'self' data:"
@@ -314,7 +324,8 @@ def login_required(f):
                 session.clear()
                 flash('Session expired. Please log in again.', 'warning')
                 return redirect(url_for('login'))
-        except Exception:
+        except Exception as e:
+            logger.warning('login_required check failed for user %s: %s', session.get('user_id'), e)
             session.clear()
             return redirect(url_for('login'))
         return f(*args, **kwargs)
@@ -336,13 +347,17 @@ def character_required(f):
                                (session['user_id'],)):
                 flash('Create a character first!', 'warning')
                 return redirect(url_for('create_character'))
-        except Exception:
+        except Exception as e:
+            logger.warning('character_required check failed for user %s: %s', session.get('user_id'), e)
             session.clear()
             return redirect(url_for('login'))
         return f(*args, **kwargs)
     return decorated
 
 def get_current_user():
+    """Get the current user, cached per request via Flask's g object."""
+    if hasattr(g, '_cached_current_user'):
+        return g._cached_current_user
     if 'user_id' in session:
         db = get_db()
         try:
@@ -354,10 +369,13 @@ def get_current_user():
                 WHERE u.id = %s
             ''', (session['user_id'],))
             if user:
+                g._cached_current_user = user
                 return user
             session.clear()
-        except Exception:
+        except Exception as e:
+            logger.warning('get_current_user failed for user %s: %s', session.get('user_id'), e)
             session.clear()
+    g._cached_current_user = None
     return None
 
 @app.context_processor
@@ -375,8 +393,8 @@ def inject_globals():
                     WHERE (cv.user1_id = %s OR cv.user2_id = %s) AND m.sender_id != %s AND m.is_read = 0
                 ''', (session['user_id'], session['user_id'], session['user_id']))
                 unread_count = row['c'] if row else 0
-            except Exception:
-                pass
+            except Exception as e:
+                logger.debug('Unread count query failed: %s', e)
     return dict(
         current_user=user,
         elysal_locations=ELYSAL_LOCATIONS,
@@ -402,6 +420,10 @@ def timeago_filter(dt_string):
     if diff < 604800: return f'{int(diff/86400)}d ago'
     return dt.strftime('%b %d, %Y')
 
+def escape_like(value):
+    """Escape SQL LIKE wildcards (% and _) to prevent injection."""
+    return value.replace('\\', '\\\\').replace('%', '\\%').replace('_', '\\_')
+
 @app.template_filter('censor')
 def censor_filter(text):
     """Censor profanity unless the current user has enabled show_explicit."""
@@ -422,8 +444,8 @@ def index():
             user = db.fetchone('SELECT id FROM users WHERE id = %s', (session['user_id'],))
             if user:
                 return redirect(url_for('feed'))
-        except Exception:
-            pass
+        except Exception as e:
+            logger.debug('Index user check failed: %s', e)
         session.clear()
     return render_template('landing.html')
 
@@ -475,6 +497,7 @@ def register():
             return redirect(url_for('login'))
         else:
             session['user_id'] = user_id
+            session.permanent = True
             flash('Account created! Now forge your first character.', 'success')
             return redirect(url_for('create_character'))
     return render_template('register.html')
@@ -514,6 +537,7 @@ def login():
                 return render_template('login.html', show_resend=True, resend_username=username)
             session.clear()
             session['user_id'] = user['id']
+            session.permanent = True
             if not db.fetchone('SELECT id FROM characters WHERE user_id = %s', (user['id'],)):
                 return redirect(url_for('create_character'))
             flash('Welcome back!', 'success')
@@ -825,7 +849,7 @@ def feed():
     per_page = 20
     offset = (page - 1) * per_page
     if q:
-        like_q = '%{}%'.format(q)
+        like_q = '%{}%'.format(escape_like(q))
         posts = db.fetchall('''
             SELECT p.*, u.username, c.name as char_name, c.avatar_url as char_avatar,
                    (SELECT COUNT(*) FROM likes WHERE post_id = p.id) as like_count,
@@ -973,7 +997,7 @@ def api_search_users():
         SELECT u.username, c.name as char_name
         FROM users u LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
         WHERE u.username LIKE %s AND u.id != %s LIMIT 8
-    ''', ('%{}%'.format(q), session['user_id']))
+    ''', ('%{}%'.format(escape_like(q)), session['user_id']))
     return jsonify([{'username': u['username'], 'char_name': u['char_name'] or u['username']} for u in users])
 
 # ─── Routes: Post Interactions ────────────────────────────────────────────────
@@ -994,9 +1018,9 @@ def like_post(post_id):
             db.execute('DELETE FROM likes WHERE user_id=%s AND post_id=%s', (uid, post_id))
         else:
             db.execute('INSERT INTO likes (user_id, post_id) VALUES (%s,%s)', (uid, post_id))
-    except Exception:
+    except Exception as e:
         # Handle race condition (duplicate key, etc.)
-        pass
+        logger.debug('Like toggle race condition for post %s: %s', post_id, e)
     cnt = db.fetchone('SELECT COUNT(*) as c FROM likes WHERE post_id=%s', (post_id,))
     return jsonify({'liked': not existing, 'count': cnt['c'] if cnt else 0})
 
@@ -1020,7 +1044,8 @@ def add_comment(post_id):
         cid = str(uuid.uuid4())
         db.execute('INSERT INTO comments (id, post_id, author_id, content) VALUES (%s,%s,%s,%s)',
                    (cid, post_id, session['user_id'], content))
-    except Exception:
+    except Exception as e:
+        logger.error('Failed to save comment on post %s: %s', post_id, e)
         return jsonify({'error': 'Failed to save comment'}), 500
     user = get_current_user()
     return jsonify({
@@ -1223,8 +1248,8 @@ def toggle_follow(username):
             db.execute('DELETE FROM follows WHERE follower_id=%s AND followed_id=%s', (session['user_id'], target['id']))
         else:
             db.execute('INSERT INTO follows (follower_id, followed_id) VALUES (%s,%s)', (session['user_id'], target['id']))
-    except Exception:
-        pass
+    except Exception as e:
+        logger.debug('Follow toggle race condition for %s: %s', username, e)
     cnt = db.fetchone('SELECT COUNT(*) as c FROM follows WHERE followed_id=%s', (target['id'],))
     return jsonify({'following': not existing, 'follower_count': cnt['c'] if cnt else 0})
 
@@ -1390,12 +1415,19 @@ def messages_inbox():
         ORDER BY last_message_at DESC
     ''', (uid, uid, uid, uid))
     conv_data = []
-    for cv in conversations:
-        other = db.fetchone('''
+    # Batch-fetch other users to fix N+1 query
+    other_ids = [cv['other_id'] for cv in conversations]
+    others_map = {}
+    if other_ids:
+        placeholders = ','.join(['%s'] * len(other_ids))
+        others = db.fetchall('''
             SELECT u.*, c.name as char_name, c.avatar_url as char_avatar
             FROM users u LEFT JOIN characters c ON c.user_id = u.id AND c.is_main = 1
-            WHERE u.id = %s
-        ''', (cv['other_id'],))
+            WHERE u.id IN ({})
+        '''.format(placeholders), tuple(other_ids))
+        others_map = {o['id']: o for o in others}
+    for cv in conversations:
+        other = others_map.get(cv['other_id'])
         if other:
             conv_data.append({'conv': cv, 'other': other})
     return render_template('messages_inbox.html', conversations=conv_data)
@@ -1584,7 +1616,7 @@ def annals_search():
             JOIN users u ON a.author_id = u.id
             WHERE LOWER(a.title) LIKE %s OR LOWER(a.content) LIKE %s
             ORDER BY a.created_at DESC LIMIT 50
-        ''', (f'%{q}%', f'%{q}%'))
+        ''', (f'%{escape_like(q)}%', f'%{escape_like(q)}%'))
         for us in user_stories:
             age = next((a for a in ANNALS_AGES if a['number'] == us['age_number']), None)
             if age:
